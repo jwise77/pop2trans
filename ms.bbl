@@ -1,0 +1,8 @@
+\begin{thebibliography}{1}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Turk}(2008)}]{yt}
+{Turk}, M.~J. 2008, in Proceedings of the 7th Python in Science Conference, ed.
+  G.~Varoquaux, T.~Vaught, \& J.~Millman, Pasadena, CA USA, 46 -- 50
+
+\end{thebibliography}
