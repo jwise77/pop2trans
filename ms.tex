@@ -1,5 +1,5 @@
-%\documentclass[apj,onecolumn]{emulateapj}
-\documentclass[12pt,preprint]{aastex}
+\documentclass[apjl]{emulateapj}
+%\documentclass[12pt,preprint]{aastex}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
@@ -22,19 +22,35 @@
 \title{How Short Lived is the Population III Epoch?}
 
 \author{John H. Wise\altaffilmark{1,2}, 
-  Tom Abel\altaffilmark{3}, 
-  Michael L. Norman\altaffilmark{4}}
+  Michael L. Norman\altaffilmark{3},
+  Tom Abel\altaffilmark{4}}
 
 \altaffiltext{1}{Department of Astrophysical Sciences, Princeton
   University, Peyton Hall, Ivy Lane, Princeton, NJ 08544}
 \altaffiltext{2}{Hubble Fellow}
-\altaffiltext{3}{Kavli Institute for Particle Astrophysics and
-  Cosmology, Stanford University, Menlo Park, CA 94025}
-\altaffiltext{4}{Center for Astrophysics and Space Sciences,
+\altaffiltext{3}{Center for Astrophysics and Space Sciences,
   University of California at San Diego, La Jolla, CA 92093}
+\altaffiltext{4}{Kavli Institute for Particle Astrophysics and
+  Cosmology, Stanford University, Menlo Park, CA 94025}
 \email{jwise@astro.princeton.edu}
 
 \begin{abstract}
+
+  Population III stars first form in dark matter halos with masses
+  around $10^6 \Ms$.  By definition, they are metal-free, and their
+  protostellar collapse is driven by molecular hydrogen cooling in the
+  gas-phase, leading to a massive characteristic mass $\sim 100~\Ms$
+  and suppressed fragmentation.  Population II stars with lower
+  characteristic masses form when the star-forming gas reaches a
+  critical metallicity of $10^{-6} - 10^{-3}~Z_\odot$, depending on
+  whether dust cooling is important.  We present adaptive mesh
+  refinement radiation hydrodynamics simulations that
+  self-consistently follow the transition from Population III to II
+  star formation.  We model stellar radiative feedback with adaptive
+  ray tracing.  A top-heavy initial mass function for the Population
+  III stars is considered, resulting in a plausible distribution of
+  pair-instability supernovae and associated metal enrichment.
+  \textbf{Add results.}
 
 \end{abstract}
 
@@ -43,13 +59,78 @@
 
 \section{Motivation}
 
+The first (Pop III) stars are metal-free and have a large
+characteristic mass and suppressed fragmentation in its protostellar
+collapse \citep{refs}.  A fraction of these stars enrich the
+surrounding intergalactic medium (IGM) when they go supernova, which
+can happen in stars $\lsim40~\Ms$ in Type II supernovae (SNe) or in
+stars roughly between 140 \Ms~and 260 \Ms~in pair-instability SNe
+\citep[PISNe;][]{Heger02}.  The host halo and the neighboring halos
+are then enriched with this ejecta.  There exists a critical
+metallicity that is $\sim 10^{-6} Z_\odot$ if dust cooling is
+efficient \citep{refs} and $\sim 10^{-3.5} Z_\odot$ otherwise
+\citep{refs}, where the gas can cool rapidly, lowering its Jeans mass.
+An intermediate characteristic mass of $\sim10~\Ms$ can be occur if
+the gas cooling is suppressed to the cosmic microwave background (CMB)
+temperature \citep{ref}.  The resulting Population II star cluster
+will thus have a lower characteristic stellar mass than its metal-free
+progenitors \citep{refs}.  In the local universe, stars in the Milky
+Way halo and dwarf spheroidal (dSph) galaxies may be connected to
+these first stellar clusters.  In the halo of the Milky Way, the most
+metal-poor stars have a metallicity floor of [Z/H] = ??? \citep{ref},
+and in dwarf spheroidal (dSph) galaxies this floor is a factor of 10
+higher \citep{refs}.
+
+The transition from Pop III to Pop II star formation is solely
+dependent on the propagation of metals from the SNe remnants into
+future sites of star formation.  Their flows are complex because of
+the interactions between the SN blastwave, cosmological accretion and
+halo mergers, and nearby stellar feedback.  In minihalos ($M_{\rm h}
+\sim 10^6~\Ms$), radiation from the massive Pop III drives a 30
+\kms~shock, which is 10 times greater than the escape velocity of the
+halo, and leaves behind a warm ($3 \times 10^4$ K) and diffuse (0.5
+\cubecm) medium \citep{refs}.  The latter feature aids in the
+expansion of the blastwave because it delays the transition to the
+Sedov-Taylor and snowplow phases.  In PISNe, approximately half of the
+metals stay in the IGM with an metal bubble size of a few kpc.  The
+remaining metals fall back into the host halo.  The blastwave may
+induce star formation in nearby halos through the compression of the
+gas \citep{refs}; however timescales for metal mixing into the dense
+gas are many dynamical times \citep{refs} for shock velocities $\lsim
+100~\kms$.
+
+Numerical simulations are useful to detangle and study these
+complexities and the transition from Pop III to II stars.  In this
+Letter, we present the simulations that include both types of star
+formation, its radiative feedback, and its SNe feedback.  We utilize
+an initial mass function (IMF) for individual Pop III stars, based on
+the latest simulation results.  The methods used here incorporate and
+link together recent results from metal-enriched and metal-free star
+formation, the critical metallicity, pair-instability supernovae, and
+fine-structure metal line cooling.  Furthermore we spatially
+distinguish metal enrichment from Pop II and Pop III stars as their
+abundance patterns differ significantly \citep{ref}.  This is the
+first time that all of these processes have been interconnected in a
+simulation that resolves minihalos to study the transition to Pop II
+star formation self-consistently.  We describe our simulation setup
+and our adopted star formation models in \S \ref{sec:setup} and
+present our results in \S \ref{sec:results}.  We discuss the
+implications of our findings and conclude in the last section.
+
+\section{Simulation Setup}
+\label{sec:setup}
+
+\section{Results}
+\label{sec:results}
+
+\section{Discussion and Summary}
 
 \acknowledgments
 
 J.H.W. is supported by the Hubble Fellowship etc.  The majority of the
 analysis and plots were done with \texttt{yt} \citep{yt}.
 
-\clearpage
+%\clearpage
 %\input biblio.tex
 \bibliography{ms}
 
