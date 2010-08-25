@@ -23,7 +23,8 @@
 
 \author{John H. Wise\altaffilmark{1,2}, 
   Michael L. Norman\altaffilmark{3},
-  Tom Abel\altaffilmark{4}}
+  Tom Abel\altaffilmark{4},
+  Britton D. Smith \altaffilmark{5}}
 
 \altaffiltext{1}{Department of Astrophysical Sciences, Princeton
   University, Peyton Hall, Ivy Lane, Princeton, NJ 08544}
@@ -32,6 +33,7 @@
   University of California at San Diego, La Jolla, CA 92093}
 \altaffiltext{4}{Kavli Institute for Particle Astrophysics and
   Cosmology, Stanford University, Menlo Park, CA 94025}
+\altaffiltext{5}{Michigan State University}
 \email{jwise@astro.princeton.edu}
 
 \begin{abstract}
@@ -108,17 +110,76 @@ the latest simulation results.  The methods used here incorporate and
 link together recent results from metal-enriched and metal-free star
 formation, the critical metallicity, pair-instability supernovae, and
 fine-structure metal line cooling.  Furthermore we spatially
-distinguish metal enrichment from Pop II and Pop III stars as their
-abundance patterns differ significantly \citep{ref}.  This is the
-first time that all of these processes have been interconnected in a
-simulation that resolves minihalos to study the transition to Pop II
+distinguish metal enrichment from Pop II and Pop III stars.  This is
+the first time that all of these processes have been interconnected in
+a simulation that resolves minihalos to study the transition to Pop II
 star formation self-consistently.  We describe our simulation setup
 and our adopted star formation models in \S \ref{sec:setup} and
 present our results in \S \ref{sec:results}.  We discuss the
 implications of our findings and conclude in the last section.
 
-\section{Simulation Setup}
+\section{Method}
 \label{sec:setup}
+
+In this section, we first describe our simulation setup.  We then
+detail the star formation models used in these simulations and how we
+model stellar radiation and SNe feedback.
+
+\subsection{Simulation setup}
+
+We use the adaptive mesh refinement (AMR) code \enzo~\citep{refs} that
+employs our implementation of adaptive ray tracing for radiation
+transport \citep{refs}.  To resolve minihalos with at least 100 dark
+matter (DM) particles and follow the formation of the first generation
+of dwarf galaxies, we use a simulation box of 1 Mpc that has a
+resolution of $256^3$.  This gives us a DM mass resolution of 1840
+\Ms.  We refine the grid on baryon overdensities of $3 \times
+2^{-0.2l}$, where $l$ is the AMR level, resulting in a
+super-Lagrangian behavior.  We also refine on a DM overdensity of $3
+\times 2^l$ and always resolve the local Jeans length by at least 4
+cells.  The latter criterion avoids any artifical fragmentation during
+gaseous collapses \citep{Truelove97}.  We initialize the simulation
+with \textsl{grafic} \citep{Bertschinger01} at $z = ???$ and use the
+cosmological parameters from the 7-year WMAP data \citep{ref}:
+$\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h
+= 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$ with the variables having
+their usual definitions.
+
+We peform two simulations with the same initial conditions.  They
+differ only in that one considers primordial cooling, and the other
+considers additional cooling in metal-enriched gas.  For primordial
+cooling, we use a non-equilbrium chemistry solver with 9 species of
+hydrogen, helium, and molecular hydrogen.  For metal cooling, we use a
+cooling curve that is calculated from CLOUDY \citep{ref} and using the
+method of \citet{ref}.  It is tabulated based on density, temperature,
+electron fraction, and metallicity.
+
+\subsection{Star formation}
+
+Simulations have shown that the characteristic mass of Pop III stars
+$M_{\rm char} \sim 100~\Ms$.  They form in molecular clouds that
+coexist with the dark matter halo center with limited fragmentation
+occurring during their collapse; however \citet{Turk10} has recently
+shown that Pop III binaries may form in a fraction of such halos.
+Furthermore, detailed one-dimensional calculations have shown that
+their IMF should follow a Kroupa-like IMF that has a Salpeter slope at
+the high-mass end and an exponential cut-off below $M_{\rm char}$
+\citep{refs}.  
+
+For Pop III stars, we use the same star formation model as
+\citet{Abel07} and \citet{Wise08_Gal} but now the stellar mass is
+randomly sampled from an IMF with a functional form of
+%
+\begin{equation}
+\label{eqn:imf}
+f(M)dM = ...
+\end{equation}
+%
+For reproducibility, we initialize both simulations with the same
+random seed and record the number of times the random number generator
+\citep[Mersenne twister;][]{ref} has been called.
+
+\subsection{Stellar feedback}
 
 \section{Results}
 \label{sec:results}
