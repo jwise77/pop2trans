@@ -16,7 +16,7 @@
 
 \begin{document}
 
-\shorttitle{TRANSITION TO POPULATION II}
+\shorttitle{POPULATION III STAR EPOCH}
 \shortauthors{WISE ET AL.}
 
 \title{How Short Lived is the Population III Epoch?}
@@ -127,23 +127,23 @@ model stellar radiation and SNe feedback.
 
 \subsection{Simulation setup}
 
-We use the adaptive mesh refinement (AMR) code \enzo~\citep{refs} that
-employs our implementation of adaptive ray tracing for radiation
-transport \citep{refs}.  To resolve minihalos with at least 100 dark
-matter (DM) particles and follow the formation of the first generation
-of dwarf galaxies, we use a simulation box of 1 Mpc that has a
-resolution of $256^3$.  This gives us a DM mass resolution of 1840
-\Ms.  We refine the grid on baryon overdensities of $3 \times
-2^{-0.2l}$, where $l$ is the AMR level, resulting in a
-super-Lagrangian behavior.  We also refine on a DM overdensity of $3
-\times 2^l$ and always resolve the local Jeans length by at least 4
-cells.  The latter criterion avoids any artifical fragmentation during
-gaseous collapses \citep{Truelove97}.  We initialize the simulation
-with \textsl{grafic} \citep{Bertschinger01} at $z = ???$ and use the
-cosmological parameters from the 7-year WMAP data \citep{ref}:
-$\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h
-= 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$ with the variables having
-their usual definitions.
+We use the adaptive mesh refinement (AMR) code
+\enzo~\citep{BryanNorman97, OShea2004} that employs our implementation
+of adaptive ray tracing for radiation transport \citep{Wise11}.  To
+resolve minihalos with at least 100 dark matter (DM) particles and
+follow the formation of the first generation of dwarf galaxies, we use
+a simulation box of 1 Mpc that has a resolution of $256^3$.  This
+gives us a DM mass resolution of 1840 \Ms.  We refine the grid on
+baryon overdensities of $3 \times 2^{-0.2l}$, where $l$ is the AMR
+level, resulting in a super-Lagrangian behavior.  We also refine on a
+DM overdensity of $3 \times 2^l$ and always resolve the local Jeans
+length by at least 4 cells.  The latter criterion avoids any artifical
+fragmentation during gaseous collapses \citep{Truelove97}.  We
+initialize the simulation with \textsl{grafic} \citep{Bertschinger01}
+at $z = ???$ and use the cosmological parameters from the 7-year WMAP
+data \citep{ref}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
+$\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$
+with the variables having their usual definitions.
 
 We peform two simulations with the same initial conditions.  They
 differ only in that one considers primordial cooling, and the other
@@ -151,33 +151,43 @@ considers additional cooling in metal-enriched gas.  For primordial
 cooling, we use a non-equilbrium chemistry solver with 9 species of
 hydrogen, helium, and molecular hydrogen.  For metal cooling, we use a
 cooling curve that is calculated from CLOUDY \citep{ref} and using the
-method of \citet{ref}.  It is tabulated based on density, temperature,
-electron fraction, and metallicity.
+method of \citet{2008MNRAS.385.1443S}.  It is tabulated based on
+density, temperature, electron fraction, and metallicity.
 
 \subsection{Star formation}
+
+We distinguish Pop II and Pop III star formation by the metallicity of
+the cold ($T < 10^3$ K) star forming gas in the molecular clouds.  Pop
+II stars are formed if [Z/H] $> -4$, and Pop III stars are formed
+otherwise.  We do not consider Pop III.2 stars and intermediate mass
+stars from CMB-limited cooling.
 
 Simulations have shown that the characteristic mass of Pop III stars
 $M_{\rm char} \sim 100~\Ms$.  They form in molecular clouds that
 coexist with the dark matter halo center with limited fragmentation
-occurring during their collapse; however \citet{Turk10} has recently
-shown that Pop III binaries may form in a fraction of such halos.
-Furthermore, detailed one-dimensional calculations have shown that
-their IMF should follow a Kroupa-like IMF that has a Salpeter slope at
-the high-mass end and an exponential cut-off below $M_{\rm char}$
-\citep{refs}.  
+occurring during their collapse; however \citet{2009Sci...325..601T}
+has recently shown that Pop III binaries may form in a fraction of
+such halos.  Furthermore, detailed one-dimensional calculations have
+shown that their IMF should follow a Kroupa-like IMF that has a
+Salpeter slope at the high-mass end and an exponential cut-off below
+$M_{\rm char}$ \citep{refs}.
 
 For Pop III stars, we use the same star formation model as
-\citet{Abel07} and \citet{Wise08_Gal} but now the stellar mass is
+\citet{Abel07} and \citet{Wise08_Gal} where each star particle
+represents a single star.  Instead of using a fixed stellar mass, we
 randomly sampled from an IMF with a functional form of
 %
 \begin{equation}
 \label{eqn:imf}
-f(M)dM = ...
+f(M)dM = M^{-1.3} \exp\left[-\left(\frac{M_{\rm char}}{M}\right)^{1.6}\right]
 \end{equation}
 %
-For reproducibility, we initialize both simulations with the same
-random seed and record the number of times the random number generator
-\citep[Mersenne twister;][]{ref} has been called.
+to determine the stellar mass.  Above $M_{\rm char}$, it behaves as a
+Salpeter IMF but is exponentially cutoff below that mass
+\citep{Chabrier03, Clark09}.  For reproducibility, we initialize both
+simulations with the same random seed and record the number of times
+the random number generator \citep[Mersenne twister;][]{ref} has been
+called for use when restarting the simulations.
 
 \subsection{Stellar feedback}
 
