@@ -63,25 +63,26 @@
 
 The first (Pop III) stars are metal-free and have a large
 characteristic mass and suppressed fragmentation in its protostellar
-collapse \citep{refs}.  A fraction of these stars enrich the
-surrounding intergalactic medium (IGM) when they go supernova, which
-can happen in stars $\lsim40~\Ms$ in Type II supernovae (SNe) or in
-stars roughly between 140 \Ms~and 260 \Ms~in pair-instability SNe
-\citep[PISNe;][]{Heger02}.  The host halo and the neighboring halos
-are then enriched with this ejecta.  There exists a critical
-metallicity that is $\sim 10^{-6} Z_\odot$ if dust cooling is
-efficient \citep{refs} and $\sim 10^{-3.5} Z_\odot$ otherwise
-\citep{refs}, where the gas can cool rapidly, lowering its Jeans mass.
-An intermediate characteristic mass of $\sim10~\Ms$ can be occur if
-the gas cooling is suppressed to the cosmic microwave background (CMB)
-temperature \citep{ref}.  The resulting Population II star cluster
-will thus have a lower characteristic stellar mass than its metal-free
-progenitors \citep{refs}.  In the local universe, stars in the Milky
-Way halo and dwarf spheroidal (dSph) galaxies may be connected to
-these first stellar clusters.  In the halo of the Milky Way, the most
-metal-poor stars have a metallicity floor of [Z/H] = ??? \citep{ref},
-and in dwarf spheroidal (dSph) galaxies this floor is a factor of 10
-higher \citep{refs}.
+collapse \citep{Abel00, ABN02, Bromm02, Yoshida03, OShea07a}.  A
+fraction of these stars enrich the surrounding intergalactic medium
+(IGM) when they go supernova, which can happen in stars $\lsim40~\Ms$
+in Type II supernovae (SNe) or in stars roughly between 140 \Ms~and
+260 \Ms~in pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}.
+The host halo and the neighboring halos are then enriched with this
+ejecta.  There exists a critical metallicity that is $\sim 10^{-6}
+Z_\odot$ if dust cooling is efficient \citep{refs} and $\sim 10^{-3.5}
+Z_\odot$ otherwise \citep{Bromm01, 2009ApJ...691..441S}, where the gas
+can cool rapidly, lowering its Jeans mass.  An intermediate
+characteristic mass of $\sim10~\Ms$ can be occur if the gas cooling is
+suppressed to the cosmic microwave background (CMB) temperature
+\citep{Larson, Tumlinson04, 2009ApJ...691..441S}.  The resulting
+Population II star cluster will thus have a lower characteristic
+stellar mass than its metal-free progenitors.  In the local universe,
+stars in the Milky Way halo and dwarf spheroidal (dSph) galaxies may
+be connected to these first stellar clusters.  In the halo of the
+Milky Way, the most metal-poor stars have a metallicity floor of [Z/H]
+= ???  \citep{ref}, and in dwarf spheroidal (dSph) galaxies this floor
+is a factor of 10 higher \citep{refs}.
 
 The transition from Pop III to Pop II star formation is solely
 dependent on the propagation of metals from the SNe remnants into
@@ -91,15 +92,15 @@ halo mergers, and nearby stellar feedback.  In minihalos ($M_{\rm h}
 \sim 10^6~\Ms$), radiation from the massive Pop III drives a 30
 \kms~shock, which is 10 times greater than the escape velocity of the
 halo, and leaves behind a warm ($3 \times 10^4$ K) and diffuse (0.5
-\cubecm) medium \citep{refs}.  The latter feature aids in the
-expansion of the blastwave because it delays the transition to the
-Sedov-Taylor and snowplow phases.  In PISNe, approximately half of the
-metals stay in the IGM with an metal bubble size of a few kpc.  The
-remaining metals fall back into the host halo.  The blastwave may
-induce star formation in nearby halos through the compression of the
-gas \citep{refs}; however timescales for metal mixing into the dense
-gas are many dynamical times \citep{refs} for shock velocities $\lsim
-100~\kms$.
+\cubecm) medium \citep{Kitayama04, Whalen04, Abel07}.  The latter
+feature aids in the expansion of the blastwave because it delays the
+transition to the Sedov-Taylor and snowplow phases.  In PISNe,
+approximately half of the metals stay in the IGM with an metal bubble
+size of a few kpc.  The remaining metals fall back into the host halo.
+The blastwave may induce star formation in nearby halos through the
+compression of the gas \citep{Ferrara98}; however timescales for metal
+mixing into the dense gas are many dynamical times \citep{Cen07} for
+shock velocities $\lsim 100~\kms$.
 
 Numerical simulations are useful to detangle and study these
 complexities and the transition from Pop III to II stars.  In this
@@ -129,7 +130,7 @@ model stellar radiation and SNe feedback.
 
 We use the adaptive mesh refinement (AMR) code
 \enzo~\citep{BryanNorman97, OShea2004} that employs our implementation
-of adaptive ray tracing for radiation transport \citep{Wise11}.  To
+of adaptive ray tracing for radiation transport \citep{Wise10}.  To
 resolve minihalos with at least 100 dark matter (DM) particles and
 follow the formation of the first generation of dwarf galaxies, we use
 a simulation box of 1 Mpc that has a resolution of $256^3$.  This
@@ -150,8 +151,8 @@ differ only in that one considers primordial cooling, and the other
 considers additional cooling in metal-enriched gas.  For primordial
 cooling, we use a non-equilbrium chemistry solver with 9 species of
 hydrogen, helium, and molecular hydrogen.  For metal cooling, we use a
-cooling curve that is calculated from CLOUDY \citep{ref} and using the
-method of \citet{2008MNRAS.385.1443S}.  It is tabulated based on
+cooling curve that is calculated from CLOUDY \citep{CLOUDY} and using
+the method of \citet{2008MNRAS.385.1443S}.  It is tabulated based on
 density, temperature, electron fraction, and metallicity.
 
 \subsection{Star formation}

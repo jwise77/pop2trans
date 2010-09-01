@@ -1,8 +1,62 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{15}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{ABN02}
+{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2002, Science, 295, 93
+
+\bibitem[{{Abel} {et~al.}(2007){Abel}, {Wise}, \& {Bryan}}]{Abel07}
+{Abel}, T., {Wise}, J.~H., \& {Bryan}, G.~L. 2007, \apjl, 659, L87
+
+\bibitem[{{Bromm} {et~al.}(2001){Bromm}, {Ferrara}, {Coppi}, \&
+  {Larson}}]{Bromm01}
+{Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
+  328, 969
+
+\bibitem[{{Bryan} \& {Norman}(1997)}]{BryanNorman1997}
+{Bryan}, G.~L., \& {Norman}, M.~L. 1997, ArXiv Astrophysics e-prints
+
+\bibitem[{{Heger} \& {Woosley}(2002)}]{2002ApJ...567..532H}
+{Heger}, A., \& {Woosley}, S.~E. 2002, \apj, 567, 532
+
+\bibitem[{{Kitayama} {et~al.}(2004){Kitayama}, {Yoshida}, {Susa}, \&
+  {Umemura}}]{Kitayama04}
+{Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
+  631
+
+\bibitem[{{O'Shea} {et~al.}(2004){O'Shea}, {Bryan}, {Bordner}, {Norman},
+  {Abel}, {Harkness}, \& {Kritsuk}}]{OShea2004}
+{O'Shea}, B.~W., {Bryan}, G., {Bordner}, J., {Norman}, M.~L., {Abel}, T.,
+  {Harkness}, R., \& {Kritsuk}, A. 2004, ArXiv Astrophysics e-prints
+
+\bibitem[{{O'Shea} \& {Norman}(2007)}]{OShea07a}
+{O'Shea}, B.~W., \& {Norman}, M.~L. 2007, \apj, 654, 66
+
+\bibitem[{{Smith} {et~al.}(2008){Smith}, {Sigurdsson}, \&
+  {Abel}}]{2008MNRAS.385.1443S}
+{Smith}, B., {Sigurdsson}, S., \& {Abel}, T. 2008, \mnras, 385, 1443
+
+\bibitem[{{Smith} {et~al.}(2009){Smith}, {Turk}, {Sigurdsson}, {O'Shea}, \&
+  {Norman}}]{2009ApJ...691..441S}
+{Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
+  M.~L. 2009, \apj, 691, 441
 
 \bibitem[{{Turk}(2008)}]{yt}
 {Turk}, M.~J. 2008, in Proceedings of the 7th Python in Science Conference, ed.
   G.~Varoquaux, T.~Vaught, \& J.~Millman, Pasadena, CA USA, 46 -- 50
+
+\bibitem[{{Turk} {et~al.}(2009){Turk}, {Abel}, \&
+  {O'Shea}}]{2009Sci...325..601T}
+{Turk}, M.~J., {Abel}, T., \& {O'Shea}, B. 2009, Science, 325, 601
+
+\bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
+{Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14
+
+\bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
+{Wise}, J.~H., \& {Abel}, T. 2008, \apj, 685, 40
+
+\bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
+  {Sugiyama}}]{Yoshida03}
+{Yoshida}, N., {Abel}, T., {Hernquist}, L., \& {Sugiyama}, N. 2003, \apj, 592,
+  645
 
 \end{thebibliography}
