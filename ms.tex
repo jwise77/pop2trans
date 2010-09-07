@@ -142,8 +142,8 @@ DM overdensity of $3 \times 2^l$ and always resolve the local Jeans
 length by at least 4 cells.  The latter criterion avoids any artifical
 fragmentation during gaseous collapses \citep{Truelove97}.  We
 initialize the simulation with \textsl{grafic} \citep{Bertschinger01}
-at $z = ???$ and use the cosmological parameters from the 7-year WMAP
-data \citep{ref}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
+at $z = 130$ and use the cosmological parameters from the 7-year WMAP
+data \citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
 $\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$
 with the variables having their usual definitions.
 
@@ -176,7 +176,8 @@ $M_{\rm char}$ \citep{refs}.
 
 For Pop III stars, we use the same star formation model as
 \citet{Abel07} and \citet{Wise08_Gal} where each star particle
-represents a single star.  Instead of using a fixed stellar mass, we
+represents a single star.  The critical overdensity in which a star
+forms is $5 \times 10^5$.  Instead of using a fixed stellar mass, we
 randomly sampled from an IMF with a functional form of
 %
 \begin{equation}
@@ -196,7 +197,43 @@ III stars can be altered from enhanced star formation and feedback
 from nearby Pop II star clusters, as we will demonstrate in this
 Letter.
 
+We treat Pop II star formation with the same prescription as
+\citet{Wise09}, which is a modified version of the widely used
+\citet{Cen92} method but accounts for the fact that the molecular
+clouds are resolved.  The critical overdensity is the same as the Pop
+III star formation model.  In each star-forming region, a fraction
+$c_* = 0.07$ of the cold gas ($T < 10^3$ K) is removed from the grid
+and deposited into the star particle.  Each star particle lives for 20
+Myr, the lifetime of an OB star.  These stars generate the majority of
+the ionizing radiation and SNe feedback in stellar clusters, thus we
+ignore lower mass stars.  We discuss our treatment of stellar feedback
+next.  
+
 \subsection{Stellar feedback}
+
+The mass-dependent luminosities and lifetimes of the Pop III stars are
+taken from \citet{Schaerer02}.  The radiation field is evolved with
+with adaptive ray tracing \citep{Abel02, Wise10} and is coupled
+self-consistently to the hydrodynamics.  These stars die as
+pair-instability SNe (PISNe) if they are in the mass range 140--260
+\Ms \citep{Heger02}.  We use the explosion energy from
+\citeauthor{Heger02}, where we fit the following function to their
+models, $E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He} -
+64)]$, where $M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the
+helium core mass and $M_\star$ is the stellar mass.
+
+The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
+their lifetime, and we do not consider singly- and doubly-ionizing
+helium photons.  We note that low-metallicity stars generate up to a
+factor of four more ionizing photons than a solar metallicity
+population \citep{Schaerer03} and might be underestimating the
+radiative feedback.  Nonetheless this study provides an excellent
+first insight in the transition to Pop II star formation, as the metal
+enrichment is the key ingredient here.  For SN feedback, these stars
+generate $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$ of energy after
+living for 4 Myr, which is injected into spheres with a radius of 10
+pc.  If the resolution of the grid is less than 10/3 pc, we deposit
+the energy into a $3^3$ cube surrounding the star particle.
 
 \section{Results}
 \label{sec:results}
