@@ -1,19 +1,30 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{22}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
+\bibitem[{{Abel} {et~al.}(2000){Abel}, {Bryan}, \& {Norman}}]{Abel00}
+{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2000, \apj, 540, 39
+
 \bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{ABN02}
-{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2002, Science, 295, 93
+---. 2002, Science, 295, 93
 
 \bibitem[{{Abel} {et~al.}(2007){Abel}, {Wise}, \& {Bryan}}]{Abel07}
 {Abel}, T., {Wise}, J.~H., \& {Bryan}, G.~L. 2007, \apjl, 659, L87
+
+\bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
+{Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
 
 \bibitem[{{Bromm} {et~al.}(2001){Bromm}, {Ferrara}, {Coppi}, \&
   {Larson}}]{Bromm01}
 {Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
   328, 969
 
-\bibitem[{{Bryan} \& {Norman}(1997)}]{BryanNorman1997}
-{Bryan}, G.~L., \& {Norman}, M.~L. 1997, ArXiv Astrophysics e-prints
+\bibitem[{{Clark} {et~al.}(2009){Clark}, {Glover}, {Bonnell}, \&
+  {Klessen}}]{Clark09}
+{Clark}, P.~C., {Glover}, S.~C.~O., {Bonnell}, I.~A., \& {Klessen}, R.~S. 2009,
+  ArXiv e-prints
+
+\bibitem[{{Clark} {et~al.}(2008){Clark}, {Glover}, \& {Klessen}}]{clark08}
+{Clark}, P.~C., {Glover}, S.~C.~O., \& {Klessen}, R.~S. 2008, \apj, 672, 757
 
 \bibitem[{{Heger} \& {Woosley}(2002)}]{2002ApJ...567..532H}
 {Heger}, A., \& {Woosley}, S.~E. 2002, \apj, 567, 532
@@ -23,6 +34,14 @@
 {Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
   631
 
+\bibitem[{{Larson}(1998)}]{Larson98}
+{Larson}, R.~B. 1998, \mnras, 301, 569
+
+\bibitem[{{Omukai} {et~al.}(2005){Omukai}, {Tsuribe}, {Schneider}, \&
+  {Ferrara}}]{Omukai05}
+{Omukai}, K., {Tsuribe}, T., {Schneider}, R., \& {Ferrara}, A. 2005, \apj, 626,
+  627
+
 \bibitem[{{O'Shea} {et~al.}(2004){O'Shea}, {Bryan}, {Bordner}, {Norman},
   {Abel}, {Harkness}, \& {Kritsuk}}]{OShea2004}
 {O'Shea}, B.~W., {Bryan}, G., {Bordner}, J., {Norman}, M.~L., {Abel}, T.,
@@ -30,6 +49,11 @@
 
 \bibitem[{{O'Shea} \& {Norman}(2007)}]{OShea07a}
 {O'Shea}, B.~W., \& {Norman}, M.~L. 2007, \apj, 654, 66
+
+\bibitem[{{Schneider} {et~al.}(2006){Schneider}, {Omukai}, {Inoue}, \&
+  {Ferrara}}]{Schneider06_Frag}
+{Schneider}, R., {Omukai}, K., {Inoue}, A.~K., \& {Ferrara}, A. 2006, \mnras,
+  369, 1437
 
 \bibitem[{{Smith} {et~al.}(2008){Smith}, {Sigurdsson}, \&
   {Abel}}]{2008MNRAS.385.1443S}
@@ -39,6 +63,9 @@
   {Norman}}]{2009ApJ...691..441S}
 {Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
   M.~L. 2009, \apj, 691, 441
+
+\bibitem[{{Tumlinson}(2007)}]{Tumlinson07_IMF}
+{Tumlinson}, J. 2007, \apjl, 664, L63
 
 \bibitem[{{Turk}(2008)}]{yt}
 {Turk}, M.~J. 2008, in Proceedings of the 7th Python in Science Conference, ed.

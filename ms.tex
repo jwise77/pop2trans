@@ -63,26 +63,27 @@
 
 The first (Pop III) stars are metal-free and have a large
 characteristic mass and suppressed fragmentation in its protostellar
-collapse \citep{Abel00, ABN02, Bromm02, Yoshida03, OShea07a}.  A
+collapse \citep{Abel00, ABN02, Bromm02_P3, Yoshida03, OShea07a}.  A
 fraction of these stars enrich the surrounding intergalactic medium
 (IGM) when they go supernova, which can happen in stars $\lsim40~\Ms$
 in Type II supernovae (SNe) or in stars roughly between 140 \Ms~and
 260 \Ms~in pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}.
 The host halo and the neighboring halos are then enriched with this
 ejecta.  There exists a critical metallicity that is $\sim 10^{-6}
-Z_\odot$ if dust cooling is efficient \citep{refs} and $\sim 10^{-3.5}
-Z_\odot$ otherwise \citep{Bromm01, 2009ApJ...691..441S}, where the gas
-can cool rapidly, lowering its Jeans mass.  An intermediate
-characteristic mass of $\sim10~\Ms$ can be occur if the gas cooling is
-suppressed to the cosmic microwave background (CMB) temperature
-\citep{Larson, Tumlinson04, 2009ApJ...691..441S}.  The resulting
-Population II star cluster will thus have a lower characteristic
-stellar mass than its metal-free progenitors.  In the local universe,
-stars in the Milky Way halo and dwarf spheroidal (dSph) galaxies may
-be connected to these first stellar clusters.  In the halo of the
-Milky Way, the most metal-poor stars have a metallicity floor of [Z/H]
-= ???  \citep{ref}, and in dwarf spheroidal (dSph) galaxies this floor
-is a factor of 10 higher \citep{refs}.
+Z_\odot$ if dust cooling is efficient \citep{Omukai05,
+  Schneider06_Frag, clark08} and $\sim 10^{-3.5} Z_\odot$ otherwise
+\citep{Bromm01, 2009ApJ...691..441S}, where the gas can cool rapidly,
+lowering its Jeans mass.  An intermediate characteristic mass of
+$\sim10~\Ms$ can be occur if the gas cooling is suppressed to the
+cosmic microwave background (CMB) temperature \citep{Larson98,
+  Tumlinson07_IMF, 2009ApJ...691..441S}.  The resulting Population II
+star cluster will thus have a lower characteristic stellar mass than
+its metal-free progenitors.  In the local universe, stars in the Milky
+Way halo and dwarf spheroidal (dSph) galaxies may be connected to
+these first stellar clusters.  In the halo of the Milky Way, the most
+metal-poor stars have a metallicity floor of [Z/H] = ???  \citep{ref},
+and in dwarf spheroidal (dSph) galaxies this floor is a factor of 10
+higher \citep{refs}.
 
 The transition from Pop III to Pop II star formation is solely
 dependent on the propagation of metals from the SNe remnants into
@@ -182,13 +183,18 @@ randomly sampled from an IMF with a functional form of
 \label{eqn:imf}
 f(M)dM = M^{-1.3} \exp\left[-\left(\frac{M_{\rm char}}{M}\right)^{1.6}\right]
 \end{equation}
-%
 to determine the stellar mass.  Above $M_{\rm char}$, it behaves as a
 Salpeter IMF but is exponentially cutoff below that mass
 \citep{Chabrier03, Clark09}.  For reproducibility, we initialize both
 simulations with the same random seed and record the number of times
 the random number generator \citep[Mersenne twister;][]{ref} has been
-called for use when restarting the simulations.
+called for use when restarting the simulations.  Although the Pop III
+star formation history (SFH) is identical for a given $N$ stars, the
+Pop III SFH for a given halo can be different between the two
+simulations.  This happens because the order in which halos form Pop
+III stars can be altered from enhanced star formation and feedback
+from nearby Pop II star clusters, as we will demonstrate in this
+Letter.
 
 \subsection{Stellar feedback}
 
