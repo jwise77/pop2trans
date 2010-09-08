@@ -24,7 +24,7 @@
 \author{John H. Wise\altaffilmark{1,2}, 
   Michael L. Norman\altaffilmark{3},
   Tom Abel\altaffilmark{4},
-  Britton D. Smith \altaffilmark{5}}
+  Matthew J. Turk\altaffilmark{3}}
 
 \altaffiltext{1}{Department of Astrophysical Sciences, Princeton
   University, Peyton Hall, Ivy Lane, Princeton, NJ 08544}
@@ -33,7 +33,7 @@
   University of California at San Diego, La Jolla, CA 92093}
 \altaffiltext{4}{Kavli Institute for Particle Astrophysics and
   Cosmology, Stanford University, Menlo Park, CA 94025}
-\altaffiltext{5}{Michigan State University}
+%\altaffiltext{5}{Michigan State University}
 \email{jwise@astro.princeton.edu}
 
 \begin{abstract}
@@ -81,9 +81,10 @@ star cluster will thus have a lower characteristic stellar mass than
 its metal-free progenitors.  In the local universe, stars in the Milky
 Way halo and dwarf spheroidal (dSph) galaxies may be connected to
 these first stellar clusters.  In the halo of the Milky Way, the most
-metal-poor stars have a metallicity floor of [Z/H] = ???  \citep{ref},
-and in dwarf spheroidal (dSph) galaxies this floor is a factor of 10
-higher \citep{refs}.
+metal-poor stars have a metallicity floor of [Z/H] = -4
+\citep{Beers05}, and in dwarf spheroidal (dSph) galaxies this floor is
+a factor of 10 higher \citep{Tolstoy04, Helmi06}.  \textbf{Check for
+  more recent references.}
 
 The transition from Pop III to Pop II star formation is solely
 dependent on the propagation of metals from the SNe remnants into
@@ -110,15 +111,15 @@ formation, its radiative feedback, and its SNe feedback.  We utilize
 an initial mass function (IMF) for individual Pop III stars, based on
 the latest simulation results.  The methods used here incorporate and
 link together recent results from metal-enriched and metal-free star
-formation, the critical metallicity, pair-instability supernovae, and
-fine-structure metal line cooling.  Furthermore we spatially
-distinguish metal enrichment from Pop II and Pop III stars.  This is
-the first time that all of these processes have been interconnected in
-a simulation that resolves minihalos to study the transition to Pop II
-star formation self-consistently.  We describe our simulation setup
-and our adopted star formation models in \S \ref{sec:setup} and
-present our results in \S \ref{sec:results}.  We discuss the
-implications of our findings and conclude in the last section.
+formation, the critical metallicity, and pair-instability supernovae.
+Furthermore we spatially distinguish metal enrichment from Pop II and
+Pop III stars.  This is the first time that all of these processes
+have been interconnected in a simulation that resolves minihalos to
+study the transition to Pop II star formation self-consistently.  We
+describe our simulation setup and our adopted star formation models in
+\S \ref{sec:setup} and present our results in \S \ref{sec:results}.
+We discuss the implications of our findings and conclude in the last
+section.
 
 \section{Method}
 \label{sec:setup}
@@ -147,14 +148,20 @@ data \citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
 $\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$
 with the variables having their usual definitions.
 
-We peform two simulations with the same initial conditions.  They
-differ only in that one considers primordial cooling, and the other
-considers additional cooling in metal-enriched gas.  For primordial
-cooling, we use a non-equilbrium chemistry solver with 9 species of
-hydrogen, helium, and molecular hydrogen.  For metal cooling, we use a
-cooling curve that is calculated from CLOUDY \citep{CLOUDY} and using
-the method of \citet{2008MNRAS.385.1443S}.  It is tabulated based on
-density, temperature, electron fraction, and metallicity.
+We use a non-equilbrium chemistry solver with 9 species of hydrogen,
+helium, and molecular hydrogen \citep{Abel97}.  We will follow-up this
+study with one that considers radiative cooling from metal-enriched
+gas, using rates that are calculated from CLOUDY \citep{CLOUDY} and
+the method of \citet{2008MNRAS.385.1443S}.
+
+% We peform two simulations with the same initial conditions.  They
+% differ only in that one considers primordial cooling, and the other
+% considers additional cooling in metal-enriched gas.  For primordial
+% cooling, we use a non-equilbrium chemistry solver with 9 species of
+% hydrogen, helium, and molecular hydrogen.  For metal cooling, we use a
+% cooling curve that is calculated from CLOUDY \citep{CLOUDY} and using
+% the method of \citet{2008MNRAS.385.1443S}.  It is tabulated based on
+% density, temperature, electron fraction, and metallicity.
 
 \subsection{Star formation}
 
@@ -189,13 +196,16 @@ Salpeter IMF but is exponentially cutoff below that mass
 \citep{Chabrier03, Clark09}.  For reproducibility, we initialize both
 simulations with the same random seed and record the number of times
 the random number generator \citep[Mersenne twister;][]{ref} has been
-called for use when restarting the simulations.  Although the Pop III
-star formation history (SFH) is identical for a given $N$ stars, the
-Pop III SFH for a given halo can be different between the two
-simulations.  This happens because the order in which halos form Pop
-III stars can be altered from enhanced star formation and feedback
-from nearby Pop II star clusters, as we will demonstrate in this
-Letter.
+called for use when restarting the simulations.  
+
+%%% FOR THE COMPARISON BETWEEN RUNS WITH AND WITHOUT METAL COOLING %%%
+%
+% Although the Pop III star formation history (SFH) is identical for a
+% given $N$ stars, the Pop III SFH for a given halo can be different
+% between the two simulations.  This happens because the order in which
+% halos form Pop III stars can be altered from enhanced star formation
+% and feedback from nearby Pop II star clusters, as we will demonstrate
+% in this Letter.
 
 We treat Pop II star formation with the same prescription as
 \citet{Wise09}, which is a modified version of the widely used
@@ -204,10 +214,10 @@ clouds are resolved.  The critical overdensity is the same as the Pop
 III star formation model.  In each star-forming region, a fraction
 $c_* = 0.07$ of the cold gas ($T < 10^3$ K) is removed from the grid
 and deposited into the star particle.  Each star particle lives for 20
-Myr, the lifetime of an OB star.  These stars generate the majority of
-the ionizing radiation and SNe feedback in stellar clusters, thus we
-ignore lower mass stars.  We discuss our treatment of stellar feedback
-next.  
+Myr, the maximum lifetime of an OB star.  These stars generate the
+majority of the ionizing radiation and SNe feedback in stellar
+clusters, thus we ignore lower mass stars.  We discuss our treatment
+of stellar feedback next.
 
 \subsection{Stellar feedback}
 
@@ -237,6 +247,12 @@ the energy into a $3^3$ cube surrounding the star particle.
 
 \section{Results}
 \label{sec:results}
+
+\subsection{Metal enrichment history}
+
+\subsection{Population III star formation history}
+
+\subsection{Population II stellar populations}
 
 \section{Discussion and Summary}
 
