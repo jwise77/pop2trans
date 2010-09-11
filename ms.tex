@@ -16,10 +16,11 @@
 
 \begin{document}
 
-\shorttitle{POPULATION III STAR EPOCH}
+\shorttitle{THE BIRTH OF A GALAXY}
 \shortauthors{WISE ET AL.}
 
-\title{How Short Lived is the Population III Epoch?}
+\title{The Birth of a Galaxy: Self-consistent transition to Population
+  II Star Formation}
 
 \author{John H. Wise\altaffilmark{1,2}, 
   Michael L. Norman\altaffilmark{3},
@@ -101,7 +102,7 @@ approximately half of the metals stay in the IGM with an metal bubble
 size of a few kpc.  The remaining metals fall back into the host halo.
 The blastwave may induce star formation in nearby halos through the
 compression of the gas \citep{Ferrara98}; however timescales for metal
-mixing into the dense gas are many dynamical times \citep{Cen07} for
+mixing into the dense gas are many dynamical times \citep{Cen08} for
 shock velocities $\lsim 100~\kms$.
 
 Numerical simulations are useful to detangle and study these
@@ -131,22 +132,23 @@ model stellar radiation and SNe feedback.
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
-\enzo~\citep{BryanNorman97, OShea2004} that employs our implementation
-of adaptive ray tracing for radiation transport \citep{Wise10}.  To
-resolve minihalos with at least 100 dark matter (DM) particles and
-follow the formation of the first generation of dwarf galaxies, we use
-a simulation box of 1 Mpc that has a resolution of $256^3$.  This
-gives us a DM mass resolution of 1840 \Ms.  We refine the grid on
-baryon overdensities of $3 \times 2^{-0.2l}$, where $l$ is the AMR
-level, resulting in a super-Lagrangian behavior.  We also refine on a
-DM overdensity of $3 \times 2^l$ and always resolve the local Jeans
-length by at least 4 cells.  The latter criterion avoids any artifical
-fragmentation during gaseous collapses \citep{Truelove97}.  We
-initialize the simulation with \textsl{grafic} \citep{Bertschinger01}
-at $z = 130$ and use the cosmological parameters from the 7-year WMAP
-data \citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
-$\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$
-with the variables having their usual definitions.
+\enzo~\citep{BryanNorman1997, OShea2004} that employs our
+implementation of adaptive ray tracing for radiation transport
+\citep{Wise10}.  To resolve minihalos with at least 100 dark matter
+(DM) particles and follow the formation of the first generation of
+dwarf galaxies, we use a simulation box of 1 Mpc that has a resolution
+of $256^3$.  This gives us a DM mass resolution of 1840 \Ms.  We
+refine the grid on baryon overdensities of $3 \times 2^{-0.2l}$, where
+$l$ is the AMR level, resulting in a super-Lagrangian behavior.  We
+also refine on a DM overdensity of $3 \times 2^l$ and always resolve
+the local Jeans length by at least 4 cells.  The latter criterion
+avoids any artifical fragmentation during gaseous collapses
+\citep{Truelove97}.  We initialize the simulation with \textsl{grafic}
+\citep{Bertschinger01} at $z = 130$ and use the cosmological
+parameters from the 7-year WMAP data \citep{WMAP7}: $\Omega_M =
+0.266$, $\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h = 0.71$,
+$\sigma_8 = 0.81$, and $n = 0.963$ with the variables having their
+usual definitions.
 
 We use a non-equilbrium chemistry solver with 9 species of hydrogen,
 helium, and molecular hydrogen \citep{Abel97}.  We will follow-up this
@@ -176,10 +178,12 @@ $M_{\rm char} \sim 100~\Ms$.  They form in molecular clouds that
 coexist with the dark matter halo center with limited fragmentation
 occurring during their collapse; however \citet{2009Sci...325..601T}
 has recently shown that Pop III binaries may form in a fraction of
-such halos.  Furthermore, detailed one-dimensional calculations have
-shown that their IMF should follow a Kroupa-like IMF that has a
-Salpeter slope at the high-mass end and an exponential cut-off below
-$M_{\rm char}$ \citep{refs}.
+such halos.  
+
+% Furthermore, detailed one-dimensional calculations have shown that
+% their IMF should follow a Kroupa-like IMF that has a Salpeter slope
+% at the high-mass end and an exponential cut-off below $M_{\rm char}$
+% \citep{refs}.
 
 For Pop III stars, we use the same star formation model as
 \citet{Abel07} and \citet{Wise08_Gal} where each star particle
@@ -195,8 +199,8 @@ to determine the stellar mass.  Above $M_{\rm char}$, it behaves as a
 Salpeter IMF but is exponentially cutoff below that mass
 \citep{Chabrier03, Clark09}.  For reproducibility, we initialize both
 simulations with the same random seed and record the number of times
-the random number generator \citep[Mersenne twister;][]{ref} has been
-called for use when restarting the simulations.  
+the random number generator \citep[Mersenne twister;][]{MTwister} has
+been called for use when restarting the simulations.
 
 %%% FOR THE COMPARISON BETWEEN RUNS WITH AND WITHOUT METAL COOLING %%%
 %
@@ -223,14 +227,14 @@ of stellar feedback next.
 
 The mass-dependent luminosities and lifetimes of the Pop III stars are
 taken from \citet{Schaerer02}.  The radiation field is evolved with
-with adaptive ray tracing \citep{Abel02, Wise10} and is coupled
+with adaptive ray tracing \citep{Abel02_RT, Wise10} and is coupled
 self-consistently to the hydrodynamics.  These stars die as
 pair-instability SNe (PISNe) if they are in the mass range 140--260
-\Ms \citep{Heger02}.  We use the explosion energy from
-\citeauthor{Heger02}, where we fit the following function to their
-models, $E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He} -
-64)]$, where $M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the
-helium core mass and $M_\star$ is the stellar mass.
+\Ms \citep{Heger03}.  We use the explosion energy from
+\citet{Heger02}, where we fit the following function to their models,
+$E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He} - 64)]$, where
+$M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium core
+mass and $M_\star$ is the stellar mass.
 
 The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
 their lifetime, and we do not consider singly- and doubly-ionizing
@@ -248,18 +252,42 @@ the energy into a $3^3$ cube surrounding the star particle.
 \section{Results}
 \label{sec:results}
 
+Here we present the gaseous and stellar evolution of two selected
+halos in the simulation, starting with the birth of the first Pop III
+star in its merger history.  We then compare the nature of star
+formation in these two halos.
+
 \subsection{Halo evolution}
+
+\li Describe the evolution of the baryon fraction and metallicity from
+PISN and Type II SNe metals in the two halos.
 
 \subsection{Population III star formation history}
 
+\li Report on the Pop III stars forming in halo progenitors
+
 \subsection{Population II stellar populations}
+
+\li Present results on the star formation history and the physical
+reasons for the features seen in the SFH and metallicities.
+
+\li Present the stellar metallicity distribution at the final time
+
+\subsection{Environments for starbursts and quiescent star formation}
+
+\li Present the environment for bursting and quiescent star formation
+history
 
 \section{Discussion and Summary}
 
 \acknowledgments
 
-J.H.W. is supported by the Hubble Fellowship etc.  The majority of the
-analysis and plots were done with \texttt{yt} \citep{yt}.
+Support for this work was provided by NASA through Hubble Fellowship
+grant \#120-6370 awarded by the Space Telescope Science Institute,
+which is operated by the Association of Universities for Research in
+Astronomy, Inc., for NASA, under contract NAS 5-26555.  Computational
+resources were provided by NASA/NCCS award SMD-09-1439.  The majority
+of the analysis and plots were done with \texttt{yt} \citep{yt}.
 
 %\clearpage
 %\input biblio.tex

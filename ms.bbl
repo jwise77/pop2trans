@@ -1,5 +1,10 @@
-\begin{thebibliography}{22}
+\begin{thebibliography}{43}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
+  {Norman}}]{Abel97}
+{Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, New Astronomy,
+  2, 181
 
 \bibitem[{{Abel} {et~al.}(2000){Abel}, {Bryan}, \& {Norman}}]{Abel00}
 {Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2000, \apj, 540, 39
@@ -7,8 +12,17 @@
 \bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{ABN02}
 ---. 2002, Science, 295, 93
 
+\bibitem[{{Abel} \& {Wandelt}(2002)}]{Abel02_RT}
+{Abel}, T., \& {Wandelt}, B.~D. 2002, \mnras, 330, L53
+
 \bibitem[{{Abel} {et~al.}(2007){Abel}, {Wise}, \& {Bryan}}]{Abel07}
 {Abel}, T., {Wise}, J.~H., \& {Bryan}, G.~L. 2007, \apjl, 659, L87
+
+\bibitem[{{Beers} \& {Christlieb}(2005)}]{Beers05}
+{Beers}, T.~C., \& {Christlieb}, N. 2005, \araa, 43, 531
+
+\bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
+{Bertschinger}, E. 2001, \apjs, 137, 1
 
 \bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
 {Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
@@ -18,6 +32,18 @@
 {Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
   328, 969
 
+\bibitem[{{Bryan} \& {Norman}(1997)}]{BryanNorman1997}
+{Bryan}, G.~L., \& {Norman}, M.~L. 1997, ArXiv Astrophysics e-prints
+
+\bibitem[{{Cen} \& {Ostriker}(1992)}]{Cen92}
+{Cen}, R., \& {Ostriker}, J.~P. 1992, \apjl, 399, L113
+
+\bibitem[{{Cen} \& {Riquelme}(2008)}]{Cen08}
+{Cen}, R., \& {Riquelme}, M.~A. 2008, \apj, 674, 644
+
+\bibitem[{{Chabrier}(2003)}]{Chabrier03}
+{Chabrier}, G. 2003, \pasp, 115, 763
+
 \bibitem[{{Clark} {et~al.}(2009){Clark}, {Glover}, {Bonnell}, \&
   {Klessen}}]{Clark09}
 {Clark}, P.~C., {Glover}, S.~C.~O., {Bonnell}, I.~A., \& {Klessen}, R.~S. 2009,
@@ -26,16 +52,53 @@
 \bibitem[{{Clark} {et~al.}(2008){Clark}, {Glover}, \& {Klessen}}]{clark08}
 {Clark}, P.~C., {Glover}, S.~C.~O., \& {Klessen}, R.~S. 2008, \apj, 672, 757
 
-\bibitem[{{Heger} \& {Woosley}(2002)}]{2002ApJ...567..532H}
-{Heger}, A., \& {Woosley}, S.~E. 2002, \apj, 567, 532
+\bibitem[{{Ferland} {et~al.}(1998){Ferland}, {Korista}, {Verner}, {Ferguson},
+  {Kingdon}, \& {Verner}}]{CLOUDY}
+{Ferland}, G.~J., {Korista}, K.~T., {Verner}, D.~A., {Ferguson}, J.~W.,
+  {Kingdon}, J.~B., \& {Verner}, E.~M. 1998, \pasp, 110, 761
+
+\bibitem[{{Ferrara}(1998)}]{Ferrara98}
+{Ferrara}, A. 1998, \apjl, 499, L17+
+
+\bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
+  {Hartmann}}]{Heger03}
+{Heger}, A., {Fryer}, C.~L., {Woosley}, S.~E., {Langer}, N., \& {Hartmann},
+  D.~H. 2003, \apj, 591, 288
+
+\bibitem[{{Heger} \& {Woosley}(2002{\natexlab{a}})}]{2002ApJ...567..532H}
+{Heger}, A., \& {Woosley}, S.~E. 2002{\natexlab{a}}, \apj, 567, 532
+
+\bibitem[{{Heger} \& {Woosley}(2002{\natexlab{b}})}]{Heger02}
+---. 2002{\natexlab{b}}, \apj, 567, 532
+
+\bibitem[{{Helmi} {et~al.}(2006){Helmi}, {Irwin}, {Tolstoy}, {Battaglia},
+  {Hill}, {Jablonka}, {Venn}, {Shetrone}, {Letarte}, {Arimoto}, {Abel},
+  {Francois}, {Kaufer}, {Primas}, {Sadakane}, \& {Szeifert}}]{Helmi06}
+{Helmi}, A., {Irwin}, M.~J., {Tolstoy}, E., {Battaglia}, G., {Hill}, V.,
+  {Jablonka}, P., {Venn}, K., {Shetrone}, M., {Letarte}, B., {Arimoto}, N.,
+  {Abel}, T., {Francois}, P., {Kaufer}, A., {Primas}, F., {Sadakane}, K., \&
+  {Szeifert}, T. 2006, \apjl, 651, L121
 
 \bibitem[{{Kitayama} {et~al.}(2004){Kitayama}, {Yoshida}, {Susa}, \&
   {Umemura}}]{Kitayama04}
 {Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
   631
 
+\bibitem[{{Komatsu} {et~al.}(2010){Komatsu}, {Smith}, {Dunkley}, {Bennett},
+  {Gold}, {Hinshaw}, {Jarosik}, {Larson}, {Nolta}, {Page}, {Spergel},
+  {Halpern}, {Hill}, {Kogut}, {Limon}, {Meyer}, {Odegard}, {Tucker}, {Weiland},
+  {Wollack}, \& {Wright}}]{WMAP7}
+{Komatsu}, E., {Smith}, K.~M., {Dunkley}, J., {Bennett}, C.~L., {Gold}, B.,
+  {Hinshaw}, G., {Jarosik}, N., {Larson}, D., {Nolta}, M.~R., {Page}, L.,
+  {Spergel}, D.~N., {Halpern}, M., {Hill}, R.~S., {Kogut}, A., {Limon}, M.,
+  {Meyer}, S.~S., {Odegard}, N., {Tucker}, G.~S., {Weiland}, J.~L., {Wollack},
+  E., \& {Wright}, E.~L. 2010, ArXiv e-prints
+
 \bibitem[{{Larson}(1998)}]{Larson98}
 {Larson}, R.~B. 1998, \mnras, 301, 569
+
+\bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
+Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
 \bibitem[{{Omukai} {et~al.}(2005){Omukai}, {Tsuribe}, {Schneider}, \&
   {Ferrara}}]{Omukai05}
@@ -50,6 +113,12 @@
 \bibitem[{{O'Shea} \& {Norman}(2007)}]{OShea07a}
 {O'Shea}, B.~W., \& {Norman}, M.~L. 2007, \apj, 654, 66
 
+\bibitem[{{Schaerer}(2002)}]{Schaerer02}
+{Schaerer}, D. 2002, \aap, 382, 28
+
+\bibitem[{{Schaerer}(2003)}]{Schaerer03}
+---. 2003, \aap, 397, 527
+
 \bibitem[{{Schneider} {et~al.}(2006){Schneider}, {Omukai}, {Inoue}, \&
   {Ferrara}}]{Schneider06_Frag}
 {Schneider}, R., {Omukai}, K., {Inoue}, A.~K., \& {Ferrara}, A. 2006, \mnras,
@@ -63,6 +132,20 @@
   {Norman}}]{2009ApJ...691..441S}
 {Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
   M.~L. 2009, \apj, 691, 441
+
+\bibitem[{{Tolstoy} {et~al.}(2004){Tolstoy}, {Irwin}, {Helmi}, {Battaglia},
+  {Jablonka}, {Hill}, {Venn}, {Shetrone}, {Letarte}, {Cole}, {Primas},
+  {Francois}, {Arimoto}, {Sadakane}, {Kaufer}, {Szeifert}, \&
+  {Abel}}]{Tolstoy04}
+{Tolstoy}, E., {Irwin}, M.~J., {Helmi}, A., {Battaglia}, G., {Jablonka}, P.,
+  {Hill}, V., {Venn}, K.~A., {Shetrone}, M.~D., {Letarte}, B., {Cole}, A.~A.,
+  {Primas}, F., {Francois}, P., {Arimoto}, N., {Sadakane}, K., {Kaufer}, A.,
+  {Szeifert}, T., \& {Abel}, T. 2004, \apjl, 617, L119
+
+\bibitem[{{Truelove} {et~al.}(1997){Truelove}, {Klein}, {McKee}, {Holliman},
+  {Howell}, \& {Greenough}}]{Truelove97}
+{Truelove}, J.~K., {Klein}, R.~I., {McKee}, C.~F., {Holliman}, II, J.~H.,
+  {Howell}, L.~H., \& {Greenough}, J.~A. 1997, \apjl, 489, L179+
 
 \bibitem[{{Tumlinson}(2007)}]{Tumlinson07_IMF}
 {Tumlinson}, J. 2007, \apjl, 664, L63
@@ -80,6 +163,13 @@
 
 \bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
 {Wise}, J.~H., \& {Abel}, T. 2008, \apj, 685, 40
+
+\bibitem[{{Wise} {et~al.}(2010){Wise}, {Abel}, {Kim}, \& {Wang}}]{Wise10}
+{Wise}, J.~H., {Abel}, T., {Kim}, J.~H., \& {Wang}, P. 2010, \apjs, In
+  preparation
+
+\bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
+{Wise}, J.~H., \& {Cen}, R. 2009, \apj, 693, 984
 
 \bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
   {Sugiyama}}]{Yoshida03}
