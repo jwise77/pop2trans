@@ -1,4 +1,4 @@
-\begin{thebibliography}{43}
+\begin{thebibliography}{45}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -59,6 +59,12 @@
 
 \bibitem[{{Ferrara}(1998)}]{Ferrara98}
 {Ferrara}, A. 1998, \apjl, 499, L17+
+
+\bibitem[{{Gnedin}(2000)}]{gnedin00}
+{Gnedin}, N.~Y. 2000, \apj, 542, 535
+
+\bibitem[{{Gnedin} \& {Hui}(1998)}]{gnedin98}
+{Gnedin}, N.~Y., \& {Hui}, L. 1998, \mnras, 296, 44
 
 \bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
   {Hartmann}}]{Heger03}
@@ -150,13 +156,14 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 \bibitem[{{Tumlinson}(2007)}]{Tumlinson07_IMF}
 {Tumlinson}, J. 2007, \apjl, 664, L63
 
-\bibitem[{{Turk}(2008)}]{yt}
-{Turk}, M.~J. 2008, in Proceedings of the 7th Python in Science Conference, ed.
-  G.~Varoquaux, T.~Vaught, \& J.~Millman, Pasadena, CA USA, 46 -- 50
-
 \bibitem[{{Turk} {et~al.}(2009){Turk}, {Abel}, \&
   {O'Shea}}]{2009Sci...325..601T}
 {Turk}, M.~J., {Abel}, T., \& {O'Shea}, B. 2009, Science, 325, 601
+
+\bibitem[{{Turk} {et~al.}(2010){Turk}, {Smith}, {Oishi}, {Skory}, {Skillman},
+  {Abel}, \& {Norman}}]{yt_full_paper}
+{Turk}, M.~J., {Smith}, B.~D.~S., {Oishi}, J.~S., {Skory}, S., {Skillman},
+  S.~W., {Abel}, T., \& {Norman}, M.~L. 2010, \apjs, submitted (October, 2010)
 
 \bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
 {Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14

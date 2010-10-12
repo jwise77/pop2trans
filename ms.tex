@@ -228,13 +228,14 @@ of stellar feedback next.
 The mass-dependent luminosities and lifetimes of the Pop III stars are
 taken from \citet{Schaerer02}.  The radiation field is evolved with
 with adaptive ray tracing \citep{Abel02_RT, Wise10} and is coupled
-self-consistently to the hydrodynamics.  These stars die as
-pair-instability SNe (PISNe) if they are in the mass range 140--260
-\Ms \citep{Heger03}.  We use the explosion energy from
-\citet{Heger02}, where we fit the following function to their models,
-$E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He} - 64)]$, where
-$M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium core
-mass and $M_\star$ is the stellar mass.
+self-consistently to the hydrodynamics.  We model the \hh~dissociating
+radiation with an optically-thin, inverse square profile, centered on
+all stars.  These stars die as pair-instability SNe (PISNe) if they
+are in the mass range 140--260 \Ms \citep{Heger03}.  We use the
+explosion energy from \citet{Heger02}, where we fit the following
+function to their models, $E_{\rm PISN} = 10^{51} \times [5.0 + 1.304
+(M_{\rm He} - 64)]$, where $M_{\rm He} = (13/24) \times (M_\star - 20)
+\Ms$ is the helium core mass and $M_\star$ is the stellar mass.
 
 The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
 their lifetime, and we do not consider singly- and doubly-ionizing
@@ -252,54 +253,148 @@ the energy into a $3^3$ cube surrounding the star particle.
 \section{Results}
 \label{sec:results}
 
-Here we present the gaseous and stellar evolution of three selected
-halos in the simulation: (1) a halo that never recovers a gas
-reservior after a PISN, (2) one that experiences a series of major
-mergers, and (3) one that has an early mass buildup but no major
-mergers after $z=12$.  The halos are referred to by these numbers.  We
-start with the birth of the first Pop III star in its merger history.
-We then compare the nature of star formation in these halos.
+\begin{figure*}
+  \plotone{f3}
+  \caption{\label{fig:projections} Density-weighted projections of gas
+    density (top), temperature (middle), and metallicity (bottom).
+    The left column shows the entire simulation volume, where the
+    center and right columns focus on the intense and quiet halos,
+    respectively.  The metallicity projections are a composite picture
+    of metals originating from Pop III (red) and Pop II (blue) stars.}
+\end{figure*}
 
-\li Should we present the gas-poor halo?
+Here we present the gaseous and stellar evolution of two selected
+halos in the simulation: one that has an early mass buildup but no
+major mergers after $z=12$, and one that experiences a series of major
+mergers between $z=10$ and $z=7$.  We name the halos ``quiet'' and
+``intense'', respectively.  We start with the birth of the first Pop
+III star in its merger history.  We then compare the nature of star
+formation in these halos.
+
+We illustrate the state of the simulation at $z=7$ in Figure
+\ref{fig:projections} with density weighted projections of gas
+density, temperature, and metallicity, showing the entire box and
+focusing on the two halos of interest.  The quiet and intense halos
+are located in the bottom center and bottom right of the full box,
+respectively.
 
 \subsection{Halo evolution}
 
 \begin{figure}
   \epsscale{1.15}
   \plotone{f1}
-  \caption{\label{fig:evo}}
+  \caption{\label{fig:evo} Evolution of the total halo mass (top),
+    stellar mass (middle), and gas fraction (bottom) of the quiet
+    (dashed) and intense (solid) halos.}
   \epsscale{1}
 \end{figure}
 
 \begin{figure}
   \epsscale{1.15}
   \plotone{f2}
-  \caption{\label{fig:Zevo}}
+  \caption{\label{fig:Zevo} Average stellar metallicities and gas
+    metallicities enriched by Pop II and Pop III SNe of the
+    intense (top) and quiet (bottom) halos.}
   \epsscale{1}
 \end{figure}
 
-\begin{figure*}
-  \plotone{f3}
-  \caption{\label{fig:projections}}
-\end{figure*}
+%\li Describe the evolution of the baryon fraction and metallicity from
+%PISN and Type II SNe metals in the two halos.
 
-\li Describe the evolution of the baryon fraction and metallicity from
-PISN and Type II SNe metals in the two halos.
+Figure \ref{fig:evo} shows the total, metal-enriched stellar, and gas
+mass history of the most massive progenitors of both halos.  The quiet
+halo undergoes a series of major mergers at $z > 12$, growing by a
+factor of 30 to $2.5 \times 10^7 \Ms$ within 150 Myr.  Afterwards it
+only grows by a factor of 3 by $z=7$ mainly through smooth accretion
+from the filaments and IGM.  It is the most massive halo in the
+simulation between redshifts 13 and 10.  At the same time, the intense
+halo has a relatively small mass $M = 10^7 \Ms$, but it is contained
+in a biased region on a comoving scale of 50 kpc with $\sim30$ halos
+with $M > 10^6 \Ms$.  After $z=10$, these halos hierarchically merge
+to form a $10^9 \Ms$ halo at $z=7$ with two major mergers at redshifts
+10 and 7.9, seen in the rapid increases in total mass in Figure
+\ref{fig:evo}.  The merger history of the two halos are not atypical
+as dark matter halos can experience both quiescent and vigorous mass
+accretion rates in their buildup.
 
-\li Need to run the halo analysis on smaller halos to capture the
-entire merger histories.
+Both halos star forming Pop II stars when $M = 10^7 \Ms$.  This is
+consistent with the filtering mass $M_f$ of high-redshift halos when
+it accretes mainly from a pre-heated IGM \citep{gnedin98, gnedin00,
+  Wise08_Gal}.  The quiet halo forms $10^5 \Ms$ of stars by $z=9$.
+This initial starburst photo-evaporates the majority of its molecular
+clouds, in addition to heating and ionizing the surrounding IGM out to
+a radius of 10--15 kpc at $z=9$.  These respectively reduce the
+in-situ and external cold gas supply that could feed future star
+formation.
+
+The gas fractions of both halos are depleted from 0.15 to 0.08 by
+outflowing shocks driven by ionization fronts in their initial
+starbursts.  The quiet halo never recovers to the cosmic fraction
+$\Omega_b/\Omega_M$ for the following reason.  The lack of major
+mergers of halos above the filtering mass leads to a small gas
+fraction, cold gas reservoir, and stellar mass at later times.  This
+plays a large role in gas accretion because halos with $M < M_f$ will
+be likely photo-evaporated, hosting diffuse warm gas reservoirs
+instead of cold dense cores.  During this quienscent period, the halo
+mainly accretes warm diffuse gas from the filaments and IGM.  In
+contrast, the intense halo grows from major mergers of halos with $M >
+M_f$.  The progenitor halos involved in the major mergers are able to
+host molecular clouds and have, in general, higher gas fractions.
+Between $z=10$ and $z=8$, the gas fraction increases from 0.07 to 0.12
+until it rapidly jumps to 0.14 when a gas-rich major merger occurs.
+The stellar mass accordingly increases with the ample supply of cold
+gas during this period.  The gas fraction then decreases slightly by
+0.01 when galactic outflows are generated from the starburst
+associated with this major merger.
+
+The evolution of the stellar and gas metallicity of both halos are
+illustrated in Figure \ref{fig:Zevo}.  PISNe from Pop III stars enrich
+the nearby IGM out to a radius of 10 kpc and provides a metallicity
+floor of $[Z_3/H] \sim -3$ in both halos, given $M_{\rm char} = 100
+\Ms$.  The metallicity from Pop II SNe initially enrich the ISM of
+both halos to an average $[\bar{Z}_2/H]$ between --3.5 and --3.  The
+quiet halo is enriched to $[\bar{Z}_2/H] \sim -2.5$ until the
+metal-poor inflows balance the metal-rich galactic outflows, which are
+directed in the polar directions of the gas disk.  This is apparent in
+the metallicity projections in Figure \ref{fig:projections}.  The
+average stellar metallicities is equal or slightly higher up to 0.5
+dex than $[\bar{Z}_2/H]$.
+
+At $z \sim 8$, the metallicity of the intense halo dramatically
+self-enriches itself by a factor of 30 to $[\bar{Z}_2/H] = 1.5$ during
+a starburst.  Because this halo is located in a large-scale
+overdensity, the ejecta falls back into the halo after reaching
+distances up to 20 comoving kpc, in turn keeping the halo gas
+metallicity high because the inflows are relatively metal-rich
+themselves.  Interestingly the first few Pop II star clusters have
+[Z/H] between --1 and --2 and dominate the average stellar metallicity
+at $z > 8$.  We further detail the formation of these clusters in
+\S\ref{sec:pop}.  After the $z=8$ starburst, the average stellar
+metallicity follows the average gas metallicity within 0.1 dex.
 
 \subsection{Population III star formation history}
 
 \li Report on the Pop III stars forming in halo progenitors
 
+The most massive progenitor of the quiet halo interestingly never
+hosts a Pop III star.  Instead a nearby halo forms a Pop III star,
+which (randomly) produces a PISNe at $z=16$.  The associated blastwave
+overruns the most massive progenitor, and the dense core survives this
+event and is enriched by this PISN.
+
 \subsection{Population II stellar populations}
+\label{sec:pop}
 
 \begin{figure*}
-  \epsscale{1.15}
   \plottwo{f4a}{f4b}
-  \caption{\label{fig:pops}}
-  \epsscale{1}
+  \caption{\label{fig:pops} The scatter plots show the star formation
+    history of the intense (left) and quiet (right) halos as a
+    function of metallicity at $z=7$.  Each circle represents a star
+    cluster, whose area is proportional to its mass.  The open circles
+    in the upper right represent sizes of $10^3$, $10^4$, and $10^5$
+    \Ms~star clusters.  The upper histogram collects the star formation
+    history into 25 equal temporal bins.  The right histogram depicts
+    the stellar metallicity distribution.}
 \end{figure*}
 
 \li Present results on the star formation history and the physical
@@ -321,7 +416,8 @@ grant \#120-6370 awarded by the Space Telescope Science Institute,
 which is operated by the Association of Universities for Research in
 Astronomy, Inc., for NASA, under contract NAS 5-26555.  Computational
 resources were provided by NASA/NCCS award SMD-09-1439.  The majority
-of the analysis and plots were done with \texttt{yt} \citep{yt}.
+of the analysis and plots were done with \texttt{yt}
+\citep{yt_full_paper}.
 
 %\clearpage
 %\input biblio.tex
