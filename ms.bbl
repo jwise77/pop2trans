@@ -1,4 +1,4 @@
-\begin{thebibliography}{45}
+\begin{thebibliography}{52}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -17,6 +17,11 @@
 
 \bibitem[{{Abel} {et~al.}(2007){Abel}, {Wise}, \& {Bryan}}]{Abel07}
 {Abel}, T., {Wise}, J.~H., \& {Bryan}, G.~L. 2007, \apjl, 659, L87
+
+\bibitem[{{Battaglia} {et~al.}(2010){Battaglia}, {Tolstoy}, {Helmi}, {Irwin},
+  {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia10}
+{Battaglia}, G., {Tolstoy}, E., {Helmi}, A., {Irwin}, M., {Parisi}, P., {Hill},
+  V., \& {Jablonka}, P. 2010, ArXiv e-prints
 
 \bibitem[{{Beers} \& {Christlieb}(2005)}]{Beers05}
 {Beers}, T.~C., \& {Christlieb}, N. 2005, \araa, 43, 531
@@ -60,11 +65,20 @@
 \bibitem[{{Ferrara}(1998)}]{Ferrara98}
 {Ferrara}, A. 1998, \apjl, 499, L17+
 
+\bibitem[{{Frebel} \& {Bromm}(2010)}]{Frebel10}
+{Frebel}, A., \& {Bromm}, V. 2010, ArXiv e-prints
+
+\bibitem[{{Frebel} {et~al.}(2010){Frebel}, {Kirby}, \& {Simon}}]{Frebel10_Obs}
+{Frebel}, A., {Kirby}, E.~N., \& {Simon}, J.~D. 2010, \nat, 464, 72
+
 \bibitem[{{Gnedin}(2000)}]{gnedin00}
 {Gnedin}, N.~Y. 2000, \apj, 542, 535
 
 \bibitem[{{Gnedin} \& {Hui}(1998)}]{gnedin98}
 {Gnedin}, N.~Y., \& {Hui}, L. 1998, \mnras, 296, 44
+
+\bibitem[{{Gnedin} \& {Kravtsov}(2006)}]{Gnedin06}
+{Gnedin}, N.~Y., \& {Kravtsov}, A.~V. 2006, \apj, 645, 1054
 
 \bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
   {Hartmann}}]{Heger03}
@@ -139,6 +153,18 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 {Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
   M.~L. 2009, \apj, 691, 441
 
+\bibitem[{{Stacy} {et~al.}(2010){Stacy}, {Greif}, \& {Bromm}}]{Stacy10_Binary}
+{Stacy}, A., {Greif}, T.~H., \& {Bromm}, V. 2010, \mnras, 403, 45
+
+\bibitem[{{Tafelmeyer} {et~al.}(2010){Tafelmeyer}, {Jablonka}, {Hill},
+  {Shetrone}, {Tolstoy}, {Irwin}, {Battaglia}, {Helmi}, {Starkenburg}, {Venn},
+  {Abel}, {Francois}, {Kaufer}, {North}, {Primas}, \&
+  {Szeifert}}]{Tafelmeyer10}
+{Tafelmeyer}, M., {Jablonka}, P., {Hill}, V., {Shetrone}, M., {Tolstoy}, E.,
+  {Irwin}, M.~J., {Battaglia}, G., {Helmi}, A., {Starkenburg}, E., {Venn},
+  K.~A., {Abel}, T., {Francois}, P., {Kaufer}, A., {North}, P., {Primas}, F.,
+  \& {Szeifert}, T. 2010, ArXiv e-prints
+
 \bibitem[{{Tolstoy} {et~al.}(2004){Tolstoy}, {Irwin}, {Helmi}, {Battaglia},
   {Jablonka}, {Hill}, {Venn}, {Shetrone}, {Letarte}, {Cole}, {Primas},
   {Francois}, {Arimoto}, {Sadakane}, {Kaufer}, {Szeifert}, \&
@@ -147,6 +173,10 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
   {Hill}, V., {Venn}, K.~A., {Shetrone}, M.~D., {Letarte}, B., {Cole}, A.~A.,
   {Primas}, F., {Francois}, P., {Arimoto}, N., {Sadakane}, K., {Kaufer}, A.,
   {Szeifert}, T., \& {Abel}, T. 2004, \apjl, 617, L119
+
+\bibitem[{Toro {et~al.}(1994)Toro, Spruce, \& Speares}]{Toro94_HLLC}
+Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
+  10.1007/BF01414629
 
 \bibitem[{{Truelove} {et~al.}(1997){Truelove}, {Klein}, {McKee}, {Holliman},
   {Howell}, \& {Greenough}}]{Truelove97}
