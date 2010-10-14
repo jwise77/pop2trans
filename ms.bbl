@@ -57,11 +57,6 @@
 \bibitem[{{Clark} {et~al.}(2008){Clark}, {Glover}, \& {Klessen}}]{clark08}
 {Clark}, P.~C., {Glover}, S.~C.~O., \& {Klessen}, R.~S. 2008, \apj, 672, 757
 
-\bibitem[{{Ferland} {et~al.}(1998){Ferland}, {Korista}, {Verner}, {Ferguson},
-  {Kingdon}, \& {Verner}}]{CLOUDY}
-{Ferland}, G.~J., {Korista}, K.~T., {Verner}, D.~A., {Ferguson}, J.~W.,
-  {Kingdon}, J.~B., \& {Verner}, E.~M. 1998, \pasp, 110, 761
-
 \bibitem[{{Ferrara}(1998)}]{Ferrara98}
 {Ferrara}, A. 1998, \apjl, 499, L17+
 
@@ -79,6 +74,11 @@
 
 \bibitem[{{Gnedin} \& {Kravtsov}(2006)}]{Gnedin06}
 {Gnedin}, N.~Y., \& {Kravtsov}, A.~V. 2006, \apj, 645, 1054
+
+\bibitem[{{Greif} {et~al.}(2010){Greif}, {Glover}, {Bromm}, \&
+  {Klessen}}]{Greif10}
+{Greif}, T.~H., {Glover}, S.~C.~O., {Bromm}, V., \& {Klessen}, R.~S. 2010,
+  \apj, 716, 510
 
 \bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
   {Hartmann}}]{Heger03}
