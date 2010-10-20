@@ -1,8 +1,5 @@
 \begin{thebibliography}{10}
 
-\bibitem{Abel00}
-T.~{Abel}, G.~L. {Bryan}, M.~L. {Norman}, {\it \apj\/} {\bf 540}, 39 (2000).
-
 \bibitem{ABN02}
 T.~{Abel}, G.~L. {Bryan}, M.~L. {Norman}, {\it Science\/} {\bf 295}, 93 (2002).
 
@@ -48,12 +45,6 @@ J.~{Tumlinson}, {\it \apjl\/} {\bf 664}, L63 (2007).
 \bibitem{Beers05}
 T.~C. {Beers}, N.~{Christlieb}, {\it \araa\/} {\bf 43}, 531 (2005).
 
-\bibitem{Tolstoy04}
-E.~{Tolstoy}, {\it et~al.\/}, {\it \apjl\/} {\bf 617}, L119 (2004).
-
-\bibitem{Helmi06}
-A.~{Helmi}, {\it et~al.\/}, {\it \apjl\/} {\bf 651}, L121 (2006).
-
 \bibitem{Tafelmeyer10}
 M.~{Tafelmeyer}, {\it et~al.\/}, {\it ArXiv e-prints\/}  (2010).
 
@@ -70,6 +61,9 @@ D.~{Whalen}, T.~{Abel}, M.~L. {Norman}, {\it \apj\/} {\bf 610}, 14 (2004).
 \bibitem{Abel07}
 T.~{Abel}, J.~H. {Wise}, G.~L. {Bryan}, {\it \apjl\/} {\bf 659}, L87 (2007).
 
+\bibitem{Wise08_Gal}
+J.~H. {Wise}, T.~{Abel}, {\it \apj\/} {\bf 685}, 40 (2008).
+
 \bibitem{Ferrara98}
 A.~{Ferrara}, {\it \apjl\/} {\bf 499}, L17+ (1998).
 
@@ -81,9 +75,6 @@ N.~Y. {Gnedin}, L.~{Hui}, {\it \mnras\/} {\bf 296}, 44 (1998).
 
 \bibitem{gnedin00}
 N.~Y. {Gnedin}, {\it \apj\/} {\bf 542}, 535 (2000).
-
-\bibitem{Wise08_Gal}
-J.~H. {Wise}, T.~{Abel}, {\it \apj\/} {\bf 685}, 40 (2008).
 
 \bibitem{Greif10}
 T.~H. {Greif}, S.~C.~O. {Glover}, V.~{Bromm}, R.~S. {Klessen}, {\it \apj\/}
