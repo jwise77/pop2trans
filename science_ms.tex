@@ -107,8 +107,8 @@
 % settings shown here.
 
 \author
-{John H.~Wise,$^{1,2\ast}$ Michael L.~Norman,$^{3}$ Tom Abel$^{4}$,
-Matthew J.~Turk$^{3}$\\
+{John H.~Wise,$^{1,2\ast}$ Matthew J.~Turk$^{3}$, Michael
+  L.~Norman,$^{3}$ Tom Abel$^{4}$\\
 \\
 \normalsize{$^{1}$Department of Astrophysical Sciences, Princeton
 University,}\\
@@ -197,8 +197,10 @@ background (CMB) temperature \cite{Larson98, Tumlinson07_IMF,
 thus have a lower characteristic stellar mass than its metal-free
 progenitors.  These first stellar clusters may be connected to stars
 in the Milky Way halo and nearby dwarf spheroidal (dSph) galaxies,
-both with a metallicity floor of [Z/H] = --4 \cite{Beers05,
-  Tafelmeyer10, Frebel10_Obs}.
+both with a metallicity floor of [Z/H]\footnote{We use the
+  conventional notation, [Z/H] $\equiv$ log(Z/H) -
+  log(Z$_\odot$/H$_\odot$)} = --4 \cite{Beers05, Tafelmeyer10,
+  Frebel10_Obs}.
 
 The transition from Pop III to Pop II star formation (SF) is solely
 dependent on the propagation of metals from the SNe remnants into
@@ -225,7 +227,7 @@ incorporate and link together recent results from metal-enriched and
 metal-free star formation, the critical metallicity, and
 pair-instability supernovae.  This is the first time it has been
 possible to link the formation and feedback of the first stars to
-protogalaxies resolving the important scales and including the most
+protogalaxies, resolving the important scales and including the most
 important physical effects.
 
 \section*{Results}
@@ -235,9 +237,12 @@ Here we present the gaseous and stellar evolution of two selected
 halos in the simulation: one that has an early mass buildup but no
 major mergers after $z=12$, and one that experiences a series of major
 mergers between $z=10$ and $z=7$.  We name the halos ``quiet'' and
-``intense'', respectively. 
-
-\textbf{Add some interesting stats about the simulation.}
+``intense'', respectively.  The entire simulation contains 38 galaxies
+with 3640 Pop II stellar clusters and captures the formation of 333
+Pop III stars.  The halo mass function and galaxy luminosities are
+plotted in Figure \ref{fig:massfn}.  This simulation has $1.4 \times
+10^8$ computational elements and a maximal spatial resolution of 0.1
+pc.
 
 % We start with the mass accretion history and enrichment of the
 % halos.  We then compare the nature of the stellar populations in
@@ -270,19 +275,19 @@ form a $10^9 \Ms$ halo at $z=7$ with two major mergers at redshifts 10
 and 7.9, seen in the rapid increases in total mass in Figure
 \ref{fig:evo}a.  The merger history of the two halos are not atypical
 as dark matter halos can experience both quiescent and vigorous mass
-accretion rates in their buildup.
+accretion rates.
 
 Both halos start forming Pop II stars when $M = 10^7 \Ms$.  This is
 consistent with the filtering mass $M_f$ of high-redshift halos when
 it accretes mainly from a pre-heated IGM \cite{gnedin98, gnedin00,
   Wise08_Gal}.  Afterwards these halos can cool efficiently through
-\hh~cooling, sustaining constant and sometimes bursty SF.  The latter
-characteristics are equated with the definition of a galaxy.  The
-quiet halo forms $10^5 \Ms$ of stars by $z=9$.  This initial starburst
-photo-evaporates the majority of its molecular clouds, in addition to
-heating and ionizing the surrounding IGM out to a radius of 10--15 kpc
-at $z=9$.  These respectively reduce the in-situ and external cold gas
-supply that could feed future SF.
+\hh~cooling, sustaining constant and sometimes bursting SF.  The
+latter characteristics are equated with the definition of a galaxy.
+The quiet halo forms $10^5 \Ms$ of stars by $z=9$.  This initial
+starburst photo-evaporates the majority of its molecular clouds, in
+addition to heating and ionizing the surrounding IGM out to a radius
+of 10--15 kpc at $z=9$.  These respectively reduce the in-situ and
+external cold gas supply that could feed future SF.
 
 The gas fractions of both halos decrease from 0.15 to 0.08 by outflows
 driven by ionization fronts and blastwaves in their initial
@@ -294,13 +299,13 @@ hosting diffuse warm gas reservoirs instead of cold dense cores.
 After $z=10$, the halo mainly accretes warm diffuse gas from the
 filaments and IGM.  In contrast, the intense halo grows from major
 mergers of halos with $M > M_f$.  The progenitor halos involved in the
-major mergers are able to host molecular clouds and have, in general,
-higher gas fractions.  Between $z=10$ and $z=8$, the gas fraction
-increases from 0.07 to 0.12 until it jumps to 0.14 when a gas-rich
-major merger occurs.  The stellar mass accordingly increases with the
-ample supply of gas during this period.  The gas fraction then
-decreases by 0.01 when galactic outflows are generated from the
-starburst associated with this major merger.
+major mergers are able to host molecular clouds and have higher gas
+fractions.  Between $z=10$ and $z=8$, the gas fraction increases from
+0.07 to 0.12 until it jumps to 0.14 when a gas-rich major merger
+occurs.  The stellar mass accordingly increases with the ample supply
+of gas during this period.  The gas fraction then decreases by 0.01
+when galactic outflows are generated from the starburst associated
+with this major merger.
 
 \subsection*{Metallicity evolution}
 \label{sec:zevo}
@@ -312,7 +317,7 @@ floor of $[Z_3/H] \sim -3$.  The metallicity from Pop II SNe initially
 enrich the ISM of both halos to an average $[\bar{Z}_2/H]$ between
 --3.5 and --3.  
 
-In the quiet halo, an equilbrium of $[\bar{Z}_2/H] \sim -2.5$ is
+In the quiet halo, an equilibrium of $[\bar{Z}_2/H] \sim -2.5$ is
 established between metal-rich outflows and metal-poor inflows.
 Galactic outflows are directed in the polar directions of the gas
 disk, keeping the adjacent filaments metal-poor.  These features and a
@@ -320,15 +325,15 @@ well-mixed ISM (cf.~\cite{Wise08_Gal, Greif10}) are apparent in the
 metallicity projections in Figure \ref{fig:projections}.  The average
 stellar metallicity is within 0.5 dex of $[\bar{Z}_2/H]$.
 
-In the intense halos, the first few Pop II star clusters have $[Z/H]$
+In the intense halo, the first few Pop II star clusters have $[Z/H]$
 between --1 and --2 and dominate the average stellar metallicity at $z
 > 8$.  Afterwards the metallicity increases by a factor of 30 to
 $[\bar{Z}_2/H] = -1.5$ through self-enrichment from a starburst.
 Because this halo is located in a large-scale overdensity, most of the
 ejecta falls back into the halo after reaching distances up to 20
-comoving kpc, in turn keeping the halo gas metallicity high because
-the inflows are relatively metal-rich themselves.  After the $z \sim
-8$ starburst, the average stellar metallicity follows the average gas
+comoving kpc, keeping the halo gas metallicity high because the
+inflows are relatively metal-rich themselves.  After the $z \sim 8$
+starburst, the average stellar metallicity follows the average gas
 metallicity within 0.1 dex.
 
 \subsection*{Population III star formation history}
@@ -340,19 +345,20 @@ the most massive progenitor, and the dense core survives this event
 and is enriched by this PISN, triggering the transition to Pop II SF.
 Other progenitors host three Pop III stars, forming at $z = 15.4,
 14.2, 13.8$, with the latter producing a PISN.  Metal enrichment from
-these two PISNe and Pop II SF quench Pop III SF in this halo.
+these two PISNe and Pop II SF quench Pop III SF in this halo.  The
+progenitors of the intense halo host a total of 56 Pop III stars with
+21 producing PISNe.  The first forms in a $6 \times 10^5 \Ms$ halo at
+$z=19$.  Pop III stars form on a regular interval in the halo's
+progenitors until $z=9$ when most of these halos enter the metal-rich
+bubble surrounding the intense halo.
 
-The progenitors of the intense halo host a total of 56 Pop III stars
-with 21 producing PISNe.  The first forms in a $6 \times 10^5 \Ms$
-halo at $z=19$.  Pop III stars form on a regular interval in the
-halo's progenitors until $z=9$ when most of these halos enter the
-metal-rich bubble surrounding the intense halo.  There are two stars
-forming at $z=7.7$ with [Z/H] = --5.7, whose molecular clouds were
-enriched by external blastwaves that only partially enriched the dense
-regions.  This falls into the metallicity range where fragmentation
-could occur if dust cooling is efficient below \tento{-4} $Z_\odot$.
-The most massive progenitors of the intense halo cease to form Pop III
-stars at $z<12$ because of nearby or intrinsic PISNe.
+% There are two stars forming at $z=7.7$ with [Z/H] = --5.7, whose
+% molecular clouds were enriched by external blastwaves that only
+% partially enriched the dense regions.  This falls into the metallicity
+% range where fragmentation could occur if dust cooling is efficient
+% below \tento{-4} $Z_\odot$.  The most massive progenitors of the
+% intense halo cease to form Pop III stars at $z<12$ because of nearby
+% or intrinsic PISNe.
 
 \subsection*{Population II stellar populations}
 \label{sec:pop}
@@ -363,25 +369,22 @@ stars at $z<12$ because of nearby or intrinsic PISNe.
 %%
 %% \li Present the stellar metallicity distribution at the final time
 
-Figure \ref{fig:pops} shows the SF history (SFH) of both halos.  The
-metallicity distribution, SF rates, and metallicity evolution and
-spread at a given time can all be extracted from these data.
-
-A nearby PISNe provides a metallicity floor of [Z/H] = --2.8 in the
-quiet halo at which metallicity the first Pop II stars form.  The
-stellar metallicity evolution exhibits what is expected from an
-isolated system with the stellar feedback steadily enriching the ISM,
-resulting in a correlation between stellar age and metallicity.  After
-$z=10$ the metallicities plateau at [Z/H] = --2.1 for reasons
-previously discussed.  The SFR peaks at $z=10$ and decreases as the
-cold gas reservoir is depleted.  Around $z=7.5$, a 25:1 minor merger
-occurs, and the gas inside the satellite halo is compressed,
-triggering metal-poor, [Z/H] = --3.2, SF during its nearest approach.
-This halo infalls through a filament, where most of metal enrichment
-in the quiet halo occurs in bi-polar flows perpendicular to the galaxy
-disk and filament.  The filament and thus this satellite halo remains
-relatively metal-poor.  Stars with [Z/H] $<$ --3 compose 1.6 percent
-of the total stellar mass.
+Figure \ref{fig:pops} shows the SF history (SFH), metallicity
+distribution, and SF rates of both halos.  A nearby PISNe provides a
+metallicity floor of [Z/H] = --2.8 in the quiet halo at which
+metallicity the first Pop II stars form.  The stellar metallicity
+evolution exhibits what is expected from an isolated system with the
+stellar feedback steadily enriching the ISM, resulting in a
+correlation between stellar age and metallicity.  After $z=10$ the
+metallicities plateau at [Z/H] = --2.1 for reasons previously
+discussed.  The SFR peaks at $z=10$ and decreases as the cold gas
+reservoir is depleted.  Around $z=7.5$, a 25:1 minor merger occurs,
+and the gas inside the satellite halo is compressed, triggering
+metal-poor, [Z/H] = --3.2, SF during its nearest approach.  This halo
+remains metal-poor because most of metal enrichment in the quiet halo
+occurs in bi-polar flows perpendicular to the galaxy disk and
+filament.  Stars with [Z/H] $<$ --3 compose 1.6 percent of the total
+stellar mass.
        
 In contrast with the quiet halo, the intense halo undergoes a few
 mergers of halos with an established stellar population.  This creates
@@ -392,17 +395,17 @@ occurs when a PISN blastwave triggers SF in two neighboring halos.
 Most of the early SF have [Z/H] = --2.5.  At $z=9$, the halo's virial
 temperature reaches \tento{4} K.  This combined with a 10:1 merger
 creates a starburst that quickly enriches the halo to [Z/H] = --1.5 by
-$z=8$.  The halo continues to enrich itself with further SF until
-$z=7$.  The spikes in the scatter plot correspond to SN triggered SF
-in nearby molecular clouds that are enriched up to a factor of 10 with
-respect to the ISM.  However their mass fraction are small compared to
-the total stellar mass.  The starburst at $z=9$ creates a bimodal
-metallicity distribution with peaks at [Z/H] = --2.4 and --1.2 with
-the metal-rich component mainly being created after the starburst.
-Two systems with sizable stellar components merge into the halo at $z
-\sim 8$, and their stellar populations are still discernible in the
-metallicity-age plot, whose tracks are noted by dashed lines.  Stars
-with [Z/H] $<$ --3 compose 1.8 percent of the total stellar mass.
+$z=8$.  The halo continues to enrich itself afterwards.  The spikes in
+the scatter plot correspond to SN triggered SF in nearby molecular
+clouds that are enriched up to a factor of 10 with respect to the ISM.
+However their mass fraction are small compared to the total stellar
+mass.  The starburst at $z=9$ creates a bimodal metallicity
+distribution with peaks at [Z/H] = --2.4 and --1.2 with the metal-rich
+component mainly being created after the starburst.  Two systems with
+sizable stellar components merge into the halo at $z \sim 8$, and
+their stellar populations are still discernible in the metallicity-age
+plot.  Stars with [Z/H] $<$ --3 compose 1.8 percent of the total
+stellar mass.
 
 \section*{Discussion and Conclusions}
 
@@ -444,31 +447,30 @@ blastwave overtakes it.  Less than two percent of stars have [Z/H] $<
 -3$ in both systems, consistent with observations of metal-poor stars
 in the halo and dSphs \cite{Beers05, Battaglia10}.
 
-We also find that the merger history plays an important role in
-supplying gas into halos after its first epoch of SF.  Mergers of
-halos below the filtering mass are inefficient in providing gas
-whereas the opposite is true for merging halos above the filtering
-mass.  
-% Halos do not necessarily need $\tvir \ge 10^4$ K to form significant
-% stellar populations; however SFRs dramatically increase, and thus
-% metal enrichment, when this threshold is reached.  Halos with mostly
-% gas-poor mergers or a quiet merger history result in a monotonic
-% increase in metallicity with time.  SFHs become more complex with
-% multiple metallicity-age tracks if the halo experiences mergers with
-% other halos that have an established stellar population.  Furthermore
-% SF that is triggered by blastwaves interacting with molecular clouds
-% can have metallicities up to a factor of 10 higher than the main
-% starburst.
-Starbursts at $\tvir = 10^4$ K can enrich the host halo enough to
-create a bimodal metallicity distribution, where the metal-poor
-component is created before the burst.  Note that mergers of stellar
-populations can also create a similar bimodal distribution.  Such
-distributions are observed in dSphs \cite{Battaglia10}.
+% We also find that the merger history plays an important role in
+% supplying gas into halos after its first epoch of SF.  Mergers of
+% halos below the filtering mass are inefficient in providing gas
+% whereas the opposite is true for merging halos above the filtering
+% mass.  Halos do not necessarily need $\tvir \ge 10^4$ K to form
+% significant stellar populations; however SFRs dramatically increase,
+% and thus metal enrichment, when this threshold is reached.  Halos
+% with mostly gas-poor mergers or a quiet merger history result in a
+% monotonic increase in metallicity with time.  SFHs become more
+% complex with multiple metallicity-age tracks if the halo experiences
+% mergers with other halos that have an established stellar
+% population.  Furthermore SF that is triggered by blastwaves
+% interacting with molecular clouds can have metallicities up to a
+% factor of 10 higher than the main starburst.  Starbursts at $\tvir =
+% 10^4$ K can enrich the host halo enough to create a bimodal
+% metallicity distribution, where the metal-poor component is created
+% before the burst.  Note that mergers of stellar populations can also
+% create a similar bimodal distribution, which are observed in dSphs
+% \cite{Battaglia10}.
 
 We have shown that it is possible to simulate the formation of a
 high-redshift dwarf galaxy and its entire SFH with radiative and
-mechanical feedback.  This provides invaluable insight on the first
-galaxies and the role of metal-free stars in the early universe.
+mechanical feedback.  These results provide invaluable insight on the
+first galaxies and the role of metal-free stars in the early universe.
 There exists a wealth of information in this simulation, and we plan
 to follow up this preliminary report with more detailed analysis of
 the metal enrichment of the IGM, global SF rates, and observational
@@ -509,6 +511,14 @@ Tolstoy for enlightening discussions.
 % submit figures as separate files according to the Art Department's
 % instructions.
 
+\clearpage
+\begin{figure*}
+\includegraphics[width=0.6\textwidth]{Lstar.eps}
+\caption{\label{fig:massfn} \textbf{Top}: Halo mass function of the
+  simulation compared with the analytical fit (solid) of
+  \cite{Warren06}.  \textbf{Bottom}: Total Pop II luminosities of
+  halos with constant mass-to-light ratios overplotted.}
+\end{figure*}
 
 \clearpage
 \begin{figure*}
@@ -521,16 +531,6 @@ Tolstoy for enlightening discussions.
   The metallicity projections are a composite picture of metals
   originating from Pop III (red) and Pop II (blue) stars with magenta
   indicating a mixture of the two.}
-\end{figure*}
-
-\clearpage
-\begin{figure*}
-\includegraphics[width=0.6\textwidth]{Lstar.eps}
-\caption{\label{fig:massfn} \textbf{Top}: Halo mass function of the
-  simulation compared with the analytical fit (solid) of
-  \cite{Warren06}.  \textbf{Bottom}: Total Pop II luminosities of
-  halos with constant mass-to-light ratios overplotted.  The two
-  galaxies detailed here marked with a square and diamond.}
 \end{figure*}
 
 \clearpage
