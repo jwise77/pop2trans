@@ -6,11 +6,8 @@
 {Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, New Astronomy,
   2, 181
 
-\bibitem[{{Abel} {et~al.}(2000){Abel}, {Bryan}, \& {Norman}}]{Abel00}
-{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2000, \apj, 540, 39
-
 \bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{ABN02}
----. 2002, Science, 295, 93
+{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2002, Science, 295, 93
 
 \bibitem[{{Abel} \& {Wandelt}(2002)}]{Abel02_RT}
 {Abel}, T., \& {Wandelt}, B.~D. 2002, \mnras, 330, L53
@@ -91,14 +88,6 @@
 \bibitem[{{Heger} \& {Woosley}(2002{\natexlab{b}})}]{Heger02}
 ---. 2002{\natexlab{b}}, \apj, 567, 532
 
-\bibitem[{{Helmi} {et~al.}(2006){Helmi}, {Irwin}, {Tolstoy}, {Battaglia},
-  {Hill}, {Jablonka}, {Venn}, {Shetrone}, {Letarte}, {Arimoto}, {Abel},
-  {Francois}, {Kaufer}, {Primas}, {Sadakane}, \& {Szeifert}}]{Helmi06}
-{Helmi}, A., {Irwin}, M.~J., {Tolstoy}, E., {Battaglia}, G., {Hill}, V.,
-  {Jablonka}, P., {Venn}, K., {Shetrone}, M., {Letarte}, B., {Arimoto}, N.,
-  {Abel}, T., {Francois}, P., {Kaufer}, A., {Primas}, F., {Sadakane}, K., \&
-  {Szeifert}, T. 2006, \apjl, 651, L121
-
 \bibitem[{{Kitayama} {et~al.}(2004){Kitayama}, {Yoshida}, {Susa}, \&
   {Umemura}}]{Kitayama04}
 {Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
@@ -116,6 +105,12 @@
 
 \bibitem[{{Larson}(1998)}]{Larson98}
 {Larson}, R.~B. 1998, \mnras, 301, 569
+
+\bibitem[{{Lehnert} {et~al.}(2010){Lehnert}, {Nesvadba}, {Cuby}, {Swinbank},
+  {Morris}, {Cl{\'e}ment}, {Evans}, {Bremer}, \& {Basa}}]{Lehnert10_z8.6}
+{Lehnert}, M.~D., {Nesvadba}, N.~P.~H., {Cuby}, J., {Swinbank}, A.~M.,
+  {Morris}, S., {Cl{\'e}ment}, B., {Evans}, C.~J., {Bremer}, M.~N., \& {Basa},
+  S. 2010, \nat, 467, 940
 
 \bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
 Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
@@ -165,15 +160,6 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
   K.~A., {Abel}, T., {Francois}, P., {Kaufer}, A., {North}, P., {Primas}, F.,
   \& {Szeifert}, T. 2010, ArXiv e-prints
 
-\bibitem[{{Tolstoy} {et~al.}(2004){Tolstoy}, {Irwin}, {Helmi}, {Battaglia},
-  {Jablonka}, {Hill}, {Venn}, {Shetrone}, {Letarte}, {Cole}, {Primas},
-  {Francois}, {Arimoto}, {Sadakane}, {Kaufer}, {Szeifert}, \&
-  {Abel}}]{Tolstoy04}
-{Tolstoy}, E., {Irwin}, M.~J., {Helmi}, A., {Battaglia}, G., {Jablonka}, P.,
-  {Hill}, V., {Venn}, K.~A., {Shetrone}, M.~D., {Letarte}, B., {Cole}, A.~A.,
-  {Primas}, F., {Francois}, P., {Arimoto}, N., {Sadakane}, K., {Kaufer}, A.,
-  {Szeifert}, T., \& {Abel}, T. 2004, \apjl, 617, L119
-
 \bibitem[{Toro {et~al.}(1994)Toro, Spruce, \& Speares}]{Toro94_HLLC}
 Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
   10.1007/BF01414629
@@ -195,6 +181,11 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 {Turk}, M.~J., {Smith}, B.~D.~S., {Oishi}, J.~S., {Skory}, S., {Skillman},
   S.~W., {Abel}, T., \& {Norman}, M.~L. 2010, \apjs, submitted (October, 2010)
 
+\bibitem[{{Warren} {et~al.}(2006){Warren}, {Abazajian}, {Holz}, \&
+  {Teodoro}}]{Warren06}
+{Warren}, M.~S., {Abazajian}, K., {Holz}, D.~E., \& {Teodoro}, L. 2006, \apj,
+  646, 881
+
 \bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
 {Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14
 
@@ -207,6 +198,10 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 
 \bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
 {Wise}, J.~H., \& {Cen}, R. 2009, \apj, 693, 984
+
+\bibitem[{{Wolfe} {et~al.}(2005){Wolfe}, {Gawiser}, \&
+  {Prochaska}}]{Wolfe05_Review}
+{Wolfe}, A.~M., {Gawiser}, E., \& {Prochaska}, J.~X. 2005, \araa, 43, 861
 
 \bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
   {Sugiyama}}]{Yoshida03}
