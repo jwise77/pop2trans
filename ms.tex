@@ -59,14 +59,11 @@
   Population II star formation.  This provides a natural explanation
   for the observed floor on damped Lyman alpha (DLA) systems
   metallicities reported in the literature, which is of this order.
-  Neighboring halos are enriched to metallicities 10--100 times lower
-  as the enriching blastwaves mainly bypass them.  Stellar
-  metallicities trace gas metallicities within 0.2 dex.  We find that
-  stellar metallicities do not necessarily trace stellar ages, as
-  mergers of halos with established stellar populations can create
-  superpositions of $t-Z$ evolutionary tracks.  A bimodal metallicity
-  distribution is created after a starburst occurs when the halo can
-  cool efficiently through atomic line cooling.
+  We find that stellar metallicities do not necessarily trace stellar
+  ages, as mergers of halos with established stellar populations can
+  create superpositions of $t-Z$ evolutionary tracks.  A bimodal
+  metallicity distribution is created after a starburst occurs when
+  the halo can cool efficiently through atomic line cooling.
 
 \end{abstract}
 
@@ -77,9 +74,9 @@
 
 The first (Pop III) stars are metal-free and have a large
 characteristic mass and suppressed fragmentation in its protostellar
-collapse \citep{ABN02, Bromm02_P3, Yoshida03, OShea07a}.  A fraction of
-these stars enrich the surrounding intergalactic medium (IGM) when
-they go supernova, which can happen in stars $\lsim 40~\Ms$ in Type II
+collapse \citep{ABN02, Bromm02_P3, OShea07a}.  A fraction of these
+stars enrich the surrounding intergalactic medium (IGM) when they go
+supernova, which can happen in stars $\lsim 40~\Ms$ in Type II
 supernovae (SNe) or in stars roughly between 140 \Ms~and 260 \Ms~in
 pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}.  The host
 halo and the neighboring halos are then enriched with this ejecta.
@@ -94,10 +91,8 @@ background (CMB) temperature \citep{Larson98, Tumlinson07_IMF,
 thus have a lower characteristic stellar mass than its metal-free
 progenitors.  These first stellar clusters may be connected to stars
 in the Milky Way halo and nearby dwarf spheroidal (dSph) galaxies,
-both with a metallicity floor of [Z/H]\footnote[\dag]{We use the
-  conventional notation, [Z/H] $\equiv$ log(Z/H) -
-  log(Z$_\odot$/H$_\odot$)} = --4 \citep{Beers05, Tafelmeyer10,
-  Frebel10_Obs}.
+both with a metallicity floor of [Z/H] = --4 \citep{Beers05,
+  Tafelmeyer10, Frebel10_Obs}.
 
 The transition from Pop III to Pop II star formation (SF) is solely
 dependent on the propagation of metals from the SNe remnants into
@@ -125,24 +120,17 @@ metal-free star formation, the critical metallicity, and
 pair-instability supernovae.  This is the first time it has been
 possible to link the formation and feedback of the first stars to
 protogalaxies, resolving the important scales and including the most
-important physical effects.  We describe our simulation setup and our
-adopted SF models in \S \ref{sec:setup} and present our results in \S
-\ref{sec:results}.  We discuss the implications of our findings and
-conclude in the last section.
+important physical effects.
 
 \section{Method}
 \label{sec:setup}
-
-In this section, we first describe our simulation setup.  We then
-detail the SF models used here and how we model radiative and SNe
-feedback.
 
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
 enzo~v2.0\footnote[\ddag]{\texttt{enzo.googlecode.com, unstable
-    changeset b86d8ba026d6}} \citep{BryanNorman1997, OShea2004}, which
-has been modified to use a HLLC Riemann solver \citep{Toro94_HLLC} for
+    changeset b86d8ba026d6}} \citep{OShea2004}, which has been
+modified to use a HLLC Riemann solver \citep{Toro94_HLLC} for
 additional stability in strong shocks.  To resolve minihalos with at
 least 100 dark matter (DM) particles and follow the formation of the
 first generation of dwarf galaxies, we use a simulation box of 1 Mpc
@@ -152,12 +140,14 @@ of 1840 \Ms.  We refine the grid on baryon overdensities of $3 \times
 super-Lagrangian behavior.  We also refine on a DM overdensity of $3
 \times 2^l$ and always resolve the local Jeans length by at least 4
 cells, avoiding artificial fragmentation during gaseous collapses
-\citep{Truelove97}.  We initialize the simulation with \textsl{grafic}
-\citep{Bertschinger01} at $z = 130$ and use the cosmological parameters
-from the 7-year WMAP data \citep{WMAP7}: $\Omega_M = 0.266$,
-$\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 =
-0.81$, and $n = 0.963$ with the variables having their usual
-definitions.  We stop the simulation at $z=7$.
+\citep{Truelove97}.  This simulation has $1.4 \times 10^8$
+computational elements and a maximal spatial resolution of 0.1 pc.  We
+initialize the simulation with \textsl{grafic} \citep{Bertschinger01}
+at $z = 130$ and use the cosmological parameters from the 7-year WMAP
+data \citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
+$\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$
+with the variables having their usual definitions.  We stop the
+simulation at $z=7$.
 
 We use a non-equilibrium chemistry solver with 9 species of hydrogen,
 helium, and molecular hydrogen \citep{Abel97}.  We spatially
@@ -300,9 +290,7 @@ mergers between $z=10$ and $z=7$.  We name the halos ``quiet'' and
 ``intense'', respectively.  The entire simulation contains 38 galaxies
 with 3640 Pop II stellar clusters and captures the formation of 333
 Pop III stars.  The halo mass function and galaxy luminosities are
-plotted in Figure \ref{fig:massfn}.  This simulation has $1.4 \times
-10^8$ computational elements and a maximal spatial resolution of 0.1
-pc.
+plotted in Figure \ref{fig:massfn}.
 
 % We start with the mass accretion history and enrichment of the
 % halos.  We then compare the nature of the stellar populations in
@@ -323,11 +311,11 @@ embedded in a warm and ionized IGM.
   quiet (left) and intense (right) halos as a function of metallicity
   at $z=7$.  Each circle represents a star cluster, whose area is
   proportional to its mass.  The open circles in the upper right
-  represent sizes of $10^3$, $10^4$, and $10^5$ \Ms~star clusters.
-  The dashed lines in the right panel guide the eye to two stellar
-  populations that were formed in two satellite halos, merging at
-  $z=7.5$.  The upper histogram shows the SF rate.  The right
-  histogram depicts the stellar metallicity distribution.}
+  represent $10^3$, $10^4$, and $10^5$ \Ms~star clusters.  The dashed
+  lines in the right panel guide the eye to two stellar populations
+  that were formed in two satellite halos, merging at $z=7.5$.  The
+  upper histogram shows the SFR.  The right histogram depicts the
+  stellar metallicity distribution.}
 \end{figure*}
 
 \subsection{Mass evolution}
@@ -539,14 +527,14 @@ in the near future.
 
 \acknowledgments
 
-Support for this work was provided by NASA through Hubble Fellowship
-grant \#120-6370 awarded by the Space Telescope Science Institute,
-which is operated by the Association of Universities for Research in
-Astronomy, Inc., for NASA, under contract NAS 5-26555.  Computational
-resources were provided by NASA/NCCS award SMD-09-1439.
-J.~H.~W. thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline
-Tolstoy for enlightening discussions.  The majority of the analysis
-and plots were done with \texttt{yt} \citep{yt_full_paper}.
+J.~H.~W. is supported by NASA through Hubble Fellowship grant
+\#120-6370 awarded by the Space Telescope Science Institute, which is
+operated by the Association of Universities for Research in Astronomy,
+Inc., for NASA, under contract NAS 5-26555.  Computational resources
+were provided by NASA/NCCS award SMD-09-1439.  J.~H.~W. thanks Renyue
+Cen, Amina Helmi, Marco Spaans, and Eline Tolstoy for enlightening
+discussions.  The majority of the analysis and plots were done with
+\texttt{yt} \citep{yt_full_paper}.
 
 %\clearpage
 %\input biblio.tex
