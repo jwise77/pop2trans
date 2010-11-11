@@ -1,16 +1,56 @@
-\documentclass[apjl]{emulateapj}
-%\documentclass[12pt,preprint]{aastex}
+%\documentclass[apjl]{emulateapj}
+\documentclass[12pt,preprint]{aastex}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{natbib}
-%\usepackage[section] {placeins}
+\usepackage[section] {placeins}
 \bibliographystyle{apj}
 \citestyle{apj}
 
 %%%%%%%% Begin custom definitions %%%%%%%%%%%%%
 
-\input macros.tex
+\newcommand{\fesc}{\ifmmode{f_{\rm esc}}\else{$f_{\rm esc}$}\fi}
+\newcommand{\fescs}{\ifmmode{f_{\rm esc}^\star}\else{$f_{\rm esc}^\star$}\fi}
+\newcommand{\kms}{\ifmmode{{\rm km~s^{-1}}}\else{km s$^{-1}$}\fi}
+\newcommand{\cubecm}{\ifmmode{{\rm cm^{-3}}}\else{cm$^{-3}$}\fi}
+\newcommand{\lsim}{\lower0.3em\hbox{$\,\buildrel <\over\sim\,$}}
+\newcommand{\gsim}{\lower0.3em\hbox{$\,\buildrel >\over\sim\,$}}
+\newcommand{\li}{\noindent$\bullet$\quad}
+\newcommand{\flux}{erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$}
+\newcommand{\emis}{erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$ sr$^{-1}$}
+\newcommand{\sfr}{M$_\odot$ yr$^{-1}$ Mpc$^{-3}$}
+\newcommand{\hst}{{\it HST}}
+\newcommand{\enzo}{{\sl Enzo}}
+\newcommand{\Ms}{\ifmmode{M_\odot}\else{$M_\odot$}\fi}
+\newcommand{\mmin}{M$_{min}$}
+\newcommand{\hh}{H$_2$}
+\newcommand{\Ol}{$\Omega_\Lambda$}
+\newcommand{\Om}{$\Omega_M$}
+\newcommand{\Ob}{$\Omega_b$}
+\newcommand{\theat}{$t_{\rm{heat}}$}
+\newcommand{\tcool}{$t_{\rm{cool}}$}
+\newcommand{\rcool}{$r_{\rm{cool}}$}
+\newcommand{\tcross}{$t_{\rm{cross}}$}
+\newcommand{\tdyn}{$t_{\rm{dyn}}$}
+\newcommand{\tkh}{$t_{\rm{KH}}$}
+\newcommand{\tH}{$t_{\rm{H}}$}
+\newcommand{\tvir}{\ifmmode{T_{\rm{vir}}}\else{$T_{\rm{vir}}$}\fi}
+\newcommand{\mvir}{\ifmmode{M_{\rm{vir}}}\else{$M_{\rm{vir}}$}\fi}
+\newcommand{\rvir}{\ifmmode{r_{\rm{vir}}}\else{$r_{\rm{vir}}$}\fi}
+\newcommand{\rr}{$r_{200}$}
+\newcommand{\lya}{Ly$\alpha$}
+\newcommand{\jj}{\ifmmode{J_{21}}\else{$J_{21}$}\fi}
+\newcommand{\flw}{\ifmmode{F_{LW}}\else{$F_{LW}$}\fi}
+\newcommand{\kph}{\ifmmode{k_{\rm ph}}\else{$k_{\rm ph}$}\fi}
+\newcommand{\tv}{$\langle T \rangle_{\rm v}$}
+\newcommand{\tm}{$\langle T \rangle_{\rm m}$}
+\newcommand{\msun}{{\rm\,M_\odot}} 
+\newcommand{\lsun}{{\rm\,L_\odot}}
+\newcommand{\zsun}{{\rm\,Z_\odot}}
+\newcommand{\etal}{et al.\ }
+\newcommand\tento[1]{$10^{#1}$}
+\newcommand\step[1]{\textit{Step #1}.---}
 
 %%%%%%%% End custom definitions %%%%%%%%%%
 
@@ -128,26 +168,25 @@ important physical effects.
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
-enzo~v2.0\footnote[\ddag]{\texttt{enzo.googlecode.com, unstable
-    changeset b86d8ba026d6}} \citep{OShea2004}, which has been
-modified to use a HLLC Riemann solver \citep{Toro94_HLLC} for
-additional stability in strong shocks.  To resolve minihalos with at
-least 100 dark matter (DM) particles and follow the formation of the
-first generation of dwarf galaxies, we use a simulation box of 1 Mpc
-that has a resolution of $256^3$.  This gives us a DM mass resolution
-of 1840 \Ms.  We refine the grid on baryon overdensities of $3 \times
-2^{-0.2l}$, where $l$ is the AMR level, resulting in a
-super-Lagrangian behavior.  We also refine on a DM overdensity of $3
-\times 2^l$ and always resolve the local Jeans length by at least 4
-cells, avoiding artificial fragmentation during gaseous collapses
-\citep{Truelove97}.  This simulation has $1.4 \times 10^8$
-computational elements and a maximal spatial resolution of 0.1 pc.  We
-initialize the simulation with \textsl{grafic} \citep{Bertschinger01}
-at $z = 130$ and use the cosmological parameters from the 7-year WMAP
-data \citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$,
-$\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$
-with the variables having their usual definitions.  We stop the
-simulation at $z=7$.
+enzo~v2.0\footnote{\texttt{enzo.googlecode.com, changeset
+    b86d8ba026d6}} \citep{OShea2004}, which has been modified to use a
+HLLC Riemann solver \citep{Toro94_HLLC} for additional stability in
+strong shocks.  To resolve minihalos with at least 100 dark matter
+(DM) particles and follow the formation of the first generation of
+dwarf galaxies, we use a simulation box of 1 Mpc that has a resolution
+of $256^3$.  This gives us a DM mass resolution of 1840 \Ms.  We
+refine the grid on baryon overdensities of $3 \times 2^{-0.2l}$, where
+$l$ is the AMR level, resulting in a super-Lagrangian behavior.  We
+also refine on a DM overdensity of $3 \times 2^l$ and always resolve
+the local Jeans length by at least 4 cells, avoiding artificial
+fragmentation during gaseous collapses \citep{Truelove97}.  This
+simulation has $1.4 \times 10^8$ computational elements and a maximal
+spatial resolution of 0.1 pc.  We initialize the simulation with
+\textsl{grafic} \citep{Bertschinger01} at $z = 130$ and use the
+cosmological parameters from the 7-year WMAP data \citep{WMAP7}:
+$\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h
+= 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$ with the variables having
+their usual definitions.  We stop the simulation at $z=7$.
 
 We use a non-equilibrium chemistry solver with 9 species of hydrogen,
 helium, and molecular hydrogen \citep{Abel97}.  We spatially
@@ -167,9 +206,9 @@ metal-enriched gas, using the method of \citet{2008MNRAS.385.1443S}.
 \subsection{Star formation}
 
 \begin{figure}
-\epsscale{1.15}
+%\epsscale{1.15}
 \plotone{f1}
-\epsscale{1}
+%\epsscale{1}
 \caption{\label{fig:massfn} \textit{Top}: Halo mass function of the
   simulation compared with the analytical fit (solid) of
   \citet{Warren06}.  \textit{Bottom}: Total Pop II luminosities of
@@ -231,9 +270,9 @@ ignore lower mass stars.
 \subsection{Stellar feedback}
 
 \begin{figure*}
-\epsscale{1.15}
+%\epsscale{1.15}
 \plotone{f2}
-\epsscale{1}
+%\epsscale{1}
 \caption{\label{fig:projections} Density-weighted projections of gas
   density (top), temperature (middle), and metallicity (bottom) at
   $z=7$.  The left column shows the entire simulation volume, where
@@ -270,9 +309,9 @@ resolution of the grid is less than 10/3 pc, we deposit the energy
 into a $3^3$ cube surrounding the star particle.
 
 \begin{figure*}
-\epsscale{1.15}
+%\epsscale{1.15}
 \plotone{f3}
-\epsscale{1}
+%\epsscale{1}
 \caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
   stellar mass (middle), and gas fraction (bottom) of the quiet
   (dashed) and intense (solid) halos.  (b) Mass-weighted stellar
@@ -380,9 +419,9 @@ starburst, the average stellar metallicity follows the average gas
 metallicity within 0.1 dex.
 
 \begin{figure*}
-\epsscale{1.1}
+%\epsscale{1.1}
 \plotone{f4}
-\epsscale{1}
+%\epsscale{1}
 \caption{\label{fig:pops} The scatter plots show the SF history of the
   quiet (left) and intense (right) halos as a function of metallicity
   at $z=7$.  Each circle represents a star cluster, whose area is
@@ -530,14 +569,218 @@ in the near future.
 J.~H.~W. is supported by NASA through Hubble Fellowship grant
 \#120-6370 awarded by the Space Telescope Science Institute, which is
 operated by the Association of Universities for Research in Astronomy,
-Inc., for NASA, under contract NAS 5-26555.  Computational resources
-were provided by NASA/NCCS award SMD-09-1439.  J.~H.~W. thanks Renyue
-Cen, Amina Helmi, Marco Spaans, and Eline Tolstoy for enlightening
-discussions.  The majority of the analysis and plots were done with
-\texttt{yt} \citep{yt_full_paper}.
+Inc., for NASA, under contract NAS 5-26555.  M.~J.~T. and
+M.~L.~N. acknowledge partial support from NASA ATFP grant NNX08AH26G.
+Computational resources were provided by NASA/NCCS award SMD-09-1439.
+J.~H.~W. thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline
+Tolstoy for enlightening discussions.  The majority of the analysis
+and plots were done with \texttt{yt} \citep{yt_full_paper}.
 
 %\clearpage
 %\input biblio.tex
-\bibliography{ms}
+%\bibliography{ms}
+\begin{thebibliography}{50}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
+  {Norman}}]{Abel97}
+{Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, New Astronomy,
+  2, 181
+
+\bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{ABN02}
+{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2002, Science, 295, 93
+
+\bibitem[{{Abel} \& {Wandelt}(2002)}]{Abel02_RT}
+{Abel}, T., \& {Wandelt}, B.~D. 2002, \mnras, 330, L53
+
+\bibitem[{{Abel} {et~al.}(2007){Abel}, {Wise}, \& {Bryan}}]{Abel07}
+{Abel}, T., {Wise}, J.~H., \& {Bryan}, G.~L. 2007, \apjl, 659, L87
+
+\bibitem[{{Battaglia} {et~al.}(2010){Battaglia}, {Tolstoy}, {Helmi}, {Irwin},
+  {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia10}
+{Battaglia}, G., {Tolstoy}, E., {Helmi}, A., {Irwin}, M., {Parisi}, P., {Hill},
+  V., \& {Jablonka}, P. 2010, ArXiv e-prints
+
+\bibitem[{{Beers} \& {Christlieb}(2005)}]{Beers05}
+{Beers}, T.~C., \& {Christlieb}, N. 2005, \araa, 43, 531
+
+\bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
+{Bertschinger}, E. 2001, \apjs, 137, 1
+
+\bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
+{Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
+
+\bibitem[{{Bromm} {et~al.}(2001){Bromm}, {Ferrara}, {Coppi}, \&
+  {Larson}}]{Bromm01}
+{Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
+  328, 969
+
+\bibitem[{{Cen} \& {Ostriker}(1992)}]{Cen92}
+{Cen}, R., \& {Ostriker}, J.~P. 1992, \apjl, 399, L113
+
+\bibitem[{{Cen} \& {Riquelme}(2008)}]{Cen08}
+{Cen}, R., \& {Riquelme}, M.~A. 2008, \apj, 674, 644
+
+\bibitem[{{Chabrier}(2003)}]{Chabrier03}
+{Chabrier}, G. 2003, \pasp, 115, 763
+
+\bibitem[{{Clark} {et~al.}(2009){Clark}, {Glover}, {Bonnell}, \&
+  {Klessen}}]{Clark09}
+{Clark}, P.~C., {Glover}, S.~C.~O., {Bonnell}, I.~A., \& {Klessen}, R.~S. 2009,
+  ArXiv e-prints
+
+\bibitem[{{Clark} {et~al.}(2008){Clark}, {Glover}, \& {Klessen}}]{clark08}
+{Clark}, P.~C., {Glover}, S.~C.~O., \& {Klessen}, R.~S. 2008, \apj, 672, 757
+
+\bibitem[{{Ferrara}(1998)}]{Ferrara98}
+{Ferrara}, A. 1998, \apjl, 499, L17+
+
+\bibitem[{{Frebel} \& {Bromm}(2010)}]{Frebel10}
+{Frebel}, A., \& {Bromm}, V. 2010, ArXiv e-prints
+
+\bibitem[{{Frebel} {et~al.}(2010){Frebel}, {Kirby}, \& {Simon}}]{Frebel10_Obs}
+{Frebel}, A., {Kirby}, E.~N., \& {Simon}, J.~D. 2010, \nat, 464, 72
+
+\bibitem[{{Gnedin}(2000)}]{gnedin00}
+{Gnedin}, N.~Y. 2000, \apj, 542, 535
+
+\bibitem[{{Gnedin} \& {Hui}(1998)}]{gnedin98}
+{Gnedin}, N.~Y., \& {Hui}, L. 1998, \mnras, 296, 44
+
+\bibitem[{{Gnedin} \& {Kravtsov}(2006)}]{Gnedin06}
+{Gnedin}, N.~Y., \& {Kravtsov}, A.~V. 2006, \apj, 645, 1054
+
+\bibitem[{{Greif} {et~al.}(2010){Greif}, {Glover}, {Bromm}, \&
+  {Klessen}}]{Greif10}
+{Greif}, T.~H., {Glover}, S.~C.~O., {Bromm}, V., \& {Klessen}, R.~S. 2010,
+  \apj, 716, 510
+
+\bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
+  {Hartmann}}]{Heger03}
+{Heger}, A., {Fryer}, C.~L., {Woosley}, S.~E., {Langer}, N., \& {Hartmann},
+  D.~H. 2003, \apj, 591, 288
+
+\bibitem[{{Heger} \& {Woosley}(2002{\natexlab{a}})}]{2002ApJ...567..532H}
+{Heger}, A., \& {Woosley}, S.~E. 2002{\natexlab{a}}, \apj, 567, 532
+
+\bibitem[{{Heger} \& {Woosley}(2002{\natexlab{b}})}]{Heger02}
+---. 2002{\natexlab{b}}, \apj, 567, 532
+
+\bibitem[{{Kitayama} {et~al.}(2004){Kitayama}, {Yoshida}, {Susa}, \&
+  {Umemura}}]{Kitayama04}
+{Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
+  631
+
+\bibitem[{{Komatsu} {et~al.}(2010){Komatsu}, {Smith}, {Dunkley}, {Bennett},
+  {Gold}, {Hinshaw}, {Jarosik}, {Larson}, {Nolta}, {Page}, {Spergel},
+  {Halpern}, {Hill}, {Kogut}, {Limon}, {Meyer}, {Odegard}, {Tucker}, {Weiland},
+  {Wollack}, \& {Wright}}]{WMAP7}
+{Komatsu}, E., {Smith}, K.~M., {Dunkley}, J., {Bennett}, C.~L., {Gold}, B.,
+  {Hinshaw}, G., {Jarosik}, N., {Larson}, D., {Nolta}, M.~R., {Page}, L.,
+  {Spergel}, D.~N., {Halpern}, M., {Hill}, R.~S., {Kogut}, A., {Limon}, M.,
+  {Meyer}, S.~S., {Odegard}, N., {Tucker}, G.~S., {Weiland}, J.~L., {Wollack},
+  E., \& {Wright}, E.~L. 2010, ArXiv e-prints
+
+\bibitem[{{Larson}(1998)}]{Larson98}
+{Larson}, R.~B. 1998, \mnras, 301, 569
+
+\bibitem[{{Lehnert} {et~al.}(2010){Lehnert}, {Nesvadba}, {Cuby}, {Swinbank},
+  {Morris}, {Cl{\'e}ment}, {Evans}, {Bremer}, \& {Basa}}]{Lehnert10_z8.6}
+{Lehnert}, M.~D., {Nesvadba}, N.~P.~H., {Cuby}, J., {Swinbank}, A.~M.,
+  {Morris}, S., {Cl{\'e}ment}, B., {Evans}, C.~J., {Bremer}, M.~N., \& {Basa},
+  S. 2010, \nat, 467, 940
+
+\bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
+Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
+
+\bibitem[{{Omukai} {et~al.}(2005){Omukai}, {Tsuribe}, {Schneider}, \&
+  {Ferrara}}]{Omukai05}
+{Omukai}, K., {Tsuribe}, T., {Schneider}, R., \& {Ferrara}, A. 2005, \apj, 626,
+  627
+
+\bibitem[{{O'Shea} {et~al.}(2004){O'Shea}, {Bryan}, {Bordner}, {Norman},
+  {Abel}, {Harkness}, \& {Kritsuk}}]{OShea2004}
+{O'Shea}, B.~W., {Bryan}, G., {Bordner}, J., {Norman}, M.~L., {Abel}, T.,
+  {Harkness}, R., \& {Kritsuk}, A. 2004, ArXiv Astrophysics e-prints
+
+\bibitem[{{O'Shea} \& {Norman}(2007)}]{OShea07a}
+{O'Shea}, B.~W., \& {Norman}, M.~L. 2007, \apj, 654, 66
+
+\bibitem[{{Schaerer}(2002)}]{Schaerer02}
+{Schaerer}, D. 2002, \aap, 382, 28
+
+\bibitem[{{Schaerer}(2003)}]{Schaerer03}
+---. 2003, \aap, 397, 527
+
+\bibitem[{{Schneider} {et~al.}(2006){Schneider}, {Omukai}, {Inoue}, \&
+  {Ferrara}}]{Schneider06_Frag}
+{Schneider}, R., {Omukai}, K., {Inoue}, A.~K., \& {Ferrara}, A. 2006, \mnras,
+  369, 1437
+
+\bibitem[{{Smith} {et~al.}(2008){Smith}, {Sigurdsson}, \&
+  {Abel}}]{2008MNRAS.385.1443S}
+{Smith}, B., {Sigurdsson}, S., \& {Abel}, T. 2008, \mnras, 385, 1443
+
+\bibitem[{{Smith} {et~al.}(2009){Smith}, {Turk}, {Sigurdsson}, {O'Shea}, \&
+  {Norman}}]{2009ApJ...691..441S}
+{Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
+  M.~L. 2009, \apj, 691, 441
+
+\bibitem[{{Stacy} {et~al.}(2010){Stacy}, {Greif}, \& {Bromm}}]{Stacy10_Binary}
+{Stacy}, A., {Greif}, T.~H., \& {Bromm}, V. 2010, \mnras, 403, 45
+
+\bibitem[{{Tafelmeyer} {et~al.}(2010){Tafelmeyer}, {Jablonka}, {Hill},
+  {Shetrone}, {Tolstoy}, {Irwin}, {Battaglia}, {Helmi}, {Starkenburg}, {Venn},
+  {Abel}, {Francois}, {Kaufer}, {North}, {Primas}, \&
+  {Szeifert}}]{Tafelmeyer10}
+{Tafelmeyer}, M., {Jablonka}, P., {Hill}, V., {Shetrone}, M., {Tolstoy}, E.,
+  {Irwin}, M.~J., {Battaglia}, G., {Helmi}, A., {Starkenburg}, E., {Venn},
+  K.~A., {Abel}, T., {Francois}, P., {Kaufer}, A., {North}, P., {Primas}, F.,
+  \& {Szeifert}, T. 2010, ArXiv e-prints
+
+\bibitem[{Toro {et~al.}(1994)Toro, Spruce, \& Speares}]{Toro94_HLLC}
+Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
+  10.1007/BF01414629
+
+\bibitem[{{Truelove} {et~al.}(1997){Truelove}, {Klein}, {McKee}, {Holliman},
+  {Howell}, \& {Greenough}}]{Truelove97}
+{Truelove}, J.~K., {Klein}, R.~I., {McKee}, C.~F., {Holliman}, II, J.~H.,
+  {Howell}, L.~H., \& {Greenough}, J.~A. 1997, \apjl, 489, L179+
+
+\bibitem[{{Tumlinson}(2007)}]{Tumlinson07_IMF}
+{Tumlinson}, J. 2007, \apjl, 664, L63
+
+\bibitem[{{Turk} {et~al.}(2009){Turk}, {Abel}, \&
+  {O'Shea}}]{2009Sci...325..601T}
+{Turk}, M.~J., {Abel}, T., \& {O'Shea}, B. 2009, Science, 325, 601
+
+\bibitem[{{Turk} {et~al.}(2010){Turk}, {Smith}, {Oishi}, {Skory}, {Skillman},
+  {Abel}, \& {Norman}}]{yt_full_paper}
+{Turk}, M.~J., {Smith}, B.~D.~S., {Oishi}, J.~S., {Skory}, S., {Skillman},
+  S.~W., {Abel}, T., \& {Norman}, M.~L. 2010, \apjs, submitted (October, 2010)
+
+\bibitem[{{Warren} {et~al.}(2006){Warren}, {Abazajian}, {Holz}, \&
+  {Teodoro}}]{Warren06}
+{Warren}, M.~S., {Abazajian}, K., {Holz}, D.~E., \& {Teodoro}, L. 2006, \apj,
+  646, 881
+
+\bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
+{Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14
+
+\bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
+{Wise}, J.~H., \& {Abel}, T. 2008, \apj, 685, 40
+
+\bibitem[{{Wise} \& {Abel}(2010)}]{Wise10}
+---. 2010, \apjs, In preparation
+
+\bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
+{Wise}, J.~H., \& {Cen}, R. 2009, \apj, 693, 984
+
+\bibitem[{{Wolfe} {et~al.}(2005){Wolfe}, {Gawiser}, \&
+  {Prochaska}}]{Wolfe05_Review}
+{Wolfe}, A.~M., {Gawiser}, E., \& {Prochaska}, J.~X. 2005, \araa, 43, 861
+
+\end{thebibliography}
+
 
 \end{document}

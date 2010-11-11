@@ -1,4 +1,4 @@
-\begin{thebibliography}{52}
+\begin{thebibliography}{50}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -33,9 +33,6 @@
   {Larson}}]{Bromm01}
 {Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
   328, 969
-
-\bibitem[{{Bryan} \& {Norman}(1997)}]{BryanNorman1997}
-{Bryan}, G.~L., \& {Norman}, M.~L. 1997, ArXiv Astrophysics e-prints
 
 \bibitem[{{Cen} \& {Ostriker}(1992)}]{Cen92}
 {Cen}, R., \& {Ostriker}, J.~P. 1992, \apjl, 399, L113
@@ -201,10 +198,5 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Wolfe} {et~al.}(2005){Wolfe}, {Gawiser}, \&
   {Prochaska}}]{Wolfe05_Review}
 {Wolfe}, A.~M., {Gawiser}, E., \& {Prochaska}, J.~X. 2005, \araa, 43, 861
-
-\bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
-  {Sugiyama}}]{Yoshida03}
-{Yoshida}, N., {Abel}, T., {Hernquist}, L., \& {Sugiyama}, N. 2003, \apj, 592,
-  645
 
 \end{thebibliography}
