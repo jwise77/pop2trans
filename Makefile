@@ -24,7 +24,7 @@ endif
 .PHONY : clean veryclean
 
 clean:
-	rm -f *.bbl *.log *.aux *.out *.dvi *.blg *.toc *.lof *.lot *.tbx *.fgx *~
+	rm -f *.log *.aux *.out *.dvi *.blg *.toc *.lof *.lot *.tbx *.fgx *~
 
 veryclean: clean
 	rm -f *.ps *.pdf
