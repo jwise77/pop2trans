@@ -1,40 +1,38 @@
-%\documentclass[apjl]{emulateapj}
-\documentclass[12pt,preprint]{aastex}
+\documentclass[useAMS,usenatbib]{mn2e}
 
 \usepackage{graphicx}
 \usepackage{epsfig}
 \usepackage{natbib}
 \usepackage[section] {placeins}
-\bibliographystyle{apj}
-\citestyle{apj}
+\bibliographystyle{mn2e}
+\citestyle{mn2e}
 
 %%%%%%%% Begin custom definitions %%%%%%%%%%%%%
 
 \input macros.tex
+\voffset=-1.4cm
 
 %%%%%%%% End custom definitions %%%%%%%%%%
 
 \begin{document}
 
-\shorttitle{High Redshift Dwarf Galaxies}
-\shortauthors{WISE ET AL.}
+\title[High Redshift Dwarf Galaxies]{Metal Enrichment and Stellar
+  Populations of High Redshift Dwarf Galaxies}
 
-\title{Metal Enrichment and Stellar Populations of High Redshift Dwarf
-  Galaxies}
+\author[Wise et al.]{John H. Wise$^1$\thanks{Hubble Fellow; e-mail:
+    jwise@astro.princeton.edu}, Matthew J. Turk$^2$, Michael
+  L. Norman$^2$, Tom Abel$^3$\\
+  $^{1}$ Department of Astrophysical Sciences, Princeton University,
+  Peyton Hall, Ivy Lane, Princeton, NJ 08544, USA\\
+  $^{2}$ Center for Astrophysics and Space Sciences,
+    University of California at San Diego, La Jolla, CA 92093, USA\\
+  $^{3}$ Kavli Institute for Particle Astrophysics and Cosmology,
+  Stanford University, Menlo Park, CA 94025, USA}
 
-\author{John H. Wise\altaffilmark{1,2}, 
-  Matthew J. Turk\altaffilmark{3},
-  Michael L. Norman\altaffilmark{3},
-  Tom Abel\altaffilmark{4}}
+\pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2010}
 
-\altaffiltext{1}{Department of Astrophysical Sciences, Princeton
-  University, Peyton Hall, Ivy Lane, Princeton, NJ 08544}
-\altaffiltext{2}{Hubble Fellow}
-\altaffiltext{3}{Center for Astrophysics and Space Sciences,
-  University of California at San Diego, La Jolla, CA 92093}
-\altaffiltext{4}{Kavli Institute for Particle Astrophysics and
-  Cosmology, Stanford University, Menlo Park, CA 94025}
-\email{jwise@astro.princeton.edu}
+\maketitle
+\label{firstpage}
 
 \begin{abstract}
 
@@ -67,8 +65,10 @@
 
 \end{abstract}
 
-\keywords{cosmology --- methods: numerical --- hydrodynamics ---
-  radiative transfer --- star formation}
+\begin{keywords}
+  cosmology --- methods: numerical --- hydrodynamics ---
+  radiative transfer --- star formation
+\end{keywords}
 
 \section{Motivation}
 
@@ -283,7 +283,7 @@ halos
 
 \section{Summary}
 
-\acknowledgments
+\section*{Acknowledgements}
 
 J.~H.~W. is supported by NASA through Hubble Fellowship grant
 \#120-6370 awarded by the Space Telescope Science Institute, which is
@@ -295,8 +295,8 @@ J.~H.~W. thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline
 Tolstoy for enlightening discussions.  The majority of the analysis
 and plots were done with \texttt{yt} \citep{yt_full_paper}.
 
-%\clearpage
-%\input biblio.tex
 \bibliography{ms}
+\bsp
+\label{lastpage}
 
 \end{document}
