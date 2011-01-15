@@ -128,10 +128,17 @@ important physical effects.
 \section{Method}
 \label{sec:setup}
 
+\begin{figure*}
+  \epsscale{2}
+  \plotone{bmosaic.eps}
+  \epsscale{1}
+  \caption{\label{fig:evo-mosaic} text.}
+\end{figure*}
+
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
-enzo~v2.0\footnote{\texttt{enzo.googlecode.com, changeset
+\textsc{enzo~v2.0}\footnote{\texttt{enzo.googlecode.com, changeset
     b86d8ba026d6}} \citep{OShea2004}, which has been modified to use a
 HLLC Riemann solver \citep{Toro94_HLLC} for additional stability in
 strong shocks and rarefaction waves.  To resolve minihalos with at
@@ -145,7 +152,7 @@ super-Lagrangian behavior.  We also refine on a DM overdensity of $3
 cells, avoiding artificial fragmentation during gaseous collapses
 \citep{Truelove97}.  This simulation has $1.4 \times 10^8$
 computational elements and a maximal spatial resolution of 0.1 pc.  We
-initialize the simulation with \textsl{grafic} \citep{Bertschinger01}
+initialize the simulation with \textsc{grafic} \citep{Bertschinger01}
 at $z = 130$ and use the cosmological parameters from the 7-year WMAP
 $\Lambda$CDM+SZ+LENS best fit \citep{WMAP7}: $\Omega_M = 0.266$,
 $\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 =
@@ -254,11 +261,61 @@ III star formation.  We vary this model with the following:
 \section{Results}
 \label{sec:results}
 
+\begin{figure*}
+  \plottwo{z7-mosaic0.eps}{z7-mosaic1.eps}
+  \caption{\label{fig:z7-mosaic} Redshift 7.}
+\end{figure*}
+
+\begin{figure*}
+  \plottwo{z8-mosaic0.eps}{z8-mosaic1.eps}
+  \caption{\label{fig:z8-mosaic} Redshift 8.}
+\end{figure*}
+
+\begin{figure*}
+  \plottwo{z10-mosaic0.eps}{z10-mosaic1.eps}
+  \caption{\label{fig:z10-mosaic} Redshift 10.}
+\end{figure*}
+
 \subsection{Halo mass evolution}
+
+\begin{figure*}
+  \plottwo{history0.eps}{history5.eps}
+  \caption{\label{fig:massevo} Mass evolution.}
+\end{figure*}
 
 \subsection{Metal enrichment}
 
+\begin{figure}
+  \plotone{Zhistory.eps}
+  \caption{\label{fig:Zevo} Metal evolution.}
+\end{figure}
+
+\begin{figure}
+  \plotone{z2.eps}
+  \caption{\label{fig:z2} Halo metallicities.}
+\end{figure}
+
+\begin{figure}
+  \plotone{z3.eps}
+  \caption{\label{fig:z3} Halo metallicities.}
+\end{figure}
+
+\begin{figure}
+  \plotone{ztot.eps}
+  \caption{\label{fig:ztot} Halo metallicities.}
+\end{figure}
+
 \subsection{Star formation}
+
+\begin{figure}
+  \plotone{mlratios.eps}
+  \caption{\label{fig:ML} Mass to light ratios.}
+\end{figure}
+
+%\begin{figure}
+%  \plotone{sfh.eps}
+%  \caption{\label{fig:SFR} Star formation history.}
+%\end{figure}
 
 \subsection{Negative feedback from gas loss}
 
