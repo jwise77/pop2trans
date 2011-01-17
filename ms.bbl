@@ -12,13 +12,17 @@
   et~al.}{2007}]{Abel07}
 {Abel} T.,  {Wise} J.~H.,    {Bryan} G.~L.,  2007, \apjl, 659, L87
 
-\bibitem[\protect\citeauthoryear{{Beers} \& {Christlieb}}{{Beers} \&
-  {Christlieb}}{2005}]{Beers05}
-{Beers} T.~C.,  {Christlieb} N.,  2005, \araa, 43, 531
+\bibitem[\protect\citeauthoryear{{Alvarez}, {Bromm} \& {Shapiro}}{{Alvarez}
+  et~al.}{2006}]{Alvarez06}
+{Alvarez} M.~A.,  {Bromm} V.,    {Shapiro} P.~R.,  2006, \apj, 639, 621
 
 \bibitem[\protect\citeauthoryear{{Bertschinger}}{{Bertschinger}}{2001}]{Bertsc%
 hinger01}
 {Bertschinger} E.,  2001, \apjs, 137, 1
+
+\bibitem[\protect\citeauthoryear{{Bond}, {Arnett} \& {Carr}}{{Bond}
+  et~al.}{1984}]{Bond84}
+{Bond} J.~R.,  {Arnett} W.~D.,    {Carr} B.~J.,  1984, \apj, 280, 825
 
 \bibitem[\protect\citeauthoryear{{Bromm}, {Coppi} \& {Larson}}{{Bromm}
   et~al.}{2002}]{Bromm02_P3}
@@ -28,6 +32,10 @@ hinger01}
   {Larson}}{{Bromm} et~al.}{2001}]{Bromm01}
 {Bromm} V.,  {Ferrara} A.,  {Coppi} P.~S.,    {Larson} R.~B.,  2001, \mnras,
   328, 969
+
+\bibitem[\protect\citeauthoryear{{Bromm}, {Yoshida} \& {Hernquist}}{{Bromm}
+  et~al.}{2003}]{Bromm03_SN}
+{Bromm} V.,  {Yoshida} N.,    {Hernquist} L.,  2003, \apjl, 596, L135
 
 \bibitem[\protect\citeauthoryear{{Cen} \& {Ostriker}}{{Cen} \&
   {Ostriker}}{1992}]{Cen92}
@@ -57,10 +65,6 @@ hinger01}
 \bibitem[\protect\citeauthoryear{{Ferrara}}{{Ferrara}}{1998}]{Ferrara98}
 {Ferrara} A.,  1998, \apjl, 499, L17+
 
-\bibitem[\protect\citeauthoryear{{Frebel}, {Kirby} \& {Simon}}{{Frebel}
-  et~al.}{2010}]{Frebel10_Obs}
-{Frebel} A.,  {Kirby} E.~N.,    {Simon} J.~D.,  2010, \nat, 464, 72
-
 \bibitem[\protect\citeauthoryear{{Greif}, {Glover}, {Bromm} \&
   {Klessen}}{{Greif} et~al.}{2010}]{Greif10}
 {Greif} T.~H.,  {Glover} S.~C.~O.,  {Bromm} V.,    {Klessen} R.~S.,  2010,
@@ -79,6 +83,10 @@ hinger01}
   {Woosley}}{2002b}]{Heger02}
 {Heger} A.,  {Woosley} S.~E.,  2002b, \apj, 567, 532
 
+\bibitem[\protect\citeauthoryear{{Johnson} \& {Bromm}}{{Johnson} \&
+  {Bromm}}{2006}]{Johnson06}
+{Johnson} J.~L.,  {Bromm} V.,  2006, \mnras, 366, 247
+
 \bibitem[\protect\citeauthoryear{{Kitayama}, {Yoshida}, {Susa} \&
   {Umemura}}{{Kitayama} et~al.}{2004}]{Kitayama04}
 {Kitayama} T.,  {Yoshida} N.,  {Susa} H.,    {Umemura} M.,  2004, \apj, 613,
@@ -91,14 +99,33 @@ hinger01}
 \bibitem[\protect\citeauthoryear{{Larson}}{{Larson}}{1998}]{Larson98}
 {Larson} R.~B.,  1998, \mnras, 301, 569
 
+\bibitem[\protect\citeauthoryear{{Mac Low} \& {Shull}}{{Mac Low} \&
+  {Shull}}{1986}]{MacLow86}
+{Mac Low} M.,  {Shull} J.~M.,  1986, \apj, 302, 585
+
 \bibitem[\protect\citeauthoryear{Matsumoto \& Nishimura}{Matsumoto \&
   Nishimura}{1998}]{MTwister}
 Matsumoto M.,  Nishimura T.,  1998, ACM Trans. Model. Comput. Simul., 8, 3
+
+\bibitem[\protect\citeauthoryear{{McGreer} \& {Bryan}}{{McGreer} \&
+  {Bryan}}{2008}]{McGreer08}
+{McGreer} I.~D.,  {Bryan} G.~L.,  2008, \apj, 685, 8
+
+\bibitem[\protect\citeauthoryear{{Norman}}{{Norman}}{2008}]{Norman08}
+{Norman} M.~L.,  2008, in {B.~W.~O'Shea \& A.~Heger} ed., First Stars III
+  Vol.~990 of American Institute of Physics Conference Series, {Population III
+  Star Formation and IMF}.
+pp 3--15
 
 \bibitem[\protect\citeauthoryear{{Omukai}, {Tsuribe}, {Schneider} \&
   {Ferrara}}{{Omukai} et~al.}{2005}]{Omukai05}
 {Omukai} K.,  {Tsuribe} T.,  {Schneider} R.,    {Ferrara} A.,  2005, \apj, 626,
   627
+
+\bibitem[\protect\citeauthoryear{{O'Shea}, {Abel}, {Whalen} \&
+  {Norman}}{{O'Shea} et~al.}{2005}]{OShea05}
+{O'Shea} B.~W.,  {Abel} T.,  {Whalen} D.,    {Norman} M.~L.,  2005, \apjl, 628,
+  L5
 
 \bibitem[\protect\citeauthoryear{{O'Shea}, {Bryan}, {Bordner}, {Norman},
   {Abel}, {Harkness} \& {Kritsuk}}{{O'Shea} et~al.}{2004}]{OShea2004}
@@ -120,6 +147,10 @@ Matsumoto M.,  Nishimura T.,  1998, ACM Trans. Model. Comput. Simul., 8, 3
 {Schneider} R.,  {Omukai} K.,  {Inoue} A.~K.,    {Ferrara} A.,  2006, \mnras,
   369, 1437
 
+\bibitem[\protect\citeauthoryear{{Shapiro} \& {Kang}}{{Shapiro} \&
+  {Kang}}{1987}]{Shapiro87}
+{Shapiro} P.~R.,  {Kang} H.,  1987, \apj, 318, 32
+
 \bibitem[\protect\citeauthoryear{{Smith}, {Sigurdsson} \& {Abel}}{{Smith}
   et~al.}{2008}]{2008MNRAS.385.1443S}
 {Smith} B.,  {Sigurdsson} S.,    {Abel} T.,  2008, \mnras, 385, 1443
@@ -133,14 +164,10 @@ Matsumoto M.,  Nishimura T.,  1998, ACM Trans. Model. Comput. Simul., 8, 3
   et~al.}{2010}]{Stacy10_Binary}
 {Stacy} A.,  {Greif} T.~H.,    {Bromm} V.,  2010, \mnras, 403, 45
 
-\bibitem[\protect\citeauthoryear{{Tafelmeyer}, {Jablonka}, {Hill}, {Shetrone},
-  {Tolstoy}, {Irwin}, {Battaglia}, {Helmi}, {Starkenburg}, {Venn}, {Abel},
-  {Francois}, {Kaufer}, {North}, {Primas} \& {Szeifert}}{{Tafelmeyer}
-  et~al.}{2010}]{Tafelmeyer10}
-{Tafelmeyer} M.,  {Jablonka} P.,  {Hill} V.,  {Shetrone} M.,  {Tolstoy} E.,
-  {Irwin} M.~J.,  {Battaglia} G.,  {Helmi} A.,  {Starkenburg} E.,  {Venn}
-  K.~A.,  {Abel} T.,  {Francois} P.,  {Kaufer} A.,  {North} P.,  {Primas} F.,
-   {Szeifert} T.,  2010, ArXiv e-prints
+\bibitem[\protect\citeauthoryear{{Tegmark}, {Silk}, {Rees}, {Blanchard}, {Abel}
+  \& {Palla}}{{Tegmark} et~al.}{1997}]{Tegmark97}
+{Tegmark} M.,  {Silk} J.,  {Rees} M.~J.,  {Blanchard} A.,  {Abel} T.,
+  {Palla} F.,  1997, \apj, 474, 1
 
 \bibitem[\protect\citeauthoryear{Toro, Spruce \& Speares}{Toro
   et~al.}{1994}]{Toro94_HLLC}
@@ -179,5 +206,9 @@ IMF}
 \bibitem[\protect\citeauthoryear{{Wise} \& {Cen}}{{Wise} \&
   {Cen}}{2009}]{Wise09}
 {Wise} J.~H.,  {Cen} R.,  2009, \apj, 693, 984
+
+\bibitem[\protect\citeauthoryear{{Yoshida}, {Omukai} \& {Hernquist}}{{Yoshida}
+  et~al.}{2007}]{Yoshida07}
+{Yoshida} N.,  {Omukai} K.,    {Hernquist} L.,  2007, \apjl, 667, L117
 
 \end{thebibliography}
