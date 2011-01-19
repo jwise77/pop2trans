@@ -1,5 +1,10 @@
-\begin{thebibliography}{68}
+\begin{thebibliography}{84}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Abel} {et~al}\mbox{.}(1997){Abel}, {Anninos}, {Zhang}, \&
+  {Norman}}]{Abel97}
+{Abel} T., {Anninos} P., {Zhang} Y., {Norman} M.~L., 1997, New Astronomy, 2,
+  181
 
 \bibitem[{{Abel}, {Bryan} \& {Norman}(2002){Abel}, {Bryan}, \&
   {Norman}}]{ABN02}
@@ -14,6 +19,11 @@
 \bibitem[{{Alvarez}, {Bromm} \& {Shapiro}(2006){Alvarez}, {Bromm}, \&
   {Shapiro}}]{Alvarez06}
 {Alvarez} M.~A., {Bromm} V., {Shapiro} P.~R., 2006, \apj, 639, 621
+
+\bibitem[{{Anninos} {et~al}\mbox{.}(1997){Anninos}, {Zhang}, {Abel}, \&
+  {Norman}}]{Anninos97}
+{Anninos} P., {Zhang} Y., {Abel} T., {Norman} M.~L., 1997, New Astronomy, 2,
+  209
 
 \bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
 {Bertschinger} E., 2001, \apjs, 137, 1
@@ -33,6 +43,11 @@
   {Hernquist}}]{Bromm03_SN}
 {Bromm} V., {Yoshida} N., {Hernquist} L., 2003, \apjl, 596, L135
 
+\bibitem[{{Bryan} {et~al}\mbox{.}(1995){Bryan}, {Norman}, {Stone}, {Cen}, \&
+  {Ostriker}}]{Bryan95}
+{Bryan} G.~L., {Norman} M.~L., {Stone} J.~M., {Cen} R., {Ostriker} J.~P., 1995,
+  Computer Physics Communications, 89, 149
+
 \bibitem[{{Cen} \& {Ostriker}(1992)}]{Cen92}
 {Cen} R., {Ostriker} J.~P., 1992, \apjl, 399, L113
 
@@ -51,6 +66,11 @@
   {Klessen}}]{clark08}
 {Clark} P.~C., {Glover} S.~C.~O., {Klessen} R.~S., 2008, \apj, 672, 757
 
+\bibitem[{{Efstathiou} {et~al}\mbox{.}(1985){Efstathiou}, {Davis}, {White}, \&
+  {Frenk}}]{Efstathiou85}
+{Efstathiou} G., {Davis} M., {White} S.~D.~M., {Frenk} C.~S., 1985, \apjs, 57,
+  241
+
 \bibitem[{{Ferland} {et~al}\mbox{.}(1998){Ferland}, {Korista}, {Verner},
   {Ferguson}, {Kingdon}, \& {Verner}}]{CLOUDY}
 {Ferland} G.~J., {Korista} K.~T., {Verner} D.~A., {Ferguson} J.~W., {Kingdon}
@@ -62,10 +82,22 @@
 \bibitem[{{Furlanetto} \& {Loeb}(2005)}]{Furlanetto05_Reion}
 {Furlanetto} S.~R., {Loeb} A., 2005, \apj, 634, 1
 
+\bibitem[{{Glover} \& {Abel}(2008)}]{Glover08_Rates}
+{Glover} S.~C.~O., {Abel} T., 2008, \mnras, 388, 1627
+
+\bibitem[{{G{\'o}rski} {et~al}\mbox{.}(2005){G{\'o}rski}, {Hivon}, {Banday},
+  {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{HEALPix}
+{G{\'o}rski} K.~M., {Hivon} E., {Banday} A.~J., {Wandelt} B.~D., {Hansen}
+  F.~K., {Reinecke} M., {Bartelmann} M., 2005, \apj, 622, 759
+
 \bibitem[{{Greif} {et~al}\mbox{.}(2010){Greif}, {Glover}, {Bromm}, \&
   {Klessen}}]{Greif10}
 {Greif} T.~H., {Glover} S.~C.~O., {Bromm} V., {Klessen} R.~S., 2010, \apj, 716,
   510
+
+\bibitem[{{Greif} {et~al}\mbox{.}(2007){Greif}, {Johnson}, {Bromm}, \&
+  {Klessen}}]{Greif07}
+{Greif} T.~H., {Johnson} J.~L., {Bromm} V., {Klessen} R.~S., 2007, \apj, 670, 1
 
 \bibitem[{{Heger} {et~al}\mbox{.}(2003){Heger}, {Fryer}, {Woosley}, {Langer},
   \& {Hartmann}}]{Heger03}
@@ -122,6 +154,11 @@ Matsumoto M., Nishimura T., 1998, ACM Trans. Model. Comput. Simul., 8, 3
 \bibitem[{{McGreer} \& {Bryan}(2008)}]{McGreer08}
 {McGreer} I.~D., {Bryan} G.~L., 2008, \apj, 685, 8
 
+\bibitem[{{Nomoto} {et~al}\mbox{.}(2006){Nomoto}, {Tominaga}, {Umeda},
+  {Kobayashi}, \& {Maeda}}]{Nomoto06}
+{Nomoto} K., {Tominaga} N., {Umeda} H., {Kobayashi} C., {Maeda} K., 2006,
+  Nuclear Physics A, 777, 424
+
 \bibitem[{{Norman}(2008)}]{Norman08}
 {Norman} M.~L., 2008, in American Institute of Physics Conference Series, Vol.
   990, First Stars III, {B.~W.~O'Shea \& A.~Heger}, ed., pp. 3--15
@@ -142,9 +179,18 @@ Matsumoto M., Nishimura T., 1998, ACM Trans. Model. Comput. Simul., 8, 3
 \bibitem[{{O'Shea} \& {Norman}(2007)}]{OShea07a}
 {O'Shea} B.~W., {Norman} M.~L., 2007, \apj, 654, 66
 
+\bibitem[{{O'Shea} \& {Norman}(2008)}]{OShea08}
+---, 2008, \apj, 673, 14
+
 \bibitem[{{Ricotti}, {Gnedin} \& {Shull}(2008){Ricotti}, {Gnedin}, \&
   {Shull}}]{Ricotti08}
 {Ricotti} M., {Gnedin} N.~Y., {Shull} J.~M., 2008, \apj, 685, 21
+
+\bibitem[{{Safranek-Shrader}, {Bromm} \&
+  {Milosavljevi{\'c}}(2010){Safranek-Shrader}, {Bromm}, \&
+  {Milosavljevi{\'c}}}]{Safranek10}
+{Safranek-Shrader} C., {Bromm} V., {Milosavljevi{\'c}} M., 2010, \apj, 723,
+  1568
 
 \bibitem[{{Salvadori}, {Schneider} \& {Ferrara}(2007){Salvadori}, {Schneider},
   \& {Ferrara}}]{Salvadori07}
@@ -176,6 +222,11 @@ Matsumoto M., Nishimura T., 1998, ACM Trans. Model. Comput. Simul., 8, 3
   {Abel}}]{2008MNRAS.385.1443S}
 {Smith} B., {Sigurdsson} S., {Abel} T., 2008, \mnras, 385, 1443
 
+\bibitem[{{Smith} {et~al}\mbox{.}(2010){Smith}, {Hallman}, {Shull}, \&
+  {O'Shea}}]{Smith10}
+{Smith} B.~D., {Hallman} E.~J., {Shull} J.~M., {O'Shea} B.~W., 2010, ArXiv
+  e-prints
+
 \bibitem[{{Smith} {et~al}\mbox{.}(2009){Smith}, {Turk}, {Sigurdsson}, {O'Shea},
   \& {Norman}}]{2009ApJ...691..441S}
 {Smith} B.~D., {Turk} M.~J., {Sigurdsson} S., {O'Shea} B.~W., {Norman} M.~L.,
@@ -200,6 +251,9 @@ Toro E.~F., Spruce M., Speares W., 1994, Shock Waves, 4, 25, 10.1007/BF01414629
 \bibitem[{{Trenti} \& {Shull}(2010)}]{Trenti10}
 {Trenti} M., {Shull} J.~M., 2010, \apj, 712, 435
 
+\bibitem[{{Trenti} \& {Stiavelli}(2009)}]{Trenti09_SFR}
+{Trenti} M., {Stiavelli} M., 2009, \apj, 694, 879
+
 \bibitem[{{Trenti}, {Stiavelli} \& {Shull}(2009){Trenti}, {Stiavelli}, \&
   {Shull}}]{Trenti09}
 {Trenti} M., {Stiavelli} M., {Shull} J.~M., 2009, \apj, 700, 1672
@@ -222,10 +276,13 @@ Toro E.~F., Spruce M., Speares W., 1994, Shock Waves, 4, 25, 10.1007/BF01414629
   {O'Shea}}]{2009Sci...325..601T}
 {Turk} M.~J., {Abel} T., {O'Shea} B., 2009, Science, 325, 601
 
-\bibitem[{{Turk} {et~al}\mbox{.}(2010){Turk}, {Smith}, {Oishi}, {Skory},
+\bibitem[{{Turk} {et~al}\mbox{.}(2011){Turk}, {Smith}, {Oishi}, {Skory},
   {Skillman}, {Abel}, \& {Norman}}]{yt_full_paper}
-{Turk} M.~J., {Smith} B.~D.~S., {Oishi} J.~S., {Skory} S., {Skillman} S.~W.,
-  {Abel} T., {Norman} M.~L., 2010, \apjs, submitted (October, 2010)
+{Turk} M.~J., {Smith} B.~D., {Oishi} J.~S., {Skory} S., {Skillman} S.~W.,
+  {Abel} T., {Norman} M.~L., 2011, \apjs, 192, 9
+
+\bibitem[{{Umeda} \& {Nomoto}(2003)}]{Umeda03}
+{Umeda} H., {Nomoto} K., 2003, \nat, 422, 871
 
 \bibitem[{{Whalen}, {Abel} \& {Norman}(2004){Whalen}, {Abel}, \&
   {Norman}}]{Whalen04}
@@ -241,14 +298,23 @@ Toro E.~F., Spruce M., Speares W., 1994, Shock Waves, 4, 25, 10.1007/BF01414629
 {Whalen} D., {van Veelen} B., {O'Shea} B.~W., {Norman} M.~L.,
   2008{\natexlab{b}}, \apj, 682, 49
 
+\bibitem[{{Wise} \& {Abel}(2005)}]{Wise05}
+{Wise} J.~H., {Abel} T., 2005, \apj, 629, 615
+
 \bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
-{Wise} J.~H., {Abel} T., 2008, \apj, 685, 40
+---, 2008, \apj, 685, 40
 
 \bibitem[{{Wise} \& {Abel}(2010)}]{Wise10}
 ---, 2010, ArXiv e-prints
 
 \bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
 {Wise} J.~H., {Cen} R., 2009, \apj, 693, 984
+
+\bibitem[{{Woodward} \& {Colella}(1984)}]{Woodward84}
+{Woodward} P., {Colella} P., 1984, Journal of Computational Physics, 54, 115
+
+\bibitem[{{Woosley} \& {Weaver}(1995)}]{Woosley95}
+{Woosley} S.~E., {Weaver} T.~A., 1995, \apjs, 101, 181
 
 \bibitem[{{Yoshida}, {Bromm} \& {Hernquist}(2004){Yoshida}, {Bromm}, \&
   {Hernquist}}]{Yoshida04}

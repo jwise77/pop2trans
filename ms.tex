@@ -20,13 +20,15 @@
   Massive Metal Free Stars to Dwarf Galaxies}
 
 \author[J. H. Wise et al.]{John H. Wise$^1$\thanks{Hubble Fellow;
-    e-mail: jwise@astro.princeton.edu}, Matthew J. Turk$^2$, Michael
-  L. Norman$^2$, Tom Abel$^3$\\
+    e-mail: jwise@astro.princeton.edu}, Matthew J. Turk$^{2,3}$, Michael
+  L. Norman$^3$, Tom Abel$^4$\\
   $^{1}$ Department of Astrophysical Sciences, Princeton University,
-  Princeton, NJ 08544, USA\\
-  $^{2}$ Center for Astrophysics and Space Sciences,
+  Peyton Hall, Princeton, NJ 08544, USA\\
+  $^{2}$ Department of Astronomy, Columbia University, 538 West 120th
+  Street, New York, NY 10027, USA\\
+  $^{3}$ Center for Astrophysics and Space Sciences,
   University of California at San Diego, La Jolla, CA 92093, USA\\
-  $^{3}$ Kavli Institute for Particle Astrophysics and Cosmology,
+  $^{4}$ Kavli Institute for Particle Astrophysics and Cosmology,
   Stanford University, Menlo Park, CA 94025, USA}
 
 \pagerange{\pageref{firstpage}--\pageref{lastpage}} \pubyear{2011}
@@ -259,40 +261,53 @@ our results.
 \section{Method}
 \label{sec:setup}
 
-\begin{figure*}
-  \epsscale{2}
-  \plotone{bmosaic.eps}
-  \epsscale{1}
-  \caption{\label{fig:evo-mosaic} text.}
-\end{figure*}
-
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
 \textsc{enzo~v2.0}\footnote{\texttt{enzo.googlecode.com, changeset
-    b86d8ba026d6}} \citep{OShea2004}, which has been modified to use a
-HLLC Riemann solver \citep{Toro94_HLLC} for additional stability in
-strong shocks and rarefaction waves.  To resolve minihaloes with at
-least 100 dark matter (DM) particles and follow the formation of the
-first generation of dwarf galaxies, we use a simulation box of 1 Mpc
-that has a resolution of $256^3$.  This gives us a DM mass resolution
-of 1840 \Ms.  We refine the grid on baryon overdensities of $3 \times
-2^{-0.2l}$, where $l$ is the AMR level, resulting in a
-super-Lagrangian behavior.  We also refine on a DM overdensity of $3
-\times 2^l$ and always resolve the local Jeans length by at least 4
-cells, avoiding artificial fragmentation during gaseous collapses
-\citep{Truelove97}.  This simulation has $1.4 \times 10^8$
-computational elements and a maximal spatial resolution of 0.1 pc.  We
-initialize the simulation with \textsc{grafic} \citep{Bertschinger01}
-at $z = 130$ and use the cosmological parameters from the 7-year WMAP
-$\Lambda$CDM+SZ+LENS best fit \citep{WMAP7}: $\Omega_M = 0.266$,
-$\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 =
-0.81$, and $n = 0.963$ with the variables having their usual
-definitions.  We stop the simulation at $z=7$.
+    b86d8ba026d6}} \citep{OShea2004}.  It uses an $N$-body adaptive
+particle-mesh solver \citep{Efstathiou85} to follow the dark matter
+(DM) dynamics.  It solves the hydrodynamical equation using the
+second-order accurate piecewise parabolic method \citep{Woodward84,
+  Bryan95}, while a Riemann solver ensures accurate shock capturing
+with minimal viscosity.  We use the recently added HLLC Riemann solver
+\citep{Toro94_HLLC} for additional stability in strong shocks and
+rarefaction waves.  We use the nine-species (\hi, \hii, \hei, \heii,
+\heiii, e$^-$, \hh, \hh$^+$, H$^-$) non-equilibrium chemistry model in
+\enzo~\citep{Abel97, Anninos97} and the \hh~cooling rates from
+\citet{Glover08_Rates}.
+
+To resolve minihaloes with at least 100 dark matter (DM) particles and
+follow the formation of the first generation of dwarf galaxies, we use
+a simulation box of $L_{\rm box} = 1$ Mpc that has a resolution of
+$256^3$.  This gives us a DM mass resolution of 1840 \Ms.  We refine
+the grid on baryon overdensities of $3 \times 2^{-0.2l}$, where $l$ is
+the AMR level, resulting in a super-Lagrangian behavior \citep[also
+see][]{OShea08}.  We also refine on a DM overdensity of $3 \times 2^l$
+and always resolve the local Jeans length by at least 4 cells,
+avoiding artificial fragmentation during gaseous collapses
+\citep{Truelove97}.  If any of these critera are met in a single cell,
+it is flagged for further spatial refinement.
+
+We initialize the simulation with \textsc{grafic}
+\citep{Bertschinger01} at $z = 130$ and use the cosmological
+parameters from the 7-year WMAP $\Lambda$CDM+SZ+LENS best fit
+\citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$, $\Omega_b
+= 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$ with the
+variables having their usual definitions.  We use a maximum refinement
+level of $l = 12$, resulting in a maximal comoving resolution of 1 pc.
+We stop the simulation at $z=7$ to avoid any large-scale modes with $r
+\sim L_{\rm box}$ entering the non-linear growth regime.  At the final
+redshift, this simulation has $1.4 \times 10^8$ computational cells.
 
 \subsection{Star formation}
 
-We distinguish Pop II and Pop III SF by the total metallicity of the
+Here we describe our star formation and feedback algorithms, quoting
+the parameters used in our fidicual model.  We describe the variations
+in these parameters later in Sec. \ref{sec:config}.
+
+We consider both Pop II and III star formation in the simulation.  We
+distinguish between the two modes by the total metallicity of the
 densest cell in the molecular cloud.  Pop II stars are formed if [Z/H]
 $> -4$, and Pop III stars are formed otherwise.  We do not consider
 Pop III.2 stars and intermediate mass stars from CMB-limited cooling.
@@ -304,15 +319,31 @@ occurring during their collapse; however \citet{2009Sci...325..601T}
 and \citet{Stacy10_Binary} have recently shown that Pop III binaries
 may form in a fraction of such haloes.
 
-% Furthermore, detailed one-dimensional calculations have shown that
-% their IMF should follow a Kroupa-like IMF that has a Salpeter slope
-% at the high-mass end and an exponential cut-off below $M_{\rm char}$
-% \cite{refs}.
+For Pop III stars, we use the same SF model as \citet{Wise08_Gal}
+where each star particle represents a single star, forming at an
+overdensity of $5 \times 10^5$.  The overdense cell must have a
+converging velocity flow ($\nabla \cdot v < 0$) and be cold ($T <
+10^3$ K), similar to the original \citet{Cen92} model.  We do not use
+the $t_{\rm cool} < t_{\rm dyn}$ condition either because these
+timescales are roughly equivalent during the quasi-static collapse of
+a metal-free molecular cloud \citep[e.g.][]{OShea07a}.  Thus this
+comparison does not pose a good test whether a volume will collapse
+and form a Pop III star.  In its replacement, we require that the cell
+have a \hh~fraction $f_{\rm H2} > 5 \times 10^{-3}$ to suppress star
+formation in the presence of a strong \hh-dissociating (Lyman-Werner;
+hereafter LW) background.  Lastly we do not use the original criterion
+of a cell being Jeans unstable because the local Jeans length is
+always resolved by at least four cells in our simulation.  Once a cell
+satisifies these four criteria, the cell is flagged to form a star
+particle, acting as a radiative point source.  To conserve mass within
+the simulation, we remove half of the gas in a sphere centered on the
+overdense cell that contains twice the stellar mass.  If multiple star
+particles form in the same timestep within $r_{\rm merge} = 10$ pc,
+these particles are merged, and the resulting position is their center
+of mass.
 
-For Pop III stars, we use the same SF model as \citet{Wise08_Gal} where
-each star particle represents a single star, forming at an overdensity
-of $5 \times 10^5$.  Instead of using a fixed stellar mass, we randomly
-sampled from an IMF with a functional form of
+Instead of using a fixed stellar mass as in \citet{Wise08_Gal}, we
+randomly sampled from an IMF with a functional form of
 %
 \begin{equation}
 \label{eqn:imf}
@@ -332,62 +363,173 @@ two simulations.  This happens because the order in which haloes form
 Pop III stars can be altered from enhanced star formation and feedback
 from nearby Pop II star clusters.
 
-We treat Pop II SF with the same prescription as \citet{Wise09}, which
-is a modified version of the \citet{Cen92} method but accounts for the
-fact that the molecular clouds are resolved.  The critical overdensity
-is the same as the Pop III SF model.  In each star-forming region,
-seven percent of the cold gas ($T < 10^3$ K) is removed from the grid
-and deposited into the star particle that lives for 20 Myr, the
-maximum lifetime of an OB star.  These stars generate the majority of
-the ionizing radiation and SNe feedback in stellar clusters, thus we
-ignore lower mass stars.
+We treat Pop II star formation with the same prescription as
+\citet{Wise09}, which is similar to the Pop III prescription but
+without the \hh~fraction floor that is removed because the
+metal-enriched gas can efficiently cool even in the presence of a
+strong UV radiation field \citep[e.g.][]{Safranek10}.  This method is
+effectively a modified version of the \citet{Cen92} method but
+accounts for the fact that the molecular clouds are resolved.  In the
+simulation, we define the molecular cloud as a sphere, centered on the
+most dense cell, with a dynamical time $t_{\rm dyn} = 3$ Myr
+(corresponding to an average density $\bar{\rho}_{\rm MC} \simeq
+1000\mu \cubecm$) and a radius $R_{\rm MC}$.  In this sphere, a
+fraction $c_\star = 0.07 f_{\rm cold}$ of the cold gas ($T < 10^3$ K)
+is converted into a star particle with mass $m_\star = c_\star
+(4\pi/3) \bar{\rho}_{\rm MC} R_{\rm MC}^3$.  We then replace the
+sphere with a uniform density $\rho_{\rm MC} = (1 - c_\star) /
+(Gt_{\rm dyn}^2)$ and temperature $T = 10^4$ K, which approximates the
+initial stages of an \hii~region.  Similar to the Pop III treatment,
+we merge any newly created particles within a radius $R_{\rm merge}$.
+We set the minimum mass of a star particle to $m_{\rm \star, min} =
+1000 \Ms$.  If the initial mass does not exceed $m_{\rm \star, min}$,
+the star particle does not provide any feedback and continues to
+accrete until it reaches $m_{\rm \star, min}$.  The star particles
+live for 20 Myr, the maximum lifetime of an OB star.  These stars
+generate the majority of the ionizing radiation and SNe feedback in
+stellar clusters, thus we ignore any feedback from lower mass stars.
 
 \subsection{Stellar feedback}
 
-We use mass-dependent luminosities and lifetimes of the Pop III stars
-from \citet{Schaerer02}.  The radiation field is evolved with adaptive
-ray tracing \citep{Abel02_RT, Wise10} and is coupled self-consistently
-to the hydrodynamics.  We model the \hh~dissociating radiation with an
-optically-thin, inverse square profile, centered on all stars.  These
-stars die as pair-instability SNe (PISNe) if they are in the mass
-range 140--260 \Ms~\citep{Heger03}.  We use the explosion energy from
+The radiation field is evolved with adaptive ray tracing
+\citep{Abel02_RT, Wise10} that is based on the HEALPix framework
+\citep{HEALPix} and is coupled self-consistently to the hydrodynamics.
+Each star particle is a point source of hydrogen ionizing radiation
+with the ionizing luminosity equally split between 48 initial rays
+(HEALPix level 2).  We use a mono-chromatic spectrum for the radiation
+with the energy $E_{\rm ph}$ equaling the luminosity-weighted photon
+energy of the spectrum.  For a cosmological simulation that focuses on
+galaxies, this does not significantly affect the overall galactic
+dynamics \citep[see Sec. 6.3 in][]{Wise10}.  We do not consider helium
+singly- and doubly-ionizing radiation.  As the rays propagate from the
+source or into a high resolution AMR grid, they are adaptively split
+into 4 child rays, increasing the angular resolution of the solution,
+when the solid angle of the ray $\theta = 4\pi/(12 \times 4^{L})$ is
+larger than 1/3 of the cell area, where $L$ is the HEALPix level.  We
+model the \hh~dissociating radiation with an optically-thin, inverse
+square profile, centered on all star particles.  In halos with $M
+\gsim 10^8 \Ms$, the \hh~column density may become large enough to
+self-shield itself from LW radiation \citep{Wise08_Gal}.  Thus we may
+be underestimating the SFRs in our work.
+
+We use mass-dependent hydrogen ionizing and LW photon luminosites and
+lifetimes of the Pop III stars from \citet{Schaerer02}.  We use a
+mass-independent photon energy $E_{\rm ph} = 29.6$ eV, appropriate for
+the near-constant $10^5$ K surface temperatures of Pop III stars.
+They die as Type II SNe if $11 \le M_\star/\Ms \le 40$
+\Ms~\citep{Woosley95} and as PISNe if they are in the mass range
+140--260 \Ms~\citep{Heger03}, where $M_\star$ is the stellar mass.
+For normal Type II SNe between 11--20 \Ms, we use an explosion energy
+of \tento{51}~erg and a linear fit to the metal ejecta mass calculated
+in \citet{Nomoto06},
+%
+\begin{equation}
+  \label{eqn:typeii}
+  M_{\rm Z}/\Ms = 0.1077 + 0.3383 \times (M_\star/\Ms - 11).
+\end{equation}
+%
+We model the SNe of stars with $20 \le M_\star/\Ms \le 40$ as
+hypernova with the energies and ejecta masses also taken from
+\citeauthor{Nomoto06}, linearly interpolating their results to
+$M_\star$.  For PISNe, we use the explosion energy from
 \citet{Heger02}, where we fit the following function to their models,
-$E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He} - 64)]$, where
-$M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium core
-(and equivalently the ejecta) mass and $M_\star$ is the stellar mass.
+%
+\begin{equation}
+  \label{eqn:pisn}
+  E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He}/\Ms - 64)] \; \mathrm{erg},
+\end{equation}
+%
+where $M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium
+core (and equivalently the metal ejecta) mass and $M_\star$ is the
+stellar mass.  The blastwave is modeled by injecting the explosion
+energy and ejecta mass into a sphere of 10 pc, smoothed at its surface
+to improve numerical stability \citep{Wise08_Gal}.  Because we resolve
+the blastwave relatively well with several cells across at its
+initialization, the thermal energy is converted into kinetic energy
+and agrees with the Sedov-Taylor solution \citep[e.g.][]{Greif07}.
 
 The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
-their lifetime, and we do not consider singly- and doubly-ionizing
-helium photons.  We note that low-metallicity stars generate up to a
-factor of four more ionizing photons than a solar metallicity
-population \citep{Schaerer03} and might be underestimating the
-radiative feedback.  Nonetheless this study provides an excellent
+their lifetime, appropriate for a [Z/H] = $-1.3$ population.  We note
+that lower-metallicity stars generate up to 60\% more ionizing photons
+and might be underestimating the radiative feedback
+\citep{Schaerer03}.  Nonetheless this study provides an excellent
 first insight in the transition to Pop II SF, as the metal enrichment
 is the key ingredient here.  For SN feedback, these stars generate
 $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$ after living for 4 Myr,
-which is injected into spheres with a radius of 10 pc.  If the
-resolution of the grid is less than 10/3 pc, we deposit the energy
-into a $3^3$ cube surrounding the star particle.
+which is injected into spheres with a radius of 10 pc, using the same
+technique as the Pop III SNe.  However if the resolution of the grid
+is less than 10/3 pc, we distribute the energy into a $3^3$ cube
+surrounding the star particle.  In addition to numerical stability,
+energy distribution across several cells instead of a single cell has
+been shown to match cosmic SFRs better in galaxy simulations at lower
+redshifts \citep{Smith10}.
 
 \subsection{Different physics configurations}
+\label{sec:config}
+
+\begin{figure}
+  \plotone{uvb.eps}
+  \caption{\label{fig:uvb} Time evolution of the Lyman-Werner
+    background, calculated with the \citet{Wise05} model.}
+\end{figure}
 
 We perform five different simulations with the same initial
-conditions.  The fiducial model considers (1) primordial cooling that
-is solved with a non-equilbrium chemistry solver with 9 species of
-hydrogen, helium, and molecular hydrogen, (2) a Pop III IMF
-characteristic mass $M_{\rm char}$ = 100 \Ms, and (3) Pop II and Pop
-III star formation.  We vary this model with the following:
+conditions.  The fiducial model considers (a) primordial cooling with
+9 species of hydrogen, helium, and molecular hydrogen, (b) a Pop III
+IMF characteristic mass $M_{\rm char}$ = 100 \Ms, and (c) Pop II and
+Pop III star formation.  We vary this model with the following
+changes:
 
-\begin{enumerate}
+\begin{itemize}
 \item Radiative cooling from metal species.  We calculate a cooling
   curve with CLOUDY \citep{CLOUDY} and use the method of
   \citep{2008MNRAS.385.1443S}.  Solar abundances were used in the
   cooling curve.  It is tabulated based on density, temperature,
-  electron fraction, and metallicity.
-\item Pop III IMF characteristic mass $M_{\rm char}$ = 40 \Ms.
-\item Pop II star formation only.
+  electron fraction, and total metallicity.
+\item Pop III IMF characteristic mass $M_{\rm char}$ = 40 \Ms.  Using
+  the abundance patterns of EMP stars and reionization as constaints,
+  the data are best fit with IMFs favoring stars with masses between
+  20--130 \Ms \citep{Umeda03, Tumlinson06}.
+\item Lyman-Werner radiation background.  We use the semi-analytical
+  model of \citet{Wise05}, updated with the 7-year WMAP parameters and
+  optical depth to Thompson scattering, to calculate the LW background
+  intensity, plotted in Figure \ref{fig:uvb}.  In this semi-analytical
+  model, we use a Pop III stellar mass of 100 \Ms, star formation
+  efficiency of 0.005, and escape fraction of 0.2 \citep{Wise09}.  The
+  LW radiation from point sources are added to the background.  For
+  computational convenience, we fit the background evolution with the
+  function
+%
+  \begin{equation}
+    \label{eqn:uvb}
+    \log J_{21}(z) = A + Bz - Cz^2 + Dz^3 - Ez^4,
+  \end{equation}
+%
+  where $(A,B,C,D,E) = (-2.356, 0.4562, 0.02680, 5.882 \times 10^{-4},
+  -5.056 \times 10^{-6})$ and $J_{21}$ is the specific intensity in
+  units of $10^{-21}$ \emis.  This fits the model data within 1\% in
+  $6 \le z \le 30$ and is consistent with $J_{21}$ values in
+  \citet{Trenti09_SFR}.
+\item Pop II star formation only.  This model provides a good
+  comparison to other works that do not consider \hh~cooling.
 \item Pop II star formation only and no molecular hydrogen cooling.
-\end{enumerate}
+  This model is useful to study the importance of treating Pop III
+  star formation and their PISNe.
+\end{itemize}
+
+\begin{figure*}
+  \epsscale{2}
+  \plotone{bmosaic.eps}
+  \epsscale{1}
+  \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
+    volume at redshifts 15, 12, 10, 8, and 7 (left to right).
+    Pictured here are the density-weighted projections of density
+    (top), temperature (middle), and metallicity (bottom).  Note how
+    the stellar radiative feedback from low-mass galaxies reionize
+    the majority of the volume.  The metallicity projections are a
+    composite image of metals originating from Pop II (blue) and III
+    (red) stars with magneta indicdating a mixture of the two.}
+\end{figure*}
 
 \section{Results}
 \label{sec:results}
