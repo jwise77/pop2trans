@@ -91,19 +91,19 @@ matter (DM) haloes with masses $\sim 10^6 \Ms$
 These stars have large luminosities on the order of 10$^6 \lsun$,
 surface temperatures of $\sim 10^5$ K, and lifetimes of $\sim3$ Myr
 \citep{Bond84, Schaerer02}.  Radiation during their main sequence
-creates an \hii region with $r \sim 1-3~\mathrm{kpc}$, ionizing the
+creates an \hii~region with $r \sim 1-3~\mathrm{kpc}$, ionizing the
 surrounding intergalactic medium as the virial radii of the host
 haloes are $r_{\rm vir} \sim 100 \mathrm{pc}$ \citep{Whalen04,
-  Kitayama04, Alvarez06, Abel07}.  The over-pressurized \hii region
+  Kitayama04, Alvarez06, Abel07}.  The over-pressurized \hii~region
 drives a $\sim$ 30 \kms~shock, which is 10 times greater than the
 escape velocity of a $10^6 \Ms$ halo.  In turn, most of the gas is
 expelled from the halo, leaving behind a warm ($3 \times 10^4$ K) and
 diffuse (0.5 \cubecm) medium.  In haloes that are encompassed by these
-\hii regions and not completely photo-evaporated \citep{Shapiro04,
+\hii~regions and not completely photo-evaporated \citep{Shapiro04,
   whalen08}, the additional free electrons catalyze both \hh~and HD
 molecular line cooling \citep{OShea05, Johnson06, Yoshida07,
   McGreer08}, cooling the gas below $\sim$ 100 K and lowering the
-Jeans mass to $\sim$ 10--30 \Ms.  These lower-mass, metal-free stars
+Jeans mass to $\sim10-30$ \Ms.  These lower-mass, metal-free stars
 are called Pop III.2, whereas their more massive counterparts
 that form in unheated regions are called Pop III.1 stars
 \citep{Norman08}.
@@ -115,7 +115,7 @@ pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}. The host
 halo and the neighboring haloes are then enriched with this ejecta.
 The blastwave expands to a radius of a few kpc \citep{Bromm03_SN,
   Wise08_Gal, Greif10} with approximately half of the ejecta falling
-back into the adjacent filaments and halos.  The blastwave may induce
+back into the adjacent filaments and haloes.  The blastwave may induce
 star formation in nearby haloes through the compression of the gas
 \citep{Shapiro87, Ferrara98, Mackey03}, and the timescales for metal
 mixing into the dense gas are many dynamical times \citep{Cen08} for
@@ -208,7 +208,7 @@ formation, stellar feedback, and inhomogeneous chemical enrichment.
 \citeauthor{Tornatore07} employed smoothed particle hydrodynamics
 (SPH) simulations to study this problem and found that Pop III star
 formation occurs down to $z=2.5$ in underdense regions.  Their mass
-resolution did not allow them to capture star formation in minihalos
+resolution did not allow them to capture star formation in minihaloes
 ($M_{\rm halo} \sim 10^{5-7} \Ms$) that host Pop III stars, which may
 have resulted in an underestimate of metal enrichment.  They found a
 `Pop III wave' of star formation, where Pop III star formation is
@@ -216,7 +216,7 @@ quenched in an inside-out fashion from biased regions to voids, is
 however still valid.  \citeauthor{Ricotti08} used a Lagrangian
 moving-mesh simulation with radiative, mechanical, and chemical
 feedback that resolved minihaloes to find that (i) 1--10\% of the
-cosmic volume is chemically enriched, (ii) the gas reservoir in halos
+cosmic volume is chemically enriched, (ii) the gas reservoir in haloes
 with $M < 10^8 \Ms$ are depleted, (iii) there is a large scatter in
 the mass-to-light (M/L) ratios of dwarf galaxies, and (iv) their
 luminosity function is relatively flat.  Most recently
@@ -227,7 +227,7 @@ is chemically enriched by $z=11$.  This difference of several orders
 of magnitude may result from the lack of radiative feedback, which can
 expel most of the gas from the host halo before the SN explosion.
 Supporting this idea, \citet{Whalen08_SN} found that PISN blastwaves
-in neutral halos radiate all of their energy, stalling the shock
+in neutral haloes radiate all of their energy, stalling the shock
 within the halo and suppressing outflows.
 
 Here, we present simulations that include both modes of star formation
@@ -241,7 +241,9 @@ input parameters, and we thus run several simulations while varying
 these parameters.  This is the first time it has been possible to link
 the formation and feedback of the first stars to protogalaxies in a
 numerical simulation, resolving the important scales and including the
-most important physical effects.
+most important physical effects.  This is the first paper in series
+that focuses on the formation and properties of high-redshift dwarf
+galaxies.
 
 This paper is structured as follows.  Section \ref{sec:setup}
 describes our simulation setup, numerical methods for star formation
@@ -260,6 +262,15 @@ our results.
 
 \section{Method}
 \label{sec:setup}
+
+In this section, we describe our cosmological radiation hydrodynamics
+simulation suite with sub-pc resolution, focusing on first the
+formation and feedback of Pop III stars, the transition to Pop II star
+formation, and finally the formation of the first galaxies.  We then
+detail our star formation and feedback algorithms.  We run a total of
+eight different simulations, varying physical parameters.  In the
+following description, we quote the parameters used in our fidicual
+model and describe their variations later in Sec. \ref{sec:config}.
 
 \subsection{Simulation setup}
 
@@ -301,10 +312,6 @@ We stop the simulation at $z=7$ to avoid any large-scale modes with $r
 redshift, this simulation has $1.4 \times 10^8$ computational cells.
 
 \subsection{Star formation}
-
-Here we describe our star formation and feedback algorithms, quoting
-the parameters used in our fidicual model.  We describe the variations
-in these parameters later in Sec. \ref{sec:config}.
 
 We consider both Pop II and III star formation in the simulation.  We
 distinguish between the two modes by the total metallicity of the
@@ -407,7 +414,7 @@ into 4 child rays, increasing the angular resolution of the solution,
 when the solid angle of the ray $\theta = 4\pi/(12 \times 4^{L})$ is
 larger than 1/3 of the cell area, where $L$ is the HEALPix level.  We
 model the \hh~dissociating radiation with an optically-thin, inverse
-square profile, centered on all star particles.  In halos with $M
+square profile, centered on all star particles.  In haloes with $M
 \gsim 10^8 \Ms$, the \hh~column density may become large enough to
 self-shield itself from LW radiation \citep{Wise08_Gal}.  Thus we may
 be underestimating the SFRs in our work.
@@ -449,20 +456,20 @@ initialization, the thermal energy is converted into kinetic energy
 and agrees with the Sedov-Taylor solution \citep[e.g.][]{Greif07}.
 
 The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
-their lifetime, appropriate for a [Z/H] = $-1.3$ population.  We note
-that lower-metallicity stars generate up to 60\% more ionizing photons
-and might be underestimating the radiative feedback
-\citep{Schaerer03}.  Nonetheless this study provides an excellent
-first insight in the transition to Pop II SF, as the metal enrichment
-is the key ingredient here.  For SN feedback, these stars generate
-$6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$ after living for 4 Myr,
-which is injected into spheres with a radius of 10 pc, using the same
-technique as the Pop III SNe.  However if the resolution of the grid
-is less than 10/3 pc, we distribute the energy into a $3^3$ cube
-surrounding the star particle.  In addition to numerical stability,
-energy distribution across several cells instead of a single cell has
-been shown to match cosmic SFRs better in galaxy simulations at lower
-redshifts \citep{Smith10}.
+their lifetime and $E_{\rm ph} = 21.6$ eV, appropriate for a [Z/H] =
+$-1.3$ population.  We note that lower-metallicity stars generate up
+to 60\% more ionizing photons and might be underestimating the
+radiative feedback \citep{Schaerer03}.  Nonetheless this study
+provides an excellent first insight in the transition to Pop II SF, as
+the metal enrichment is the key ingredient here.  For SN feedback,
+these stars generate $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$
+after living for 4 Myr, which is injected into spheres with a radius
+of 10 pc, using the same technique as the Pop III SNe.  However if the
+resolution of the grid is less than 10/3 pc, we distribute the energy
+into a $3^3$ cube surrounding the star particle.  In addition to
+numerical stability, energy distribution across several cells instead
+of a single cell has been shown to match cosmic SFRs better in galaxy
+simulations at lower redshifts \citep{Smith10}.
 
 \subsection{Different physics configurations}
 \label{sec:config}
@@ -473,19 +480,22 @@ redshifts \citep{Smith10}.
     background, calculated with the \citet{Wise05} model.}
 \end{figure}
 
-We perform five different simulations with the same initial
+We perform eight different simulations with the same initial
 conditions.  The fiducial model considers (a) primordial cooling with
 9 species of hydrogen, helium, and molecular hydrogen, (b) a Pop III
 IMF characteristic mass $M_{\rm char}$ = 100 \Ms, and (c) Pop II and
 Pop III star formation.  We vary this model with the following
 changes:
 
-\begin{itemize}
+\begin{enumerate}
 \item Radiative cooling from metal species.  We calculate a cooling
   curve with CLOUDY \citep{CLOUDY} and use the method of
   \citep{2008MNRAS.385.1443S}.  Solar abundances were used in the
   cooling curve.  It is tabulated based on density, temperature,
   electron fraction, and total metallicity.
+\item A critical metallicity of [Z/H] = --5 and --6, accounting for
+  the case where dust cooling can induce low-mass fragmentation in
+  these lower metallicities \citep{Omukai05, Schneider06_Frag}.
 \item Pop III IMF characteristic mass $M_{\rm char}$ = 40 \Ms.  Using
   the abundance patterns of EMP stars and reionization as constaints,
   the data are best fit with IMFs favoring stars with masses between
@@ -496,7 +506,10 @@ changes:
   intensity, plotted in Figure \ref{fig:uvb}.  In this semi-analytical
   model, we use a Pop III stellar mass of 100 \Ms, star formation
   efficiency of 0.005, and escape fraction of 0.2 \citep{Wise09}.  The
-  LW radiation from point sources are added to the background.  For
+  LW radiation from point sources are added to the background.  The
+  intensity decreases after $z \sim 14$ because Pop II star formation
+  becomes dominant, which produce less LW specific luminosity than Pop
+  III stars that have surface temperatures of $T = 10^5$ K.  For
   computational convenience, we fit the background evolution with the
   function
 %
@@ -507,15 +520,26 @@ changes:
 %
   where $(A,B,C,D,E) = (-2.356, 0.4562, 0.02680, 5.882 \times 10^{-4},
   -5.056 \times 10^{-6})$ and $J_{21}$ is the specific intensity in
-  units of $10^{-21}$ \emis.  This fits the model data within 1\% in
-  $6 \le z \le 30$ and is consistent with $J_{21}$ values in
-  \citet{Trenti09_SFR}.
-\item Pop II star formation only.  This model provides a good
-  comparison to other works that do not consider \hh~cooling.
+  units of $10^{-21}$ \emis.  This fits the
+  model data within 1\% in $6 \le z \le 30$ and is consistent with
+  $J_{21}$ values in \citet{Trenti09_SFR}.
+\item Pop II star formation only.  This model is useful to study the
+  importance of treating Pop III star formation as single stars and
+  their pair-instability and Type II SNe.
 \item Pop II star formation only and no molecular hydrogen cooling.
-  This model is useful to study the importance of treating Pop III
-  star formation and their PISNe.
-\end{itemize}
+  This model provides a good comparison to larger scale simulations
+  where it is not computationally feasible to consider \hh~cooling or
+  resolve the necessary scales for Pop III star formation.
+\end{enumerate}
+
+By running several simulations with different physical scenarios, we
+can quantify the importance of each ingredient in high-redshift dwarf
+galaxy formation.  This approach is similar in spirit with many other
+galaxy formation simulation suites \citep[e.g.][]{Schaye10,
+  Maio10_Pop32}.
+
+\section{Results}
+\label{sec:results}
 
 \begin{figure*}
   \epsscale{2}
@@ -531,25 +555,125 @@ changes:
     (red) stars with magneta indicdating a mixture of the two.}
 \end{figure*}
 
-\section{Results}
-\label{sec:results}
+\begin{figure}
+  \plotone{Lstar.eps}
+  \caption{\label{fig:mass_fn} The top panel shows the halo mass
+    function of the simulated haloes (points) where the error bars are
+    Poisson noise and the solid line is the analytic halo mass
+    function of \citet{Warren06}.  The bottom panel depicts the galaxy
+    luminosities versus halo DM mass.  Overplotted are constant
+    mass-to-light ratios.  The large scatter at low halo masses are
+    similar to ones observed in local dSph galaxies.}
+\end{figure}
+
+Here we present the gaseous and stellar evolution of the high-redshift
+dwarf galaxies that form in our simulations.  To illustrate its global
+properties, we show the density-weighted projections of gas density,
+temperature, and metallicity at redshifts 15, 12, 10, 8, and 7 in
+Figure \ref{fig:evo-mosaic}.  Most apparent is the photo-heating of
+IGM over this redshift range, where the ionized fraction is 0.XX at
+$z=7$.  The metallicity projections show the growth of metal-enriched
+bubbles, starting first with enrichment from Pop III stars.  Then as
+time progresses, the haloes enriched within these bubbles above $Z_{\rm
+  cr}$ transition to Pop II star formation, enriching their host halo
+and surrounding IGM.  In Fig. \ref{fig:mass_fn}, we show the halo mass
+function, agreeing well with the analytic halo mass function of
+\citet{Warren06}.  We identify the haloes with a friends-of-friends
+(FOF) algorithm \citep{Davis85}.  The excess of low-mass haloes below
+$M_{\rm DM} = 2 \times 10^6 \Ms$ is most likely associated with the
+biased region in the lower-right region in the projections.
+Furthermore, the uncertainities in different analytic halo mass
+functions \citep[e.g., see][for a comparison]{Reed07} and halo
+identification are comparable than these differences.  Also in this
+Figure, we display the galaxy luminosities with respect to halo DM
+mass found with the FOF halo finder.  Our fidicual model contains 38
+galaxies with a total of 3640 Pop II star clusters and captures the
+formation of 333 Pop III stars.  Note that the most massive halo
+($M_{\rm DM} = 5.2 \times 10^8 \Ms$) is undergoing a starburst at
+$z=7$ and has a high $M/L = 3$.  The lower mass galaxies show a spread
+in M/L over two orders of magnitude, similar to the observations of
+local dSph galaxies \citep[e.g.][]{Strigari08}.
+
+We split our presentation into two sets of analyses.  In one, we focus
+on the evolution of the individual halo and galaxy properties of the
+10 most massive haloes at $z=7$ to better understand their formation
+process and progenitors.  Second, we analyze the statistics of the
+star formation and metal enrichment in all 38 galaxies.  We start by
+presenting the change in the global halo properties, followed by their
+metal enrichment histories.  Lastly we detail their star formation
+histories, metallicity distribution functions, and star formation
+rates.
+
+\subsection{Halo mass evolution}
+
+To get a visual sense of the mass accretion and metal enrichment
+history of the 10 most massive haloes, we show their density-weighted
+projections of gas density, temperature, and composite Pop II+III
+metallicity at redshifts 7, 8, and 10 in
+Fig. \ref{fig:z7-mosaic}--\ref{fig:z10-mosaic}, respectively.  One
+common feature of all of the halos represented in these Figure is that
+they are embedded in a preheated IGM with the exception of Halo 7 at
+$z=10$.  Prior radiative feedback in either the host or nearby halos
+created \hii~regions that encompass these halos.  For \hii~regions
+without sustained star formation, these so-called relic \hii~regions
+recombine and radiatively cool down to $T = 10^3$ K.  Within the
+virial radius, one can see that our simulations capture the
+multi-phase ISM.  In the density projections, the effects of
+photo-evaporation and cloud crushing are clearly seen, which are
+caused by the stellar radiative and mechanical feedback, respectively.
+The filaments adjacent to the halos are photo-heated to $T = 1-3
+\times 10^4$ K, and then their gas escapes into the IGM no longer
+being pressure equilibrium with the gravitational potential of the
+filament, i.e. Jeans smoothing.  Furthermore, neighboring halos are
+photo-evaporated \citep[see][for the level of halo
+photo-evaporation]{Wise08_Reion}, resulting in the suppression of
+gas-rich satellite haloes.  A good illustration of photo-evaporation
+in progress is the cometary structure in the bottom-center of the
+density projection of Halo 4 at $z=7$.
+
+\li Something is wrong with the progenitor finder with Halo 9 at $t =
+500$ Myr.  See the extreme jump in mass and decrease in gas fraction?
+
+In Fig. \ref{fig:massevo}, we show the total halo mass $M_{\rm tot}$,
+stellar mass $M_\star$, and gas fraction $f_{\rm gas} = M_{\rm gas} /
+M_{\rm tot}$ of the most massive halos as a function of time.  We
+define the halo as a sphere with a radius $r_{200}$, centered on the
+DM center-of-mass, with an overdensity of 200 times the cosmic mean
+density.  We identify the progenitors of these halos by searching for
+the halo in the previous output with the greatest number of shared
+particles (all particles in \enzo~have unique identification numbers).
+The mass accretion histories of the halos are not atypical from ones
+found in cosmological simulations with periods of smooth accretion
+from the IGM and filaments with major mergers occasionally occurs,
+appearing as jumps in $M_{\rm halo}(z)$.
+
+Even from these visual representations of the data, it is clear that
+almost all of the halos are gas-poor with outflows from Pop III star
+formation and PISNe having the greatest effect.
+
 
 \begin{figure*}
   \plottwo{z7-mosaic0.eps}{z7-mosaic1.eps}
-  \caption{\label{fig:z7-mosaic} Redshift 7.}
+  \caption{\label{fig:z7-mosaic} Density-weighted projections of
+    density (left), temperature (center), and metallicity (right) of
+    the 10 most massive haloes at $z=7$.  The field of view is 5 proper
+    kpc, and the circles have a radius of $r_{200}$.  The composite
+    metallicity images are constructed in the same fashion as
+    Fig. \ref{fig:evo-mosaic}.}
 \end{figure*}
 
 \begin{figure*}
   \plottwo{z8-mosaic0.eps}{z8-mosaic1.eps}
-  \caption{\label{fig:z8-mosaic} Redshift 8.}
+  \caption{\label{fig:z8-mosaic} Same as Fig. \ref{fig:z7-mosaic} but
+    at $z=8$, showing the progenitors of the 10 most massive haloes at
+    $z=7$.}
 \end{figure*}
 
 \begin{figure*}
   \plottwo{z10-mosaic0.eps}{z10-mosaic1.eps}
-  \caption{\label{fig:z10-mosaic} Redshift 10.}
+  \caption{\label{fig:z10-mosaic} Same as Fig. \ref{fig:z8-mosaic} at
+    $z=10$.}
 \end{figure*}
-
-\subsection{Halo mass evolution}
 
 \begin{figure}
   \plottwo{history0.eps}{history5.eps}
@@ -587,10 +711,22 @@ changes:
   \caption{\label{fig:SFR} Star formation history.}
 \end{figure*}
 
-\subsection{Negative feedback from gas loss}
+\subsection{Unique details about individual haloes}
 
 \section{Differences between Physical Models}
 \label{sec:models}
+
+\subsection{Metal cooling}
+
+\subsection{Varying the critical metallicity}
+
+\subsection{Characteristic mass of the Pop III IMF}
+
+\subsection{Lyman-Werner radiation background}
+
+\subsection{Neglecting Pop III star formation}
+
+\subsection{Neglecting Pop III star formation and \hh~formation}
 
 \section{Comparison to Previous Work}
 \label{sec:compare}

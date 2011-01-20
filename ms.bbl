@@ -1,4 +1,4 @@
-\begin{thebibliography}{84}
+\begin{thebibliography}{90}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al}\mbox{.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -65,6 +65,11 @@
 \bibitem[{{Clark}, {Glover} \& {Klessen}(2008){Clark}, {Glover}, \&
   {Klessen}}]{clark08}
 {Clark} P.~C., {Glover} S.~C.~O., {Klessen} R.~S., 2008, \apj, 672, 757
+
+\bibitem[{{Davis} {et~al}\mbox{.}(1985){Davis}, {Efstathiou}, {Frenk}, \&
+  {White}}]{Davis85}
+{Davis} M., {Efstathiou} G., {Frenk} C.~S., {White} S.~D.~M., 1985, \apj, 292,
+  371
 
 \bibitem[{{Efstathiou} {et~al}\mbox{.}(1985){Efstathiou}, {Davis}, {White}, \&
   {Frenk}}]{Efstathiou85}
@@ -182,6 +187,11 @@ Matsumoto M., Nishimura T., 1998, ACM Trans. Model. Comput. Simul., 8, 3
 \bibitem[{{O'Shea} \& {Norman}(2008)}]{OShea08}
 ---, 2008, \apj, 673, 14
 
+\bibitem[{{Reed} {et~al}\mbox{.}(2007){Reed}, {Bower}, {Frenk}, {Jenkins}, \&
+  {Theuns}}]{Reed07}
+{Reed} D.~S., {Bower} R., {Frenk} C.~S., {Jenkins} A., {Theuns} T., 2007,
+  \mnras, 374, 2
+
 \bibitem[{{Ricotti}, {Gnedin} \& {Shull}(2008){Ricotti}, {Gnedin}, \&
   {Shull}}]{Ricotti08}
 {Ricotti} M., {Gnedin} N.~Y., {Shull} J.~M., 2008, \apj, 685, 21
@@ -205,6 +215,11 @@ Matsumoto M., Nishimura T., 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
 \bibitem[{{Schaerer}(2003)}]{Schaerer03}
 ---, 2003, \aap, 397, 527
+
+\bibitem[{{Schaye} {et~al}\mbox{.}(2010){Schaye}, {Dalla Vecchia}, {Booth},
+  {Wiersma}, {Theuns}, {Haas}, {Bertone}, {Duffy}, {McCarthy}, \& {van de
+  Voort}}]{Schaye10}
+{Schaye} J. {et~al.}, 2010, \mnras, 402, 1536
 
 \bibitem[{{Schneider} {et~al}\mbox{.}(2006){Schneider}, {Omukai}, {Inoue}, \&
   {Ferrara}}]{Schneider06_Frag}
@@ -235,6 +250,11 @@ Matsumoto M., Nishimura T., 1998, ACM Trans. Model. Comput. Simul., 8, 3
 \bibitem[{{Stacy}, {Greif} \& {Bromm}(2010){Stacy}, {Greif}, \&
   {Bromm}}]{Stacy10_Binary}
 {Stacy} A., {Greif} T.~H., {Bromm} V., 2010, \mnras, 403, 45
+
+\bibitem[{{Strigari} {et~al}\mbox{.}(2008){Strigari}, {Bullock}, {Kaplinghat},
+  {Simon}, {Geha}, {Willman}, \& {Walker}}]{Strigari08}
+{Strigari} L.~E., {Bullock} J.~S., {Kaplinghat} M., {Simon} J.~D., {Geha} M.,
+  {Willman} B., {Walker} M.~G., 2008, \nat, 454, 1096
 
 \bibitem[{{Tegmark} {et~al}\mbox{.}(1997){Tegmark}, {Silk}, {Rees},
   {Blanchard}, {Abel}, \& {Palla}}]{Tegmark97}
@@ -284,6 +304,11 @@ Toro E.~F., Spruce M., Speares W., 1994, Shock Waves, 4, 25, 10.1007/BF01414629
 \bibitem[{{Umeda} \& {Nomoto}(2003)}]{Umeda03}
 {Umeda} H., {Nomoto} K., 2003, \nat, 422, 871
 
+\bibitem[{{Warren} {et~al}\mbox{.}(2006){Warren}, {Abazajian}, {Holz}, \&
+  {Teodoro}}]{Warren06}
+{Warren} M.~S., {Abazajian} K., {Holz} D.~E., {Teodoro} L., 2006, \apj, 646,
+  881
+
 \bibitem[{{Whalen}, {Abel} \& {Norman}(2004){Whalen}, {Abel}, \&
   {Norman}}]{Whalen04}
 {Whalen} D., {Abel} T., {Norman} M.~L., 2004, \apj, 610, 14
@@ -301,8 +326,11 @@ Toro E.~F., Spruce M., Speares W., 1994, Shock Waves, 4, 25, 10.1007/BF01414629
 \bibitem[{{Wise} \& {Abel}(2005)}]{Wise05}
 {Wise} J.~H., {Abel} T., 2005, \apj, 629, 615
 
-\bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
----, 2008, \apj, 685, 40
+\bibitem[{{Wise} \& {Abel}(2008{\natexlab{a}})}]{Wise08_Reion}
+---, 2008{\natexlab{a}}, \apj, 684, 1
+
+\bibitem[{{Wise} \& {Abel}(2008{\natexlab{b}})}]{Wise08_Gal}
+---, 2008{\natexlab{b}}, \apj, 685, 40
 
 \bibitem[{{Wise} \& {Abel}(2010)}]{Wise10}
 ---, 2010, ArXiv e-prints
