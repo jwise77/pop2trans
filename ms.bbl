@@ -1,4 +1,4 @@
-\begin{thebibliography}{90}
+\begin{thebibliography}{93}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al}\mbox{.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -89,6 +89,12 @@
 
 \bibitem[{{Glover} \& {Abel}(2008)}]{Glover08_Rates}
 {Glover} S.~C.~O., {Abel} T., 2008, \mnras, 388, 1627
+
+\bibitem[{{Gnedin}(2000)}]{Gnedin00}
+{Gnedin} N.~Y., 2000, \apj, 542, 535
+
+\bibitem[{{Gnedin} \& {Hui}(1998)}]{Hui98}
+{Gnedin} N.~Y., {Hui} L., 1998, \mnras, 296, 44
 
 \bibitem[{{G{\'o}rski} {et~al}\mbox{.}(2005){G{\'o}rski}, {Hivon}, {Banday},
   {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{HEALPix}
@@ -308,6 +314,11 @@ Toro E.~F., Spruce M., Speares W., 1994, Shock Waves, 4, 25, 10.1007/BF01414629
   {Teodoro}}]{Warren06}
 {Warren} M.~S., {Abazajian} K., {Holz} D.~E., {Teodoro} L., 2006, \apj, 646,
   881
+
+\bibitem[{{Wechsler} {et~al}\mbox{.}(2002){Wechsler}, {Bullock}, {Primack},
+  {Kravtsov}, \& {Dekel}}]{Wechsler02}
+{Wechsler} R.~H., {Bullock} J.~S., {Primack} J.~R., {Kravtsov} A.~V., {Dekel}
+  A., 2002, \apj, 568, 52
 
 \bibitem[{{Whalen}, {Abel} \& {Norman}(2004){Whalen}, {Abel}, \&
   {Norman}}]{Whalen04}

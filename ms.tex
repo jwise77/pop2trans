@@ -109,7 +109,7 @@ that form in unheated regions are called Pop III.1 stars
 \citep{Norman08}.
 
 A fraction of Pop III stars enrich the surrounding IGM when
-they go supernova, which can happen in stars $\lsim 40~\Ms$ in Type II
+they go supernova, which can happen in stars $\la 40~\Ms$ in Type II
 supernovae (SNe) or in stars roughly between 140 \Ms~and 260 \Ms~in
 pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}. The host
 halo and the neighboring haloes are then enriched with this ejecta.
@@ -119,12 +119,12 @@ back into the adjacent filaments and haloes.  The blastwave may induce
 star formation in nearby haloes through the compression of the gas
 \citep{Shapiro87, Ferrara98, Mackey03}, and the timescales for metal
 mixing into the dense gas are many dynamical times \citep{Cen08} for
-shock velocities $\lsim 100~\kms$.
+shock velocities $\la 100~\kms$.
 
 When star-forming gas reaches some `critical metallicity' $Z_{\rm
   cr}$, radiative cooling from metal fine-structure lines or
 \hh~formation on dust grains becomes efficient, allowing cooling to $T
-\lsim 100$ K \citep{Omukai05}.  The exact value of $Z_{\rm cr}$ has
+\la 100$ K \citep{Omukai05}.  The exact value of $Z_{\rm cr}$ has
 been constrained to be between $10^{-6} \zsun$ and $10^{-3.5} \zsun$.
 The lower limit applies if dust cooling is important in these
 scenarios \citep{Omukai05, Schneider06_Frag, clark08}, and the upper
@@ -160,8 +160,8 @@ inhomogenous metal enrichment and the transition to Pop II star
 formation, and here we give a brief overview of its development.
 Considering only Pop III star formation, \citeauthor{Yoshida04}
 calculated that Pop III stars can raise the mean metallicity to $-4.5
-\lsim$ [Z/H]\footnote{We use the conventional notation, [Z/H] $\equiv
-  \log(Z/H) - \log(Z_\odot/H_\odot)$.} $\lsim -3.5$ by redshift 15 in
+\la$ [Z/H]\footnote{We use the conventional notation, [Z/H] $\equiv
+  \log(Z/H) - \log(Z_\odot/H_\odot)$.} $\la -3.5$ by redshift 15 in
 the upper limit where all metal-free stars have $M = 200 \Ms$ and
 produce PISNe.  Considering both Pop III and II star formation,
 \citeauthor{Scannapieco03} found that the transition between the two
@@ -192,7 +192,7 @@ than 1\% of the total SFR at $z=6$.  \citeauthor{Karlsson08} use
 observational data of EMP stars with their model to constrain the mass
 fraction of Pop III stars that die with a PISN is less than 40 per
 cent.  They also conclude that stars enriched primarily by PISNe have
-[Ca/H] $\gsim$ --2.6, which could have been missed by some EMP
+[Ca/H] $\ga$ --2.6, which could have been missed by some EMP
 surveys.
 
 %These first stellar clusters may be connected to stars in the Milky
@@ -380,21 +380,22 @@ accounts for the fact that the molecular clouds are resolved.  In the
 simulation, we define the molecular cloud as a sphere, centered on the
 most dense cell, with a dynamical time $t_{\rm dyn} = 3$ Myr
 (corresponding to an average density $\bar{\rho}_{\rm MC} \simeq
-1000\mu \cubecm$) and a radius $R_{\rm MC}$.  In this sphere, a
-fraction $c_\star = 0.07 f_{\rm cold}$ of the cold gas ($T < 10^3$ K)
-is converted into a star particle with mass $m_\star = c_\star
-(4\pi/3) \bar{\rho}_{\rm MC} R_{\rm MC}^3$.  We then replace the
-sphere with a uniform density $\rho_{\rm MC} = (1 - c_\star) /
-(Gt_{\rm dyn}^2)$ and temperature $T = 10^4$ K, which approximates the
-initial stages of an \hii~region.  Similar to the Pop III treatment,
-we merge any newly created particles within a radius $R_{\rm merge}$.
-We set the minimum mass of a star particle to $m_{\rm \star, min} =
-1000 \Ms$.  If the initial mass does not exceed $m_{\rm \star, min}$,
-the star particle does not provide any feedback and continues to
-accrete until it reaches $m_{\rm \star, min}$.  The star particles
-live for 20 Myr, the maximum lifetime of an OB star.  These stars
-generate the majority of the ionizing radiation and SNe feedback in
-stellar clusters, thus we ignore any feedback from lower mass stars.
+1000\mu \cubecm$) and a radius $R_{\rm MC}$, where $\mu$ is the mean
+molecular weight.  In this sphere, a fraction $c_\star = 0.07 f_{\rm
+  cold}$ of the cold gas ($T < 10^3$ K) is converted into a star
+particle with mass $m_\star = c_\star (4\pi/3) \bar{\rho}_{\rm MC}
+R_{\rm MC}^3$.  We then replace the sphere with a uniform density
+$\rho_{\rm MC} = (1 - c_\star) / (Gt_{\rm dyn}^2)$ and temperature $T
+= 10^4$ K, which approximates the initial stages of an \hii~region.
+Similar to the Pop III treatment, we merge any newly created particles
+within a radius $R_{\rm merge}$.  We set the minimum mass of a star
+particle to $m_{\rm \star, min} = 1000 \Ms$.  If the initial mass does
+not exceed $m_{\rm \star, min}$, the star particle does not provide
+any feedback and continues to accrete until it reaches $m_{\rm \star,
+  min}$.  The star particles live for 20 Myr, the maximum lifetime of
+an OB star.  These stars generate the majority of the ionizing
+radiation and SNe feedback in stellar clusters, thus we ignore any
+feedback from lower mass stars.
 
 \subsection{Stellar feedback}
 
@@ -415,7 +416,7 @@ when the solid angle of the ray $\theta = 4\pi/(12 \times 4^{L})$ is
 larger than 1/3 of the cell area, where $L$ is the HEALPix level.  We
 model the \hh~dissociating radiation with an optically-thin, inverse
 square profile, centered on all star particles.  In haloes with $M
-\gsim 10^8 \Ms$, the \hh~column density may become large enough to
+\ga 10^8 \Ms$, the \hh~column density may become large enough to
 self-shield itself from LW radiation \citep{Wise08_Gal}.  Thus we may
 be underestimating the SFRs in our work.
 
@@ -477,7 +478,9 @@ simulations at lower redshifts \citep{Smith10}.
 \begin{figure}
   \plotone{uvb.eps}
   \caption{\label{fig:uvb} Time evolution of the Lyman-Werner
-    background, calculated with the \citet{Wise05} model.}
+    background in units of $J_{21} = 10^{-21}$ \emis, calculated with
+    the \citet{Wise05} model.  See eq. (\ref{eqn:uvb}) for its
+    functional fit.}
 \end{figure}
 
 We perform eight different simulations with the same initial
@@ -503,7 +506,7 @@ changes:
 \item Lyman-Werner radiation background.  We use the semi-analytical
   model of \citet{Wise05}, updated with the 7-year WMAP parameters and
   optical depth to Thompson scattering, to calculate the LW background
-  intensity, plotted in Figure \ref{fig:uvb}.  In this semi-analytical
+  intensity, plotted in Fig. \ref{fig:uvb}.  In this semi-analytical
   model, we use a Pop III stellar mass of 100 \Ms, star formation
   efficiency of 0.005, and escape fraction of 0.2 \citep{Wise09}.  The
   LW radiation from point sources are added to the background.  The
@@ -566,11 +569,13 @@ galaxy formation simulation suites \citep[e.g.][]{Schaye10,
     similar to ones observed in local dSph galaxies.}
 \end{figure}
 
+\input table1.tex
+
 Here we present the gaseous and stellar evolution of the high-redshift
 dwarf galaxies that form in our simulations.  To illustrate its global
 properties, we show the density-weighted projections of gas density,
 temperature, and metallicity at redshifts 15, 12, 10, 8, and 7 in
-Figure \ref{fig:evo-mosaic}.  Most apparent is the photo-heating of
+Fig. \ref{fig:evo-mosaic}.  Most apparent is the photo-heating of
 IGM over this redshift range, where the ionized fraction is 0.XX at
 $z=7$.  The metallicity projections show the growth of metal-enriched
 bubbles, starting first with enrichment from Pop III stars.  Then as
@@ -597,60 +602,16 @@ local dSph galaxies \citep[e.g.][]{Strigari08}.
 We split our presentation into two sets of analyses.  In one, we focus
 on the evolution of the individual halo and galaxy properties of the
 10 most massive haloes at $z=7$ to better understand their formation
-process and progenitors.  Second, we analyze the statistics of the
-star formation and metal enrichment in all 38 galaxies.  We start by
-presenting the change in the global halo properties, followed by their
-metal enrichment histories.  Lastly we detail their star formation
+process and progenitors.  We list the global properties of these
+haloes at $z = 7$ in Table \ref{tab:halos}.  Second, we analyze the
+statistics of the star formation and metal enrichment in all 38
+galaxies.  We start by presenting the change in the global halo
+properties, followed by a description of their star formation
 histories, metallicity distribution functions, and star formation
-rates.
+rates.  We then present their metal enrichment and lastly comment on
+unique details of individual haloes.
 
-\subsection{Halo mass evolution}
-
-To get a visual sense of the mass accretion and metal enrichment
-history of the 10 most massive haloes, we show their density-weighted
-projections of gas density, temperature, and composite Pop II+III
-metallicity at redshifts 7, 8, and 10 in
-Fig. \ref{fig:z7-mosaic}--\ref{fig:z10-mosaic}, respectively.  One
-common feature of all of the halos represented in these Figure is that
-they are embedded in a preheated IGM with the exception of Halo 7 at
-$z=10$.  Prior radiative feedback in either the host or nearby halos
-created \hii~regions that encompass these halos.  For \hii~regions
-without sustained star formation, these so-called relic \hii~regions
-recombine and radiatively cool down to $T = 10^3$ K.  Within the
-virial radius, one can see that our simulations capture the
-multi-phase ISM.  In the density projections, the effects of
-photo-evaporation and cloud crushing are clearly seen, which are
-caused by the stellar radiative and mechanical feedback, respectively.
-The filaments adjacent to the halos are photo-heated to $T = 1-3
-\times 10^4$ K, and then their gas escapes into the IGM no longer
-being pressure equilibrium with the gravitational potential of the
-filament, i.e. Jeans smoothing.  Furthermore, neighboring halos are
-photo-evaporated \citep[see][for the level of halo
-photo-evaporation]{Wise08_Reion}, resulting in the suppression of
-gas-rich satellite haloes.  A good illustration of photo-evaporation
-in progress is the cometary structure in the bottom-center of the
-density projection of Halo 4 at $z=7$.
-
-\li Something is wrong with the progenitor finder with Halo 9 at $t =
-500$ Myr.  See the extreme jump in mass and decrease in gas fraction?
-
-In Fig. \ref{fig:massevo}, we show the total halo mass $M_{\rm tot}$,
-stellar mass $M_\star$, and gas fraction $f_{\rm gas} = M_{\rm gas} /
-M_{\rm tot}$ of the most massive halos as a function of time.  We
-define the halo as a sphere with a radius $r_{200}$, centered on the
-DM center-of-mass, with an overdensity of 200 times the cosmic mean
-density.  We identify the progenitors of these halos by searching for
-the halo in the previous output with the greatest number of shared
-particles (all particles in \enzo~have unique identification numbers).
-The mass accretion histories of the halos are not atypical from ones
-found in cosmological simulations with periods of smooth accretion
-from the IGM and filaments with major mergers occasionally occurs,
-appearing as jumps in $M_{\rm halo}(z)$.
-
-Even from these visual representations of the data, it is clear that
-almost all of the halos are gas-poor with outflows from Pop III star
-formation and PISNe having the greatest effect.
-
+\subsection{Time evolution of halo properties}
 
 \begin{figure*}
   \plottwo{z7-mosaic0.eps}{z7-mosaic1.eps}
@@ -675,10 +636,151 @@ formation and PISNe having the greatest effect.
     $z=10$.}
 \end{figure*}
 
+To get a visual sense of the mass accretion and metal enrichment
+history of the 10 most massive haloes, we show their density-weighted
+projections of gas density, temperature, and composite Pop II+III
+metallicity at redshifts 7, 8, and 10 in
+Fig. \ref{fig:z7-mosaic}--\ref{fig:z10-mosaic}, respectively.  One
+common feature of all of the halos represented in these Figures is
+that they are embedded in a preheated IGM with the exception of Halo 7
+at $z=10$.  Prior radiative feedback in either the host or nearby
+halos created \hii~regions that encompass these halos.  For
+\hii~regions without sustained star formation, these so-called relic
+\hii~regions recombine and radiatively cool down to $T = 10^3$ K.
+Within the virial radius, one can see that our simulations capture the
+multi-phase ISM.  In the density projections, the effects of
+photo-evaporation and cloud crushing are clearly seen, which are
+caused by the stellar radiative and mechanical feedback, respectively.
+The filaments adjacent to the halos are photo-heated to $T = 1-3
+\times 10^4$ K, and then their gas escapes into the IGM no longer
+being pressure equilibrium with the gravitational potential of the
+filament, i.e. Jeans smoothing.  Furthermore, neighboring halos are
+photo-evaporated \citep[see][for the level of halo
+  photo-evaporation]{Wise08_Reion}, resulting in the suppression of
+gas-rich satellite haloes.  A good illustration of photo-evaporation
+in progress is the cometary structure in the bottom-center of the
+density projection of Halo 4 at $z=7$.
+
+%% \li Something is wrong with the progenitor finder with Halo 9 at $t =
+%% 500$ Myr.  See the extreme jump in mass and decrease in gas fraction?
+
+\subsubsection{Halo mass evolution}
+
 \begin{figure}
   \plottwo{history0.eps}{history5.eps}
-  \caption{\label{fig:massevo} Mass evolution.}
+  \caption{\label{fig:massevo} Time evolution of the total halo mass
+    (top panels), stellar mass (middle panels), and gas fraction
+    (bottom panels; $M_{\rm gas} / M_{\rm tot}$) of the 10 most
+    massive halos at $z=7$.  The cosmic mean gas fraction $\Omega_b /
+    \Omega_M$ is marked by a horizontal dotted line in the bottom
+    panels.}
 \end{figure}
+
+In the top panels of Fig. \ref{fig:massevo}, we show the total halo
+mass $M_{\rm tot}$ of the most massive halos as a function of time.
+We define the halo as a sphere with a radius $r_{200}$, centered on
+the DM center-of-mass, with an overdensity of 200 times the cosmic
+mean density.  The mass accretion histories of the halos are not
+atypical from ones found in cosmological simulations with periods of
+smooth accretion from the IGM and filaments with major mergers
+occasionally occurs, appearing as jumps in $M_{\rm halo}(z)$.  The
+halo mass histories are well described by the analytic expression
+\citep{Wechsler02},
+%
+\begin{equation}
+  \label{eqn:mhalo}
+  M_{\rm halo}(a) = M_0 \exp \left[-2a_c\left(\frac{a_0}{a} -
+    1\right)\right],
+\end{equation}
+%
+where $a = 1/(1+z)$ is the scale factor, $M_0 = M_{\rm halo}(a_0)$,
+and $a_c$ describes the rate of mass accretion.  The fitted values
+values are listed in Table \ref{tab:halos} with $a_0 = 1/8$.
+
+\subsubsection{Gas fraction evolution}
+
+In the bottom panels of Fig. \ref{fig:massevo}, we show the gas
+fraction $f_{\rm gas}(z) = M_{\rm gas} / M_{\rm tot}$ of these haloes.
+The time evolution of the gas fraction is unique for each halo, but
+there are some general trends.  Before any star formation occurs in
+the halo, the gas fraction is near the cosmic fraction $\Omega_b /
+\Omega_M$.  Then afterwards it decreases because one or more of the
+three following processes (in order of decreasing impact): a PISN
+explosion within the halo, Pop III stellar radiation within the halo,
+and photo-evaporation from nearby star formation.  Cloud crushing due
+to a nearby SN blastwave is also a possiblity if the halo mass is
+small, but it is not as prevalent.  Complicating the scenario,
+external feedback can also trigger star formation as they compress the
+gas in the halo.  Even from the visual representations of the data in
+Figs. \ref{fig:z7-mosaic}--\ref{fig:z10-mosaic}, it is clear that
+almost all of the haloes and their environments are gas-poor with the
+except of the most massive halo that resides in a cosmologically
+overdense region.
+
+In the most massive halo (Halo 0), \fgas~peaks at 0.19 at $z \sim 13$
+because of a SN blastwave overrunning the halo and compressing the
+gas.  This blastwave enriches the halo and triggers Pop II star
+formation at $z=12$.  The ensuing radiative and mechanical feedback
+drives outflows from the halo, reducing \fgas~by half to 0.08 over 100
+Myr.  Afterwards this halo experiences a series of minor mergers and
+two major mergers with gas-rich haloes, raising \fgas~to 0.15 by
+$z=7$.  Halo 8 shows a similar recovery after a Pop III star forms and
+its associated PISN explodes at $z \sim 12$, driving \fgas~from 0.15
+to 0.01.  It slowly increases over the following 350 Myr to $\fgas =
+0.14$ at $z=7$ because of gas-rich mergers.  The other eight haloes
+remain relatively gas-poor ($0.05 \la \fgas \la 0.1$) after their
+first epoch of star formation.
+
+Because of the severity of gas loss from outflows created by Pop III
+stars and Jeans-smoothing of the adjacent filaments, the halo is
+dependent on mergers to replenish their gas supply
+\citep[cf.][]{Yoshida07, Wise08_Gal, Greif10}.  For a halo to accrete
+from a pre-heated IGM at a given time, it must exceed the `filtering
+mass' \citep{Hui98, Gnedin00},
+%
+\begin{equation}
+  \label{eqn:filtering}
+  M_{\rm F}^{2/3} = \frac{3}{a} \int^a_0 da^\prime M_{\rm J}^{2/3}(a^\prime)
+  \left[ 1 - \left(\frac{a^\prime}{a}\right)^{1/2} \right],
+\end{equation}
+where $M_{\rm J}$ is the time-dependent Jeans mass in the IGM.  We
+plot $M_{\rm F}$ in the pre-heated IGM\footnote{We define the
+  pre-heated IGM as regions with $x_e > 10^{-3}$ and $\rho/\bar{\rho}
+  < 10$, where $x_e$ is the electron fraction and $\bar{\rho}$ is the
+  mean cosmic density.} in Figure \ref{fig:filtering}.  Because the
+haloes that merge into Halo 0 had $M > M_{\rm F}$, its gas fraction
+recovers to nearly the cosmic fraction.  In contrast, all of the other
+massive haloes build up their masses through mergers with halos $M \la
+M_{\rm F}$ that cannot accrete from the pre-heated IGM.
+
+Halo 8 is an uncommon case of a halo with a high gas accretion rate.
+The merging haloes are still gas-rich because they have not hosted any
+(including Pop III) star formation.  They lie in the outskirts of the
+overdense region in the lower-right corner of the projections in
+Fig. \ref{fig:evo-mosaic}.  It is 4.5 proper kpc from Halo 0 at $z=7$,
+far enough away from the starbursting galaxies (the progenitors of
+Halo 0) to avoid significant photo-evaporation but is subjected to
+strong LW radiation, suppressing Pop III star formation.
+
+\subsection{Star formation}
+
+\subsubsection{Star formation histories}
+
+\subsubsection{Metallicity distribution function}
+
+\subsubsection{Star formation rates}
+
+\begin{figure}
+  \plotone{mlratios.eps}
+  \caption{\label{fig:ML} Mass to light ratios.}
+\end{figure}
+
+\begin{figure*}
+  \epsscale{2.0}
+  \plotone{sfh1.eps}
+  \epsscale{1.0}
+  \caption{\label{fig:SFR} Star formation history.}
+\end{figure*}
 
 \subsection{Metal enrichment}
 
@@ -697,19 +799,9 @@ formation and PISNe having the greatest effect.
   \caption{\label{fig:ztot} Halo metallicities.}
 \end{figure}
 
-\subsection{Star formation}
-
-\begin{figure}
-  \plotone{mlratios.eps}
-  \caption{\label{fig:ML} Mass to light ratios.}
-\end{figure}
-
-\begin{figure*}
-  \epsscale{2.0}
-  \plotone{sfh1.eps}
-  \epsscale{1.0}
-  \caption{\label{fig:SFR} Star formation history.}
-\end{figure*}
+%% \subsection{Negative feedback}
+%% \subsubsection{Gas loss from stellar feedback}
+%% \subsubsection{Lyman-Werner radiation}
 
 \subsection{Unique details about individual haloes}
 
