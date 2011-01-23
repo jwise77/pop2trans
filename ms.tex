@@ -308,8 +308,9 @@ parameters from the 7-year WMAP $\Lambda$CDM+SZ+LENS best fit
 variables having their usual definitions.  We use a maximum refinement
 level of $l = 12$, resulting in a maximal comoving resolution of 1 pc.
 We stop the simulation at $z=7$ to avoid any large-scale modes with $r
-\sim L_{\rm box}$ entering the non-linear growth regime.  At the final
-redshift, this simulation has $1.4 \times 10^8$ computational cells.
+\sim L_{\rm box}/2$ entering the non-linear growth regime.  At the
+final redshift, this simulation has $1.4 \times 10^8$ computational
+cells.
 
 \subsection{Star formation}
 
@@ -502,7 +503,7 @@ changes:
 \item Pop III IMF characteristic mass $M_{\rm char}$ = 40 \Ms.  Using
   the abundance patterns of EMP stars and reionization as constaints,
   the data are best fit with IMFs favoring stars with masses between
-  20--130 \Ms \citep{Umeda03, Tumlinson06}.
+  20--130 \Ms~\citep{Umeda03, Tumlinson06}.
 \item Lyman-Werner radiation background.  We use the semi-analytical
   model of \citet{Wise05}, updated with the 7-year WMAP parameters and
   optical depth to Thompson scattering, to calculate the LW background
@@ -559,14 +560,11 @@ galaxy formation simulation suites \citep[e.g.][]{Schaye10,
 \end{figure*}
 
 \begin{figure}
-  \plotone{Lstar.eps}
-  \caption{\label{fig:mass_fn} The top panel shows the halo mass
-    function of the simulated haloes (points) where the error bars are
-    Poisson noise and the solid line is the analytic halo mass
-    function of \citet{Warren06}.  The bottom panel depicts the galaxy
-    luminosities versus halo DM mass.  Overplotted are constant
-    mass-to-light ratios.  The large scatter at low halo masses are
-    similar to ones observed in local dSph galaxies.}
+  \plotone{mass_fn.eps}
+  \caption{\label{fig:mass_fn} Halo DM mass function of the simulated
+    haloes (points) where the error bars are Poisson noise and the
+    solid line is the analytic halo mass function of
+    \citet{Warren06}.}
 \end{figure}
 
 \input table1.tex
@@ -575,11 +573,11 @@ Here we present the gaseous and stellar evolution of the high-redshift
 dwarf galaxies that form in our simulations.  To illustrate its global
 properties, we show the density-weighted projections of gas density,
 temperature, and metallicity at redshifts 15, 12, 10, 8, and 7 in
-Fig. \ref{fig:evo-mosaic}.  Most apparent is the photo-heating of
-IGM over this redshift range, where the ionized fraction is 0.XX at
-$z=7$.  The metallicity projections show the growth of metal-enriched
-bubbles, starting first with enrichment from Pop III stars.  Then as
-time progresses, the haloes enriched within these bubbles above $Z_{\rm
+Fig. \ref{fig:evo-mosaic}.  Most apparent is the photo-heating of IGM
+over this redshift range, where the ionized fraction is 0.XX at $z=7$.
+The metallicity projections show the growth of metal-enriched bubbles,
+starting first with enrichment from Pop III stars.  Then as time
+progresses, the haloes enriched within these bubbles above $Z_{\rm
   cr}$ transition to Pop II star formation, enriching their host halo
 and surrounding IGM.  In Fig. \ref{fig:mass_fn}, we show the halo mass
 function, agreeing well with the analytic halo mass function of
@@ -588,16 +586,10 @@ function, agreeing well with the analytic halo mass function of
 $M_{\rm DM} = 2 \times 10^6 \Ms$ is most likely associated with the
 biased region in the lower-right region in the projections.
 Furthermore, the uncertainities in different analytic halo mass
-functions \citep[e.g., see][for a comparison]{Reed07} and halo
-identification are comparable than these differences.  Also in this
-Figure, we display the galaxy luminosities with respect to halo DM
-mass found with the FOF halo finder.  Our fidicual model contains 38
-galaxies with a total of 3640 Pop II star clusters and captures the
-formation of 333 Pop III stars.  Note that the most massive halo
-($M_{\rm DM} = 5.2 \times 10^8 \Ms$) is undergoing a starburst at
-$z=7$ and has a high $M/L = 3$.  The lower mass galaxies show a spread
-in M/L over two orders of magnitude, similar to the observations of
-local dSph galaxies \citep[e.g.][]{Strigari08}.
+functions \citep[see][for a comparison]{Reed07} and halo
+identification are comparable than these differences.  Our fidicual
+model contains 38 galaxies with a total of 3640 Pop II star clusters
+and captures the formation of 333 Pop III stars.
 
 We split our presentation into two sets of analyses.  In one, we focus
 on the evolution of the individual halo and galaxy properties of the
@@ -605,11 +597,61 @@ on the evolution of the individual halo and galaxy properties of the
 process and progenitors.  We list the global properties of these
 haloes at $z = 7$ in Table \ref{tab:halos}.  Second, we analyze the
 statistics of the star formation and metal enrichment in all 38
-galaxies.  We start by presenting the change in the global halo
-properties, followed by a description of their star formation
-histories, metallicity distribution functions, and star formation
-rates.  We then present their metal enrichment and lastly comment on
-unique details of individual haloes.
+galaxies.  We first present results on the frequency of Pop III star
+formation and the chemical enrichment from their PISNe.  We then focus
+on the evolution in the global halo properties, followed by a
+description of their Pop II star formation histories, metallicity
+distribution functions, and star formation rates.  We then present
+their metal enrichment and lastly comment on unique details of
+individual haloes.
+
+\subsection{Pop III star formation}
+
+\begin{figure}
+  \plotone{z3.eps}
+  \caption{\label{fig:zhalo3} Average halo metallicity from Pop III
+    SNe as a function of total halo mass.  Inhomogenous metal
+    enrichment causes the large spread in metallicity at low masses.
+    At $M_{\rm halo} > 3 \times 10^7 \Ms$, all halos are enriched by
+    Pop III SNe above [Z/H] $>$ --4.  The y-axis error bars show the
+    25\% and 75\% percentile values because the underlying
+    distribution is not Gaussian.}
+\end{figure}
+
+\begin{figure}
+  \plotone{Zhistory.eps}
+  \caption{\label{fig:Zevo} The time evolution of the average gas
+    metallicity from Pop II SNe (dashed) and Pop III SNe (dotted) and
+    average stellar metallicity (solid) of the 10 most massive haloes.
+    Note that a metallicity floor of [Z/H] $\sim -3$ exists in every
+    halo.}
+\end{figure}
+
+\subsubsection{Number of Pop III stars}
+
+In Table \ref{tab:halos} we list the number of the Pop III stars,
+$N_{\rm III}$, that have formed in the progenitors of the 10 most
+massive haloes.  For Haloes 1--9, between one and four Pop III stars
+formed in the progenitors.  The progenitors of Halo 0 hosted 21 Pop
+III stars, which is consistent with the number of Pop III stars per
+$10^8 \Ms$ halo seen in the lower mass haloes, considering that
+several such haloes merged to form the $10^9 \Ms$ halo.
+
+Given the idea of most minihaloes host a Pop III, these numbers appear
+low.  However there are a few processes that can suppress Pop III star
+formation:
+%
+\begin{enumerate}
+\item photo-dissociation of \hh~\citep{Dekel87, Haiman00, Machacek01},
+\item photo-evaporation of minihaloes \citep{Shapiro04, whalen08}, and
+\item metal enrichment from nearby (PI)SNe \citep{Wise08_Gal, Greif10,
+  Trenti09}.
+\end{enumerate}
+We observe all of these affecting Pop III star formation in the
+simulation, confirming that negative feedback plays an important role
+in metal-free star formation.
+
+\subsubsection{Metal enrichment from pair-instability SNe}
 
 \subsection{Time evolution of halo properties}
 
@@ -699,6 +741,11 @@ values are listed in Table \ref{tab:halos} with $a_0 = 1/8$.
 
 \subsubsection{Gas fraction evolution}
 
+\begin{figure}
+  \vspace{200pt}
+  \caption{\label{fig:filtering} Halo filtering mass.}
+\end{figure}
+
 In the bottom panels of Fig. \ref{fig:massevo}, we show the gas
 fraction $f_{\rm gas}(z) = M_{\rm gas} / M_{\rm tot}$ of these haloes.
 The time evolution of the gas fraction is unique for each halo, but
@@ -762,36 +809,64 @@ far enough away from the starbursting galaxies (the progenitors of
 Halo 0) to avoid significant photo-evaporation but is subjected to
 strong LW radiation, suppressing Pop III star formation.
 
-\subsection{Star formation}
+\subsection{Pop II star formation}
 
-\subsubsection{Star formation histories}
+\begin{figure*}
+  \epsscale{2.0}
+  \plotone{sfh1.eps}
+  \epsscale{1.0}
+  \caption{\label{fig:SFH} The scatter plots show the Pop II star
+    formation history as a function of metallicity for the 10 most
+    massive halos.  Halo 8 is not shown because it contains no stars.
+    Each circle represents a star particle, whose area is proportional
+    to its mass.  The open circles in the upper right represent $M =
+    10^3$, $10^4$, and $10^5$ \Ms.  The dashed lines in the Halo 0
+    panel guide the eye to two stellar populations that were formed in
+    two satellite halos, merging at $z=7.5$.  The upper histogram
+    shows the star formation rate.  The right histogram depicts the
+    Pop II metallicity distribution function.}
+\end{figure*}
 
-\subsubsection{Metallicity distribution function}
-
-\subsubsection{Star formation rates}
+\begin{figure}
+  \plotone{Lstar.eps}
+  \caption{\label{fig:Lstar} Galaxy luminosities versus total halo
+    mass.  Overplotted are constant mass-to-light ratios.  The large
+    scatter at low halo masses are similar to ones observed in local
+    dSph galaxies.}
+\end{figure}
 
 \begin{figure}
   \plotone{mlratios.eps}
   \caption{\label{fig:ML} Mass to light ratios.}
 \end{figure}
 
-\begin{figure*}
-  \epsscale{2.0}
-  \plotone{sfh1.eps}
-  \epsscale{1.0}
-  \caption{\label{fig:SFR} Star formation history.}
-\end{figure*}
+\subsubsection{Star formation histories}
 
-\subsection{Metal enrichment}
+The scatter plots of Fig. \ref{fig:SFH} show the Pop II star formation
+history as a function of metallicity for the 10 most massive halos.
+
+We now focus on the star formation rates (SFR) and metallicity
+distribution functions (MDF) of these histories, collapsing the
+stellar population in the metallicity and time axes, respectively.
+
+\subsubsection{Star formation rates}
+
+\subsubsection{Metallicity distribution functions}
+
+\subsubsection{Mass-to-light ratios}
+\label{sec:mlratios}
+
+Note that the most massive halo ($M_{\rm tot} = 10^9 \Ms$) is
+undergoing a starburst at $z=7$ and has a relatively high $M/L = 6$.
+The lower mass galaxies show a spread in M/L over two orders of
+magnitude, similar to the Sloan Digital Sky Survey (SDSS) observations
+of local dSph galaxies \citep[e.g.][]{Strigari08}.
+
+\subsubsection{Metal enrichment}
 
 \begin{figure}
-  \plotone{Zhistory.eps}
-  \caption{\label{fig:Zevo} Metal evolution.}
-\end{figure}
-
-\begin{figure}
-  \plottwo{z2.eps}{z3.eps}
-  \caption{\label{fig:zhalo} Halo metallicities.}
+  \plotone{z2.eps}
+  \caption{\label{fig:zhalo2} Halo metallicities.}
 \end{figure}
 
 \begin{figure}
