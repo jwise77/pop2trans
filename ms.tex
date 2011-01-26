@@ -550,13 +550,14 @@ galaxy formation simulation suites \citep[e.g.][]{Schaye10,
   \plotone{bmosaic.eps}
   \epsscale{1}
   \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
-    volume at redshifts 15, 12, 10, 8, and 7 (left to right).
-    Pictured here are the density-weighted projections of density
-    (top), temperature (middle), and metallicity (bottom).  Note how
-    the stellar radiative feedback from low-mass galaxies reionize
-    the majority of the volume.  The metallicity projections are a
-    composite image of metals originating from Pop II (blue) and III
-    (red) stars with magneta indicdating a mixture of the two.}
+    volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
+    (left to right).  Pictured here are the density-weighted
+    projections of density (top), temperature (middle), and
+    metallicity (bottom).  Note how the stellar radiative feedback
+    from low-mass galaxies reionize the majority of the volume.  The
+    metallicity projections are a composite image of metals
+    originating from Pop II (blue) and III (red) stars with magneta
+    indicdating a mixture of the two.}
 \end{figure*}
 
 \begin{figure}
@@ -608,6 +609,15 @@ individual haloes.
 \subsection{Pop III star formation}
 
 \begin{figure}
+  \plotone{Zhistory.eps}
+  \caption{\label{fig:Zevo} The time evolution of the average gas
+    metallicity from Pop II SNe (dashed) and Pop III SNe (dotted) and
+    average stellar metallicity (solid) of the 10 most massive haloes.
+    Note that a metallicity floor of [Z/H] $\sim -3$ exists in every
+    halo.}
+\end{figure}
+
+\begin{figure}
   \plotone{z3.eps}
   \caption{\label{fig:zhalo3} Average halo metallicity from Pop III
     SNe as a function of total halo mass.  Inhomogenous metal
@@ -616,15 +626,6 @@ individual haloes.
     Pop III SNe above [Z/H] $>$ --4.  The y-axis error bars show the
     25\% and 75\% percentile values because the underlying
     distribution is not Gaussian.}
-\end{figure}
-
-\begin{figure}
-  \plotone{Zhistory.eps}
-  \caption{\label{fig:Zevo} The time evolution of the average gas
-    metallicity from Pop II SNe (dashed) and Pop III SNe (dotted) and
-    average stellar metallicity (solid) of the 10 most massive haloes.
-    Note that a metallicity floor of [Z/H] $\sim -3$ exists in every
-    halo.}
 \end{figure}
 
 \subsubsection{Number of Pop III stars}
@@ -644,14 +645,54 @@ formation:
 \begin{enumerate}
 \item photo-dissociation of \hh~\citep{Dekel87, Haiman00, Machacek01},
 \item photo-evaporation of minihaloes \citep{Shapiro04, whalen08}, and
-\item metal enrichment from nearby (PI)SNe \citep{Wise08_Gal, Greif10,
-  Trenti09}.
+\item metal enrichment from intrinsic and nearby (pair-instability)
+  SNe \citep{Wise08_Gal, Trenti09, Greif10}.
 \end{enumerate}
 We observe all of these affecting Pop III star formation in the
 simulation, confirming that negative feedback plays an important role
 in metal-free star formation.
 
 \subsubsection{Metal enrichment from pair-instability SNe}
+
+We plot the evolution of the mass-averaged gas and stellar metallicity
+in the massive halos in Fig. \ref{fig:Zevo}.  Here we focus on the
+metallicity provided from Pop III SNe, \zthree.  The most relevant
+aspect of these data is the existence of a metallicity floor $\zthree
+\sim -3$ in all of the haloes.  The haloes can either be enriched from
+hosting a PISNe or one in a nearby halo.  In the time evolution of the
+metallicity, the former scenario appears as an initial peak in
+\zthree~then gradually decreasing, which is seen in Haloes 1-3 and 6-9
+with two enrichment events occurring in Halo 6.  This peak happens
+because the halo is gas-poor from the Pop III radiative feedback with
+$M_{\rm gas} \sim 10^4$ (also see Sec. \ref{sec:fgas}) and the PISN
+provides $\sim 100 \Ms$ of heavy elements, resulting in $\zthree \sim
+0$.  The ensuing blastwave drives out the remainder of the gas,
+leaving behind a diffuse medium, enriched to $\zthree \ga -3$.
+Because the blastwave rapidly exits the halo on timescales smaller
+than the time sampling in Fig. \ref{fig:Zevo}, the maximum mean
+metallicity is missed in most haloes but is captured in Halo 2.
+
+Gas in satellite haloes and adjacent filaments are enriched to a
+lesser extent because these high-density regions are resistant to
+impinging metal-rich blastwaves \citep[cf.][]{Cen08}.  However if the
+nearby SNe is close enough when the shock velocities are still high
+($\ga 100~\kms$), the dense gas in the minihalo can be enriched to
+similar metallicities.  This scenario appears as prompt enrichment but
+without the temporary peak in metallicity as the blastwave overtakes
+the halo, and this occurs in Haloes 0, 4, and 5 with Halo 5 being
+enriched by two nearby PISNe.
+
+In Figure \ref{fig:zhalo3}, we show the average \zthree~in all haloes
+as a function of halo mass at $z =$ 7, 8, 9, and 10, and it is
+strongly dependent on halo mass.  The \zthree~error bars mark the 25\%
+and 75\% percentiles of the distribution at $M = M_{\rm halo}$ because
+the underlying distribution is not necessarily Gaussian at all halo
+masses.  Above $3 \times 10^7 \Ms$, all haloes enriched to $\zthree
+\ga -4$ with little time evolution, further illustrating the
+metallicity floor.  Below this halo mass, the distribution is roughly
+bimodal composed of pristine and metal-enriched halos.
+
+\li Add figure and describe metal filling fraction evolution.
 
 \subsection{Time evolution of halo properties}
 
@@ -740,6 +781,7 @@ and $a_c$ describes the rate of mass accretion.  The fitted values
 values are listed in Table \ref{tab:halos} with $a_0 = 1/8$.
 
 \subsubsection{Gas fraction evolution}
+\label{sec:fgas}
 
 \begin{figure}
   \vspace{200pt}
