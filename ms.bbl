@@ -1,4 +1,4 @@
-\begin{thebibliography}{96}
+\begin{thebibliography}{100}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al}\mbox{.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -24,6 +24,11 @@
   {Norman}}]{Anninos97}
 {Anninos} P., {Zhang} Y., {Abel} T., {Norman} M.~L., 1997, New Astronomy, 2,
   209
+
+\bibitem[{{Battaglia} {et~al}\mbox{.}(2010){Battaglia}, {Tolstoy}, {Helmi},
+  {Irwin}, {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia10}
+{Battaglia} G., {Tolstoy} E., {Helmi} A., {Irwin} M., {Parisi} P., {Hill} V.,
+  {Jablonka} P., 2010, ArXiv e-prints
 
 \bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
 {Bertschinger} E., 2001, \apjs, 137, 1
@@ -87,6 +92,9 @@
 \bibitem[{{Ferrara}(1998)}]{Ferrara98}
 {Ferrara} A., 1998, \apjl, 499, L17+
 
+\bibitem[{{Frebel} \& {Bromm}(2010)}]{Frebel10}
+{Frebel} A., {Bromm} V., 2010, ArXiv e-prints
+
 \bibitem[{{Furlanetto} \& {Loeb}(2005)}]{Furlanetto05_Reion}
 {Furlanetto} S.~R., {Loeb} A., 2005, \apj, 634, 1
 
@@ -103,6 +111,11 @@
   {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{HEALPix}
 {G{\'o}rski} K.~M., {Hivon} E., {Banday} A.~J., {Wandelt} B.~D., {Hansen}
   F.~K., {Reinecke} M., {Bartelmann} M., 2005, \apj, 622, 759
+
+\bibitem[{{Greif} {et~al}\mbox{.}(2011){Greif}, {Springel}, {White}, {Glover},
+  {Clark}, {Smith}, {Klessen}, \& {Bromm}}]{Greif11_P3Cluster}
+{Greif} T., {Springel} V., {White} S., {Glover} S., {Clark} P., {Smith} R.,
+  {Klessen} R., {Bromm} V., 2011, ArXiv e-prints
 
 \bibitem[{{Greif} {et~al}\mbox{.}(2010){Greif}, {Glover}, {Bromm}, \&
   {Klessen}}]{Greif10}
@@ -159,6 +172,11 @@
 \bibitem[{{Mackey}, {Bromm} \& {Hernquist}(2003){Mackey}, {Bromm}, \&
   {Hernquist}}]{Mackey03}
 {Mackey} J., {Bromm} V., {Hernquist} L., 2003, \apj, 586, 1
+
+\bibitem[{{Madau} {et~al}\mbox{.}(1996){Madau}, {Ferguson}, {Dickinson},
+  {Giavalisco}, {Steidel}, \& {Fruchter}}]{Madau96}
+{Madau} P., {Ferguson} H.~C., {Dickinson} M.~E., {Giavalisco} M., {Steidel}
+  C.~C., {Fruchter} A., 1996, \mnras, 283, 1388
 
 \bibitem[{{Maio} {et~al}\mbox{.}(2010{\natexlab{a}}){Maio}, {Ciardi}, {Dolag},
   {Tornatore}, \& {Khochfar}}]{Maio10_Pop32}
