@@ -495,15 +495,15 @@ cosmic SFRs better in galaxy simulations at lower redshifts
     functional fit.}
 \end{figure}
 
-We perform nine different simulations with the same initial
-conditions.  The fiducial model considers (a) primordial cooling with
-9 species of hydrogen, helium, and molecular hydrogen, (b) a Pop III
-IMF characteristic mass $M_{\rm char}$ = 100 \Ms, (c) Pop II and Pop
-III star formation, and (d) a critical metallicity of [Z/H] = --4.  We
+We perform ten different simulations with the same initial conditions.
+The baseline model considers (a) primordial cooling with 9 species of
+hydrogen, helium, and molecular hydrogen, (b) a Pop III IMF
+characteristic mass $M_{\rm char}$ = 100 \Ms, (c) Pop II and Pop III
+star formation, and (d) a critical metallicity of [Z/H] = --4.  We
 vary this model with the following changes:
 
 \begin{enumerate}
-\item Additional radiative cooling from metal species.  We calculate a
+\item Additional radiative cooling from metal lines.  We calculate a
   cooling curve with CLOUDY \citep{CLOUDY} and use the method of
   \citep{2008MNRAS.385.1443S}.  Solar abundances were used in the
   cooling curve.  It is tabulated based on density, temperature,
@@ -547,6 +547,10 @@ vary this model with the following changes:
   This model provides a good comparison to larger scale simulations
   where it is not computationally feasible to consider \hh~cooling or
   resolve the necessary scales for Pop III star formation.
+\item Combination of metal cooling (model i), increased metal yields
+  (model iii), a LW background (model v).  This provides the best
+  physical scenario for the high-$z$ universe, and we consider it as
+  our \textit{primary model}.
 \end{enumerate}
 
 By running several simulations with different physical scenarios, we
@@ -584,7 +588,9 @@ galaxy formation simulation suites \citep[e.g.][]{Schaye10,
 \input table1.tex
 
 Here we present the gaseous and stellar evolution of the high-redshift
-dwarf galaxies that form in our simulations.  To illustrate its global
+dwarf galaxies that form in our \textit{primary physical model} with
+metal-line radiative cooling, Pop II metal yields that agree with MW
+data, and a LW radiation background.  To illustrate its global
 properties, we show the density-weighted projections of gas density,
 temperature, and metallicity at redshifts 15, 12, 10, 8, and 7 in
 Fig. \ref{fig:evo-mosaic}.  Most apparent is the photo-heating of IGM
