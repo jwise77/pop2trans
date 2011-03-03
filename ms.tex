@@ -157,7 +157,7 @@ numerical simulations with stellar feedback \citep{Tornatore07,
 
 Over the past decade, these works have refined the general picture of
 inhomogenous metal enrichment and the transition to Pop II star
-formation, and here we give a brief overview of its development.
+formation, and here we give an overview of its development.
 Considering only Pop III star formation, \citeauthor{Yoshida04}
 calculated that Pop III stars can raise the mean metallicity to $-4.5
 \la$ [Z/H]\footnote{We use the conventional notation, [Z/H] $\equiv
@@ -828,26 +828,25 @@ strong LW radiation, suppressing Pop III star formation.
   \plotone{sfh1.eps}
   \epsscale{1.0}
   \caption{\label{fig:SFH} The scatter plots show the Pop II star
-    formation history as a function of stellar age $t_\star$ with
-    respect to metallicity for the 10 most massive halos.  Halo 8 is
-    not shown because it contains no stars.  Each circle represents a
-    star particle, whose area is proportional to its mass.  The open
-    circles in the upper right represent $M = 10^3$, $10^4$, and
-    $10^5$ \Ms.  The dashed lines in the Halo 0 panel guide the eye to
-    two stellar populations that were formed in two satellite halos,
-    merging at $z=7.5$.  The upper histogram shows the star formation
-    rate with each bar representing 5 Myr.  The right histogram
-    depicts the Pop II metallicity distribution function.}
+    formation history as a function of time with respect to
+    metallicity for the 10 most massive halos.  Halo 8 is not shown
+    because it contains no stars.  Each circle represents a star
+    particle, whose area is proportional to its mass.  The open
+    circles in the upper right represent $M = 10^3$ and $10^4$ \Ms.
+    The dashed lines in the Halo 0 panel guide the eye to two stellar
+    populations that were formed in two satellite halos, merging at
+    $z=7.5$.  The upper histogram shows the star formation rate with
+    each bar representing 5 Myr.  The right histogram depicts the Pop
+    II metallicity distribution function.}
 \end{figure*}
 
 Here we present the properties of the metal-enriched stellar
 population.  The SFHs of the 10 most massive haloes are shown in
-Fig. \ref{fig:SFH} in the plane of stellar age $t_\star$ and
-metallicity as scatter plots with each point representing a star
-particle and its size proportional to its mass.  Collapsing the data
-along the time and metallicity axes gives the metallicity distribution
-function (MDF) and star formation rate, respectively, also shown in
-the Figure.
+Fig. \ref{fig:SFH} in the plane of formation time and metallicity as
+scatter plots with each point representing a star particle and its
+size proportional to its mass.  Collapsing the data along the time and
+metallicity axes gives the metallicity distribution function (MDF) and
+star formation rate, respectively, also shown in the Figure.
 
 \subsubsection{Star formation histories}
 \label{sec:SFH}
@@ -960,9 +959,10 @@ will follow up with more sophisicated models to determine more
 accurate observables.  Stars in each particle are treated an
 instantaneous burst.  Using the empirical law of main sequence
 lifetime $t_{\rm MS} \propto M^{-5/2}$, the maximum stellar mass in
-such a system is dependent only on its age, $M_{\rm up} = (t_\star /
-10\;\mathrm{Gyr})^{-2/5}$.  Then combining another scaling law $L
-\propto M^{7/2}$ and the Salpeter IMF $\psi(M) \propto M^{-\alpha}$,
+such a system is dependent only on its age $t_\star$, so $M_{\rm up} =
+(t_\star / 10\;\mathrm{Gyr})^{-2/5}$.  Then combining another scaling
+law $L \propto M^{7/2}$ and the Salpeter IMF $\psi(M) \propto
+M^{-\alpha}$,
 %
 \begin{eqnarray}
   \label{eqn:lum}
@@ -1198,6 +1198,8 @@ $\sim 3 \times 10^7 \Ms$ (see Fig. \ref{fig:zhalo3}).
 Here we discuss some notable details about individual haloes that did
 not fit into the previous sections.
 
+\halo{0} \textbf{Early time metal-rich stars.}
+
 \halo{3} Fig. \ref{fig:Zevo} shows that metal enrichment from Pop II
 stars occurs 10 Myr after a PISN.  In this case, PISN remnant did not
 escape from the halo \citep[cf.][]{Whalen08_SN}, leaving the halo
@@ -1215,7 +1217,8 @@ halo experiences a series of major and minor mergers at $z > 10$ and
 very little afterwards.  The lack of mergers allows a gas and stellar
 disc to form, unlike all of the other galaxies in the simulation.  SNe
 feedback creates a bipolar outflow, perpendicular to the disc, that
-enriches the surrounding IGM but not the halo itself.
+enriches the surrounding IGM but not the halo itself.  \textbf{Metal
+  poor stars at late times from minor merger.}
 
 \halo{7} Triggerred star formation similar to Halo 3 occurs in this
 halo, where the PISN does not expel the majority of the gas.  2000
