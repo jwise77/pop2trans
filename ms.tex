@@ -495,7 +495,7 @@ cosmic SFRs better in galaxy simulations at lower redshifts
     functional fit.}
 \end{figure}
 
-We perform ten different simulations with the same initial conditions.
+We perform nine different simulations with the same initial conditions.
 The baseline model considers (a) primordial cooling with 9 species of
 hydrogen, helium, and molecular hydrogen, (b) a Pop III IMF
 characteristic mass $M_{\rm char}$ = 100 \Ms, (c) Pop II and Pop III
@@ -543,14 +543,12 @@ vary this model with the following changes:
 \item Pop II star formation only.  This model is useful to study the
   importance of treating Pop III star formation as single stars and
   their pair-instability and Type II SNe.
-\item Pop II star formation only and no molecular hydrogen cooling.
-  This model provides a good comparison to larger scale simulations
-  where it is not computationally feasible to consider \hh~cooling or
-  resolve the necessary scales for Pop III star formation.
+\item Combination of metal cooling (model i) and a LW background
+  (model v).  This provides the best physical scenario for the
+  high-$z$ universe, and we consider it as our \textit{primary model}.
 \item Combination of metal cooling (model i), increased metal yields
-  (model iii), a LW background (model v).  This provides the best
-  physical scenario for the high-$z$ universe, and we consider it as
-  our \textit{primary model}.
+  (model iii), a LW background (model v).  We explain in
+  \S\ref{sec:models} why we do not consider this as our primary model.
 \end{enumerate}
 
 By running several simulations with different physical scenarios, we
@@ -577,13 +575,13 @@ galaxy formation simulation suites \citep[e.g.][]{Schaye10,
     indicdating a mixture of the two.}
 \end{figure*}
 
-\begin{figure}
-  \plotone{mass_fn.eps}
-  \caption{\label{fig:mass_fn} Halo DM mass function of the simulated
-    haloes (points) where the error bars are Poisson noise and the
-    solid line is the analytic halo mass function of
-    \citet{Warren06}.}
-\end{figure}
+% \begin{figure}
+%   \plotone{mass_fn.eps}
+%   \caption{\label{fig:mass_fn} Halo DM mass function of the simulated
+%     haloes (points) where the error bars are Poisson noise and the
+%     solid line is the analytic halo mass function of
+%     \citet{Warren06}.}
+% \end{figure}
 
 \input table1.tex
 
@@ -600,17 +598,18 @@ projections show the growth of metal-enriched bubbles, starting first
 with enrichment from Pop III stars.  Then as time progresses, the
 haloes enriched within these bubbles above $Z_{\rm cr}$ transition to
 Pop II star formation, enriching their host halo and surrounding IGM.
-In Fig. \ref{fig:mass_fn}, we show the halo mass function, agreeing
-well with the analytic halo mass function of \citet{Warren06}.  We
-identify the haloes with a friends-of-friends (FOF) algorithm
-\citep{Davis85}.  The excess of low-mass haloes below $M_{\rm DM} = 2
-\times 10^6 \Ms$ is most likely associated with the biased region in
-the lower-right region in the projections.  Furthermore, the
-uncertainities in different analytic halo mass functions
-\citep[see][for a comparison]{Reed07} and halo identification are
-comparable than these differences.  Our fidicual model contains 38
-galaxies with a total of 3640 Pop II star clusters and captures the
-formation of 333 Pop III stars.
+Our primary model contains ?? galaxies with a total of ???? Pop II
+star clusters and captures the formation of ??? Pop III stars.
+
+% In Fig. \ref{fig:mass_fn}, we show the halo mass function, agreeing
+% well with the analytic halo mass function of \citet{Warren06}.  We
+% identify the haloes with a friends-of-friends (FOF) algorithm
+% \citep{Davis85}.  The excess of low-mass haloes below $M_{\rm DM} = 2
+% \times 10^6 \Ms$ is most likely associated with the biased region in
+% the lower-right region in the projections.  Furthermore, the
+% uncertainities in different analytic halo mass functions
+% \citep[see][for a comparison]{Reed07} and halo identification are
+% comparable than these differences.  
 
 We split our presentation into two sets of analyses.  In one, we focus
 on the evolution of the individual halo and galaxy properties of the
@@ -652,52 +651,52 @@ in metal-free star formation.
 \subsection{Time evolution of halo properties}
 
 \begin{figure*}
-  \plottwo{z7-mosaic0.eps}{z7-mosaic1.eps}
-  \caption{\label{fig:z7-mosaic} Density-weighted projections of
+  %\plottwo{z82-mosaic0.eps}{z82-mosaic1.eps}
+  \vspace{150pt}
+  \caption{\label{fig:z82-mosaic} Density-weighted projections of
     density (left), temperature (center), and metallicity (right) of
-    the 10 most massive haloes at $z=7$.  The field of view is 5 proper
-    kpc, and the circles have a radius of $r_{200}$.  The composite
-    metallicity images are constructed in the same fashion as
-    Fig. \ref{fig:evo-mosaic}.}
-\end{figure*}
-
-\begin{figure*}
-  \plottwo{z8-mosaic0.eps}{z8-mosaic1.eps}
-  \caption{\label{fig:z8-mosaic} Same as Fig. \ref{fig:z7-mosaic} but
-    at $z=8$, showing the progenitors of the 10 most massive haloes at
-    $z=7$.}
+    the 10 most massive haloes at $z=8.2$ in our primary model.  The
+    field of view is 5 proper kpc, and the circles have a radius of
+    $r_{200}$.  The composite metallicity images are constructed in
+    the same fashion as Fig. \ref{fig:evo-mosaic}.}
 \end{figure*}
 
 \begin{figure*}
   \plottwo{z10-mosaic0.eps}{z10-mosaic1.eps}
-  \caption{\label{fig:z10-mosaic} Same as Fig. \ref{fig:z8-mosaic} at
-    $z=10$.}
+  \caption{\label{fig:z10-mosaic} Same as Fig. \ref{fig:z82-mosaic}
+    but at $z=10$, showing the progenitors of the 10 most massive
+    haloes at $z=8.2$.}
 \end{figure*}
+
+% \begin{figure*}
+%   \plottwo{z10-mosaic0.eps}{z10-mosaic1.eps}
+%   \caption{\label{fig:z10-mosaic} Same as Fig. \ref{fig:z8-mosaic} at
+%     $z=10$.}
+% \end{figure*}
 
 To get a visual sense of the mass accretion and metal enrichment
 history of the 10 most massive haloes, we show their density-weighted
 projections of gas density, temperature, and composite Pop II+III
-metallicity at redshifts 7, 8, and 10 in
-Fig. \ref{fig:z7-mosaic}--\ref{fig:z10-mosaic}, respectively.  One
-common feature of all of the halos represented in these Figures is
-that they are embedded in a preheated IGM with the exception of Halo 7
-at $z=10$.  Prior radiative feedback in either the host or nearby
-halos created \hii~regions that encompass these halos.  For
-\hii~regions without sustained star formation, these so-called relic
-\hii~regions recombine and radiatively cool down to $T = 10^3$ K.
-Within the virial radius, one can see that our simulations capture the
-multi-phase ISM.  In the density projections, the effects of
-photo-evaporation and cloud crushing are clearly seen, which are
-caused by the stellar radiative and mechanical feedback, respectively.
-The filaments adjacent to the halos are photo-heated to $T = 1-3
-\times 10^4$ K, and then their gas escapes into the IGM no longer
-being pressure equilibrium with the gravitational potential of the
-filament, i.e. Jeans smoothing.  Furthermore, neighboring halos are
-photo-evaporated \citep[see][for the level of halo
-  photo-evaporation]{Wise08_Reion}, resulting in the suppression of
-gas-rich satellite haloes.  A good illustration of photo-evaporation
-in progress is the cometary structure in the bottom-center of the
-density projection of Halo 4 at $z=7$.
+metallicity at redshifts 8.2 and 10 in Fig. \ref{fig:z82-mosaic} and
+\ref{fig:z10-mosaic}, respectively.  One common feature of all of the
+halos represented in these Figures is that they are embedded in a
+preheated IGM with the exception of Halo 7 at $z=10$.  Prior radiative
+feedback in either the host or nearby halos created \hii~regions that
+encompass these halos.  For \hii~regions without sustained star
+formation, these so-called relic \hii~regions recombine and
+radiatively cool down to $T = 10^3$ K.  Within the virial radius, one
+can see that our simulations capture the multi-phase ISM.  In the
+density projections, the effects of photo-evaporation and cloud
+crushing are clearly seen, which are caused by the stellar radiative
+and mechanical feedback, respectively.  The filaments adjacent to the
+halos are photo-heated to $T = 1-3 \times 10^4$ K, and then their gas
+escapes into the IGM no longer being pressure equilibrium with the
+gravitational potential of the filament, i.e. Jeans smoothing.
+Furthermore, neighboring halos are photo-evaporated \citep[see][for
+the level of halo photo-evaporation]{Wise08_Reion}, resulting in the
+suppression of gas-rich satellite haloes.  A good illustration of
+photo-evaporation in progress is the cometary structure in the
+bottom-center of the density projection of Halo 4 at $z=7$.
 
 %% \li Something is wrong with the progenitor finder with Halo 9 at $t =
 %% 500$ Myr.  See the extreme jump in mass and decrease in gas fraction?
@@ -1233,8 +1232,10 @@ the halo and are still located in the IGM at $z=7$.
 subjected to strong UV radiation that suppresses all star formation
 even after it becomes gas rich with $f_g > 0.1$ at $z \la 8$.
 
-\section{Differences between Physical Models}
+\section{Variations between Physical Models}
 \label{sec:models}
+
+\subsection{Reference Model}
 
 \subsection{Metal cooling}
 
@@ -1247,8 +1248,6 @@ even after it becomes gas rich with $f_g > 0.1$ at $z \la 8$.
 \subsection{Lyman-Werner radiation background}
 
 \subsection{Neglecting Pop III star formation}
-
-\subsection{Neglecting Pop III star formation and \hh~formation}
 
 \section{Comparison to Previous Work}
 \label{sec:compare}
