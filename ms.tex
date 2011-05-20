@@ -268,8 +268,8 @@ simulation suite with sub-pc resolution, focusing on first the
 formation and feedback of Pop III stars, the transition to Pop II star
 formation, and finally the formation of the first galaxies.  We then
 detail our star formation and feedback algorithms.  We run a total of
-eight different simulations, varying physical parameters.  In the
-following description, we quote the parameters used in our fidicual
+ten different simulations, varying physical parameters.  In the
+following description, we quote the parameters used in our reference
 model and describe their variations later in Sec. \ref{sec:config}.
 
 \subsection{Simulation setup}
@@ -307,10 +307,12 @@ parameters from the 7-year WMAP $\Lambda$CDM+SZ+LENS best fit
 = 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$ with the
 variables having their usual definitions.  We use a maximum refinement
 level of $l = 12$, resulting in a maximal comoving resolution of 1 pc.
-We stop the simulation at $z=7$ to avoid any large-scale modes with $r
-\sim L_{\rm box}/2$ entering the non-linear growth regime.  At the
-final redshift, this simulation has $1.4 \times 10^8$ computational
-cells and required 250,000 CPU hours, using 512 cores.
+We stop the simulation at $z=7$ or when the volume reaches an ionized
+fraction of 0.9.  The first stopping point prevents any large-scale
+modes with $r \sim L_{\rm box}/2$ from entering the non-linear growth
+regime.  At the final redshift, the baseline simulation has $1.4
+\times 10^8$ computational cells and required 250,000 CPU hours, using
+512 cores.
 
 \subsection{Star formation}
 
@@ -495,8 +497,8 @@ cosmic SFRs better in galaxy simulations at lower redshifts
     functional fit.}
 \end{figure}
 
-We perform nine different simulations with the same initial conditions.
-The baseline model considers (a) primordial cooling with 9 species of
+We perform ten different simulations with the same initial conditions.
+The reference model considers (a) primordial cooling with 9 species of
 hydrogen, helium, and molecular hydrogen, (b) a Pop III IMF
 characteristic mass $M_{\rm char}$ = 100 \Ms, (c) Pop II and Pop III
 star formation, and (d) a critical metallicity of [Z/H] = --4.  We
