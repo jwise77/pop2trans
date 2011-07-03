@@ -1,4 +1,4 @@
-\begin{thebibliography}{71}
+\begin{thebibliography}{75}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -30,6 +30,13 @@
 
 \bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
 {Bertschinger}, E. 2001, \apjs, 137, 1
+
+\bibitem[{{Bouwens} {et~al.}(2010){Bouwens}, {Illingworth}, {Oesch}, {Labbe},
+  {Trenti}, {van Dokkum}, {Franx}, {Stiavelli}, {Carollo}, {Magee}, \&
+  {Gonzalez}}]{Bouwens10}
+{Bouwens}, R.~J., {Illingworth}, G.~D., {Oesch}, P.~A., {Labbe}, I., {Trenti},
+  M., {van Dokkum}, P., {Franx}, M., {Stiavelli}, M., {Carollo}, C.~M.,
+  {Magee}, D., \& {Gonzalez}, V. 2010, ArXiv e-prints (1006.4360)
 
 \bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
 {Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
@@ -131,6 +138,9 @@
   {Morris}, S., {Cl{\'e}ment}, B., {Evans}, C.~J., {Bremer}, M.~N., \& {Basa},
   S. 2010, \nat, 467, 940
 
+\bibitem[{{Machacek} {et~al.}(2001){Machacek}, {Bryan}, \& {Abel}}]{Machacek01}
+{Machacek}, M.~E., {Bryan}, G.~L., \& {Abel}, T. 2001, \apj, 548, 509
+
 \bibitem[{{Maio} {et~al.}(2010{\natexlab{a}}){Maio}, {Ciardi}, {Dolag},
   {Tornatore}, \& {Khochfar}}]{Maio10_Pop32}
 {Maio}, U., {Ciardi}, B., {Dolag}, K., {Tornatore}, L., \& {Khochfar}, S.
@@ -182,6 +192,13 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
 \bibitem[{{Schaerer}(2003)}]{Schaerer03}
 ---. 2003, \aap, 397, 527
+
+\bibitem[{{Schaye} {et~al.}(2010){Schaye}, {Dalla Vecchia}, {Booth}, {Wiersma},
+  {Theuns}, {Haas}, {Bertone}, {Duffy}, {McCarthy}, \& {van de
+  Voort}}]{Schaye10}
+{Schaye}, J., {Dalla Vecchia}, C., {Booth}, C.~M., {Wiersma}, R.~P.~C.,
+  {Theuns}, T., {Haas}, M.~R., {Bertone}, S., {Duffy}, A.~R., {McCarthy},
+  I.~G., \& {van de Voort}, F. 2010, \mnras, 402, 1536
 
 \bibitem[{{Schneider} {et~al.}(2006){Schneider}, {Omukai}, {Inoue}, \&
   {Ferrara}}]{Schneider06_Frag}
@@ -254,8 +271,11 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
 {Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14
 
+\bibitem[{{Wise} \& {Abel}(2007)}]{Wise07}
+{Wise}, J.~H., \& {Abel}, T. 2007, \apj, 665, 899
+
 \bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
-{Wise}, J.~H., \& {Abel}, T. 2008, \apj, 685, 40
+---. 2008, \apj, 685, 40
 
 \bibitem[{{Wise} \& {Abel}(2010)}]{Wise10}
 ---. 2010, ArXiv e-prints (1012.2865)

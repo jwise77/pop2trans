@@ -10,47 +10,7 @@
 
 %%%%%%%% Begin custom definitions %%%%%%%%%%%%%
 
-\newcommand{\fesc}{\ifmmode{f_{\rm esc}}\else{$f_{\rm esc}$}\fi}
-\newcommand{\fescs}{\ifmmode{f_{\rm esc}^\star}\else{$f_{\rm esc}^\star$}\fi}
-\newcommand{\kms}{\ifmmode{{\rm km~s^{-1}}}\else{km s$^{-1}$}\fi}
-\newcommand{\cubecm}{\ifmmode{{\rm cm^{-3}}}\else{cm$^{-3}$}\fi}
-\newcommand{\lsim}{\lower0.3em\hbox{$\,\buildrel <\over\sim\,$}}
-\newcommand{\gsim}{\lower0.3em\hbox{$\,\buildrel >\over\sim\,$}}
-\newcommand{\li}{\noindent$\bullet$\quad}
-\newcommand{\flux}{erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$}
-\newcommand{\emis}{erg s$^{-1}$ cm$^{-2}$ Hz$^{-1}$ sr$^{-1}$}
-\newcommand{\sfr}{M$_\odot$ yr$^{-1}$ Mpc$^{-3}$}
-\newcommand{\hst}{{\it HST}}
-\newcommand{\enzo}{{\sl Enzo}}
-\newcommand{\Ms}{\ifmmode{M_\odot}\else{$M_\odot$}\fi}
-\newcommand{\mmin}{M$_{min}$}
-\newcommand{\hh}{H$_2$}
-\newcommand{\Ol}{$\Omega_\Lambda$}
-\newcommand{\Om}{$\Omega_M$}
-\newcommand{\Ob}{$\Omega_b$}
-\newcommand{\theat}{$t_{\rm{heat}}$}
-\newcommand{\tcool}{$t_{\rm{cool}}$}
-\newcommand{\rcool}{$r_{\rm{cool}}$}
-\newcommand{\tcross}{$t_{\rm{cross}}$}
-\newcommand{\tdyn}{$t_{\rm{dyn}}$}
-\newcommand{\tkh}{$t_{\rm{KH}}$}
-\newcommand{\tH}{$t_{\rm{H}}$}
-\newcommand{\tvir}{\ifmmode{T_{\rm{vir}}}\else{$T_{\rm{vir}}$}\fi}
-\newcommand{\mvir}{\ifmmode{M_{\rm{vir}}}\else{$M_{\rm{vir}}$}\fi}
-\newcommand{\rvir}{\ifmmode{r_{\rm{vir}}}\else{$r_{\rm{vir}}$}\fi}
-\newcommand{\rr}{$r_{200}$}
-\newcommand{\lya}{Ly$\alpha$}
-\newcommand{\jj}{\ifmmode{J_{21}}\else{$J_{21}$}\fi}
-\newcommand{\flw}{\ifmmode{F_{LW}}\else{$F_{LW}$}\fi}
-\newcommand{\kph}{\ifmmode{k_{\rm ph}}\else{$k_{\rm ph}$}\fi}
-\newcommand{\tv}{$\langle T \rangle_{\rm v}$}
-\newcommand{\tm}{$\langle T \rangle_{\rm m}$}
-\newcommand{\msun}{{\rm\,M_\odot}} 
-\newcommand{\lsun}{{\rm\,L_\odot}}
-\newcommand{\zsun}{{\rm\,Z_\odot}}
-\newcommand{\etal}{et al.\ }
-\newcommand\tento[1]{$10^{#1}$}
-\newcommand\step[1]{\textit{Step #1}.---}
+\input macros.tex
 
 %%%%%%%% End custom definitions %%%%%%%%%%
 
@@ -220,37 +180,42 @@ $r \sim L_{\rm box}/2$ from entering the non-linear growth regime.  At
 the final redshift, the baseline simulation has $1.4 \times 10^8$
 computational cells and required 250,000 CPU hours, using 512 cores.
 
-\subsection{Star formation}
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
-%\epsscale{1.15}
+\epsscale{1.15}
 \plotone{f1}
-%\epsscale{1}
+\epsscale{1}
 \caption{\label{fig:massfn} \textit{Top}: Halo mass function of the
   simulation compared with the analytical fit (solid) of
   \citet{Warren06}.  \textit{Bottom}: Total Pop II luminosities of
-  halos with constant mass-to-light ratios overplotted.}
+  halos versus dark matter halo mass with constant mass-to-light
+  ratios overplotted.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{figure*}
-%\epsscale{1.15}
-\plotone{f2}
-%\epsscale{1}
-\caption{\label{fig:projections} Density-weighted projections of gas
-  density (top), temperature (middle), and metallicity (bottom) at
-  $z=7$.  The left column shows the entire simulation volume, where
-  the center and right columns focus on the intense and quiet halos,
-  which are marked by left and right arrows in the upper-left panel.
-  The metallicity projections are a composite picture of metals
-  originating from Pop III (red) and Pop II (blue) stars with magenta
-  indicating a mixture of the two.}
+\epsscale{1.15}
+\plotone{bmosaic}
+\epsscale{1}
+  \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
+    volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
+    (left to right).  Pictured here are the density-weighted
+    projections of density (top), temperature (middle), and
+    metallicity (bottom).  Note how the stellar radiative feedback
+    from low-mass galaxies reionize the majority of the volume.  The
+    metallicity projections are a composite image of metals
+    originating from Pop II (blue) and III (red) stars with magneta
+    indicdating a mixture of the two.}
 \end{figure*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Star formation}
 
 We distinguish Pop II and Pop III SF by the total metallicity of the
 densest cell in the molecular cloud.  Pop II stars are formed if [Z/H]
@@ -276,7 +241,7 @@ sampled from an IMF with a functional form of
 %
 \begin{equation}
 \label{eqn:imf}
-f(M)dM = M^{-1.3} \exp\left[-\left(\frac{M_{\rm
+f(\log M) dM = M^{-1.3} \exp\left[-\left(\frac{M_{\rm
       char}}{M}\right)^{1.6}\right] dM
 \end{equation}
 to determine the stellar mass.  Above $M_{\rm char}$, it behaves as a
@@ -350,19 +315,38 @@ which is injected into spheres with a radius of 10 pc.  If the
 resolution of the grid is less than 10/3 pc, we deposit the energy
 into a $3^3$ cube surrounding the star particle.
 
-\begin{figure*}
-%\epsscale{1.15}
-\plotone{f3}
-%\epsscale{1}
-\caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
-  stellar mass (middle), and gas fraction (bottom) of the quiet
-  (dashed) and intense (solid) halos.  (b) Mass-weighted stellar
-  metallicities and gas metallicities enriched by Pop II and Pop III
-  SNe of the intense (top) and quiet (bottom) halos.}
-\end{figure*}
-
 \section{Results}
 \label{sec:results}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\epsscale{1.15}
+\plotone{hmosaic}
+\epsscale{1}
+  \caption{\label{fig:halo-mosaic} Density-weighted projections of
+    density (left), temperature (center), and metallicity (right) of
+    the two selected haloes at $z=7$.  The field of view is 5 proper
+    kpc, and the circles have a radius of $r_{200}$.  The composite
+    metallicity images are constructed in the same fashion as
+    Fig. \ref{fig:evo-mosaic}.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\epsscale{1.15}
+\plotone{sfr}
+\epsscale{1}
+\caption{\label{fig:sfr} Cosmic star formation rates for Pop II
+  (solid) and III (dashed).  Note that the Pop III rates are nearly
+  constant from redshift 12 to 7.  Pristine haloes still survive in
+  underdense regions, supporting late-time metal-free star formation.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Here we present the gaseous and stellar evolution of two selected
 halos in the simulation: one that has an early mass buildup but no
@@ -373,16 +357,31 @@ with 3640 Pop II stellar clusters and captures the formation of 333
 Pop III stars.  The halo mass function and galaxy luminosities are
 plotted in Figure \ref{fig:massfn}.
 
-% We start with the mass accretion history and enrichment of the
-% halos.  We then compare the nature of the stellar populations in
-% these halos.
+We illustrate the evolution of the simulation from $z=15$ to $z=7$ in
+Figure \ref{fig:evo-mosaic} with density weighted projections of gas
+density, temperature, and metallicity of the entire box.  Figure
+\ref{fig:halo-mosaic} shows the same types of plots but focusing on
+the two halos of interest with a field of view of 5 proper kpc.
+Radiative and mechanical feedback create a multi-phase medium inside
+these halos, which are embedded in a warm and ionized IGM.
 
-We illustrate the state of the simulation at $z=7$ in Figure
-\ref{fig:projections} with density weighted projections of gas
-density, temperature, and metallicity, showing the entire box and
-focusing on the two halos of interest.  Radiative and mechanical
-feedback create a multi-phase medium inside these halos, which are
-embedded in a warm and ionized IGM.
+\subsection{Global star formation rate}
+
+Figure \ref{fig:sfr} shows the cosmic star formation rate (SFR) in the
+simulation for Pop II and III stars.  Metal-free stars form at a
+nearly constant rate of $5 \times 10^{-4}$ \sfr~until the end of the
+simulation.  The dissociating and ionization radiation from nearby Pop
+III stars and galaxies do not halt the formation of such stars in
+low-mass haloes but only suppress them.  We expect a uniform
+\hh~dissociating (Lyman-Werner) radiation background to further delay
+them \citep{Machacek01, Wise07, OShea08}.  Metal-enriched star
+formation begins early in the simulation at $z \sim 16$ when a PISN
+blastwave overtakes a satellite halo with $M \sim 5 \times 10^5 \Ms$,
+triggering star formation there.  It rises steadily as
+$\rho_{\rm {\star,II}} \propto \exp(-z/1.1)$ until reaching $2 \times
+10^{-2}$ \sfr~at $z=7$.  This value agrees with derived SFRs from
+$z=6-10$ galaxy luminosity functions \citep[e.g.][]{Bouwens10} and
+large-scale galaxy formation simulations \citep[e.g.][]{Schaye10}.
 
 \subsection{Mass evolution}
 \label{sec:halo}
@@ -432,6 +431,24 @@ fraction increases from 0.07 to 0.12 until it jumps to 0.14 when a
 gas-rich major merger occurs.  The stellar mass accordingly increases
 with the ample supply of gas during this period.  
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+\epsscale{1.15}
+\plotone{f3}
+\epsscale{1}
+\caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
+  stellar mass (middle), and gas fraction (bottom) of the quiet
+  (dashed) and intense (solid) halos.  In the top panel, the filtering
+  halo mass is plotted as the thick black line (overlapping with the
+  quiet halo after $z=9$.  (b) Mass-weighted stellar metallicities and
+  gas metallicities enriched by Pop II and Pop III SNe of the intense
+  (top) and quiet (bottom) halos.}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \subsection{Metallicity evolution}
 
 The evolution of the stellar and gas metallicity of both halos are
@@ -446,7 +463,7 @@ established between metal-rich outflows and metal-poor inflows.
 Galactic outflows are directed in the polar directions of the gas
 disk, keeping the adjacent filaments metal-poor.  These features and a
 well-mixed ISM \citep[cf.][]{Wise08_Gal, Greif10} are apparent in the
-metallicity projections in Figure \ref{fig:projections}.  The average
+metallicity projections in Figure \ref{fig:halo-mosaic}.  The average
 stellar metallicity is within 0.5 dex of $[\bar{Z}_2/H]$.
 
 In the intense halo, the first few Pop II star clusters have $[Z/H]$
@@ -459,21 +476,6 @@ comoving kpc, keeping the halo gas metallicity high because the
 inflows are relatively metal-rich themselves.  After the $z \sim 8$
 starburst, the average stellar metallicity follows the average gas
 metallicity within 0.1 dex.
-
-\begin{figure*}
-%\epsscale{1.1}
-\plotone{f4}
-%\epsscale{1}
-\caption{\label{fig:pops} The scatter plots show the SF history of the
-  quiet (left) and intense (right) halos as a function of metallicity
-  at $z=7$.  Each circle represents a star cluster, whose area is
-  proportional to its mass.  The open circles in the upper right
-  represent $10^3$, $10^4$, and $10^5$ \Ms~star clusters.  The dashed
-  lines in the right panel guide the eye to two stellar populations
-  that were formed in two satellite halos, merging at $z=7.5$.  The
-  upper histogram shows the SFR.  The right histogram depicts the
-  stellar metallicity distribution.}
-\end{figure*}
 
 \subsection{Star formation history}
 \label{sec:pop}
@@ -496,6 +498,24 @@ bubble surrounding the intense halo.
 %% reasons for the features seen in the SFH and metallicities.
 %%
 %% \li Present the stellar metallicity distribution at the final time
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+\plottwo{sfh1}{sfh2}
+\caption{\label{fig:pops} The scatter plots show the SF history of the
+  quiet (left) and intense (right) halos as a function of metallicity
+  at $z=7$.  Each circle represents a star cluster, whose area is
+  proportional to its mass.  The open circles in the upper right
+  represent $10^3$, $10^4$, and $10^5$ \Ms~star clusters.  The dashed
+  lines in the right panel guide the eye to two stellar populations
+  that were formed in two satellite halos, merging at $z=7.5$.  The
+  upper histogram shows the SFR.  The right histogram depicts the
+  stellar metallicity distribution.}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure \ref{fig:pops} shows the SF history (SFH), metallicity
 distribution, and SF rates of both halos.  A nearby PISNe provides a
@@ -537,17 +557,17 @@ stellar mass.
 
 \section{Discussion and Conclusions}
 
-In this Letter, we focus on the birth of two galaxies prior to
-reionization with a cosmological AMR radiation hydrodynamics
-simulation.  Supernovae from Pop III stars provide the necessary heavy
-elements for the transition to a Population II stellar population,
-which we have directly simulated.  These two galaxies have a 10--15\%
-probability in surviving as present-day ``fossil'' galaxies
-\citep{Gnedin06}, otherwise they will be incorporated into galactic
-stellar halos.  A $z=8.55$ galaxy was recently spectroscopically
-confirmed that is contained in an ionized bubble with radius 0.1--0.5
-Mpc with an uncharacterized population of galaxies contributing to the
-local ionizing radiation field \citep{Lehnert10_z8.6}.  The galaxies
+We have focused on the birth of two galaxies prior to reionization
+with a cosmological AMR radiation hydrodynamics simulation.
+Supernovae from Pop III stars provide the necessary heavy elements for
+the transition to a Population II stellar population, which we have
+directly simulated.  These two galaxies have a 10--15\% probability in
+surviving as present-day ``fossil'' galaxies \citep{Gnedin06},
+otherwise they will be incorporated into galactic stellar halos.  A
+$z=8.55$ galaxy was recently spectroscopically confirmed that is
+contained in an ionized bubble with radius 0.1--0.5 Mpc with an
+uncharacterized population of galaxies contributing to the local
+ionizing radiation field \citep{Lehnert10_z8.6}.  The galaxies
 simulated here might represent this population and should be detected
 with the upcoming \textit{James Webb Space Telescope}.
 
