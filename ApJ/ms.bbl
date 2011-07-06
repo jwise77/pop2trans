@@ -1,4 +1,4 @@
-\begin{thebibliography}{75}
+\begin{thebibliography}{76}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -112,6 +112,9 @@
 
 \bibitem[{{Heger} \& {Woosley}(2002{\natexlab{b}})}]{Heger02}
 ---. 2002{\natexlab{b}}, \apj, 567, 532
+
+\bibitem[{{Hernquist} \& {Springel}(2003)}]{Hernquist03}
+{Hernquist}, L., \& {Springel}, V. 2003, \mnras, 341, 1253
 
 \bibitem[{{Karlsson} {et~al.}(2008){Karlsson}, {Johnson}, \&
   {Bromm}}]{Karlsson08}
@@ -277,8 +280,8 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
 ---. 2008, \apj, 685, 40
 
-\bibitem[{{Wise} \& {Abel}(2010)}]{Wise10}
----. 2010, ArXiv e-prints (1012.2865)
+\bibitem[{{Wise} \& {Abel}(2011)}]{Wise11_Moray}
+---. 2011, \mnras, 414, 3458
 
 \bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
 {Wise}, J.~H., \& {Cen}, R. 2009, \apj, 693, 984

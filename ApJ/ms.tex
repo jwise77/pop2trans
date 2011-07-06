@@ -24,16 +24,24 @@
 
 \author{John H. Wise\altaffilmark{1,2}, 
   Matthew J. Turk\altaffilmark{3},
-  Michael L. Norman\altaffilmark{3},
-  Tom Abel\altaffilmark{4}}
+  Michael L. Norman\altaffilmark{4},
+  Tom Abel\altaffilmark{5,6,7}}
 
 \altaffiltext{1}{Department of Astrophysical Sciences, Princeton
   University, Peyton Hall, Ivy Lane, Princeton, NJ 08544}
 \altaffiltext{2}{Hubble Fellow}
-\altaffiltext{3}{Center for Astrophysics and Space Sciences,
+\altaffiltext{3}{Department of Astronomy, Columbia University, 538
+  West 120th Street, New York, NY 10027}
+\altaffiltext{4}{Center for Astrophysics and Space Sciences,
   University of California at San Diego, La Jolla, CA 92093}
-\altaffiltext{4}{Kavli Institute for Particle Astrophysics and
+\altaffiltext{5}{Kavli Institute for Particle Astrophysics and
   Cosmology, Stanford University, Menlo Park, CA 94025}
+\altaffiltext{6}{Zentrum f\"ur Astronomie der Universit\"at, Institut
+  f\"ur Theoretische Astrophysik, Albert-Ueberle-Str. 2, 69120
+  Heidelberg, Germany}
+\altaffiltext{7}{Heidelberg Institut f\"ur Theoretische Studien,
+  Schloss-Wolfsbrunnenweg 35, 69118 Heidelberg, Germany}
+
 \email{jwise@astro.princeton.edu}
 
 \begin{abstract}
@@ -291,12 +299,12 @@ ignore any feedback from lower mass stars.
 
 We use mass-dependent luminosities and lifetimes of the Pop III stars
 from \citet{Schaerer02}.  The radiation field is evolved with adaptive
-ray tracing \citep{Abel02_RT, Wise10} and is coupled self-consistently
-to the hydrodynamics.  We model the \hh~dissociating radiation with an
-optically-thin, inverse square profile, centered on all star
-particles.  These stars die as pair-instability SNe (PISNe) if they
-are in the mass range 140--260 \Ms~\citep{Heger03}.  We use the
-explosion energy from \citet{Heger02}, where we fit the following
+ray tracing \citep{Abel02_RT, Wise11_Moray} and is coupled
+self-consistently to the hydrodynamics.  We model the \hh~dissociating
+radiation with an optically-thin, inverse square profile, centered on
+all star particles.  These stars die as pair-instability SNe (PISNe)
+if they are in the mass range 140--260 \Ms~\citep{Heger03}.  We use
+the explosion energy from \citet{Heger02}, where we fit the following
 function to their models, $E_{\rm PISN} = 10^{51} \times [5.0 + 1.304
   (M_{\rm He} - 64)]$, where $M_{\rm He} = (13/24) \times (M_\star -
 20) \Ms$ is the helium core (and equivalently the ejecta) mass and
@@ -348,14 +356,32 @@ into a $3^3$ cube surrounding the star particle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Here we present the gaseous and stellar evolution of two selected
-halos in the simulation: one that has an early mass buildup but no
-major mergers after $z=12$, and one that experiences a series of major
-mergers between $z=10$ and $z=7$.  We name the halos ``quiet'' and
-``intense'', respectively.  The entire simulation contains 38 galaxies
-with 3640 Pop II stellar clusters and captures the formation of 333
-Pop III stars.  The halo mass function and galaxy luminosities are
-plotted in Figure \ref{fig:massfn}.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\epsscale{1.15}
+\plotone{z3}
+\epsscale{1}
+\caption{\label{fig:z3} Average halo metallicity from Pop III SNe as a
+  function of total halo mass.  Inhomogenous metal enrichment causes
+  the large spread in metallicity at low masses.  At $M_{\rm halo} > 3
+  \times 10^7 \Ms$, all halos are enriched by Pop III SNe above [Z/H]
+  $>$ --4.  The y-axis error bars show the 25\% and 75\% percentile
+  values because the underlying distribution is not Gaussian.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Here we first present the global star formation rate (SFR) and metal
+enrichment during early galaxy formation and then focus on the gaseous
+and stellar evolution of two selected halos in the simulation: one
+that has an early mass buildup but no major mergers after $z=12$, and
+one that experiences a series of major mergers between $z=10$ and
+$z=7$.  We name the halos ``quiet'' and ``intense'', respectively.
+The entire simulation contains 38 galaxies with 3640 Pop II stellar
+clusters and captures the formation of 333 Pop III stars.  The halo
+mass function and galaxy luminosities are plotted in Figure
+\ref{fig:massfn}.
 
 We illustrate the evolution of the simulation from $z=15$ to $z=7$ in
 Figure \ref{fig:evo-mosaic} with density weighted projections of gas
@@ -367,21 +393,45 @@ these halos, which are embedded in a warm and ionized IGM.
 
 \subsection{Global star formation rate}
 
-Figure \ref{fig:sfr} shows the cosmic star formation rate (SFR) in the
-simulation for Pop II and III stars.  Metal-free stars form at a
-nearly constant rate of $5 \times 10^{-4}$ \sfr~until the end of the
-simulation.  The dissociating and ionization radiation from nearby Pop
-III stars and galaxies do not halt the formation of such stars in
-low-mass haloes but only suppress them.  We expect a uniform
-\hh~dissociating (Lyman-Werner) radiation background to further delay
-them \citep{Machacek01, Wise07, OShea08}.  Metal-enriched star
-formation begins early in the simulation at $z \sim 16$ when a PISN
-blastwave overtakes a satellite halo with $M \sim 5 \times 10^5 \Ms$,
-triggering star formation there.  It rises steadily as
-$\rho_{\rm {\star,II}} \propto \exp(-z/1.1)$ until reaching $2 \times
-10^{-2}$ \sfr~at $z=7$.  This value agrees with derived SFRs from
-$z=6-10$ galaxy luminosity functions \citep[e.g.][]{Bouwens10} and
-large-scale galaxy formation simulations \citep[e.g.][]{Schaye10}.
+Figure \ref{fig:sfr} shows the cosmic SFR in the simulation for Pop II
+and III stars.  Metal-free stars form at a nearly constant rate of $5
+\times 10^{-4}$ \sfr~until the end of the simulation.  The
+dissociating and ionization radiation from nearby Pop III stars and
+galaxies do not halt the formation of such stars in low-mass haloes
+but only suppress them.  We expect a uniform \hh~dissociating
+(Lyman-Werner) radiation background to further delay them
+\citep{Machacek01, Wise07, OShea08}.  Metal-enriched star formation
+begins early in the simulation at $z \sim 16$ when a PISN blastwave
+overtakes a satellite halo with $M \sim 5 \times 10^5 \Ms$, triggering
+star formation there.  After $z=12$ in our simulation, it rises
+steadily as $\rho_{\rm {\star,II}} \propto \exp(-z/1.1)$.  Star
+formation commences gradually in the smallest galaxies because of
+lowered gas fractions, causing a much steeper time dependency than
+$\exp(-z/3)$ relation found in \citet{Hernquist03}.  Note that they
+also acknowledged a steeper relation should exist at early times.  At
+redshift 7, it reaches $2 \times 10^{-2}$ \sfr.  This value agrees
+with derived SFRs from $z=6-10$ galaxy luminosity functions
+\citep[e.g.][]{Bouwens10} and large-scale galaxy formation simulations
+\citep[e.g.][]{Schaye10}.
+
+\subsection{Pre-enrichment from Population III stars}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+\epsscale{1.15}
+\plotone{f3}
+\epsscale{1}
+\caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
+  stellar mass (middle), and gas fraction (bottom) of the quiet
+  (dashed) and intense (solid) halos.  In the top panel, the filtering
+  halo mass is plotted as the thick black line (overlapping with the
+  quiet halo after $z=9$.  (b) Mass-weighted stellar metallicities and
+  gas metallicities enriched by Pop II and Pop III SNe of the intense
+  (top) and quiet (bottom) halos.}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Mass evolution}
 \label{sec:halo}
@@ -406,16 +456,17 @@ as dark matter halos can experience both quiescent and vigorous mass
 accretion rates.
 
 Both halos start forming Pop II stars when $M = 10^7 \Ms$.  This is
-consistent with the filtering mass $M_f$ of high-redshift halos when
-it accretes mainly from a pre-heated IGM \citep{gnedin98, gnedin00,
-  Wise08_Gal}.  Afterwards these halos can cool efficiently through
-\hh~cooling, sustaining constant and sometimes bursting SF.  The
-latter characteristics are equated with the definition of a galaxy.
-The quiet halo forms $10^5 \Ms$ of stars by $z=9$.  This initial
-starburst photo-evaporates the majority of its molecular clouds, in
-addition to heating and ionizing the surrounding IGM out to a radius
-of 10--15 kpc at $z=9$.  These respectively reduce the in-situ and
-external cold gas supply that could feed future SF.
+consistent with the filtering mass $M_f$, which is plotted as a thick
+line in Figure \ref{fig:evo}a, of high-redshift halos when it accretes
+mainly from a pre-heated IGM \citep{gnedin98, gnedin00, Wise08_Gal}.
+Afterwards these halos can cool efficiently through \hh~cooling,
+sustaining constant and sometimes bursting SF.  The latter
+characteristics are equated with the definition of a galaxy.  The
+quiet halo forms $10^5 \Ms$ of stars by $z=9$.  This initial starburst
+photo-evaporates the majority of its molecular clouds, in addition to
+heating and ionizing the surrounding IGM out to a radius of 10--15 kpc
+at $z=9$.  These respectively reduce the in-situ and external cold gas
+supply that could feed future SF.
 
 The gas fractions of both halos decrease from 0.15 to 0.08 by outflows
 driven by ionization fronts and blastwaves in their initial
@@ -430,24 +481,6 @@ and have higher gas fractions.  Between $z=10$ and $z=8$, the gas
 fraction increases from 0.07 to 0.12 until it jumps to 0.14 when a
 gas-rich major merger occurs.  The stellar mass accordingly increases
 with the ample supply of gas during this period.  
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure*}
-\epsscale{1.15}
-\plotone{f3}
-\epsscale{1}
-\caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
-  stellar mass (middle), and gas fraction (bottom) of the quiet
-  (dashed) and intense (solid) halos.  In the top panel, the filtering
-  halo mass is plotted as the thick black line (overlapping with the
-  quiet halo after $z=9$.  (b) Mass-weighted stellar metallicities and
-  gas metallicities enriched by Pop II and Pop III SNe of the intense
-  (top) and quiet (bottom) halos.}
-\end{figure*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Metallicity evolution}
 
@@ -628,15 +661,20 @@ in the near future.
 
 \acknowledgments
 
-J.~H.~W. is supported by NASA through Hubble Fellowship grant
-\#120-6370 awarded by the Space Telescope Science Institute, which is
-operated by the Association of Universities for Research in Astronomy,
-Inc., for NASA, under contract NAS 5-26555.  M.~J.~T. and
-M.~L.~N. acknowledge partial support from NASA ATFP grant NNX08AH26G.
-Computational resources were provided by NASA/NCCS award SMD-09-1439.
 J.~H.~W. thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline
-Tolstoy for enlightening discussions.  The majority of the analysis
-and plots were done with \texttt{yt} \citep{yt_full_paper}.
+Tolstoy for enlightening discussions.  J.~H.~W. is supported by NASA
+through Hubble Fellowship grant \#120-6370 awarded by the Space
+Telescope Science Institute, which is operated by the Association of
+Universities for Research in Astronomy, Inc., for NASA, under contract
+NAS 5-26555.  M.~J.~T. and M.~L.~N. acknowledge partial support from
+NASA ATFP grant NNX08AH26G.  Computational resources were provided by
+NASA/NCCS award SMD-09-1439.  TA acknowledges financial support from
+the {\em Baden-W\"{u}rttemberg-Stiftung} under grant P-LS-SPII/18, the
+Heidelberg Institut f\"ur Theoretische Studien. This work was
+partially supported by NASA ATFP grant NNX08AH26G and NSF
+AST-0807312. This research has made use of NASA’s Astrophysics Data
+System Bibliographic Services.  The majority of the analysis and plots
+were done with \texttt{yt} \citep{yt_full_paper}.
 
 %\clearpage
 %\input biblio.tex
