@@ -190,22 +190,6 @@ computational cells and required 250,000 CPU hours, using 512 cores.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{figure}
-\epsscale{1.15}
-\plotone{f1}
-\epsscale{1}
-\caption{\label{fig:massfn} \textit{Top}: Halo mass function of the
-  simulation compared with the analytical fit (solid) of
-  \citet{Warren06}.  \textit{Bottom}: Total Pop II luminosities of
-  halos versus dark matter halo mass with constant mass-to-light
-  ratios overplotted.}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \begin{figure*}
 \epsscale{1.15}
 \plotone{bmosaic}
@@ -356,32 +340,14 @@ into a $3^3$ cube surrounding the star particle.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure}
-\epsscale{1.15}
-\plotone{z3}
-\epsscale{1}
-\caption{\label{fig:z3} Average halo metallicity from Pop III SNe as a
-  function of total halo mass.  Inhomogenous metal enrichment causes
-  the large spread in metallicity at low masses.  At $M_{\rm halo} > 3
-  \times 10^7 \Ms$, all halos are enriched by Pop III SNe above [Z/H]
-  $>$ --4.  The y-axis error bars show the 25\% and 75\% percentile
-  values because the underlying distribution is not Gaussian.}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-Here we first present the global star formation rate (SFR) and metal
-enrichment during early galaxy formation and then focus on the gaseous
-and stellar evolution of two selected halos in the simulation: one
-that has an early mass buildup but no major mergers after $z=12$, and
-one that experiences a series of major mergers between $z=10$ and
-$z=7$.  We name the halos ``quiet'' and ``intense'', respectively.
-The entire simulation contains 38 galaxies with 3640 Pop II stellar
-clusters and captures the formation of 333 Pop III stars.  The halo
-mass function and galaxy luminosities are plotted in Figure
-\ref{fig:massfn}.
+Here we first present the global star formation rate (SFR) during
+early galaxy formation and then focus on the gaseous and stellar
+evolution of two selected halos in the simulation: one that has an
+early mass buildup but no major mergers after $z=12$, and one that
+experiences a series of major mergers between $z=10$ and $z=7$.  We
+name the halos ``quiet'' and ``intense'', respectively.  The entire
+simulation contains 38 galaxies with 3640 Pop II stellar clusters and
+captures the formation of 333 Pop III stars.
 
 We illustrate the evolution of the simulation from $z=15$ to $z=7$ in
 Figure \ref{fig:evo-mosaic} with density weighted projections of gas
@@ -414,7 +380,11 @@ with derived SFRs from $z=6-10$ galaxy luminosity functions
 \citep[e.g.][]{Bouwens10} and large-scale galaxy formation simulations
 \citep[e.g.][]{Schaye10}.
 
-\subsection{Pre-enrichment from Population III stars}
+\subsection{Mass evolution}
+\label{sec:halo}
+
+%\li Describe the evolution of the baryon fraction and metallicity from
+%PISN and Type II SNe metals in the two halos.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -432,12 +402,6 @@ with derived SFRs from $z=6-10$ galaxy luminosity functions
 \end{figure*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Mass evolution}
-\label{sec:halo}
-
-%\li Describe the evolution of the baryon fraction and metallicity from
-%PISN and Type II SNe metals in the two halos.
 
 Figure \ref{fig:evo}a shows the total, metal-enriched stellar, and gas
 mass history of the most massive progenitors of both halos.  The quiet
@@ -509,6 +473,34 @@ comoving kpc, keeping the halo gas metallicity high because the
 inflows are relatively metal-rich themselves.  After the $z \sim 8$
 starburst, the average stellar metallicity follows the average gas
 metallicity within 0.1 dex.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\epsscale{1.15}
+\plotone{z3}
+\epsscale{1}
+\caption{\label{fig:z3} Average halo metallicity from Pop III SNe as a
+  function of total halo mass.  Inhomogenous metal enrichment causes
+  the large spread in metallicity at low masses.  At $M_{\rm halo} > 3
+  \times 10^7 \Ms$, all halos are enriched by Pop III SNe above [Z/H]
+  $>$ --4.  The y-axis error bars show the 25\% and 75\% percentile
+  values because the underlying distribution is not Gaussian.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+To further demonstrate the metallicity floor in high-redshift dwarf
+galaxies, we show the average metallicity from Pop III SNe \zthree~in
+all haloes as a function of halo mass at $z =$ 7, 8, 9, and 10 in
+Fig. \ref{fig:z3}, and it is strongly dependent on halo mass.  The
+\zthree~error bars mark the 25\% and 75\% percentiles of the
+distribution at $M = M_{\rm halo}$ because the underlying distribution
+is not necessarily Gaussian at all halo masses.  Above $3 \times 10^7
+\Ms$, all haloes enriched to $\zthree \ga -4$ with little time
+evolution, further illustrating the metallicity floor.  Below this
+halo mass, the distribution is roughly bimodal composed of pristine
+and metal-enriched halos.
 
 \subsection{Star formation history}
 \label{sec:pop}
@@ -588,6 +580,49 @@ their stellar populations are still discernible in the metallicity-age
 plot.  Stars with [Z/H] $<$ --3 compose 1.8 percent of the total
 stellar mass.
 
+\subsection{Mass-to-light ratios}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\epsscale{1.15}
+\plotone{f1}
+\epsscale{1}
+\caption{\label{fig:massfn} Total Pop II luminosities of halos versus
+  total halo mass with constant mass-to-light ratios overplotted.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+Mass-to-light ratios are crucial in interpreting observations when
+connecting the galaxy to its DM halo, and ultimately to models of
+galaxy formation.  For this paper, we use a simple model to calculate
+the total stellar luminosity of each galaxy.  In a later paper, we
+will follow up with more sophisicated models to determine more
+accurate observables.  Stars in each particle are treated an
+instantaneous burst.  Using the empirical law of main sequence
+lifetime $t_{\rm MS} \propto M^{-5/2}$, the maximum stellar mass in
+such a system is dependent only on its age $t_\star$, so $M_{\rm up} =
+(t_\star / 10\;\mathrm{Gyr})^{-2/5}$.  Then combining another scaling
+law $L \propto M^{7/2}$ and the Salpeter IMF $\psi(M) \propto
+M^{-\alpha}$,
+%
+\begin{eqnarray}
+  \label{eqn:lum}
+  L/M_\odot &=& \int_{M_{\rm lo}}^{M_{\rm up}} \psi(M) L(M) dM
+  \nonumber\\ &\simeq& M_{\rm up}^{9/2-\alpha} (9/2 - \alpha)^{-1},
+\end{eqnarray}
+where we set $M_{\rm lo} \equiv 0$ because it is negligible in the
+luminosity.  Then the galaxy luminosity is the sum of all star
+particle luminosities, which we plot in Fig. \ref{fig:massfn} with
+respect to halo mass, along with the DM halo mass function.
+
+Recall that the most massive halo ($M_{\rm tot} = 10^9 \Ms$) is
+undergoing a starburst at $z=7$, translating into a relatively high
+$M/L = 6$.  The lower mass galaxies show a spread in M/L over two
+orders of magnitude, similar to the Sloan Digital Sky Survey (SDSS)
+observations of local dSph galaxies \citep[e.g.][]{Strigari08}.
+
 \section{Discussion and Conclusions}
 
 We have focused on the birth of two galaxies prior to reionization
@@ -608,7 +643,7 @@ We find that one PISN is sufficient to enrich the star-forming halo
 and surrounding $\sim 5$ kpc to a metallicity of 10$^{-3} Z_\odot$,
 given $M_{\rm char} = 100~\Ms$.  DLA systems have a metallicity floor
 on the same order \citep{Wolfe05_Review}, and metal enrichment from Pop
-III SNe provides a possible explanation.
+III SNe provides a possible explanation \citep{Kobayashi11}.
 
 If the first stars have a lower characteristic mass that favor
 hypernovae \citep{Tumlinson07_IMF}, then this metallicity floor should

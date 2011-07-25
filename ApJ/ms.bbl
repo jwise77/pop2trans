@@ -1,4 +1,4 @@
-\begin{thebibliography}{76}
+\begin{thebibliography}{78}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -125,6 +125,10 @@
 {Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
   631
 
+\bibitem[{{Kobayashi} {et~al.}(2011){Kobayashi}, {Tominaga}, \&
+  {Nomoto}}]{Kobayashi11}
+{Kobayashi}, C., {Tominaga}, N., \& {Nomoto}, K. 2011, \apjl, 730, L14+
+
 \bibitem[{{Komatsu} {et~al.}(2010)}]{WMAP7}
 {Komatsu}, E., {et~al.} 2010, ArXiv e-prints (1001.4538)
 
@@ -219,6 +223,11 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
 \bibitem[{{Stacy} {et~al.}(2010){Stacy}, {Greif}, \& {Bromm}}]{Stacy10_Binary}
 {Stacy}, A., {Greif}, T.~H., \& {Bromm}, V. 2010, \mnras, 403, 45
+
+\bibitem[{{Strigari} {et~al.}(2008){Strigari}, {Bullock}, {Kaplinghat},
+  {Simon}, {Geha}, {Willman}, \& {Walker}}]{Strigari08}
+{Strigari}, L.~E., {Bullock}, J.~S., {Kaplinghat}, M., {Simon}, J.~D., {Geha},
+  M., {Willman}, B., \& {Walker}, M.~G. 2008, \nat, 454, 1096
 
 \bibitem[{{Tafelmeyer} {et~al.}(2010){Tafelmeyer}, {Jablonka}, {Hill},
   {Shetrone}, {Tolstoy}, {Irwin}, {Battaglia}, {Helmi}, {Starkenburg}, {Venn},
