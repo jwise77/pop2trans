@@ -161,6 +161,11 @@
 \bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
 Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
+\bibitem[{{Nomoto} {et~al.}(2006){Nomoto}, {Tominaga}, {Umeda}, {Kobayashi}, \&
+  {Maeda}}]{Nomoto06}
+{Nomoto}, K., {Tominaga}, N., {Umeda}, H., {Kobayashi}, C., \& {Maeda}, K.
+  2006, Nuclear Physics A, 777, 424
+
 \bibitem[{{Omukai} {et~al.}(2005){Omukai}, {Tsuribe}, {Schneider}, \&
   {Ferrara}}]{Omukai05}
 {Omukai}, K., {Tsuribe}, T., {Schneider}, R., \& {Ferrara}, A. 2005, \apj, 626,
@@ -274,11 +279,6 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
   {Abel}, \& {Norman}}]{yt_full_paper}
 {Turk}, M.~J., {Smith}, B.~D., {Oishi}, J.~S., {Skory}, S., {Skillman}, S.~W.,
   {Abel}, T., \& {Norman}, M.~L. 2011, \apjs, 192, 9
-
-\bibitem[{{Warren} {et~al.}(2006){Warren}, {Abazajian}, {Holz}, \&
-  {Teodoro}}]{Warren06}
-{Warren}, M.~S., {Abazajian}, K., {Holz}, D.~E., \& {Teodoro}, L. 2006, \apj,
-  646, 881
 
 \bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
 {Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14

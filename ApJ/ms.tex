@@ -99,8 +99,10 @@ background (CMB) temperature \citep{Larson98, Tumlinson07_IMF,
 thus have a lower characteristic stellar mass than its metal-free
 progenitors.  These first stellar clusters may be connected to stars
 in the Milky Way halo and nearby dwarf spheroidal (dSph) galaxies,
-both with a metallicity floor of [Z/H] = --4 \citep{Beers05,
-  Tafelmeyer10, Frebel10_Obs}.
+both with a metallicity floor of [Z/H]\footnote{We use the
+  conventional notation, [Z/H] $\equiv \log(Z/H) -
+  \log(Z_\odot/H_\odot)$.} = --4 \citep{Beers05, Tafelmeyer10,
+  Frebel10_Obs}.
 
 Pop III stars primarily form in dark matter halos with $M \sim 10^6
 \Ms$.  Their stellar radiation ionizes and heats an \ion{H}{2} region
@@ -147,7 +149,7 @@ effects.
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
-\textsc{enzo~v2.0}\footnote{\texttt{enzo.googlecode.com, changeset
+enzo~v2.0\footnote{\texttt{enzo.googlecode.com, changeset
     b86d8ba026d6}} \citep{OShea2004}.  It uses an $N$-body adaptive
 particle-mesh solver \citep{Efstathiou85} to follow the dark matter
 (DM) dynamics.  It solves the hydrodynamical equation using the
@@ -176,17 +178,17 @@ avoiding artificial fragmentation during gaseous collapses
 \citep{Truelove97}.  If any of these critera are met in a single cell,
 it is flagged for further spatial refinement.  
 
-We initialize the simulation with \textsc{grafic}
-\citep{Bertschinger01} at $z = 130$ and use the cosmological
-parameters from the 7-year WMAP $\Lambda$CDM+SZ+LENS best fit
-\citep{WMAP7}: $\Omega_M = 0.266$, $\Omega_\Lambda = 0.734$, $\Omega_b
-= 0.0449$, $h = 0.71$, $\sigma_8 = 0.81$, and $n = 0.963$ with the
-variables having their usual definitions.  We use a maximum refinement
-level of $l = 12$, resulting in a maximal comoving resolution of 1 pc.
-We stop the simulation at $z=7$ to prevent any large-scale modes with
-$r \sim L_{\rm box}/2$ from entering the non-linear growth regime.  At
-the final redshift, the baseline simulation has $1.4 \times 10^8$
-computational cells and required 250,000 CPU hours, using 512 cores.
+We initialize the simulation with grafic \citep{Bertschinger01} at $z
+= 130$ and use the cosmological parameters from the 7-year WMAP
+$\Lambda$CDM+SZ+LENS best fit \citep{WMAP7}: $\Omega_M = 0.266$,
+$\Omega_\Lambda = 0.734$, $\Omega_b = 0.0449$, $h = 0.71$, $\sigma_8 =
+0.81$, and $n = 0.963$ with the variables having their usual
+definitions.  We use a maximum refinement level of $l = 12$, resulting
+in a maximal comoving resolution of 1 pc.  We stop the simulation at
+$z=7$ to prevent any large-scale modes with $r \sim L_{\rm box}/2$
+from entering the non-linear growth regime.  At the final redshift,
+the simulation has $1.4 \times 10^8$ computational cells and required
+250,000 CPU hours, using 512 cores.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -215,21 +217,26 @@ $> -4$, and Pop III stars are formed otherwise.  We do not consider
 Pop III.2 stars and intermediate mass stars from CMB-limited cooling.
 
 Simulations have shown that the characteristic mass of Pop III stars
-$M_{\rm char} \sim 100~\Ms$.  They form in molecular clouds that
-coexist with the dark matter halo center with limited fragmentation
-occurring during their collapse; however \citet{2009Sci...325..601T}
-and \citet{Stacy10_Binary} have recently shown that Pop III binaries
-may form in a fraction of such halos.
+$M_{\rm char} \sim 100~\Ms$ \citep{ABN02, Bromm02_P3, OShea07a}.  They
+form in molecular clouds that coexist with the dark matter halo center
+with limited fragmentation occurring during their collapse; however
+\citet{2009Sci...325..601T} and \citet{Stacy10_Binary} have recently
+shown that Pop III binaries may form in a fraction of such halos.
 
 % Furthermore, detailed one-dimensional calculations have shown that
 % their IMF should follow a Kroupa-like IMF that has a Salpeter slope
 % at the high-mass end and an exponential cut-off below $M_{\rm char}$
 % \cite{refs}.
 
-For Pop III stars, we use the same SF model as \citet{Wise08_Gal} where
-each star particle represents a single star, forming at an overdensity
-of $5 \times 10^5$.  Instead of using a fixed stellar mass, we randomly
-sampled from an IMF with a functional form of
+For Pop III stars, we use the same SF model as \citet{Wise08_Gal}
+where each star particle represents a single star, forming at an
+overdensity of $5 \times 10^5$ ($\sim 10^3\; \cubecm$ at $z=10$).  If
+multiple cells meet the star particle formation criteria within 1 pc,
+we form one Pop III star particle with the center of mass of these
+flagged cells to ensure that massive star is created per metal-free
+molecular cloud.  Instead of using a fixed stellar mass like in our
+previous work, we randomly sampled from an IMF with a functional form
+of
 %
 \begin{equation}
 \label{eqn:imf}
@@ -647,17 +654,23 @@ III SNe provides a possible explanation \citep{Kobayashi11}.
 
 If the first stars have a lower characteristic mass that favor
 hypernovae \citep{Tumlinson07_IMF}, then this metallicity floor should
-be lowered by a factor of $\sim 10$ because (1) the metal ejecta is
-lowered by a factor of $\sim 50$ and (2) the mixing mass is
-approximately decreased by a factor of $(E_{\rm hyp}/E_{\rm
-  PISN})^{3/5}$ in the Sedov-Taylor solution, where $(E_{\rm
-  hyp}/E_{\rm PISN}) \sim 0.1$ is the ratio of explosion energies of a
-hypernova and PISN.  In the case where this metallicity floor is less
-than the critical metallicity, then the next instance of SF will
-further enrich the ISM, solidifying the transition to Pop II SF.  We
-conclude that it only takes one, at most two, SNe from Pop III stars
-in the halo progenitors to complete the transition to Population II
-\citep{Frebel10}.  The question of whether the critical metallicity is
+be lowered by a factor of $\sim 10$ because the metal ejecta from a 40
+\Ms~hypernova is 8.6 \Ms~\citep{Nomoto06}, compared to 85 \Ms~of
+metals produced by a 180 \Ms~PISN \citep{Heger02}.  Both explosions
+have approximately $3 \times 10^{52}$ erg.  Therefore the blastwaves
+from these two explosions should expand to equal radii before stalling
+in the IGM.  We note that stronger metal-line cooling in the PISN case
+may cause the blastwave to stall at a marginally smaller radius.  
+
+In the case where this metallicity floor is less than the critical
+metallicity, then the next SN will further enrich the ISM, solidifying
+the transition to Pop II SF.  We conclude that it only takes one, at
+most two, SNe from Pop III stars in the halo progenitors to complete
+the transition to Population II \citep{Frebel10}.  However, this does
+not prohibit more than two instances of Pop III star formation in halo
+from happening because the stars can end in a direct collapse to a BH
+with little or no metal ejecta, keeping the surrounding environment
+pristine.  The question of whether the critical metallicity is
 \tento{-6} or \tento{-3.5} $Z_\odot$ is most applicable to nearby
 halos where the heavy elements mix slowly into dense cores as the
 blastwave overtakes it.  Less than two percent of stars have [Z/H] $<
