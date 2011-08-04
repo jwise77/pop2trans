@@ -143,6 +143,13 @@ formation and feedback of the first stars to protogalaxies, resolving
 the important scales and including the most important physical
 effects.
 
+We first describe the simulation setup and numerical methods behind
+our work in \S\ref{sec:setup}.  Then in \S\ref{sec:results} we present
+the evolution of two selected high-redshift dwarf galaxies, focusing
+on their metallicities and stellar populations.  Last we discuss
+possible dependencies of our results on the Pop III initial mass
+function and conclude in \S\ref{sec:discuss}.
+
 \section{Method}
 \label{sec:setup}
 
@@ -208,6 +215,8 @@ the simulation has $1.4 \times 10^8$ computational cells and required
 \end{figure*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{table1.tex}
 
 \subsection{Star formation}
 
@@ -362,7 +371,14 @@ density, temperature, and metallicity of the entire box.  Figure
 \ref{fig:halo-mosaic} shows the same types of plots but focusing on
 the two halos of interest with a field of view of 5 proper kpc.
 Radiative and mechanical feedback create a multi-phase medium inside
-these halos, which are embedded in a warm and ionized IGM.
+these halos, which are embedded in a warm and ionized IGM.  At the
+final redshift, the volume and mass ionized fraction are 0.76 and
+0.72, respectively, which are consistent with large-scale reionization
+simulations \citep{Zahn11}.  PISNe enrich 0.106 and 0.027 of the mass
+and volume, respectively, above $10^{-3} \zsun$, and 0.034 and 0.0024
+of the mass and volume are enriched by Type II SNe above the same
+threshold.  Table \ref{tab:enrich} gives additional enriched fractions
+with different metallicity cuts.
 
 \subsection{Global star formation rate}
 
@@ -372,16 +388,18 @@ and III stars.  Metal-free stars form at a nearly constant rate of $5
 dissociating and ionization radiation from nearby Pop III stars and
 galaxies do not halt the formation of such stars in low-mass haloes
 but only suppress them.  We expect a uniform \hh~dissociating
-(Lyman-Werner) radiation background to further delay them
-\citep{Machacek01, Wise07, OShea08}.  Metal-enriched star formation
-begins early in the simulation at $z \sim 16$ when a PISN blastwave
-overtakes a satellite halo with $M \sim 5 \times 10^5 \Ms$, triggering
-star formation there.  After $z=12$ in our simulation, it rises
-steadily as $\rho_{\rm {\star,II}} \propto \exp(-z/1.1)$.  Star
-formation commences gradually in the smallest galaxies because of
-lowered gas fractions, causing a much steeper time dependency than
-$\exp(-z/3)$ relation found in \citet{Hernquist03}.  Note that they
-also acknowledged a steeper relation should exist at early times.  At
+radiation background to further delay them \citep{Machacek01, Wise07,
+  OShea08}.
+
+The cosmic Pop II SFR is best fit with an exponential $\exp(-z/1.1)$.
+Metal-enriched star formation begins early in the simulation at $z
+\sim 16$ when a PISN blastwave overtakes a satellite halo with $M \sim
+5 \times 10^5 \Ms$, triggering star formation there.  At $z>10$, these
+enriched minihalos cause the Pop II SFR to be higher than this
+relation.  Only after $z \sim 10$ does the SFR follows this
+exponential, which is a steeper time dependency than the $\exp(-z/3)$
+relation found in \citet{Hernquist03}.  Note that they also
+acknowledged that this behavior should occur at early times.  At
 redshift 7, it reaches $2 \times 10^{-2}$ \sfr.  This value agrees
 with derived SFRs from $z=6-10$ galaxy luminosity functions
 \citep[e.g.][]{Bouwens10} and large-scale galaxy formation simulations
@@ -512,6 +530,23 @@ and metal-enriched halos.
 \subsection{Star formation history}
 \label{sec:pop}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+\plottwo{sfh1}{sfh2}
+\caption{\label{fig:pops} The scatter plots show the SF history of the
+  quiet (left) and intense (right) halos as a function of metallicity
+  at $z=7$.  Each circle represents a star cluster, whose area is
+  proportional to its mass.  The open circles in the upper right
+  represent $10^3$, $10^4$, and $10^5$ \Ms~star clusters.  The dashed
+  lines in the right panel guide the eye to two stellar populations
+  that were formed in two satellite halos, merging at $z=7.5$.  The
+  upper histogram shows the SFR.  The right histogram depicts the
+  stellar metallicity distribution.}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 The most massive progenitor of the quiet halo interestingly never
 hosts a Pop III star.  Instead a nearby halo forms a Pop III star,
 which (randomly) produces a PISNe at $z=16$.  The blastwave overruns
@@ -531,23 +566,6 @@ bubble surrounding the intense halo.
 %%
 %% \li Present the stellar metallicity distribution at the final time
 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure*}
-\plottwo{sfh1}{sfh2}
-\caption{\label{fig:pops} The scatter plots show the SF history of the
-  quiet (left) and intense (right) halos as a function of metallicity
-  at $z=7$.  Each circle represents a star cluster, whose area is
-  proportional to its mass.  The open circles in the upper right
-  represent $10^3$, $10^4$, and $10^5$ \Ms~star clusters.  The dashed
-  lines in the right panel guide the eye to two stellar populations
-  that were formed in two satellite halos, merging at $z=7.5$.  The
-  upper histogram shows the SFR.  The right histogram depicts the
-  stellar metallicity distribution.}
-\end{figure*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure \ref{fig:pops} shows the SF history (SFH), metallicity
 distribution, and SF rates of both halos.  A nearby PISNe provides a
@@ -631,6 +649,7 @@ orders of magnitude, similar to the Sloan Digital Sky Survey (SDSS)
 observations of local dSph galaxies \citep[e.g.][]{Strigari08}.
 
 \section{Discussion and Conclusions}
+\label{sec:discuss}
 
 We have focused on the birth of two galaxies prior to reionization
 with a cosmological AMR radiation hydrodynamics simulation.
@@ -709,15 +728,15 @@ in the near future.
 
 \acknowledgments
 
-J.~H.~W. thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline
-Tolstoy for enlightening discussions.  J.~H.~W. is supported by NASA
-through Hubble Fellowship grant \#120-6370 awarded by the Space
-Telescope Science Institute, which is operated by the Association of
-Universities for Research in Astronomy, Inc., for NASA, under contract
-NAS 5-26555.  M.~J.~T. and M.~L.~N. acknowledge partial support from
-NASA ATFP grant NNX08AH26G.  Computational resources were provided by
-NASA/NCCS award SMD-09-1439.  TA acknowledges financial support from
-the {\em Baden-W\"{u}rttemberg-Stiftung} under grant P-LS-SPII/18, the
+JHW thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline Tolstoy
+for enlightening discussions.  JHW is supported by NASA through Hubble
+Fellowship grant \#120-6370 awarded by the Space Telescope Science
+Institute, which is operated by the Association of Universities for
+Research in Astronomy, Inc., for NASA, under contract NAS 5-26555.
+MJT and MLN acknowledge partial support from NASA ATFP grant
+NNX08AH26G.  Computational resources were provided by NASA/NCCS award
+SMD-09-1439.  TA acknowledges financial support from the {\em
+  Baden-W\"{u}rttemberg-Stiftung} under grant P-LS-SPII/18, the
 Heidelberg Institut f\"ur Theoretische Studien. This work was
 partially supported by NASA ATFP grant NNX08AH26G and NSF
 AST-0807312. This research has made use of NASA’s Astrophysics Data

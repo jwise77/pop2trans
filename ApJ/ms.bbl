@@ -1,4 +1,4 @@
-\begin{thebibliography}{78}
+\begin{thebibliography}{79}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -306,5 +306,10 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Yoshida} {et~al.}(2004){Yoshida}, {Bromm}, \&
   {Hernquist}}]{Yoshida04}
 {Yoshida}, N., {Bromm}, V., \& {Hernquist}, L. 2004, \apj, 605, 579
+
+\bibitem[{{Zahn} {et~al.}(2011){Zahn}, {Mesinger}, {McQuinn}, {Trac}, {Cen}, \&
+  {Hernquist}}]{Zahn11}
+{Zahn}, O., {Mesinger}, A., {McQuinn}, M., {Trac}, H., {Cen}, R., \&
+  {Hernquist}, L.~E. 2011, \mnras, 414, 727
 
 \end{thebibliography}
