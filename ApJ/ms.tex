@@ -201,7 +201,7 @@ the simulation has $1.4 \times 10^8$ computational cells and required
 
 \begin{figure*}
 \epsscale{1.15}
-\plotone{bmosaic}
+\plotone{f1}
 \epsscale{1}
   \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
     volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
@@ -295,31 +295,89 @@ ignore any feedback from lower mass stars.
 
 \subsection{Stellar feedback}
 
-We use mass-dependent luminosities and lifetimes of the Pop III stars
-from \citet{Schaerer02}.  The radiation field is evolved with adaptive
-ray tracing \citep{Abel02_RT, Wise11_Moray} and is coupled
-self-consistently to the hydrodynamics.  We model the \hh~dissociating
-radiation with an optically-thin, inverse square profile, centered on
-all star particles.  These stars die as pair-instability SNe (PISNe)
-if they are in the mass range 140--260 \Ms~\citep{Heger03}.  We use
-the explosion energy from \citet{Heger02}, where we fit the following
-function to their models, $E_{\rm PISN} = 10^{51} \times [5.0 + 1.304
-  (M_{\rm He} - 64)]$, where $M_{\rm He} = (13/24) \times (M_\star -
-20) \Ms$ is the helium core (and equivalently the ejecta) mass and
-$M_\star$ is the stellar mass.
+The radiation field is evolved with adaptive ray tracing
+\citep{Abel02_RT, Wise11_Moray} that is based on the HEALPix framework
+\citep{HEALPix} and is coupled self-consistently to the hydrodynamics.
+Each star particle is a point source of hydrogen ionizing radiation
+with the ionizing luminosity equally split between 48 initial rays
+(HEALPix level 2).  We use a mono-chromatic spectrum for the radiation
+with the energy $E_{\rm ph}$ equaling the luminosity-weighted photon
+energy of the spectrum.  For a cosmological simulation that focuses on
+galaxies, this does not significantly affect the overall galactic
+dynamics \citep[see Sec. 6.3 in][]{Wise11_Moray}.  We do not consider helium
+singly- and doubly-ionizing radiation.  As the rays propagate from the
+source or into a high resolution AMR grid, they are adaptively split
+into 4 child rays, increasing the angular resolution of the solution,
+when the solid angle of the ray $\theta = 4\pi/(12 \times 4^{L})$ is
+larger than 1/3 of the cell area, where $L$ is the HEALPix level.  We
+model the \hh~dissociating radiation with an optically-thin, inverse
+square profile, centered on all star particles.  In haloes with $M
+\ga 10^8 \Ms$, the \hh~column density may become large enough to
+self-shield itself from LW radiation \citep{Wise08_Gal}.  Thus we may
+be underestimating the SFRs in our work.
 
-The Pop II star particles emit 6000 hydrogen ionizing photons per
-baryon over their lifetime, and we do not consider singly- and
-doubly-ionizing helium photons.  We note that low-metallicity stars
-generate up to a factor of four more ionizing photons than a solar
-metallicity population \citep{Schaerer03} and might be underestimating
-the radiative feedback.  Nonetheless this study provides an excellent
-first insight in the transition to Pop II SF, as the metal enrichment
-is the key ingredient here.  For SN feedback, these stars generate
-$6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$ after living for 4 Myr,
-which is injected into spheres with a radius of 10 pc.  If the
-resolution of the grid is less than 10/3 pc, we deposit the energy
-into a $3^3$ cube surrounding the star particle.
+We use mass-dependent hydrogen ionizing and LW photon luminosites and
+lifetimes of the Pop III stars from \citet{Schaerer02}.  We use a
+mass-independent photon energy $E_{\rm ph} = 29.6$ eV, appropriate for
+the near-constant $10^5$ K surface temperatures of Pop III stars.
+They die as Type II SNe if $11 \le M_\star/\Ms \le 40$
+\Ms~\citep{Woosley95} and as PISNe if they are in the mass range
+140--260 \Ms~\citep{Heger03}, where $M_\star$ is the stellar mass.
+For normal Type II SNe between 11--20 \Ms, we use an explosion energy
+of \tento{51}~erg and a linear fit to the metal ejecta mass calculated
+in \citet{Nomoto06},
+%
+\begin{equation}
+  \label{eqn:typeii}
+  M_{\rm Z}/\Ms = 0.1077 + 0.3383 \times (M_\star/\Ms - 11).
+\end{equation}
+%
+We model the SNe of stars with $20 \le M_\star/\Ms \le 40$ as
+hypernova with the energies and ejecta masses also taken from
+\citeauthor{Nomoto06}, linearly interpolating their results to
+$M_\star$.  For PISNe, we use the explosion energy from
+\citet{Heger02}, where we fit the following function to their models,
+%
+\begin{equation}
+  \label{eqn:pisn}
+  E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He}/\Ms - 64)] \; \mathrm{erg},
+\end{equation}
+%
+where $M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium
+core (and equivalently the metal ejecta) mass and $M_\star$ is the
+stellar mass.  The blastwave is modeled by injecting the explosion
+energy and ejecta mass into a sphere of 10 pc, smoothed at its surface
+to improve numerical stability \citep{Wise08_Gal}.  Because we resolve
+the blastwave relatively well with several cells across at its
+initialization, the thermal energy is converted into kinetic energy
+and agrees with the Sedov-Taylor solution \citep[e.g.][]{Greif07}.
+
+The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
+their lifetime and $E_{\rm ph} = 21.6$ eV, appropriate for a [Z/H] =
+$-1.3$ population.  We note that lower-metallicity stars generate up
+to 60\% more ionizing photons and might be underestimating the
+radiative feedback \citep{Schaerer03}.  Nonetheless this study
+provides an excellent first insight in the transition to Pop II SF, as
+the metal enrichment is the key ingredient here.  For SN feedback,
+these stars generate $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$
+after living for 4 Myr, which is injected into spheres with a radius
+of 10 pc, using the same technique as the Pop III SNe.  However if the
+resolution of the grid is less than 10/3 pc, we distribute the energy
+into a $3^3$ cube surrounding the star particle.  In the same region,
+star particles also return ejected material with mass
+%
+\begin{equation}
+  \label{eqn:SNmass}
+  \Delta m_{\rm ej} = \frac{0.25 \; \Delta t \; M_\star} 
+         {t_0 - 4\;\mathrm{Myr}}
+\end{equation}
+back to the grid at every timestep on the finest AMR level.  Here
+$t_0$ = 20 Myr is the lifetime of the star particle.  This ejected gas
+has solar metallicity $Z = 0.02$, resulting in a total metal yield $y
+= 0.005$.  In addition to numerical stability, energy distribution
+across several cells instead of a single cell has been shown to match
+cosmic SFRs better in galaxy simulations at lower redshifts
+\citep{Smith10}.
 
 \section{Results}
 \label{sec:results}
@@ -330,7 +388,7 @@ into a $3^3$ cube surrounding the star particle.
 
 \begin{figure}
 \epsscale{1.15}
-\plotone{hmosaic}
+\plotone{f2}
 \epsscale{1}
   \caption{\label{fig:halo-mosaic} Density-weighted projections of
     density (left), temperature (center), and metallicity (right) of
@@ -346,7 +404,7 @@ into a $3^3$ cube surrounding the star particle.
 
 \begin{figure}
 \epsscale{1.15}
-\plotone{sfr}
+\plotone{f3}
 \epsscale{1}
 \caption{\label{fig:sfr} Cosmic star formation rates for Pop II
   (solid) and III (dashed).  Note that the Pop III rates are nearly
@@ -415,7 +473,7 @@ with derived SFRs from $z=6-10$ galaxy luminosity functions
 
 \begin{figure*}
 \epsscale{1.15}
-\plotone{f3}
+\plotone{f4}
 \epsscale{1}
 \caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
   stellar mass (middle), and gas fraction (bottom) of the quiet
@@ -503,7 +561,7 @@ metallicity within 0.1 dex.
 
 \begin{figure}
 \epsscale{1.15}
-\plotone{z3}
+\plotone{f5}
 \epsscale{1}
 \caption{\label{fig:z3} Average halo metallicity from Pop III SNe as a
   function of total halo mass.  Inhomogenous metal enrichment causes
@@ -533,7 +591,7 @@ and metal-enriched halos.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure*}
-\plottwo{sfh1}{sfh2}
+\plottwo{f6a}{f6b}
 \caption{\label{fig:pops} The scatter plots show the SF history of the
   quiet (left) and intense (right) halos as a function of metallicity
   at $z=7$.  Each circle represents a star cluster, whose area is
@@ -611,10 +669,15 @@ stellar mass.
 
 \begin{figure}
 \epsscale{1.15}
-\plotone{f1}
+\plotone{f7}
 \epsscale{1}
 \caption{\label{fig:massfn} Total Pop II luminosities of halos versus
-  total halo mass with constant mass-to-light ratios overplotted.}
+  total halo mass with constant mass-to-light ratios overplotted at
+  redshift 7.  The halos with $M \gsim 10^8 \Ms$ form stars
+  efficiently because they can cool through atomic line cooling,
+  whereas the lower mass galaxies rely on molecular hydrogen cooling
+  only.  The low M/L ratios and spread across two orders of magnitude
+  are similar to ones observed in nearby ultra faint dwarf galaxies.}
 \end{figure}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -644,9 +707,14 @@ respect to halo mass, along with the DM halo mass function.
 
 Recall that the most massive halo ($M_{\rm tot} = 10^9 \Ms$) is
 undergoing a starburst at $z=7$, translating into a relatively high
-$M/L = 6$.  The lower mass galaxies show a spread in M/L over two
-orders of magnitude, similar to the Sloan Digital Sky Survey (SDSS)
-observations of local dSph galaxies \citep[e.g.][]{Strigari08}.
+$M/L = 6$.  The lower mass galaxies show a spread in M/L between 30
+and 3000, similar to the Sloan Digital Sky Survey (SDSS) observations
+of local ultra faint dwarf (uFd) galaxies \citep[e.g.][]{Strigari08}.
+This is suggestive that these low-mass ($M_{\rm tot} \lsim 10^8 \Ms$)
+galaxies that cannot cool through hydrogen line cooling are the
+progenitors of uFd galaxies \citep{Bovill11a, Bovill11b}.  In this
+scenario, all of the star formation occurs before reionization and
+was subsequently terminated by UV heating from external sources.
 
 \section{Discussion and Conclusions}
 \label{sec:discuss}
@@ -696,35 +764,34 @@ blastwave overtakes it.  Less than two percent of stars have [Z/H] $<
 -3$ in both systems, consistent with observations of metal-poor stars
 in the halo and dSphs \citep{Beers05, Battaglia10}.
 
-% We also find that the merger history plays an important role in
-% supplying gas into halos after its first epoch of SF.  Mergers of
-% halos below the filtering mass are inefficient in providing gas
-% whereas the opposite is true for merging halos above the filtering
-% mass.  Halos do not necessarily need $\tvir \ge 10^4$ K to form
-% significant stellar populations; however SFRs dramatically increase,
-% and thus metal enrichment, when this threshold is reached.  Halos
-% with mostly gas-poor mergers or a quiet merger history result in a
-% monotonic increase in metallicity with time.  SFHs become more
-% complex with multiple metallicity-age tracks if the halo experiences
-% mergers with other halos that have an established stellar
-% population.  Furthermore SF that is triggered by blastwaves
-% interacting with molecular clouds can have metallicities up to a
-% factor of 10 higher than the main starburst.  Starbursts at $\tvir =
-% 10^4$ K can enrich the host halo enough to create a bimodal
-% metallicity distribution, where the metal-poor component is created
-% before the burst.  Note that mergers of stellar populations can also
-% create a similar bimodal distribution, which are observed in dSphs
-% \cite{Battaglia10}.
+We also find that the merger history plays an important role in
+supplying gas into halos after its first epoch of SF.  Mergers of
+halos below the filtering mass are inefficient in providing gas
+whereas the opposite is true for merging halos above the filtering
+mass.  Halos do not necessarily need $\tvir \ge 10^4$ K to form
+significant stellar populations; however SFRs dramatically increase,
+and thus metal enrichment, when this threshold is reached.  Halos with
+mostly gas-poor mergers or a queiscent merger history result in a
+monotonic increase in metallicity with time.  SFHs become more complex
+with multiple metallicity-age tracks if the halo experiences mergers
+with other halos that have an established stellar population.
+Furthermore SF that is triggered by blastwaves interacting with
+molecular clouds can have metallicities up to a factor of 10 higher
+than the main starburst.  Starbursts at $\tvir = 10^4$ K can enrich
+the host halo enough to create a bimodal metallicity distribution,
+where the metal-poor component is created before the burst.  Note that
+mergers of stellar populations can also create a similar bimodal
+distribution, which are observed in dSphs \cite{Battaglia10}.
 
 We have shown that it is possible to simulate the formation of a
 high-redshift dwarf galaxy and its entire SFH with radiative and
 mechanical feedback.  These results provide invaluable insight on the
 first galaxies and the role of metal-free stars in the early universe.
-There exists a wealth of information in this simulation, and we plan
-to follow up this preliminary report with more detailed analysis of
-the metal enrichment of the IGM, global SF rates, and observational
+We plan to follow up this work by focusing on observational
 connections with high-redshift galaxies and Local Group dwarf galaxies
-in the near future.
+in the near future that can better constrain the physical models and
+assumptions, such as the critical metallicity, radiation backgrounds,
+and IMFs, used in \textit{ab initio} dwarf galaxy simulations.
 
 \acknowledgments
 

@@ -1,4 +1,4 @@
-\begin{thebibliography}{79}
+\begin{thebibliography}{85}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -37,6 +37,12 @@
 {Bouwens}, R.~J., {Illingworth}, G.~D., {Oesch}, P.~A., {Labbe}, I., {Trenti},
   M., {van Dokkum}, P., {Franx}, M., {Stiavelli}, M., {Carollo}, C.~M.,
   {Magee}, D., \& {Gonzalez}, V. 2010, ArXiv e-prints (1006.4360)
+
+\bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{a}})}]{Bovill11a}
+{Bovill}, M.~S., \& {Ricotti}, M. 2010{\natexlab{a}}, ArXiv e-prints
+
+\bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{b}})}]{Bovill11b}
+---. 2010{\natexlab{b}}, ArXiv e-prints
 
 \bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
 {Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
@@ -97,10 +103,20 @@
 \bibitem[{{Gnedin} \& {Kravtsov}(2006)}]{Gnedin06}
 {Gnedin}, N.~Y., \& {Kravtsov}, A.~V. 2006, \apj, 645, 1054
 
+\bibitem[{{G{\'o}rski} {et~al.}(2005){G{\'o}rski}, {Hivon}, {Banday},
+  {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{HEALPix}
+{G{\'o}rski}, K.~M., {Hivon}, E., {Banday}, A.~J., {Wandelt}, B.~D., {Hansen},
+  F.~K., {Reinecke}, M., \& {Bartelmann}, M. 2005, \apj, 622, 759
+
 \bibitem[{{Greif} {et~al.}(2010){Greif}, {Glover}, {Bromm}, \&
   {Klessen}}]{Greif10}
 {Greif}, T.~H., {Glover}, S.~C.~O., {Bromm}, V., \& {Klessen}, R.~S. 2010,
   \apj, 716, 510
+
+\bibitem[{{Greif} {et~al.}(2007){Greif}, {Johnson}, {Bromm}, \&
+  {Klessen}}]{Greif07}
+{Greif}, T.~H., {Johnson}, J.~L., {Bromm}, V., \& {Klessen}, R.~S. 2007, \apj,
+  670, 1
 
 \bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
   {Hartmann}}]{Heger03}
@@ -221,6 +237,11 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
   {Abel}}]{2008MNRAS.385.1443S}
 {Smith}, B., {Sigurdsson}, S., \& {Abel}, T. 2008, \mnras, 385, 1443
 
+\bibitem[{{Smith} {et~al.}(2010){Smith}, {Hallman}, {Shull}, \&
+  {O'Shea}}]{Smith10}
+{Smith}, B.~D., {Hallman}, E.~J., {Shull}, J.~M., \& {O'Shea}, B.~W. 2010,
+  ArXiv e-prints (1009.0261)
+
 \bibitem[{{Smith} {et~al.}(2009){Smith}, {Turk}, {Sigurdsson}, {O'Shea}, \&
   {Norman}}]{2009ApJ...691..441S}
 {Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
@@ -302,6 +323,9 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Woodward} \& {Colella}(1984)}]{Woodward84}
 {Woodward}, P., \& {Colella}, P. 1984, Journal of Computational Physics, 54,
   115
+
+\bibitem[{{Woosley} \& {Weaver}(1995)}]{Woosley95}
+{Woosley}, S.~E., \& {Weaver}, T.~A. 1995, \apjs, 101, 181
 
 \bibitem[{{Yoshida} {et~al.}(2004){Yoshida}, {Bromm}, \&
   {Hernquist}}]{Yoshida04}
