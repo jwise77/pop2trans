@@ -100,8 +100,8 @@ thus have a lower characteristic stellar mass than its metal-free
 progenitors.  These first stellar clusters may be connected to stars
 in the Milky Way halo and nearby dwarf spheroidal (dSph) galaxies,
 both with a metallicity floor of [Z/H]\footnote{We use the
-  conventional notation, [Z/H] $\equiv \log(Z/H) -
-  \log(Z_\odot/H_\odot)$.} = --4 \citep{Beers05, Tafelmeyer10,
+  conventional notation, [Z/H] $\equiv$ log(Z/H) -
+  log(Z$_\odot$/H$_\odot$).} = --4 \citep{Beers05, Tafelmeyer10,
   Frebel10_Obs}.
 
 Pop III stars primarily form in dark matter halos with $M \sim 10^6
@@ -121,7 +121,7 @@ times \citep{Cen08} for shock velocities $\lsim100~\kms$.
 The transition from Pop III to Pop II star formation (SF) is solely
 dependent on the propagation of metals from the SNe remnants into
 future sites of SF.  Their flows are complex because of the
-interactions between the SN blastwave, cosmological accretion and halo
+interactions between the SN blastwave, cosmological accretion, halo
 mergers, and nearby stellar feedback.  Spurred by the notion of a
 critical metallicity, this transition has been extensively studied
 with (i) volume-averaged semi-analytic models \citep{Scannapieco03,
@@ -156,7 +156,7 @@ function and conclude in \S\ref{sec:discuss}.
 \subsection{Simulation setup}
 
 We use the adaptive mesh refinement (AMR) code
-enzo~v2.0\footnote{\texttt{enzo.googlecode.com, changeset
+\enzo~v2.0\footnote{\texttt{enzo.googlecode.com, changeset
     b86d8ba026d6}} \citep{OShea2004}.  It uses an $N$-body adaptive
 particle-mesh solver \citep{Efstathiou85} to follow the dark matter
 (DM) dynamics.  It solves the hydrodynamical equation using the
@@ -179,11 +179,11 @@ a simulation box of 1 Mpc that has a resolution of $256^3$.  This
 gives us a DM mass resolution of 1840 \Ms.  We refine the grid on
 baryon overdensities of $3 \times 2^{-0.2l}$, where $l$ is the AMR
 level, resulting in a super-Lagrangian behavior \citep[also
-  see][]{OShea08}.  We also refine on a DM overdensity of $3 \times
-2^l$ and always resolve the local Jeans length by at least 4 cells,
-avoiding artificial fragmentation during gaseous collapses
-\citep{Truelove97}.  If any of these critera are met in a single cell,
-it is flagged for further spatial refinement.  
+  see][]{OShea08}.  We also refine on a DM overdensity of three and
+always resolve the local Jeans length by at least 4 cells, avoiding
+artificial fragmentation during gaseous collapses \citep{Truelove97}.
+If any of these critera are met in a single cell, it is flagged for
+further spatial refinement.
 
 We initialize the simulation with grafic \citep{Bertschinger01} at $z
 = 130$ and use the cosmological parameters from the 7-year WMAP
@@ -242,7 +242,7 @@ multiple cells meet the star particle formation criteria within 1 pc,
 we form one Pop III star particle with the center of mass of these
 flagged cells to ensure that massive star is created per metal-free
 molecular cloud.  Instead of using a fixed stellar mass like in our
-previous work, we randomly sampled from an IMF with a functional form
+previous work, we randomly sample from an IMF with a functional form
 of
 %
 \begin{equation}
@@ -284,14 +284,14 @@ R_{\rm MC}^3$.  We then replace the sphere with a uniform density
 $\rho_{\rm MC} = (1 - c_\star) / (Gt_{\rm dyn}^2)$ and temperature $T
 = 10^4$ K, which approximates the initial stages of an \ion{H}{2}
 region.  Similar to the Pop III treatment, we merge any newly created
-particles within a radius $R_{\rm merge}$.  We set the minimum mass of
-a star particle to $m_{\rm \star, min} = 1000 \Ms$.  If the initial
-mass does not exceed $m_{\rm \star, min}$, the star particle does not
-provide any feedback and continues to accrete until it reaches $m_{\rm
-  \star, min}$.  The star particles live for 20 Myr, the maximum
-lifetime of an OB star.  These stars generate the majority of the
-ionizing radiation and SNe feedback in stellar clusters, thus we
-ignore any feedback from lower mass stars.
+particles within a radius of 10 pc.  We set the minimum mass of a star
+particle to $m_{\rm \star, min} = 1000 \Ms$.  If the initial mass does
+not exceed $m_{\rm \star, min}$, the star particle does not provide
+any feedback and continues to accrete until it reaches $m_{\rm \star,
+  min}$.  The star particles live for 20 Myr, the maximum lifetime of
+an OB star.  These stars generate the majority of the ionizing
+radiation and SNe feedback in stellar clusters, thus we ignore any
+feedback from lower mass stars.
 
 \subsection{Stellar feedback}
 
@@ -361,10 +361,10 @@ provides an excellent first insight in the transition to Pop II SF, as
 the metal enrichment is the key ingredient here.  For SN feedback,
 these stars generate $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$
 after living for 4 Myr, which is injected into spheres with a radius
-of 10 pc, using the same technique as the Pop III SNe.  However if the
-resolution of the grid is less than 10/3 pc, we distribute the energy
-into a $3^3$ cube surrounding the star particle.  In the same region,
-star particles also return ejected material with mass
+of 10 pc.  However if the resolution of the grid is less than 10/3 pc,
+we distribute the energy into a $3^3$ cube surrounding the star
+particle.  In the same region, star particles also return ejected
+material with mass
 %
 \begin{equation}
   \label{eqn:SNmass}
@@ -456,12 +456,11 @@ Metal-enriched star formation begins early in the simulation at $z
 enriched minihalos cause the Pop II SFR to be higher than this
 relation.  Only after $z \sim 10$ does the SFR follows this
 exponential, which is a steeper time dependency than the $\exp(-z/3)$
-relation found in \citet{Hernquist03}.  Note that they also
-acknowledged that this behavior should occur at early times.  At
-redshift 7, it reaches $2 \times 10^{-2}$ \sfr.  This value agrees
-with derived SFRs from $z=6-10$ galaxy luminosity functions
-\citep[e.g.][]{Bouwens10} and large-scale galaxy formation simulations
-\citep[e.g.][]{Schaye10}.
+relation found in \citet{Hernquist03}, who also acknowledged that this
+behavior should occur at early times.  At redshift 7, it reaches $2
+\times 10^{-2}$ \sfr.  This value agrees with derived SFRs from
+$z=6-10$ galaxy luminosity functions \citep[e.g.][]{Bouwens10} and
+large-scale galaxy formation simulations \citep[e.g.][]{Schaye10}.
 
 \subsection{Mass evolution}
 \label{sec:halo}
@@ -700,10 +699,11 @@ M^{-\alpha}$,
   L/M_\odot &=& \int_{M_{\rm lo}}^{M_{\rm up}} \psi(M) L(M) dM
   \nonumber\\ &\simeq& M_{\rm up}^{9/2-\alpha} (9/2 - \alpha)^{-1},
 \end{eqnarray}
-where we set $M_{\rm lo} \equiv 0$ because it is negligible in the
-luminosity.  Then the galaxy luminosity is the sum of all star
-particle luminosities, which we plot in Fig. \ref{fig:massfn} with
-respect to halo mass, along with the DM halo mass function.
+where we set $M_{\rm lo} \equiv 0$ because the total luminosity of
+low-mass stars is negligible.  Then the galaxy luminosity is the sum
+of all star particle luminosities, which we plot in
+Fig. \ref{fig:massfn} with respect to halo mass, along with the DM
+halo mass function.
 
 Recall that the most massive halo ($M_{\rm tot} = 10^9 \Ms$) is
 undergoing a starburst at $z=7$, translating into a relatively high
