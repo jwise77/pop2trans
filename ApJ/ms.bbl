@@ -20,10 +20,10 @@
 {Anninos}, P., {Zhang}, Y., {Abel}, T., \& {Norman}, M.~L. 1997, New Astronomy,
   2, 209
 
-\bibitem[{{Battaglia} {et~al.}(2010){Battaglia}, {Tolstoy}, {Helmi}, {Irwin},
-  {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia10}
+\bibitem[{{Battaglia} {et~al.}(2011){Battaglia}, {Tolstoy}, {Helmi}, {Irwin},
+  {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia11}
 {Battaglia}, G., {Tolstoy}, E., {Helmi}, A., {Irwin}, M., {Parisi}, P., {Hill},
-  V., \& {Jablonka}, P. 2010, ArXiv e-prints (1009.4857)
+  V., \& {Jablonka}, P. 2011, \mnras, 411, 1013
 
 \bibitem[{{Beers} \& {Christlieb}(2005)}]{Beers05}
 {Beers}, T.~C., \& {Christlieb}, N. 2005, \araa, 43, 531
@@ -31,18 +31,19 @@
 \bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
 {Bertschinger}, E. 2001, \apjs, 137, 1
 
-\bibitem[{{Bouwens} {et~al.}(2010){Bouwens}, {Illingworth}, {Oesch}, {Labbe},
-  {Trenti}, {van Dokkum}, {Franx}, {Stiavelli}, {Carollo}, {Magee}, \&
-  {Gonzalez}}]{Bouwens10}
-{Bouwens}, R.~J., {Illingworth}, G.~D., {Oesch}, P.~A., {Labbe}, I., {Trenti},
-  M., {van Dokkum}, P., {Franx}, M., {Stiavelli}, M., {Carollo}, C.~M.,
-  {Magee}, D., \& {Gonzalez}, V. 2010, ArXiv e-prints (1006.4360)
+\bibitem[{{Bouwens} {et~al.}(2011){Bouwens}, {Illingworth}, {Oesch},
+  {Labb{\'e}}, {Trenti}, {van Dokkum}, {Franx}, {Stiavelli}, {Carollo},
+  {Magee}, \& {Gonzalez}}]{Bouwens11}
+{Bouwens}, R.~J., {Illingworth}, G.~D., {Oesch}, P.~A., {Labb{\'e}}, I.,
+  {Trenti}, M., {van Dokkum}, P., {Franx}, M., {Stiavelli}, M., {Carollo},
+  C.~M., {Magee}, D., \& {Gonzalez}, V. 2011, \apj, 737, 90
 
 \bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{a}})}]{Bovill11a}
 {Bovill}, M.~S., \& {Ricotti}, M. 2010{\natexlab{a}}, ArXiv e-prints
+  (1010.2231)
 
 \bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{b}})}]{Bovill11b}
----. 2010{\natexlab{b}}, ArXiv e-prints
+---. 2010{\natexlab{b}}, ArXiv e-prints (1010.2233)
 
 \bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
 {Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
@@ -145,8 +146,8 @@
   {Nomoto}}]{Kobayashi11}
 {Kobayashi}, C., {Tominaga}, N., \& {Nomoto}, K. 2011, \apjl, 730, L14+
 
-\bibitem[{{Komatsu} {et~al.}(2010)}]{WMAP7}
-{Komatsu}, E., {et~al.} 2010, ArXiv e-prints (1001.4538)
+\bibitem[{{Komatsu} {et~al.}(2011)}]{WMAP7}
+{Komatsu}, E., {et~al.} 2011, \apjs, 192, 18
 
 \bibitem[{{Komiya} {et~al.}(2010){Komiya}, {Habe}, {Suda}, \&
   {Fujimoto}}]{Komiya10}
@@ -164,15 +165,15 @@
 \bibitem[{{Machacek} {et~al.}(2001){Machacek}, {Bryan}, \& {Abel}}]{Machacek01}
 {Machacek}, M.~E., {Bryan}, G.~L., \& {Abel}, T. 2001, \apj, 548, 509
 
-\bibitem[{{Maio} {et~al.}(2010{\natexlab{a}}){Maio}, {Ciardi}, {Dolag},
-  {Tornatore}, \& {Khochfar}}]{Maio10_Pop32}
-{Maio}, U., {Ciardi}, B., {Dolag}, K., {Tornatore}, L., \& {Khochfar}, S.
-  2010{\natexlab{a}}, \mnras, 407, 1003
+\bibitem[{{Maio} {et~al.}(2010){Maio}, {Ciardi}, {Dolag}, {Tornatore}, \&
+  {Khochfar}}]{Maio10_Pop32}
+{Maio}, U., {Ciardi}, B., {Dolag}, K., {Tornatore}, L., \& {Khochfar}, S. 2010,
+  \mnras, 407, 1003
 
-\bibitem[{{Maio} {et~al.}(2010{\natexlab{b}}){Maio}, {Khochfar}, {Johnson}, \&
-  {Ciardi}}]{Maio10_Enrich}
-{Maio}, U., {Khochfar}, S., {Johnson}, J.~L., \& {Ciardi}, B.
-  2010{\natexlab{b}}, ArXiv e-prints (1011.3999)
+\bibitem[{{Maio} {et~al.}(2011){Maio}, {Khochfar}, {Johnson}, \&
+  {Ciardi}}]{Maio11_Enrich}
+{Maio}, U., {Khochfar}, S., {Johnson}, J.~L., \& {Ciardi}, B. 2011, \mnras,
+  414, 1145
 
 \bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
 Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
@@ -237,10 +238,10 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
   {Abel}}]{2008MNRAS.385.1443S}
 {Smith}, B., {Sigurdsson}, S., \& {Abel}, T. 2008, \mnras, 385, 1443
 
-\bibitem[{{Smith} {et~al.}(2010){Smith}, {Hallman}, {Shull}, \&
-  {O'Shea}}]{Smith10}
-{Smith}, B.~D., {Hallman}, E.~J., {Shull}, J.~M., \& {O'Shea}, B.~W. 2010,
-  ArXiv e-prints (1009.0261)
+\bibitem[{{Smith} {et~al.}(2011){Smith}, {Hallman}, {Shull}, \&
+  {O'Shea}}]{Smith11}
+{Smith}, B.~D., {Hallman}, E.~J., {Shull}, J.~M., \& {O'Shea}, B.~W. 2011,
+  \apj, 731, 6
 
 \bibitem[{{Smith} {et~al.}(2009){Smith}, {Turk}, {Sigurdsson}, {O'Shea}, \&
   {Norman}}]{2009ApJ...691..441S}
@@ -262,7 +263,7 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 {Tafelmeyer}, M., {Jablonka}, P., {Hill}, V., {Shetrone}, M., {Tolstoy}, E.,
   {Irwin}, M.~J., {Battaglia}, G., {Helmi}, A., {Starkenburg}, E., {Venn},
   K.~A., {Abel}, T., {Francois}, P., {Kaufer}, A., {North}, P., {Primas}, F.,
-  \& {Szeifert}, T. 2010, ArXiv e-prints
+  \& {Szeifert}, T. 2010, \aap, 524, A58+
 
 \bibitem[{{Tornatore} {et~al.}(2007){Tornatore}, {Ferrara}, \&
   {Schneider}}]{Tornatore07}
