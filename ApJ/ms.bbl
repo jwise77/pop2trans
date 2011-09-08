@@ -1,4 +1,4 @@
-\begin{thebibliography}{85}
+\begin{thebibliography}{91}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -19,6 +19,9 @@
   {Norman}}]{Anninos97}
 {Anninos}, P., {Zhang}, Y., {Abel}, T., \& {Norman}, M.~L. 1997, New Astronomy,
   2, 209
+
+\bibitem[{{Barkana} \& {Loeb}(2004)}]{Barkana04}
+{Barkana}, R., \& {Loeb}, A. 2004, \apj, 609, 474
 
 \bibitem[{{Battaglia} {et~al.}(2011){Battaglia}, {Tolstoy}, {Helmi}, {Irwin},
   {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia11}
@@ -119,6 +122,11 @@
 {Greif}, T.~H., {Johnson}, J.~L., {Bromm}, V., \& {Klessen}, R.~S. 2007, \apj,
   670, 1
 
+\bibitem[{{Greif} {et~al.}(2011){Greif}, {White}, {Klessen}, \&
+  {Springel}}]{Greif11_Delay}
+{Greif}, T.~H., {White}, S.~D.~M., {Klessen}, R.~S., \& {Springel}, V. 2011,
+  \apj, 736, 147
+
 \bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
   {Hartmann}}]{Heger03}
 {Heger}, A., {Fryer}, C.~L., {Woosley}, S.~E., {Langer}, N., \& {Hartmann},
@@ -199,6 +207,11 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
 \bibitem[{{O'Shea} \& {Norman}(2008)}]{OShea08}
 ---. 2008, \apj, 673, 14
+
+\bibitem[{{Penprase} {et~al.}(2010){Penprase}, {Prochaska}, {Sargent},
+  {Toro-Martinez}, \& {Beeler}}]{Penprase10}
+{Penprase}, B.~E., {Prochaska}, J.~X., {Sargent}, W.~L.~W., {Toro-Martinez},
+  I., \& {Beeler}, D.~J. 2010, \apj, 721, 1
 
 \bibitem[{{Ricotti} {et~al.}(2008){Ricotti}, {Gnedin}, \& {Shull}}]{Ricotti08}
 {Ricotti}, M., {Gnedin}, N.~Y., \& {Shull}, J.~M. 2008, \apj, 685, 21
@@ -284,6 +297,13 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 {Truelove}, J.~K., {Klein}, R.~I., {McKee}, C.~F., {Holliman}, II, J.~H.,
   {Howell}, L.~H., \& {Greenough}, J.~A. 1997, \apjl, 489, L179+
 
+\bibitem[{{Tseliakhovich} {et~al.}(2010){Tseliakhovich}, {Barkana}, \&
+  {Hirata}}]{Tselia10_Minihalo}
+{Tseliakhovich}, D., {Barkana}, R., \& {Hirata}, C. 2010, ArXiv e-prints
+
+\bibitem[{{Tseliakhovich} \& {Hirata}(2010)}]{Tselia10}
+{Tseliakhovich}, D., \& {Hirata}, C. 2010, \prd, 82, 083520
+
 \bibitem[{{Tumlinson}(2006)}]{Tumlinson06}
 {Tumlinson}, J. 2006, \apj, 641, 1
 
@@ -331,6 +351,10 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Yoshida} {et~al.}(2004){Yoshida}, {Bromm}, \&
   {Hernquist}}]{Yoshida04}
 {Yoshida}, N., {Bromm}, V., \& {Hernquist}, L. 2004, \apj, 605, 579
+
+\bibitem[{{Yoshida} {et~al.}(2008){Yoshida}, {Omukai}, \&
+  {Hernquist}}]{Yoshida08}
+{Yoshida}, N., {Omukai}, K., \& {Hernquist}, L. 2008, Science, 321, 669
 
 \bibitem[{{Zahn} {et~al.}(2011){Zahn}, {Mesinger}, {McQuinn}, {Trac}, {Cen}, \&
   {Hernquist}}]{Zahn11}
