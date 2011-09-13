@@ -1,4 +1,4 @@
-\begin{thebibliography}{91}
+\begin{thebibliography}{99}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -56,6 +56,9 @@
 {Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
   328, 969
 
+\bibitem[{{Bryan} \& {Norman}(1997)}]{BryanNorman1997}
+{Bryan}, G.~L., \& {Norman}, M.~L. 1997, ArXiv Astrophysics e-prints
+
 \bibitem[{{Bryan} {et~al.}(1995){Bryan}, {Norman}, {Stone}, {Cen}, \&
   {Ostriker}}]{Bryan95}
 {Bryan}, G.~L., {Norman}, M.~L., {Stone}, J.~M., {Cen}, R., \& {Ostriker},
@@ -78,6 +81,14 @@
 \bibitem[{{Clark} {et~al.}(2008){Clark}, {Glover}, \& {Klessen}}]{clark08}
 {Clark}, P.~C., {Glover}, S.~C.~O., \& {Klessen}, R.~S. 2008, \apj, 672, 757
 
+\bibitem[{{Clark} {et~al.}(2011){Clark}, {Glover}, {Smith}, {Greif}, {Klessen},
+  \& {Bromm}}]{Clark11_Frag}
+{Clark}, P.~C., {Glover}, S.~C.~O., {Smith}, R.~J., {Greif}, T.~H., {Klessen},
+  R.~S., \& {Bromm}, V. 2011, Science, 331, 1040
+
+\bibitem[{{Couchman}(1991)}]{Couchman91}
+{Couchman}, H.~M.~P. 1991, \apjl, 368, L23
+
 \bibitem[{{Efstathiou} {et~al.}(1985){Efstathiou}, {Davis}, {White}, \&
   {Frenk}}]{Efstathiou85}
 {Efstathiou}, G., {Davis}, M., {White}, S.~D.~M., \& {Frenk}, C.~S. 1985,
@@ -97,6 +108,9 @@
 
 \bibitem[{{Glover} \& {Abel}(2008)}]{Glover08_Rates}
 {Glover}, S.~C.~O., \& {Abel}, T. 2008, \mnras, 388, 1627
+
+\bibitem[{{Glover} \& {Mac Low}(2007)}]{Glover07}
+{Glover}, S.~C.~O., \& {Mac Low}, M.-M. 2007, \apjs, 169, 239
 
 \bibitem[{{Gnedin}(2000)}]{gnedin00}
 {Gnedin}, N.~Y. 2000, \apj, 542, 535
@@ -122,10 +136,16 @@
 {Greif}, T.~H., {Johnson}, J.~L., {Bromm}, V., \& {Klessen}, R.~S. 2007, \apj,
   670, 1
 
-\bibitem[{{Greif} {et~al.}(2011){Greif}, {White}, {Klessen}, \&
+\bibitem[{{Greif} {et~al.}(2011{\natexlab{a}}){Greif}, {Springel}, {White},
+  {Glover}, {Clark}, {Smith}, {Klessen}, \& {Bromm}}]{Greif11_P3Cluster}
+{Greif}, T.~H., {Springel}, V., {White}, S.~D.~M., {Glover}, S.~C.~O., {Clark},
+  P.~C., {Smith}, R.~J., {Klessen}, R.~S., \& {Bromm}, V. 2011{\natexlab{a}},
+  \apj, 737, 75
+
+\bibitem[{{Greif} {et~al.}(2011{\natexlab{b}}){Greif}, {White}, {Klessen}, \&
   {Springel}}]{Greif11_Delay}
-{Greif}, T.~H., {White}, S.~D.~M., {Klessen}, R.~S., \& {Springel}, V. 2011,
-  \apj, 736, 147
+{Greif}, T.~H., {White}, S.~D.~M., {Klessen}, R.~S., \& {Springel}, V.
+  2011{\natexlab{b}}, \apj, 736, 147
 
 \bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
   {Hartmann}}]{Heger03}
@@ -337,6 +357,10 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
 {Wise}, J.~H., \& {Cen}, R. 2009, \apj, 693, 984
 
+\bibitem[{{Wolcott-Green} {et~al.}(2011){Wolcott-Green}, {Haiman}, \&
+  {Bryan}}]{Wolcott11}
+{Wolcott-Green}, J., {Haiman}, Z., \& {Bryan}, G.~L. 2011, ArXiv e-prints
+
 \bibitem[{{Wolfe} {et~al.}(2005){Wolfe}, {Gawiser}, \&
   {Prochaska}}]{Wolfe05_Review}
 {Wolfe}, A.~M., {Gawiser}, E., \& {Prochaska}, J.~X. 2005, \araa, 43, 861
@@ -348,9 +372,19 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Woosley} \& {Weaver}(1995)}]{Woosley95}
 {Woosley}, S.~E., \& {Weaver}, T.~A. 1995, \apjs, 101, 181
 
+\bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
+  {Sugiyama}}]{Yoshida03}
+{Yoshida}, N., {Abel}, T., {Hernquist}, L., \& {Sugiyama}, N. 2003, \apj, 592,
+  645
+
 \bibitem[{{Yoshida} {et~al.}(2004){Yoshida}, {Bromm}, \&
   {Hernquist}}]{Yoshida04}
 {Yoshida}, N., {Bromm}, V., \& {Hernquist}, L. 2004, \apj, 605, 579
+
+\bibitem[{{Yoshida} {et~al.}(2007){Yoshida}, {Oh}, {Kitayama}, \&
+  {Hernquist}}]{Yoshida07_HII}
+{Yoshida}, N., {Oh}, S.~P., {Kitayama}, T., \& {Hernquist}, L. 2007, \apj, 663,
+  687
 
 \bibitem[{{Yoshida} {et~al.}(2008){Yoshida}, {Omukai}, \&
   {Hernquist}}]{Yoshida08}
