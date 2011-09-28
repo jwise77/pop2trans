@@ -1,4 +1,4 @@
-\begin{thebibliography}{99}
+\begin{thebibliography}{101}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -181,6 +181,9 @@
   {Fujimoto}}]{Komiya10}
 {Komiya}, Y., {Habe}, A., {Suda}, T., \& {Fujimoto}, M.~Y. 2010, \apj, 717, 542
 
+\bibitem[{{Krumholz} \& {McKee}(2005)}]{Krumholz05}
+{Krumholz}, M.~R., \& {McKee}, C.~F. 2005, \apj, 630, 250
+
 \bibitem[{{Larson}(1998)}]{Larson98}
 {Larson}, R.~B. 1998, \mnras, 301, 569
 
@@ -297,6 +300,9 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
   {Irwin}, M.~J., {Battaglia}, G., {Helmi}, A., {Starkenburg}, E., {Venn},
   K.~A., {Abel}, T., {Francois}, P., {Kaufer}, A., {North}, P., {Primas}, F.,
   \& {Szeifert}, T. 2010, \aap, 524, A58+
+
+\bibitem[{{Tan} {et~al.}(2006){Tan}, {Krumholz}, \& {McKee}}]{Tan06}
+{Tan}, J.~C., {Krumholz}, M.~R., \& {McKee}, C.~F. 2006, \apjl, 641, L121
 
 \bibitem[{{Tornatore} {et~al.}(2007){Tornatore}, {Ferrara}, \&
   {Schneider}}]{Tornatore07}
