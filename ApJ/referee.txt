@@ -1,0 +1,44 @@
+This is a very interesting paper that discusses high-resolution
+simulations of the transition of Pop III to Pop II star formation in
+the context of the first galaxies, including a detailed prescription
+of radiation feedback and metal mixing. The authors present the star
+formation histories and metallicities of these objects in
+unprecedented detail and compare them to recent observations. I find
+their results worthy of publication subject to the following minor
+changes:
+
+Section 1: The first sentence could be misinterpreted to read that the
+gas in minihalos does not fragment, which is however only the case up
+to the formation of the first seed (and even here there are
+exceptions: i.e. Turk et al.). Please clarify this briefly by
+distinguishing between fragmentation during the initial collapse and
+disk fragmentation after the initial collapse.
+
+Section 2.2, 2nd paragraph, first sentence: the formulation should be
+changed to emphasize that the proposed masses of the first stars are
+based on an extrapolation of the expected (total) accretion within the
+KH time, yielding of order 100 M_sun. In fact, any claim of a certain
+mass scale for the first stars is based on extrapolation/speculation
+(with the exception of a dominant < 0.8 M_sun contribution, which is
+ruled out observationally).
+
+Section 2.2: I find this entire section quite unclear and confusing. A
+more systematic description of the star formation recipe would be very
+helpful (even if it has already been noted elswhere).
+
+The metallicity color panel in Figures 1 and 2 appear to be incorrect,
+since a pure Pop II enriched region would appear red.
+
+Figure 6: The two panels of the figure should be switched to agree
+with the figure caption. The notation for the open circles is also
+wrong (and I can only see two in the figures). Please explain this
+figure in more detail, i.e. what metallicity is shown and that only
+Pop II star clusters are displayed.
+
+Section 4, 1st and 4th paragraphs: I find these paragraphs very
+confusing. Please rephrase.
+
+Section 4, second paragraph, last sentence: I do not believe this is
+the first simulation of its kind that is able to produce a floor of
+~10^-3 Z_sun in the first galaxies with similar resolution and
+physics. Please rephrase or acknowledge other work as well.
