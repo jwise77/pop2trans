@@ -54,6 +54,11 @@ fixed this error.
 > figure in more detail, i.e. what metallicity is shown and that only
 > Pop II star clusters are displayed.
 
+We have described the figures in more detail, drawing attention to
+relationships between the plot and the processes occurring in halos.
+We have removed the reference to the larger 10^5 solar mass open
+circle.
+
 > Section 4, 1st and 4th paragraphs: I find these paragraphs very
 > confusing. Please rephrase.
 
@@ -61,3 +66,12 @@ fixed this error.
 > the first simulation of its kind that is able to produce a floor of
 > ~10^-3 Z_sun in the first galaxies with similar resolution and
 > physics. Please rephrase or acknowledge other work as well.
+
+We have rephrased this sentence to acknowledge previous papers to the
+following.
+
+"Our simulation strengthensthis claim of a metallicity floor from Pop
+III SNe (see also Tornatore et al. 2007; Karlsson et al. 2008; Maio et
+al. 2011), where our work improves on previous studies by resolving
+star-forming molecular clouds and employing more realistic feedback
+physics, in particular, radiation transport."
