@@ -29,13 +29,24 @@ paper.  We have addressed his/her points below.
 > more systematic description of the star formation recipe would be very
 > helpful (even if it has already been noted elswhere).
 
+We have split this section into two subsections, each one focusing on
+Pop III and Pop II star formation prescriptions.  We have described
+the methods in more detail, adding all of the star formation criteria
+and reasons why they differ from the original Cen & Ostriker
+prescription.  We have also changed the text to make the description
+flow better.
+
+In addition, we split the Stellar Feedback section into Pop III and
+Pop II subsections.
+
 > The metallicity color panel in Figures 1 and 2 appear to be incorrect,
 > since a pure Pop II enriched region would appear red.
 
 The figure is correct, where a purely Pop II enriched region would
-appear red (lower-right corner of the colormap).  However, the caption
-is incorrect that states Pop II metals are blue and Pop III metals are
-red.  We have fixed this error.
+appear red (lower-right corner of the colormap) and a purely Pop III
+enriched region appears blue.  However, the caption is incorrect that
+states Pop II metals are blue and Pop III metals are red.  We have
+fixed this error.
 
 > Figure 6: The two panels of the figure should be switched to agree
 > with the figure caption. The notation for the open circles is also

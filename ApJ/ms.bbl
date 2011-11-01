@@ -1,4 +1,4 @@
-\begin{thebibliography}{101}
+\begin{thebibliography}{102}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -283,6 +283,9 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
   {Norman}}]{2009ApJ...691..441S}
 {Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
   M.~L. 2009, \apj, 691, 441
+
+\bibitem[{{Springel} \& {Hernquist}(2003)}]{Springel03b}
+{Springel}, V., \& {Hernquist}, L. 2003, \mnras, 339, 289
 
 \bibitem[{{Stacy} {et~al.}(2010){Stacy}, {Greif}, \& {Bromm}}]{Stacy10_Binary}
 {Stacy}, A., {Greif}, T.~H., \& {Bromm}, V. 2010, \mnras, 403, 45

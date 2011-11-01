@@ -275,31 +275,14 @@ $r \sim L_{\rm box}/2$ from entering the non-linear growth regime.  At
 the final redshift, the simulation has $1.4 \times 10^8$ computational
 cells and required 250,000 CPU hours, using 512 cores.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure*}
-\epsscale{1.15}
-\plotone{f1}
-\epsscale{1}
-  \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
-    volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
-    (left to right).  Pictured here are the density-weighted
-    projections of density (top), temperature (middle), and
-    metallicity (bottom).  Note how the stellar radiative feedback
-    from low-mass galaxies reionize the majority of the volume.  The
-    metallicity projections are a composite image of metals
-    originating from Pop II (red) and III (blue) stars with magenta
-    indicating a mixture of the two.}
-\end{figure*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Star formation}
 
 We distinguish Pop II and Pop III SF by the total metallicity of the
 densest cell in the molecular cloud.  Pop II stars are formed if [Z/H]
 $> -4$, and Pop III stars are formed otherwise.  We do not consider
 Pop III.2 stars and intermediate mass stars from CMB-limited cooling.
+
+\subsubsection{Population III star formation}
 
 Simulations have shown that the characteristic mass of Pop III stars
 $M_{\rm char} \sim 100~\Ms$ \citep{ABN02, Bromm02_P3, OShea07a,
@@ -321,20 +304,42 @@ characteristic mass than present-day star formation.
 % \cite{refs}.
 
 For Pop III stars, we use the same SF model as \citet{Wise08_Gal}
-where each star particle represents a single star, forming at an
-overdensity of $5 \times 10^5$ ($\sim 10^3\; \cubecm$ at $z=10$).  If
-multiple cells meet the star particle formation criteria within 1 pc,
-we form one Pop III star particle with the center of mass of these
-flagged cells to ensure that massive star is created per metal-free
-molecular cloud.  Instead of using a fixed stellar mass like in our
-previous work, we randomly sample from an IMF with a functional form
-of
+where each star particle represents a single star.  In this model, a
+star particle forms when a cell has all of the following criteria:
+%
+\begin{enumerate}
+\item an overdensity of $5 \times 10^5$ ($\sim 10^3\; \cubecm$ at
+  $z=10$),
+\item a converging gas flow ($\nabla \cdot \mathbf{v}_{\rm gas} < 0$),
+  and
+\item a molecular hydrogen fraction $f_{\rm H2} > 5 \times 10^{-4}$.
+\end{enumerate}
+%
+These physical conditions are typical of collapsing metal-free
+molecular clouds $\sim 10$ Myr before the birth of a Pop III
+main-sequence star \citep{ABN02, OShea07a}.  This prescription is
+similar to the \citet{Cen92} method but removes the Jeans unstable
+($M_{\rm gas} > M_J$) and cooling timescale ($t_{\rm cool} < t_{\rm
+  dyn}$) requirements.  We do not consider the former criterion
+because it is not applicable to simulations that resolve the Jeans
+length at all times.  The molecular hydrogen fraction requirement
+effectively constrains star formation to cooling molecular clouds,
+where the \hh~formation rate is significantly larger than the
+dissociation rate from a Lyman-Werner radiation field.
+
+If multiple cells meet the star particle formation criteria within 1
+pc, we form one Pop III star particle with the center of mass of these
+flagged cells to ensure that one massive star is created per
+metal-free molecular cloud.  Instead of using a fixed stellar mass
+like in our previous work, we randomly sample from an IMF with a
+functional form of
 %
 \begin{equation}
 \label{eqn:imf}
 f(\log M) dM = M^{-1.3} \exp\left[-\left(\frac{M_{\rm
       char}}{M}\right)^{1.6}\right] dM
 \end{equation}
+%
 to determine the stellar mass.  Above $M_{\rm char}$, it behaves as a
 Salpeter IMF but is exponentially cutoff below that mass
 \citep{Chabrier03, Clark09}.  For reproducibility, we record the
@@ -342,7 +347,13 @@ number of times the random number generator (Mersenne twister;
 \citet{MTwister}) has been called for use when restarting the
 simulations.  We stress that the Pop III IMF is still highly
 uncertain.  In Sec. \ref{sec:discuss}, we discuss possible
-dependencies of our results to changes in the IMF.
+dependencies of our results to changes in the IMF.  
+
+After the star particle forms and its mass is randomly sampled from
+the IMF, an equal amount of gas is removed from the computational grid
+in a sphere that contains twice the stellar mass and is centered on
+the star particle.  The star particle acquires the mass-weighted
+velocity of the gas contained in this sphere.
 
 %%% FOR THE COMPARISON BETWEEN RUNS WITH AND WITHOUT METAL COOLING %%%
 %
@@ -353,24 +364,34 @@ dependencies of our results to changes in the IMF.
 % and feedback from nearby Pop II star clusters, as we will demonstrate
 % in this Letter.
 
+\subsubsection{Population II star formation}
+
 We treat Pop II star formation with the same prescription as
 \citet{Wise09}, which is similar to the Pop III prescription but
-without the \hh~fraction floor that is removed because the
-metal-enriched gas can efficiently cool even in the presence of a
-strong UV radiation field \citep[e.g.][]{Safranek10}.  This method is
-effectively a modified version of the \citet{Cen92} method but
-accounts for the fact that the molecular clouds are resolved.  Unlike
-Pop III star particles that represent individual stars, Pop II star
-particles represent a star cluster of some total mass and an assumed
-normal IMF.  In the simulation, we define the molecular cloud as a
-sphere, centered on the most dense cell, with a dynamical time $t_{\rm
-  dyn} = 3$ Myr (corresponding to an average density $\bar{\rho}_{\rm
-  MC} \simeq 1000\mu \cubecm$) and a radius $R_{\rm MC}$, where $\mu$
-is the mean molecular weight.  In this sphere, a fraction $c_\star =
-0.07 f_{\rm cold}$ of the cold gas ($T < 10^3$ K) is converted into a
+without the minimum \hh~fraction requirement.  This is removed because
+the metal-enriched gas can efficiently cool even in the presence of a
+strong UV radiation field \citep[e.g.][]{Safranek10}.  To ensure the
+volume is cooling, we restrict star formation to gas with temperatures
+$T < 1000$ K.  Unlike Pop III star particles that represent individual
+stars, Pop II star particles represent a star cluster of some total
+mass and an assumed normal IMF.
+
+Once a cell meets these criteria, the prescription searches outward
+with increasing radius for the boundary of the molecular cloud,
+centered on the most dense cell.  Here, we define a molecular cloud as
+a sphere with a dynamical time $t_{\rm dyn} = 3$ Myr (corresponding to
+an average density $\bar{\rho}_{\rm MC} \simeq 1000\mu\; \cubecm$) and
+a radius $R_{\rm MC}$, where $\mu$ is the mean molecular weight.  Once
+the sphere radius is found, a fraction $c_\star = 0.07 f_{\rm cold}$
+of the cold gas ($T < 10^3$ K) inside the sphere is converted into a
 star particle with mass $m_\star = c_\star (4\pi/3) \bar{\rho}_{\rm
-  MC} R_{\rm MC}^3$.  We then replace the sphere with a uniform
-density $\rho_{\rm MC} = (1 - c_\star) / (Gt_{\rm dyn}^2)$ and
+  MC} R_{\rm MC}^3$.  This treatment of cold gas accretion is similar
+to a star formation model with a multi-phase subgrid model
+\citep{Springel03b} but is employed in a simulation that can resolve
+the multi-phase interstellar stellar medium (ISM).
+
+After the star particle is created, we replace the sphere with a
+uniform density $\rho_{\rm MC} = (1 - c_\star) / (Gt_{\rm dyn}^2)$ and
 temperature $T = 10^4$ K, which approximates the initial stages of an
 \ion{H}{2} region.  Our choice of $c_\star$ agrees with the theory
 proposed in \citet{Krumholz05} that are supported by observations.
@@ -386,11 +407,7 @@ unaltered besides the initial gas accretion from the grid to the star
 particles.  We set the minimum mass of a star particle to $m_{\rm
   \star, min} = 1000 \Ms$.  If the initial mass does not exceed
 $m_{\rm \star, min}$, the star particle does not provide any feedback
-and continues to accrete until it reaches $m_{\rm \star, min}$.  The
-star particles live for 20 Myr, the maximum lifetime of an OB star.
-These stars generate the majority of the ionizing radiation and SNe
-feedback in stellar clusters, thus we ignore any feedback from lower
-mass stars.
+and continues to accrete until it reaches $m_{\rm \star, min}$.
 
 \subsection{Stellar feedback}
 
@@ -423,6 +440,8 @@ integrating along Cartesian axes or random lines of sight
 itself from LW radiation \citep{Wise08_Gal}.  Thus we may be
 underestimating the SFRs in our work.
 
+\subsubsection{Population III stellar feedback}
+
 We use mass-dependent hydrogen ionizing and LW photon luminosities and
 lifetimes of the Pop III stars from \citet{Schaerer02}.  We use a
 mass-independent photon energy $E_{\rm ph} = 29.6$ eV, appropriate for
@@ -447,20 +466,22 @@ $M_\star$.  For PISNe, we use the explosion energy from
 %
 \begin{equation}
   \label{eqn:pisn}
-  E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He}/\Ms - 64)] \; \mathrm{erg},
+  E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He}/\Ms - 64)] \;
+  \mathrm{erg},
 \end{equation}
 %
 where $M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium
 core (and equivalently the metal ejecta) mass and $M_\star$ is the
 stellar mass.  If the stellar mass is outside of these ranges, then an
-inert, collisionless black hole (BH) particle is created.
+inert, collisionless black hole (BH) particle is created.  The
+blastwave is modeled by injecting the explosion energy and ejecta mass
+into a sphere of 10 pc, smoothed at its surface to improve numerical
+stability \citep{Wise08_Gal}.  Because we resolve the blastwave
+relatively well with several cells across at its initialization, the
+thermal energy is converted into kinetic energy and agrees with the
+Sedov-Taylor solution \citep[e.g.][]{Greif07}.
 
-The blastwave is modeled by injecting the explosion energy and ejecta
-mass into a sphere of 10 pc, smoothed at its surface to improve
-numerical stability \citep{Wise08_Gal}.  Because we resolve the
-blastwave relatively well with several cells across at its
-initialization, the thermal energy is converted into kinetic energy
-and agrees with the Sedov-Taylor solution \citep[e.g.][]{Greif07}.
+\subsubsection{Population II star formation}
 
 The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
 their lifetime and $E_{\rm ph} = 21.6$ eV, appropriate for a [Z/H] =
@@ -468,13 +489,17 @@ $-1.3$ population.  We note that lower-metallicity stars generate up
 to 60\% more ionizing photons and might be underestimating the
 radiative feedback \citep{Schaerer03}.  Nonetheless this study
 provides an excellent first insight in the transition to Pop II SF, as
-the metal enrichment is the key ingredient here.  For SN feedback,
-these stars generate $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$
-after living for 4 Myr, which is injected into spheres with a radius
-of 10 pc.  However if the resolution of the grid is less than 10/3 pc,
-we distribute the energy into a $3^3$ cube surrounding the star
-particle.  In the same region, star particles also return ejected
-material with mass
+the metal enrichment is the key ingredient here.  The star particles
+live for 20 Myr, the maximum lifetime of an OB star.  These stars
+generate the majority of the ionizing radiation and SNe feedback in
+stellar clusters, thus we ignore any feedback from lower mass stars.
+
+For SN feedback, these stars generate $6.8 \times 10^{48}$ erg
+s$^{-1}$ $\Ms^{-1}$ after living for 4 Myr, which is injected into
+spheres with a radius of 10 pc.  However if the resolution of the grid
+is less than 10/3 pc, we distribute the energy into a $3^3$ cube
+surrounding the star particle.  In the same region, star particles
+also return ejected material with mass
 %
 \begin{equation}
   \label{eqn:SNmass}
@@ -492,12 +517,29 @@ cosmic SFRs better in galaxy simulations at lower redshifts
 \section{Results}
 \label{sec:results}
 
-\input{table1.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+%\epsscale{1.15}
+\plotone{f1}
+\epsscale{1}
+  \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
+    volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
+    (left to right).  Pictured here are the density-weighted
+    projections of density (top), temperature (middle), and
+    metallicity (bottom).  Note how the stellar radiative feedback
+    from low-mass galaxies reionize the majority of the volume.  The
+    metallicity projections are a composite image of metals
+    originating from Pop II (red) and III (blue) stars with magenta
+    indicating a mixture of the two.}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
-\epsscale{1.15}
+%\epsscale{1.15}
 \plotone{f2}
 \epsscale{1}
   \caption{\label{fig:halo-mosaic} Density-weighted projections of
@@ -510,19 +552,7 @@ cosmic SFRs better in galaxy simulations at lower redshifts
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure}
-\epsscale{1.15}
-\plotone{f3}
-\epsscale{1}
-\caption{\label{fig:sfr} Cosmic star formation rates for Pop II
-  (solid) and III (dashed).  Note that the Pop III rates are nearly
-  constant from redshift 12 to 7.  Pristine halos still survive in
-  underdense regions, supporting late-time metal-free star formation.}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{table1.tex}
 
 Here we first present the global star formation rate (SFR) during
 early galaxy formation and then focus on the gaseous and stellar
@@ -552,6 +582,20 @@ originating from Pop III stars are produced in PISNe.  Table
 metallicity cuts.
 
 \subsection{Global star formation rate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+%\epsscale{1.15}
+\plotone{f3}
+\epsscale{1}
+\caption{\label{fig:sfr} Cosmic star formation rates for Pop II
+  (solid) and III (dashed).  Note that the Pop III rates are nearly
+  constant from redshift 12 to 7.  Pristine halos still survive in
+  underdense regions, supporting late-time metal-free star formation.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure \ref{fig:sfr} shows the cosmic SFR in the simulation for Pop II
 and III stars.  Metal-free stars form at a nearly constant rate of $5
@@ -584,7 +628,7 @@ large-scale galaxy formation simulations \citep[e.g.][]{Schaye10}.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure*}
-\epsscale{1.15}
+\epsscale{1}
 \plotone{f4}
 \epsscale{1}
 \caption{\label{fig:evo} (a) Evolution of the total halo mass (top),
@@ -672,7 +716,7 @@ metallicity within 0.1 dex.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
-\epsscale{1.15}
+\epsscale{1}
 \plotone{f5}
 \epsscale{1}
 \caption{\label{fig:z3} Average halo metallicity from Pop III SNe as a
@@ -782,7 +826,7 @@ mass.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{figure}
-\epsscale{1.15}
+\epsscale{1}
 \plotone{f7}
 \epsscale{1}
 \caption{\label{fig:massfn} Total Pop II luminosities of halos versus
@@ -945,409 +989,6 @@ Data System Bibliographic Services.  The majority of the analysis and
 plots were done with \texttt{yt} \citep{yt_full_paper}.
 
 %\clearpage
-\begin{thebibliography}{101}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
-
-\bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
-  {Norman}}]{Abel97}
-{Abel}, T., {Anninos}, P., {Zhang}, Y., \& {Norman}, M.~L. 1997, New Astronomy,
-  2, 181
-
-\bibitem[{{Abel} {et~al.}(2002){Abel}, {Bryan}, \& {Norman}}]{ABN02}
-{Abel}, T., {Bryan}, G.~L., \& {Norman}, M.~L. 2002, Science, 295, 93
-
-\bibitem[{{Abel} \& {Wandelt}(2002)}]{Abel02_RT}
-{Abel}, T., \& {Wandelt}, B.~D. 2002, \mnras, 330, L53
-
-\bibitem[{{Abel} {et~al.}(2007){Abel}, {Wise}, \& {Bryan}}]{Abel07}
-{Abel}, T., {Wise}, J.~H., \& {Bryan}, G.~L. 2007, \apjl, 659, L87
-
-\bibitem[{{Anninos} {et~al.}(1997){Anninos}, {Zhang}, {Abel}, \&
-  {Norman}}]{Anninos97}
-{Anninos}, P., {Zhang}, Y., {Abel}, T., \& {Norman}, M.~L. 1997, New Astronomy,
-  2, 209
-
-\bibitem[{{Barkana} \& {Loeb}(2004)}]{Barkana04}
-{Barkana}, R., \& {Loeb}, A. 2004, \apj, 609, 474
-
-\bibitem[{{Battaglia} {et~al.}(2011){Battaglia}, {Tolstoy}, {Helmi}, {Irwin},
-  {Parisi}, {Hill}, \& {Jablonka}}]{Battaglia11}
-{Battaglia}, G., {Tolstoy}, E., {Helmi}, A., {Irwin}, M., {Parisi}, P., {Hill},
-  V., \& {Jablonka}, P. 2011, \mnras, 411, 1013
-
-\bibitem[{{Beers} \& {Christlieb}(2005)}]{Beers05}
-{Beers}, T.~C., \& {Christlieb}, N. 2005, \araa, 43, 531
-
-\bibitem[{{Bertschinger}(2001)}]{Bertschinger01}
-{Bertschinger}, E. 2001, \apjs, 137, 1
-
-\bibitem[{{Bouwens} {et~al.}(2011){Bouwens}, {Illingworth}, {Oesch},
-  {Labb{\'e}}, {Trenti}, {van Dokkum}, {Franx}, {Stiavelli}, {Carollo},
-  {Magee}, \& {Gonzalez}}]{Bouwens11}
-{Bouwens}, R.~J., {Illingworth}, G.~D., {Oesch}, P.~A., {Labb{\'e}}, I.,
-  {Trenti}, M., {van Dokkum}, P., {Franx}, M., {Stiavelli}, M., {Carollo},
-  C.~M., {Magee}, D., \& {Gonzalez}, V. 2011, \apj, 737, 90
-
-\bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{a}})}]{Bovill11a}
-{Bovill}, M.~S., \& {Ricotti}, M. 2010{\natexlab{a}}, ArXiv e-prints
-  (1010.2231)
-
-\bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{b}})}]{Bovill11b}
----. 2010{\natexlab{b}}, ArXiv e-prints (1010.2233)
-
-\bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
-{Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
-
-\bibitem[{{Bromm} {et~al.}(2001){Bromm}, {Ferrara}, {Coppi}, \&
-  {Larson}}]{Bromm01}
-{Bromm}, V., {Ferrara}, A., {Coppi}, P.~S., \& {Larson}, R.~B. 2001, \mnras,
-  328, 969
-
-\bibitem[{{Bryan} \& {Norman}(1997)}]{BryanNorman1997}
-{Bryan}, G.~L., \& {Norman}, M.~L. 1997, ArXiv Astrophysics e-prints
-
-\bibitem[{{Bryan} {et~al.}(1995){Bryan}, {Norman}, {Stone}, {Cen}, \&
-  {Ostriker}}]{Bryan95}
-{Bryan}, G.~L., {Norman}, M.~L., {Stone}, J.~M., {Cen}, R., \& {Ostriker},
-  J.~P. 1995, Computer Physics Communications, 89, 149
-
-\bibitem[{{Cen} \& {Ostriker}(1992)}]{Cen92}
-{Cen}, R., \& {Ostriker}, J.~P. 1992, \apjl, 399, L113
-
-\bibitem[{{Cen} \& {Riquelme}(2008)}]{Cen08}
-{Cen}, R., \& {Riquelme}, M.~A. 2008, \apj, 674, 644
-
-\bibitem[{{Chabrier}(2003)}]{Chabrier03}
-{Chabrier}, G. 2003, \pasp, 115, 763
-
-\bibitem[{{Clark} {et~al.}(2009){Clark}, {Glover}, {Bonnell}, \&
-  {Klessen}}]{Clark09}
-{Clark}, P.~C., {Glover}, S.~C.~O., {Bonnell}, I.~A., \& {Klessen}, R.~S. 2009,
-  ArXiv e-prints (0904.3302)
-
-\bibitem[{{Clark} {et~al.}(2008){Clark}, {Glover}, \& {Klessen}}]{clark08}
-{Clark}, P.~C., {Glover}, S.~C.~O., \& {Klessen}, R.~S. 2008, \apj, 672, 757
-
-\bibitem[{{Clark} {et~al.}(2011){Clark}, {Glover}, {Smith}, {Greif}, {Klessen},
-  \& {Bromm}}]{Clark11_Frag}
-{Clark}, P.~C., {Glover}, S.~C.~O., {Smith}, R.~J., {Greif}, T.~H., {Klessen},
-  R.~S., \& {Bromm}, V. 2011, Science, 331, 1040
-
-\bibitem[{{Couchman}(1991)}]{Couchman91}
-{Couchman}, H.~M.~P. 1991, \apjl, 368, L23
-
-\bibitem[{{Efstathiou} {et~al.}(1985){Efstathiou}, {Davis}, {White}, \&
-  {Frenk}}]{Efstathiou85}
-{Efstathiou}, G., {Davis}, M., {White}, S.~D.~M., \& {Frenk}, C.~S. 1985,
-  \apjs, 57, 241
-
-\bibitem[{{Ferrara}(1998)}]{Ferrara98}
-{Ferrara}, A. 1998, \apjl, 499, L17+
-
-\bibitem[{{Frebel} \& {Bromm}(2010)}]{Frebel10}
-{Frebel}, A., \& {Bromm}, V. 2010, ArXiv e-prints (1010.1261)
-
-\bibitem[{{Frebel} {et~al.}(2010){Frebel}, {Kirby}, \& {Simon}}]{Frebel10_Obs}
-{Frebel}, A., {Kirby}, E.~N., \& {Simon}, J.~D. 2010, \nat, 464, 72
-
-\bibitem[{{Furlanetto} \& {Loeb}(2005)}]{Furlanetto05_Reion}
-{Furlanetto}, S.~R., \& {Loeb}, A. 2005, \apj, 634, 1
-
-\bibitem[{{Glover} \& {Abel}(2008)}]{Glover08_Rates}
-{Glover}, S.~C.~O., \& {Abel}, T. 2008, \mnras, 388, 1627
-
-\bibitem[{{Glover} \& {Mac Low}(2007)}]{Glover07}
-{Glover}, S.~C.~O., \& {Mac Low}, M.-M. 2007, \apjs, 169, 239
-
-\bibitem[{{Gnedin}(2000)}]{gnedin00}
-{Gnedin}, N.~Y. 2000, \apj, 542, 535
-
-\bibitem[{{Gnedin} \& {Hui}(1998)}]{gnedin98}
-{Gnedin}, N.~Y., \& {Hui}, L. 1998, \mnras, 296, 44
-
-\bibitem[{{Gnedin} \& {Kravtsov}(2006)}]{Gnedin06}
-{Gnedin}, N.~Y., \& {Kravtsov}, A.~V. 2006, \apj, 645, 1054
-
-\bibitem[{{G{\'o}rski} {et~al.}(2005){G{\'o}rski}, {Hivon}, {Banday},
-  {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{HEALPix}
-{G{\'o}rski}, K.~M., {Hivon}, E., {Banday}, A.~J., {Wandelt}, B.~D., {Hansen},
-  F.~K., {Reinecke}, M., \& {Bartelmann}, M. 2005, \apj, 622, 759
-
-\bibitem[{{Greif} {et~al.}(2010){Greif}, {Glover}, {Bromm}, \&
-  {Klessen}}]{Greif10}
-{Greif}, T.~H., {Glover}, S.~C.~O., {Bromm}, V., \& {Klessen}, R.~S. 2010,
-  \apj, 716, 510
-
-\bibitem[{{Greif} {et~al.}(2007){Greif}, {Johnson}, {Bromm}, \&
-  {Klessen}}]{Greif07}
-{Greif}, T.~H., {Johnson}, J.~L., {Bromm}, V., \& {Klessen}, R.~S. 2007, \apj,
-  670, 1
-
-\bibitem[{{Greif} {et~al.}(2011{\natexlab{a}}){Greif}, {Springel}, {White},
-  {Glover}, {Clark}, {Smith}, {Klessen}, \& {Bromm}}]{Greif11_P3Cluster}
-{Greif}, T.~H., {Springel}, V., {White}, S.~D.~M., {Glover}, S.~C.~O., {Clark},
-  P.~C., {Smith}, R.~J., {Klessen}, R.~S., \& {Bromm}, V. 2011{\natexlab{a}},
-  \apj, 737, 75
-
-\bibitem[{{Greif} {et~al.}(2011{\natexlab{b}}){Greif}, {White}, {Klessen}, \&
-  {Springel}}]{Greif11_Delay}
-{Greif}, T.~H., {White}, S.~D.~M., {Klessen}, R.~S., \& {Springel}, V.
-  2011{\natexlab{b}}, \apj, 736, 147
-
-\bibitem[{{Heger} {et~al.}(2003){Heger}, {Fryer}, {Woosley}, {Langer}, \&
-  {Hartmann}}]{Heger03}
-{Heger}, A., {Fryer}, C.~L., {Woosley}, S.~E., {Langer}, N., \& {Hartmann},
-  D.~H. 2003, \apj, 591, 288
-
-\bibitem[{{Heger} \& {Woosley}(2002{\natexlab{a}})}]{2002ApJ...567..532H}
-{Heger}, A., \& {Woosley}, S.~E. 2002{\natexlab{a}}, \apj, 567, 532
-
-\bibitem[{{Heger} \& {Woosley}(2002{\natexlab{b}})}]{Heger02}
----. 2002{\natexlab{b}}, \apj, 567, 532
-
-\bibitem[{{Hernquist} \& {Springel}(2003)}]{Hernquist03}
-{Hernquist}, L., \& {Springel}, V. 2003, \mnras, 341, 1253
-
-\bibitem[{{Karlsson} {et~al.}(2008){Karlsson}, {Johnson}, \&
-  {Bromm}}]{Karlsson08}
-{Karlsson}, T., {Johnson}, J.~L., \& {Bromm}, V. 2008, \apj, 679, 6
-
-\bibitem[{{Kitayama} {et~al.}(2004){Kitayama}, {Yoshida}, {Susa}, \&
-  {Umemura}}]{Kitayama04}
-{Kitayama}, T., {Yoshida}, N., {Susa}, H., \& {Umemura}, M. 2004, \apj, 613,
-  631
-
-\bibitem[{{Kobayashi} {et~al.}(2011){Kobayashi}, {Tominaga}, \&
-  {Nomoto}}]{Kobayashi11}
-{Kobayashi}, C., {Tominaga}, N., \& {Nomoto}, K. 2011, \apjl, 730, L14+
-
-\bibitem[{{Komatsu} {et~al.}(2011)}]{WMAP7}
-{Komatsu}, E., {et~al.} 2011, \apjs, 192, 18
-
-\bibitem[{{Komiya} {et~al.}(2010){Komiya}, {Habe}, {Suda}, \&
-  {Fujimoto}}]{Komiya10}
-{Komiya}, Y., {Habe}, A., {Suda}, T., \& {Fujimoto}, M.~Y. 2010, \apj, 717, 542
-
-\bibitem[{{Krumholz} \& {McKee}(2005)}]{Krumholz05}
-{Krumholz}, M.~R., \& {McKee}, C.~F. 2005, \apj, 630, 250
-
-\bibitem[{{Larson}(1998)}]{Larson98}
-{Larson}, R.~B. 1998, \mnras, 301, 569
-
-\bibitem[{{Lehnert} {et~al.}(2010){Lehnert}, {Nesvadba}, {Cuby}, {Swinbank},
-  {Morris}, {Cl{\'e}ment}, {Evans}, {Bremer}, \& {Basa}}]{Lehnert10_z8.6}
-{Lehnert}, M.~D., {Nesvadba}, N.~P.~H., {Cuby}, J., {Swinbank}, A.~M.,
-  {Morris}, S., {Cl{\'e}ment}, B., {Evans}, C.~J., {Bremer}, M.~N., \& {Basa},
-  S. 2010, \nat, 467, 940
-
-\bibitem[{{Machacek} {et~al.}(2001){Machacek}, {Bryan}, \& {Abel}}]{Machacek01}
-{Machacek}, M.~E., {Bryan}, G.~L., \& {Abel}, T. 2001, \apj, 548, 509
-
-\bibitem[{{Maio} {et~al.}(2010){Maio}, {Ciardi}, {Dolag}, {Tornatore}, \&
-  {Khochfar}}]{Maio10_Pop32}
-{Maio}, U., {Ciardi}, B., {Dolag}, K., {Tornatore}, L., \& {Khochfar}, S. 2010,
-  \mnras, 407, 1003
-
-\bibitem[{{Maio} {et~al.}(2011){Maio}, {Khochfar}, {Johnson}, \&
-  {Ciardi}}]{Maio11_Enrich}
-{Maio}, U., {Khochfar}, S., {Johnson}, J.~L., \& {Ciardi}, B. 2011, \mnras,
-  414, 1145
-
-\bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
-Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
-
-\bibitem[{{Nomoto} {et~al.}(2006){Nomoto}, {Tominaga}, {Umeda}, {Kobayashi}, \&
-  {Maeda}}]{Nomoto06}
-{Nomoto}, K., {Tominaga}, N., {Umeda}, H., {Kobayashi}, C., \& {Maeda}, K.
-  2006, Nuclear Physics A, 777, 424
-
-\bibitem[{{Omukai} {et~al.}(2005){Omukai}, {Tsuribe}, {Schneider}, \&
-  {Ferrara}}]{Omukai05}
-{Omukai}, K., {Tsuribe}, T., {Schneider}, R., \& {Ferrara}, A. 2005, \apj, 626,
-  627
-
-\bibitem[{{O'Shea} {et~al.}(2004){O'Shea}, {Bryan}, {Bordner}, {Norman},
-  {Abel}, {Harkness}, \& {Kritsuk}}]{OShea2004}
-{O'Shea}, B.~W., {Bryan}, G., {Bordner}, J., {Norman}, M.~L., {Abel}, T.,
-  {Harkness}, R., \& {Kritsuk}, A. 2004, ArXiv Astrophysics e-prints
-  (astro-ph/0403044)
-
-\bibitem[{{O'Shea} \& {Norman}(2007)}]{OShea07a}
-{O'Shea}, B.~W., \& {Norman}, M.~L. 2007, \apj, 654, 66
-
-\bibitem[{{O'Shea} \& {Norman}(2008)}]{OShea08}
----. 2008, \apj, 673, 14
-
-\bibitem[{{Penprase} {et~al.}(2010){Penprase}, {Prochaska}, {Sargent},
-  {Toro-Martinez}, \& {Beeler}}]{Penprase10}
-{Penprase}, B.~E., {Prochaska}, J.~X., {Sargent}, W.~L.~W., {Toro-Martinez},
-  I., \& {Beeler}, D.~J. 2010, \apj, 721, 1
-
-\bibitem[{{Ricotti} {et~al.}(2008){Ricotti}, {Gnedin}, \& {Shull}}]{Ricotti08}
-{Ricotti}, M., {Gnedin}, N.~Y., \& {Shull}, J.~M. 2008, \apj, 685, 21
-
-\bibitem[{{Safranek-Shrader} {et~al.}(2010){Safranek-Shrader}, {Bromm}, \&
-  {Milosavljevi{\'c}}}]{Safranek10}
-{Safranek-Shrader}, C., {Bromm}, V., \& {Milosavljevi{\'c}}, M. 2010, \apj,
-  723, 1568
-
-\bibitem[{{Salvadori} {et~al.}(2007){Salvadori}, {Schneider}, \&
-  {Ferrara}}]{Salvadori07}
-{Salvadori}, S., {Schneider}, R., \& {Ferrara}, A. 2007, \mnras, 381, 647
-
-\bibitem[{{Scannapieco} {et~al.}(2003){Scannapieco}, {Schneider}, \&
-  {Ferrara}}]{Scannapieco03}
-{Scannapieco}, E., {Schneider}, R., \& {Ferrara}, A. 2003, \apj, 589, 35
-
-\bibitem[{{Schaerer}(2002)}]{Schaerer02}
-{Schaerer}, D. 2002, \aap, 382, 28
-
-\bibitem[{{Schaerer}(2003)}]{Schaerer03}
----. 2003, \aap, 397, 527
-
-\bibitem[{{Schaye} {et~al.}(2010){Schaye}, {Dalla Vecchia}, {Booth}, {Wiersma},
-  {Theuns}, {Haas}, {Bertone}, {Duffy}, {McCarthy}, \& {van de
-  Voort}}]{Schaye10}
-{Schaye}, J., {Dalla Vecchia}, C., {Booth}, C.~M., {Wiersma}, R.~P.~C.,
-  {Theuns}, T., {Haas}, M.~R., {Bertone}, S., {Duffy}, A.~R., {McCarthy},
-  I.~G., \& {van de Voort}, F. 2010, \mnras, 402, 1536
-
-\bibitem[{{Schneider} {et~al.}(2006){Schneider}, {Omukai}, {Inoue}, \&
-  {Ferrara}}]{Schneider06_Frag}
-{Schneider}, R., {Omukai}, K., {Inoue}, A.~K., \& {Ferrara}, A. 2006, \mnras,
-  369, 1437
-
-\bibitem[{{Smith} {et~al.}(2008){Smith}, {Sigurdsson}, \&
-  {Abel}}]{2008MNRAS.385.1443S}
-{Smith}, B., {Sigurdsson}, S., \& {Abel}, T. 2008, \mnras, 385, 1443
-
-\bibitem[{{Smith} {et~al.}(2011){Smith}, {Hallman}, {Shull}, \&
-  {O'Shea}}]{Smith11}
-{Smith}, B.~D., {Hallman}, E.~J., {Shull}, J.~M., \& {O'Shea}, B.~W. 2011,
-  \apj, 731, 6
-
-\bibitem[{{Smith} {et~al.}(2009){Smith}, {Turk}, {Sigurdsson}, {O'Shea}, \&
-  {Norman}}]{2009ApJ...691..441S}
-{Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
-  M.~L. 2009, \apj, 691, 441
-
-\bibitem[{{Stacy} {et~al.}(2010){Stacy}, {Greif}, \& {Bromm}}]{Stacy10_Binary}
-{Stacy}, A., {Greif}, T.~H., \& {Bromm}, V. 2010, \mnras, 403, 45
-
-\bibitem[{{Strigari} {et~al.}(2008){Strigari}, {Bullock}, {Kaplinghat},
-  {Simon}, {Geha}, {Willman}, \& {Walker}}]{Strigari08}
-{Strigari}, L.~E., {Bullock}, J.~S., {Kaplinghat}, M., {Simon}, J.~D., {Geha},
-  M., {Willman}, B., \& {Walker}, M.~G. 2008, \nat, 454, 1096
-
-\bibitem[{{Tafelmeyer} {et~al.}(2010){Tafelmeyer}, {Jablonka}, {Hill},
-  {Shetrone}, {Tolstoy}, {Irwin}, {Battaglia}, {Helmi}, {Starkenburg}, {Venn},
-  {Abel}, {Francois}, {Kaufer}, {North}, {Primas}, \&
-  {Szeifert}}]{Tafelmeyer10}
-{Tafelmeyer}, M., {Jablonka}, P., {Hill}, V., {Shetrone}, M., {Tolstoy}, E.,
-  {Irwin}, M.~J., {Battaglia}, G., {Helmi}, A., {Starkenburg}, E., {Venn},
-  K.~A., {Abel}, T., {Francois}, P., {Kaufer}, A., {North}, P., {Primas}, F.,
-  \& {Szeifert}, T. 2010, \aap, 524, A58+
-
-\bibitem[{{Tan} {et~al.}(2006){Tan}, {Krumholz}, \& {McKee}}]{Tan06}
-{Tan}, J.~C., {Krumholz}, M.~R., \& {McKee}, C.~F. 2006, \apjl, 641, L121
-
-\bibitem[{{Tornatore} {et~al.}(2007){Tornatore}, {Ferrara}, \&
-  {Schneider}}]{Tornatore07}
-{Tornatore}, L., {Ferrara}, A., \& {Schneider}, R. 2007, \mnras, 382, 945
-
-\bibitem[{Toro {et~al.}(1994)Toro, Spruce, \& Speares}]{Toro94_HLLC}
-Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
-  10.1007/BF01414629
-
-\bibitem[{{Trenti} \& {Shull}(2010)}]{Trenti10}
-{Trenti}, M., \& {Shull}, J.~M. 2010, \apj, 712, 435
-
-\bibitem[{{Trenti} {et~al.}(2009){Trenti}, {Stiavelli}, \& {Shull}}]{Trenti09}
-{Trenti}, M., {Stiavelli}, M., \& {Shull}, J.~M. 2009, \apj, 700, 1672
-
-\bibitem[{{Truelove} {et~al.}(1997){Truelove}, {Klein}, {McKee}, {Holliman},
-  {Howell}, \& {Greenough}}]{Truelove97}
-{Truelove}, J.~K., {Klein}, R.~I., {McKee}, C.~F., {Holliman}, II, J.~H.,
-  {Howell}, L.~H., \& {Greenough}, J.~A. 1997, \apjl, 489, L179+
-
-\bibitem[{{Tseliakhovich} {et~al.}(2010){Tseliakhovich}, {Barkana}, \&
-  {Hirata}}]{Tselia10_Minihalo}
-{Tseliakhovich}, D., {Barkana}, R., \& {Hirata}, C. 2010, ArXiv e-prints
-
-\bibitem[{{Tseliakhovich} \& {Hirata}(2010)}]{Tselia10}
-{Tseliakhovich}, D., \& {Hirata}, C. 2010, \prd, 82, 083520
-
-\bibitem[{{Tumlinson}(2006)}]{Tumlinson06}
-{Tumlinson}, J. 2006, \apj, 641, 1
-
-\bibitem[{{Tumlinson}(2007)}]{Tumlinson07_IMF}
----. 2007, \apjl, 664, L63
-
-\bibitem[{{Tumlinson}(2010)}]{Tumlinson10}
----. 2010, \apj, 708, 1398
-
-\bibitem[{{Turk} {et~al.}(2009){Turk}, {Abel}, \&
-  {O'Shea}}]{2009Sci...325..601T}
-{Turk}, M.~J., {Abel}, T., \& {O'Shea}, B. 2009, Science, 325, 601
-
-\bibitem[{{Turk} {et~al.}(2011){Turk}, {Smith}, {Oishi}, {Skory}, {Skillman},
-  {Abel}, \& {Norman}}]{yt_full_paper}
-{Turk}, M.~J., {Smith}, B.~D., {Oishi}, J.~S., {Skory}, S., {Skillman}, S.~W.,
-  {Abel}, T., \& {Norman}, M.~L. 2011, \apjs, 192, 9
-
-\bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
-{Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14
-
-\bibitem[{{Wise} \& {Abel}(2007)}]{Wise07}
-{Wise}, J.~H., \& {Abel}, T. 2007, \apj, 665, 899
-
-\bibitem[{{Wise} \& {Abel}(2008)}]{Wise08_Gal}
----. 2008, \apj, 685, 40
-
-\bibitem[{{Wise} \& {Abel}(2011)}]{Wise11_Moray}
----. 2011, \mnras, 414, 3458
-
-\bibitem[{{Wise} \& {Cen}(2009)}]{Wise09}
-{Wise}, J.~H., \& {Cen}, R. 2009, \apj, 693, 984
-
-\bibitem[{{Wolcott-Green} {et~al.}(2011){Wolcott-Green}, {Haiman}, \&
-  {Bryan}}]{Wolcott11}
-{Wolcott-Green}, J., {Haiman}, Z., \& {Bryan}, G.~L. 2011, ArXiv e-prints
-
-\bibitem[{{Wolfe} {et~al.}(2005){Wolfe}, {Gawiser}, \&
-  {Prochaska}}]{Wolfe05_Review}
-{Wolfe}, A.~M., {Gawiser}, E., \& {Prochaska}, J.~X. 2005, \araa, 43, 861
-
-\bibitem[{{Woodward} \& {Colella}(1984)}]{Woodward84}
-{Woodward}, P., \& {Colella}, P. 1984, Journal of Computational Physics, 54,
-  115
-
-\bibitem[{{Woosley} \& {Weaver}(1995)}]{Woosley95}
-{Woosley}, S.~E., \& {Weaver}, T.~A. 1995, \apjs, 101, 181
-
-\bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
-  {Sugiyama}}]{Yoshida03}
-{Yoshida}, N., {Abel}, T., {Hernquist}, L., \& {Sugiyama}, N. 2003, \apj, 592,
-  645
-
-\bibitem[{{Yoshida} {et~al.}(2004){Yoshida}, {Bromm}, \&
-  {Hernquist}}]{Yoshida04}
-{Yoshida}, N., {Bromm}, V., \& {Hernquist}, L. 2004, \apj, 605, 579
-
-\bibitem[{{Yoshida} {et~al.}(2007){Yoshida}, {Oh}, {Kitayama}, \&
-  {Hernquist}}]{Yoshida07_HII}
-{Yoshida}, N., {Oh}, S.~P., {Kitayama}, T., \& {Hernquist}, L. 2007, \apj, 663,
-  687
-
-\bibitem[{{Yoshida} {et~al.}(2008){Yoshida}, {Omukai}, \&
-  {Hernquist}}]{Yoshida08}
-{Yoshida}, N., {Omukai}, K., \& {Hernquist}, L. 2008, Science, 321, 669
-
-\bibitem[{{Zahn} {et~al.}(2011){Zahn}, {Mesinger}, {McQuinn}, {Trac}, {Cen}, \&
-  {Hernquist}}]{Zahn11}
-{Zahn}, O., {Mesinger}, A., {McQuinn}, M., {Trac}, H., {Cen}, R., \&
-  {Hernquist}, L.~E. 2011, \mnras, 414, 727
-
-\end{thebibliography}
+\bibliography{ms}
 
 \end{document}
