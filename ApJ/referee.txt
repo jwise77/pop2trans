@@ -17,6 +17,20 @@ paper.  We have addressed his/her points below.
 > distinguishing between fragmentation during the initial collapse and
 > disk fragmentation after the initial collapse.
 
+We have clarified this section:
+
+  The first (Pop III) stars are metal-free and have a large
+  characteristic mass.  Previously, these stars were believed to be
+  massive, with universally suppressed fragmentation (Abel et al 2002,
+  Bromm et al 2002, O'Shea & Norman 2007).  Recently, several studies
+  have suggested that while fragmentation at times prior to the
+  formation of the first protostar may occur at scales of
+  $1000-2000~\mathrm{AU}$, such fragmentation is likely to result in
+  high-mass, low-multiplicity groups (Turk et al 2009, Stacy et al
+  2010).  Subsequent studies have suggested that at later times,
+  subsequent to the formation of the first protostar, additional
+  fragmentation may proceed (Greif et al 2011, Clark et al 2011).
+
 > Section 2.2, 2nd paragraph, first sentence: the formulation should be
 > changed to emphasize that the proposed masses of the first stars are
 > based on an extrapolation of the expected (total) accretion within the
@@ -24,6 +38,19 @@ paper.  We have addressed his/her points below.
 > mass scale for the first stars is based on extrapolation/speculation
 > (with the exception of a dominant < 0.8 M_sun contribution, which is
 > ruled out observationally).
+
+We have clarified this section:
+
+  Simulations following the full accretion history of Pop III stars,
+  from their formation inside cosmological minihalos through
+  transitioning onto the main sequence, are not currently possible.
+  However, under the assumption of spherical accretion, reasonable
+  estimates of the mass ranges for Pop III stars can be made by
+  extrapolating forward in time the instantaneous accretion rate at the
+  time of formation of the first protostellar core and comparing the
+  timescales for accretion against the Kelvin-Helmholtz time.  Several
+  studies, conducting this extrapolation, have shown that the
+  characteristic mass of Pop III stars 
 
 > Section 2.2: I find this entire section quite unclear and confusing. A
 > more systematic description of the star formation recipe would be very
