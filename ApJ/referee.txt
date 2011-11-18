@@ -84,10 +84,88 @@ fixed this error.
 We have described the figures in more detail, drawing attention to
 relationships between the plot and the processes occurring in halos.
 We have removed the reference to the larger 10^5 solar mass open
-circle.
+circle.  Now the caption reads as the following:
+
+  The scatter plots show the metal-enriched (Pop II) star formation
+  history of the intense (left) and quiet (right) halos as a function
+  of total metallicity, i.e. the sum of metal ejecta from both Pop II
+  and Pop III SNe, at z=7.  Each circle represents a star cluster,
+  whose area is proportional to its mass.  The open circles in the
+  upper right represent 10^3 and 10^4 \Ms~star clusters.  The upper
+  histogram shows the SFR.  The right histogram depicts the stellar
+  metallicity distribution.  The intense halo shows a large spread in
+  metallicity at z>10 because these stars formed in progenitor halos
+  that were enriched by different SN explosions.  At z<10, the
+  majority of stellar metallicities increase as the halo is
+  self-enriched.  The spikes in metallicity at t = 620, 650, and 700
+  Myr show induced star formation with enhanced metallicities in SN
+  remnant shells.  The dashed lines in the left panel guide the eye to
+  two stellar populations that were formed in two satellite halos,
+  merging at z=7.5.  The quiet halo evolves in relative isolation and
+  steadily increases its metallicity to [Z/H] ~ -2 until there is an
+  equilibrium between \textit{in-situ} star formation and metal-poor
+  inflows from filaments.
 
 > Section 4, 1st and 4th paragraphs: I find these paragraphs very
 > confusing. Please rephrase.
+
+We have reworded the 1st paragraph to the following.
+
+  We have focused on the birth of two galaxies prior to reionization
+  with a cosmological AMR radiation hydrodynamics simulation with very
+  high spatial (1 pc comoving) and mass resolution (1800 M_sun).  With
+  this resolution, we are able to follow the Pop III star formation
+  and radiative and chemical feedback effects in hundreds of minihalos
+  that contribute to the formation of a protogalaxy.  Supernovae from
+  Pop III stars provide the necessary heavy elements for the
+  transition to a Population II stellar population, which we have
+  directly simulated.  The galaxies simulated here represent a
+  population of uncharacterized high-redshift dwarf galaxies, which
+  should be detected with the upcoming James Webb Space Telescope,
+  that should contribute a significant fraction of the ionizing
+  photons during reionization.  Recently, a z=8.6 spectroscopically
+  confirmed galaxy was found to reside in an \ion{H}{2} region that
+  extends beyond 1 Mpc (Lehnert et al. 2010).  However, using the SFRs
+  and \lya~continuum as estimators, this galaxy produces enough
+  ionizing radiation to create an HII region between
+  ~0.1(f_esc/0.1)^{1/3} Mpc and 0.5(f_esc/0.1)^{1/3} Mpc, where f_esc
+  is the fraction of ionizing radiation escaping into the IGM.  This
+  discrepancy could be caused by undetected satellite dwarf galaxies,
+  such ones presented here, that contribute to local radiation field,
+  or an ionizing radiation escape fraction near unity (Wise & Cen
+  2009; Razoumov & Sommer-Larsen 2010; Paardekooper et al. 2011;
+  Yajima et al. 2011).
+
+We have rewritten the 4th paragraph to the following.
+
+  Building upon this idea of a lower metallicity floor, consider a
+  pre-galactic halo that has hosted a Pop III star, producing a SN.
+  The majority of the gas is ejected into the IGM and re-accretes
+  after ~10-50 Myr (Johnson & Bromm 2007; Wise & Abel 2008).  What
+  happens if the metallicity is not greater than the critical
+  metallicity?  Massive Pop III stars would form again in this halo;
+  however, enriching the surrounding IGM with Pop III SNe and ejecting
+  material becomes more difficult in halos with M >~ 10^7 M_sun
+  (Whalen et al. 2008).  Thus it is more likely for these subsequent
+  Pop III stars to retain more of its gas during star formation
+  episodes and self-enrich its host halo and less of the IGM.  This
+  would accelerate the transition from Pop III to II in more massive
+  halos.  
+
+  Using our result of the metallicity floor, we conclude that it only
+  takes one, at most two, SNe from Pop III stars in the halo
+  progenitors to complete the transition to Population II (Frebel &
+  Bromm 2011).  However, this does not prohibit more than two
+  instances of Pop III star formation in halo from happening because
+  the stars can produce BHs with little or no metal ejecta, keeping
+  the surrounding environment pristine.  Although we find that Pop III
+  SNe create a floor of 10^{-4} - 10^{-3} Z_sun, gas with Z/Z_sun <
+  10^{-4} can still exists in nearby halos, where the metal-rich SN
+  ejecta mix slowly into dense cores as the blastwave overtakes it
+  (Cen & Riquelme 2008).  These environments may be the host of true
+  extremely metal-poor star formation, such as the recently discovered
+  halo star with all detected metals below 10^{-4.2} Z_sun (Caffau et
+  al. 2011).
 
 > Section 4, second paragraph, last sentence: I do not believe this is
 > the first simulation of its kind that is able to produce a floor of
@@ -97,8 +175,8 @@ circle.
 We have rephrased this sentence to acknowledge previous papers to the
 following.
 
-"Our simulation strengthensthis claim of a metallicity floor from Pop
-III SNe (see also Tornatore et al. 2007; Karlsson et al. 2008; Maio et
-al. 2011), where our work improves on previous studies by resolving
-star-forming molecular clouds and employing more realistic feedback
-physics, in particular, radiation transport."
+  Our simulation strengthens this claim of a metallicity floor from
+  Pop III SNe (see also Tornatore et al. 2007; Karlsson et al. 2008;
+  Maio et al. 2011), where our work improves on previous studies by
+  resolving star-forming molecular clouds and employing more realistic
+  feedback physics, in particular, radiation transport.
