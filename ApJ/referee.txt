@@ -46,11 +46,13 @@ We have clarified this section:
   transitioning onto the main sequence, are not currently possible.
   However, under the assumption of spherical accretion, reasonable
   estimates of the mass ranges for Pop III stars can be made by
-  extrapolating forward in time the instantaneous accretion rate at the
-  time of formation of the first protostellar core and comparing the
-  timescales for accretion against the Kelvin-Helmholtz time.  Several
-  studies, conducting this extrapolation, have shown that the
-  characteristic mass of Pop III stars 
+  extrapolating forward in time the instantaneous accretion rate at
+  the time of formation of the first protostellar core and comparing
+  the timescales for accretion against the Kelvin-Helmholtz time.
+  Several studies, conducting this extrapolation, have shown that the
+  characteristic mass of Pop III stars M_char ~ 100 Msun (Abel et
+  al. 2002; Bromm et al. 2002; O'Shea & Norman 2007; Yoshida et
+  al. 2008).
 
 > Section 2.2: I find this entire section quite unclear and confusing. A
 > more systematic description of the star formation recipe would be very
@@ -146,26 +148,24 @@ We have rewritten the 4th paragraph to the following.
   metallicity?  Massive Pop III stars would form again in this halo;
   however, enriching the surrounding IGM with Pop III SNe and ejecting
   material becomes more difficult in halos with M >~ 10^7 M_sun
-  (Whalen et al. 2008).  Thus it is more likely for these subsequent
-  Pop III stars to retain more of its gas during star formation
-  episodes and self-enrich its host halo and less of the IGM.  This
-  would accelerate the transition from Pop III to II in more massive
-  halos.  
+  (Whalen et al. 2008).  Thus it is more likely for these halos to
+  retain more of its gas during star formation episodes and
+  self-enrich its host halo and less of the IGM.  This would
+  accelerate the transition from Pop III to II in more massive halos.
 
-  Using our result of the metallicity floor, we conclude that it only
-  takes one, at most two, SNe from Pop III stars in the halo
-  progenitors to complete the transition to Population II (Frebel &
-  Bromm 2011).  However, this does not prohibit more than two
-  instances of Pop III star formation in halo from happening because
-  the stars can produce BHs with little or no metal ejecta, keeping
-  the surrounding environment pristine.  Although we find that Pop III
-  SNe create a floor of 10^{-4} - 10^{-3} Z_sun, gas with Z/Z_sun <
-  10^{-4} can still exists in nearby halos, where the metal-rich SN
-  ejecta mix slowly into dense cores as the blastwave overtakes it
-  (Cen & Riquelme 2008).  These environments may be the host of true
-  extremely metal-poor star formation, such as the recently discovered
-  halo star with all detected metals below 10^{-4.2} Z_sun (Caffau et
-  al. 2011).
+  We conclude that it only takes one, at most two, SNe from Pop III
+  stars in the halo progenitors to complete the transition to
+  Population II (Frebel & Bromm 2011).  However, this does not
+  prohibit more than two instances of Pop III star formation in halo
+  from happening because the stars can produce BHs with little or no
+  metal ejecta, keeping the surrounding environment pristine.
+  Although we find that Pop III SNe create a floor of ~10^{-3} Z_sun,
+  gas with lower metallicities can still exist in nearby halos because
+  the metal-rich SN ejecta will mix slowly into dense cores as the
+  blastwave overtakes them (Cen & Riquelme 2008).  These environments
+  may be the host of true extremely metal-poor star formation, such as
+  the recently discovered halo star with all detected metals below
+  10^{-4.2} Z_sun (Caffau et al. 2011).
 
 > Section 4, second paragraph, last sentence: I do not believe this is
 > the first simulation of its kind that is able to produce a floor of
