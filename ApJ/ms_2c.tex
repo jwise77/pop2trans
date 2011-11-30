@@ -112,28 +112,36 @@ when the halo can cool efficiently through atomic line cooling.
 \section{Motivation}
 
 The first (Pop III) stars are metal-free and have a large
-characteristic mass and suppressed fragmentation in its protostellar
-collapse \citep{ABN02, Bromm02_P3, OShea07a}.  A fraction of these
-stars enrich the surrounding intergalactic medium (IGM) when they go
-supernova, which can happen in stars $\lsim 40~\Ms$ in Type II
-supernovae (SNe) or in stars roughly between 140 \Ms~and 260 \Ms~in
-pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}.  The host
-halo and the neighboring halos are then enriched with this ejecta.
-There exists a critical metallicity that is $\sim 10^{-6} Z_\odot$ if
-dust cooling is efficient \citep{Omukai05, Schneider06_Frag, clark08}
-and $\sim 10^{-3.5} Z_\odot$ otherwise \citep{Bromm01,
-  2009ApJ...691..441S}, where the gas can cool rapidly, lowering its
-Jeans mass.  An intermediate characteristic mass of $\sim10~\Ms$ can
-occur if the gas cooling is suppressed to the cosmic microwave
-background (CMB) temperature \citep{Larson98, Tumlinson07_IMF,
-  2009ApJ...691..441S}.  The resulting Population II star cluster will
-thus have a lower characteristic stellar mass than its metal-free
-progenitors.  These first stellar clusters may be connected to stars
-in the Milky Way halo and nearby dwarf spheroidal (dSph) galaxies,
-both with a metallicity floor of [Z/H]\footnote{We use the
-  conventional notation, [Z/H] $\equiv$ log(Z/H) -
-  log(Z$_\odot$/H$_\odot$).} = --4 \citep{Beers05, Frebel10_Obs,
-  Tafelmeyer10}.
+characteristic mass.  Previously, these stars were believed to be
+massive, with universally suppressed fragmentation \citep{ABN02,
+Bromm02_P3, OShea07a}.  Recently, several studies have suggested that
+while fragmentation at times prior to the formation of the first
+protostar may occur at scales of $1000-2000~\mathrm{AU}$, such
+fragmentation is likely to result in high-mass, low-multiplicity
+groups \citep{2009Sci...325..601T, Stacy10_Binary}.  Subsequent
+studies have suggested that at later times, subsequent to the
+formation of the first protostar, additional fragmentation may proceed
+\citep{Greif11_P3Cluster, Clark11_Frag}.  A fraction of high-mass,
+metal-free stars enrich the surrounding intergalactic medium (IGM)
+when they go supernova, which can happen in stars $\lsim 40~\Ms$ in
+Type II supernovae (SNe) or in stars roughly between 140 \Ms~and 260
+\Ms~in pair-instability SNe \citep[PISNe;][]{2002ApJ...567..532H}.
+The host halo and the neighboring halos are then enriched with this
+ejecta.  There exists a critical metallicity that is $\sim 10^{-6}
+Z_\odot$ if dust cooling is efficient \citep{Omukai05,
+Schneider06_Frag, clark08} and $\sim 10^{-3.5} Z_\odot$ otherwise
+\citep{Bromm01, 2009ApJ...691..441S}, where the gas can cool rapidly,
+lowering its Jeans mass.  An intermediate characteristic mass of
+$\sim10~\Ms$ can occur if the gas cooling is suppressed to the cosmic
+microwave background (CMB) temperature \citep{Larson98,
+Tumlinson07_IMF, 2009ApJ...691..441S}.  The resulting Population II
+star cluster will thus have a lower characteristic stellar mass than
+its metal-free progenitors.  These first stellar clusters may be
+connected to stars in the Milky Way halo and nearby dwarf spheroidal
+(dSph) galaxies, both with a metallicity floor of [Z/H]\footnote{We
+use the conventional notation, [Z/H] $\equiv$ log(Z/H) -
+log(Z$_\odot$/H$_\odot$).} = --4 \citep{Beers05, Frebel10_Obs,
+Tafelmeyer10}.
 
 Pop III stars primarily form in dark matter halos with $M \sim 10^6
 \Ms$.  Their stellar radiation ionizes and heats an \ion{H}{2} region
@@ -275,25 +283,6 @@ $r \sim L_{\rm box}/2$ from entering the non-linear growth regime.  At
 the final redshift, the simulation has $1.4 \times 10^8$ computational
 cells and required 250,000 CPU hours, using 512 cores.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure*}
-\epsscale{1.15}
-\plotone{f1}
-\epsscale{1}
-  \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
-    volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
-    (left to right).  Pictured here are the density-weighted
-    projections of density (top), temperature (middle), and
-    metallicity (bottom).  Note how the stellar radiative feedback
-    from low-mass galaxies reionize the majority of the volume.  The
-    metallicity projections are a composite image of metals
-    originating from Pop II (blue) and III (red) stars with magenta
-    indicating a mixture of the two.}
-\end{figure*}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 \subsection{Star formation}
 
 We distinguish Pop II and Pop III SF by the total metallicity of the
@@ -301,19 +290,29 @@ densest cell in the molecular cloud.  Pop II stars are formed if [Z/H]
 $> -4$, and Pop III stars are formed otherwise.  We do not consider
 Pop III.2 stars and intermediate mass stars from CMB-limited cooling.
 
-Simulations have shown that the characteristic mass of Pop III stars
-$M_{\rm char} \sim 100~\Ms$ \citep{ABN02, Bromm02_P3, OShea07a,
-  Yoshida08}.  They form in molecular clouds that coexist with the
-dark matter halo center with limited fragmentation occurring during
-their collapse; however \citet{2009Sci...325..601T} and
-\citet{Stacy10_Binary} have shown that Pop III binaries may form in a
-fraction of such halos.  There have been some recent hints that the
-accretion disk around the first protostar may fragment and produce
-clustered Pop III star formation \citep{Clark11_Frag,
-  Greif11_P3Cluster}.  The final stellar masses in the aforementioned
-calculations are still highly uncertain with a limited number of
-samples.  Nevertheless, they all point toward an IMF with a larger
-characteristic mass than present-day star formation.
+\subsubsection{Population III star formation}
+
+Simulations following the full accretion history of Pop III stars,
+from their formation inside cosmological minihalos through
+transitioning onto the main sequence, are not currently possible.
+However, under the assumption of spherical accretion, reasonable
+estimates of the mass ranges for Pop III stars can be made by
+extrapolating forward in time the instantaneous accretion rate at the
+time of formation of the first protostellar core and comparing the
+timescales for accretion against the Kelvin-Helmholtz time.  Several
+studies, conducting this extrapolation, have shown that the
+characteristic mass of Pop III stars $M_{\rm char} \sim 100~\Ms$
+\citep{ABN02, Bromm02_P3, OShea07a, Yoshida08}.  They form in
+molecular clouds that coexist with the dark matter halo center with
+limited fragmentation occurring during their collapse; however
+\citet{2009Sci...325..601T} and \citet{Stacy10_Binary} have shown that
+Pop III binaries may form in a fraction of such halos.  There have
+been some recent hints that the accretion disk around the first
+protostar may fragment and produce clustered Pop III star formation
+\citep{Clark11_Frag, Greif11_P3Cluster}.  The final stellar masses in
+the aforementioned calculations are still highly uncertain with a
+limited number of samples.  Nevertheless, they all point toward an IMF
+with a larger characteristic mass than present-day star formation.
 
 % Furthermore, detailed one-dimensional calculations have shown that
 % their IMF should follow a Kroupa-like IMF that has a Salpeter slope
@@ -321,20 +320,42 @@ characteristic mass than present-day star formation.
 % \cite{refs}.
 
 For Pop III stars, we use the same SF model as \citet{Wise08_Gal}
-where each star particle represents a single star, forming at an
-overdensity of $5 \times 10^5$ ($\sim 10^3\; \cubecm$ at $z=10$).  If
-multiple cells meet the star particle formation criteria within 1 pc,
-we form one Pop III star particle with the center of mass of these
-flagged cells to ensure that massive star is created per metal-free
-molecular cloud.  Instead of using a fixed stellar mass like in our
-previous work, we randomly sample from an IMF with a functional form
-of
+where each star particle represents a single star.  In this model, a
+star particle forms when a cell has all of the following criteria:
+%
+\begin{enumerate}
+\item an overdensity of $5 \times 10^5$ ($\sim 10^3\; \cubecm$ at
+  $z=10$),
+\item a converging gas flow ($\nabla \cdot \mathbf{v}_{\rm gas} < 0$),
+  and
+\item a molecular hydrogen fraction $f_{\rm H2} > 5 \times 10^{-4}$.
+\end{enumerate}
+%
+These physical conditions are typical of collapsing metal-free
+molecular clouds $\sim 10$ Myr before the birth of a Pop III
+main-sequence star \citep{ABN02, OShea07a}.  This prescription is
+similar to the \citet{Cen92} method but removes the Jeans unstable
+($M_{\rm gas} > M_J$) and cooling timescale ($t_{\rm cool} < t_{\rm
+  dyn}$) requirements.  We do not consider the former criterion
+because it is not applicable to simulations that resolve the Jeans
+length at all times.  The molecular hydrogen fraction requirement
+effectively constrains star formation to cooling molecular clouds,
+where the \hh~formation rate is significantly larger than the
+dissociation rate from a Lyman-Werner radiation field.
+
+If multiple cells meet the star particle formation criteria within 1
+pc, we form one Pop III star particle with the center of mass of these
+flagged cells to ensure that one massive star is created per
+metal-free molecular cloud.  Instead of using a fixed stellar mass
+like in our previous work, we randomly sample from an IMF with a
+functional form of
 %
 \begin{equation}
 \label{eqn:imf}
 f(\log M) dM = M^{-1.3} \exp\left[-\left(\frac{M_{\rm
       char}}{M}\right)^{1.6}\right] dM
 \end{equation}
+%
 to determine the stellar mass.  Above $M_{\rm char}$, it behaves as a
 Salpeter IMF but is exponentially cutoff below that mass
 \citep{Chabrier03, Clark09}.  For reproducibility, we record the
@@ -342,7 +363,13 @@ number of times the random number generator (Mersenne twister;
 \citet{MTwister}) has been called for use when restarting the
 simulations.  We stress that the Pop III IMF is still highly
 uncertain.  In Sec. \ref{sec:discuss}, we discuss possible
-dependencies of our results to changes in the IMF.
+dependencies of our results to changes in the IMF.  
+
+After the star particle forms and its mass is randomly sampled from
+the IMF, an equal amount of gas is removed from the computational grid
+in a sphere that contains twice the stellar mass and is centered on
+the star particle.  The star particle acquires the mass-weighted
+velocity of the gas contained in this sphere.
 
 %%% FOR THE COMPARISON BETWEEN RUNS WITH AND WITHOUT METAL COOLING %%%
 %
@@ -353,24 +380,34 @@ dependencies of our results to changes in the IMF.
 % and feedback from nearby Pop II star clusters, as we will demonstrate
 % in this Letter.
 
+\subsubsection{Population II star formation}
+
 We treat Pop II star formation with the same prescription as
 \citet{Wise09}, which is similar to the Pop III prescription but
-without the \hh~fraction floor that is removed because the
-metal-enriched gas can efficiently cool even in the presence of a
-strong UV radiation field \citep[e.g.][]{Safranek10}.  This method is
-effectively a modified version of the \citet{Cen92} method but
-accounts for the fact that the molecular clouds are resolved.  Unlike
-Pop III star particles that represent individual stars, Pop II star
-particles represent a star cluster of some total mass and an assumed
-normal IMF.  In the simulation, we define the molecular cloud as a
-sphere, centered on the most dense cell, with a dynamical time $t_{\rm
-  dyn} = 3$ Myr (corresponding to an average density $\bar{\rho}_{\rm
-  MC} \simeq 1000\mu \cubecm$) and a radius $R_{\rm MC}$, where $\mu$
-is the mean molecular weight.  In this sphere, a fraction $c_\star =
-0.07 f_{\rm cold}$ of the cold gas ($T < 10^3$ K) is converted into a
+without the minimum \hh~fraction requirement.  This is removed because
+the metal-enriched gas can efficiently cool even in the presence of a
+strong UV radiation field \citep[e.g.][]{Safranek10}.  To ensure the
+volume is cooling, we restrict star formation to gas with temperatures
+$T < 1000$ K.  Unlike Pop III star particles that represent individual
+stars, Pop II star particles represent a star cluster of some total
+mass and an assumed normal IMF.
+
+Once a cell meets these criteria, the prescription searches outward
+with increasing radius for the boundary of the molecular cloud,
+centered on the most dense cell.  Here, we define a molecular cloud as
+a sphere with a dynamical time $t_{\rm dyn} = 3$ Myr (corresponding to
+an average density $\bar{\rho}_{\rm MC} \simeq 1000\mu\; \cubecm$) and
+a radius $R_{\rm MC}$, where $\mu$ is the mean molecular weight.  Once
+the sphere radius is found, a fraction $c_\star = 0.07 f_{\rm cold}$
+of the cold gas ($T < 10^3$ K) inside the sphere is converted into a
 star particle with mass $m_\star = c_\star (4\pi/3) \bar{\rho}_{\rm
-  MC} R_{\rm MC}^3$.  We then replace the sphere with a uniform
-density $\rho_{\rm MC} = (1 - c_\star) / (Gt_{\rm dyn}^2)$ and
+  MC} R_{\rm MC}^3$.  This treatment of cold gas accretion is similar
+to a star formation model with a multi-phase subgrid model
+\citep{Springel03b} but is employed in a simulation that can resolve
+the multi-phase interstellar stellar medium (ISM).
+
+After the star particle is created, we replace the sphere with a
+uniform density $\rho_{\rm MC} = (1 - c_\star) / (Gt_{\rm dyn}^2)$ and
 temperature $T = 10^4$ K, which approximates the initial stages of an
 \ion{H}{2} region.  Our choice of $c_\star$ agrees with the theory
 proposed in \citet{Krumholz05} that are supported by observations.
@@ -386,11 +423,7 @@ unaltered besides the initial gas accretion from the grid to the star
 particles.  We set the minimum mass of a star particle to $m_{\rm
   \star, min} = 1000 \Ms$.  If the initial mass does not exceed
 $m_{\rm \star, min}$, the star particle does not provide any feedback
-and continues to accrete until it reaches $m_{\rm \star, min}$.  The
-star particles live for 20 Myr, the maximum lifetime of an OB star.
-These stars generate the majority of the ionizing radiation and SNe
-feedback in stellar clusters, thus we ignore any feedback from lower
-mass stars.
+and continues to accrete until it reaches $m_{\rm \star, min}$.
 
 \subsection{Stellar feedback}
 
@@ -423,6 +456,8 @@ integrating along Cartesian axes or random lines of sight
 itself from LW radiation \citep{Wise08_Gal}.  Thus we may be
 underestimating the SFRs in our work.
 
+\subsubsection{Population III stellar feedback}
+
 We use mass-dependent hydrogen ionizing and LW photon luminosities and
 lifetimes of the Pop III stars from \citet{Schaerer02}.  We use a
 mass-independent photon energy $E_{\rm ph} = 29.6$ eV, appropriate for
@@ -447,20 +482,22 @@ $M_\star$.  For PISNe, we use the explosion energy from
 %
 \begin{equation}
   \label{eqn:pisn}
-  E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He}/\Ms - 64)] \; \mathrm{erg},
+  E_{\rm PISN} = 10^{51} \times [5.0 + 1.304 (M_{\rm He}/\Ms - 64)] \;
+  \mathrm{erg},
 \end{equation}
 %
 where $M_{\rm He} = (13/24) \times (M_\star - 20) \Ms$ is the helium
 core (and equivalently the metal ejecta) mass and $M_\star$ is the
 stellar mass.  If the stellar mass is outside of these ranges, then an
-inert, collisionless black hole (BH) particle is created.
+inert, collisionless black hole (BH) particle is created.  The
+blastwave is modeled by injecting the explosion energy and ejecta mass
+into a sphere of 10 pc, smoothed at its surface to improve numerical
+stability \citep{Wise08_Gal}.  Because we resolve the blastwave
+relatively well with several cells across at its initialization, the
+thermal energy is converted into kinetic energy and agrees with the
+Sedov-Taylor solution \citep[e.g.][]{Greif07}.
 
-The blastwave is modeled by injecting the explosion energy and ejecta
-mass into a sphere of 10 pc, smoothed at its surface to improve
-numerical stability \citep{Wise08_Gal}.  Because we resolve the
-blastwave relatively well with several cells across at its
-initialization, the thermal energy is converted into kinetic energy
-and agrees with the Sedov-Taylor solution \citep[e.g.][]{Greif07}.
+\subsubsection{Population II star formation}
 
 The Pop II stars emit 6000 hydrogen ionizing photons per baryon over
 their lifetime and $E_{\rm ph} = 21.6$ eV, appropriate for a [Z/H] =
@@ -468,13 +505,17 @@ $-1.3$ population.  We note that lower-metallicity stars generate up
 to 60\% more ionizing photons and might be underestimating the
 radiative feedback \citep{Schaerer03}.  Nonetheless this study
 provides an excellent first insight in the transition to Pop II SF, as
-the metal enrichment is the key ingredient here.  For SN feedback,
-these stars generate $6.8 \times 10^{48}$ erg s$^{-1}$ $\Ms^{-1}$
-after living for 4 Myr, which is injected into spheres with a radius
-of 10 pc.  However if the resolution of the grid is less than 10/3 pc,
-we distribute the energy into a $3^3$ cube surrounding the star
-particle.  In the same region, star particles also return ejected
-material with mass
+the metal enrichment is the key ingredient here.  The star particles
+live for 20 Myr, the maximum lifetime of an OB star.  These stars
+generate the majority of the ionizing radiation and SNe feedback in
+stellar clusters, thus we ignore any feedback from lower mass stars.
+
+For SN feedback, these stars generate $6.8 \times 10^{48}$ erg
+s$^{-1}$ $\Ms^{-1}$ after living for 4 Myr, which is injected into
+spheres with a radius of 10 pc.  However if the resolution of the grid
+is less than 10/3 pc, we distribute the energy into a $3^3$ cube
+surrounding the star particle.  In the same region, star particles
+also return ejected material with mass
 %
 \begin{equation}
   \label{eqn:SNmass}
@@ -492,7 +533,24 @@ cosmic SFRs better in galaxy simulations at lower redshifts
 \section{Results}
 \label{sec:results}
 
-\input{table1.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure*}
+\epsscale{1.15}
+\plotone{f1}
+\epsscale{1}
+  \caption{\label{fig:evo-mosaic} Evolution of the entire simulation
+    volume ($L_{\rm box} = 1$ Mpc) at redshifts 15, 12, 10, 8, and 7
+    (left to right).  Pictured here are the density-weighted
+    projections of density (top), temperature (middle), and
+    metallicity (bottom).  Note how the stellar radiative feedback
+    from low-mass galaxies reionize the majority of the volume.  The
+    metallicity projections are a composite image of metals
+    originating from Pop II (red) and III (blue) stars with magenta
+    indicating a mixture of the two.}
+\end{figure*}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -510,19 +568,7 @@ cosmic SFRs better in galaxy simulations at lower redshifts
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{figure}
-\epsscale{1.15}
-\plotone{f3}
-\epsscale{1}
-\caption{\label{fig:sfr} Cosmic star formation rates for Pop II
-  (solid) and III (dashed).  Note that the Pop III rates are nearly
-  constant from redshift 12 to 7.  Pristine halos still survive in
-  underdense regions, supporting late-time metal-free star formation.}
-\end{figure}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{table1.tex}
 
 Here we first present the global star formation rate (SFR) during
 early galaxy formation and then focus on the gaseous and stellar
@@ -552,6 +598,20 @@ originating from Pop III stars are produced in PISNe.  Table
 metallicity cuts.
 
 \subsection{Global star formation rate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}
+\epsscale{1.15}
+\plotone{f3}
+\epsscale{1}
+\caption{\label{fig:sfr} Cosmic star formation rates for Pop II
+  (solid) and III (dashed).  Note that the Pop III rates are nearly
+  constant from redshift 12 to 7.  Pristine halos still survive in
+  underdense regions, supporting late-time metal-free star formation.}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 Figure \ref{fig:sfr} shows the cosmic SFR in the simulation for Pop II
 and III stars.  Metal-free stars form at a nearly constant rate of $5
@@ -689,15 +749,26 @@ metallicity within 0.1 dex.
 
 \begin{figure*}
 \plottwo{f6a}{f6b}
-\caption{\label{fig:pops} The scatter plots show the SF history of the
-  quiet (left) and intense (right) halos as a function of metallicity
-  at $z=7$.  Each circle represents a star cluster, whose area is
-  proportional to its mass.  The open circles in the upper right
-  represent $10^3$, $10^4$, and $10^5$ \Ms~star clusters.  The dashed
-  lines in the right panel guide the eye to two stellar populations
-  that were formed in two satellite halos, merging at $z=7.5$.  The
-  upper histogram shows the SFR.  The right histogram depicts the
-  stellar metallicity distribution.}
+\caption{\label{fig:pops} The scatter plots show the metal-enriched
+  (Pop II) star formation history of the intense (left) and quiet
+  (right) halos as a function of total metallicity, i.e. the sum of
+  metal ejecta from both Pop II and Pop III SNe, at $z=7$.  Each
+  circle represents a star cluster, whose area is proportional to its
+  mass.  The open circles in the upper right represent $10^3$ and
+  $10^4$ \Ms~star clusters.  The upper histogram shows the SFR.  The
+  right histogram depicts the stellar metallicity distribution.  The
+  intense halo shows a large spread in metallicity at $z>10$ because
+  these stars formed in progenitor halos that were enriched by
+  different SN explosions.  At $z<10$, the majority of stellar
+  metallicities increase as the halo is self-enriched.  The spikes in
+  metallicity at $t$ = 620, 650, and 700 Myr show induced star
+  formation with enhanced metallicities in SN remnant shells.  The
+  dashed lines in the left panel guide the eye to two stellar
+  populations that were formed in two satellite halos, merging at
+  $z=7.5$.  The quiet halo evolves in relative isolation and steadily
+  increases its metallicity to [Z/H] $\sim$ --2 until there is an
+  equilibrium between \textit{in-situ} star formation and metal-poor
+  inflows from filaments.}
 \end{figure*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -825,40 +896,54 @@ undergoing a starburst at $z=7$, translating into a relatively high
 $M/L = 6$.  The lower mass galaxies show a spread in M/L between 30
 and 3000, similar to the Sloan Digital Sky Survey (SDSS) observations
 of local ultra faint dwarf (uFd) galaxies \citep[e.g.][]{Strigari08}.
-This is suggestive that these low-mass ($M_{\rm tot} \lsim 10^8 \Ms$)
-galaxies that cannot cool through hydrogen line cooling are the
-progenitors of uFd galaxies \citep{Bovill11a, Bovill11b}.  In this
-scenario, all of the star formation occurs before reionization and
-was subsequently terminated by UV heating from external sources.
+It has been suggested that these low-mass ($M_{\rm tot} \lsim 10^8
+\Ms$) galaxies that cannot cool through hydrogen line cooling are the
+progenitors of uFd galaxies \citep{Bovill11a, Bovill11b}, where all of
+the star formation occurs before reionization and was subsequently
+terminated by UV heating from external sources.  These galaxies have
+stellar masses ranging from 210 \Ms~(SDSS J1058+2843) to $3.2 \times
+10^5$ \Ms~(Dra) with most between $10^3$ and $10^4$
+\Ms. \citep{Martin08_uFd}.  Because the total stellar population would
+be sampled, on average, by several star particles, we cannot make
+robust conclusions about the nature of uFd galaxies.
 
 \section{Discussion and Conclusions}
 \label{sec:discuss}
 
 We have focused on the birth of two galaxies prior to reionization
-with a cosmological AMR radiation hydrodynamics simulation with
-unprecedented spatial (1 pc comoving) and mass resolution (1800 \Ms).
-With this resolution, we are able to follow the Pop III star formation
-and radiative and chemical feedback effects in hundreds of minihalos
-that contribute to the formation of a protogalaxy.  Supernovae from
-Pop III stars provide the necessary heavy elements for the transition
-to a Population II stellar population, which we have directly
-simulated.  These two galaxies have a 10--15\% probability in
-surviving as present-day ``fossil'' galaxies \citep{Gnedin06},
-otherwise they will be incorporated into galactic stellar halos.  A
-$z=8.55$ galaxy was recently spectroscopically confirmed that is
-contained in an ionized bubble with radius 0.1--0.5 Mpc with an
-uncharacterized population of galaxies contributing to the local
-ionizing radiation field \citep{Lehnert10_z8.6}.  The galaxies
-simulated here might represent this population and should be detected
-with the upcoming \textit{James Webb Space Telescope}.
+with a cosmological AMR radiation hydrodynamics simulation with very
+high spatial (1 pc comoving) and mass resolution (1800 \Ms).  With
+this resolution, we are able to follow the Pop III star formation and
+radiative and chemical feedback effects in hundreds of minihalos that
+contribute to the formation of a protogalaxy.  Supernovae from Pop III
+stars provide the necessary heavy elements for the transition to a
+Population II stellar population, which we have directly simulated.
+The galaxies simulated here represent a population of uncharacterized
+high-redshift dwarf galaxies, which should be detected with the
+upcoming \textit{James Webb Space Telescope}, that should contribute a
+significant fraction of the ionizing photons during reionization.
+Recently, a $z=8.6$ spectroscopically confirmed galaxy was found to
+reside in an \ion{H}{2} region that extends beyond 1 Mpc.  However,
+using the SFRs and \lya~continuum as estimators, this galaxy produces
+enough ionizing radiation to create an \ion{H}{2} region between $\sim
+0.1(f_{\rm esc}/0.1)^{1/3}$ Mpc and $0.5(f_{\rm esc}/0.1)^{1/3}$ Mpc,
+where $f_{\rm esc}$ is the fraction of ionizing radiation escaping
+into the IGM \citep{Lehnert10_z8.6}.  This discrepancy could be caused
+by undetected satellite dwarf galaxies, such ones presented here, that
+contribute to local radiation field, or an ionizing radiation escape
+fraction near unity \citep{Wise09, Razoumov10, Paardekooper11,
+  Yajima11}.
 
 We find that one PISN is sufficient to enrich the star-forming halo
 and surrounding $\sim 5$ kpc to a metallicity of 10$^{-3} Z_\odot$,
 given $M_{\rm char} = 100~\Ms$.  DLA systems have a metallicity floor
 on the same order \citep{Wolfe05_Review, Penprase10}, and metal
 enrichment from Pop III SNe provides a possible explanation
-\citep{Kobayashi11}.  Ours is the first simulation with sufficient
-physics and resolution to support this claim.
+\citep{Kobayashi11}.  Our simulation strengthens this claim of a
+metallicity floor from Pop III SNe \citep[see also][]{Tornatore07,
+  Karlsson08, Maio11_Enrich}, where our work improves on previous
+studies by resolving star-forming molecular clouds and employing more
+realistic feedback physics, in particular, radiation transport.
 
 If the first stars have a lower characteristic mass that favor
 hypernovae \citep{Tumlinson07_IMF}, then this metallicity floor should
@@ -870,20 +955,32 @@ from these two explosions should expand to equal radii before stalling
 in the IGM.  We note that stronger metal-line cooling in the PISN case
 may cause the blastwave to stall at a marginally smaller radius.  
 
-In the case where this metallicity floor is less than the critical
-metallicity, then the next SN will further enrich the ISM, solidifying
-the transition to Pop II SF.  We conclude that it only takes one, at
-most two, SNe from Pop III stars in the halo progenitors to complete
-the transition to Population II \citep{Frebel10}.  However, this does
-not prohibit more than two instances of Pop III star formation in halo
-from happening because the stars can end in a direct collapse to a BH
-with little or no metal ejecta, keeping the surrounding environment
-pristine.  The question of whether the critical metallicity is
-\tento{-6} or \tento{-3.5} $Z_\odot$ is most applicable to nearby
-halos where the heavy elements mix slowly into dense cores as the
-blastwave overtakes it.  Less than two percent of stars have [Z/H] $<
--3$ in both systems, consistent with observations of metal-poor stars
-in the halo and dSphs \citep{Beers05, Battaglia11}.
+Building upon this idea of a lower metallicity floor, consider a
+pre-galactic halo that has hosted a Pop III star, producing a SN.  The
+majority of the gas is ejected into the IGM and re-accretes after
+$\sim 10-50$ Myr \citep{Johnson07, Wise08_Gal}.  What happens if the
+metallicity is not greater than the critical metallicity?  Massive Pop
+III stars would form again in this halo; however, enriching the
+surrounding IGM with Pop III SNe and ejecting material becomes more
+difficult in halos with $M \gsim 10^7 \Ms$ \citep{Whalen08_SN}.  Thus
+it is more likely for these halos to retain more of its gas during
+star formation episodes and self-enrich its host halo and less of the
+IGM.  This would accelerate the transition from Pop III to II in more
+massive halos.
+
+We conclude that it only takes one, at most two, SNe from Pop III
+stars in the halo progenitors to complete the transition to Population
+II \citep{Frebel10}.  However, this does not prohibit more than two
+instances of Pop III star formation in halo from happening because the
+stars can produce BHs with little or no metal ejecta, keeping the
+surrounding environment pristine.  Even though we find that Pop III
+SNe create a floor of $\sim 10^{-3} \zsun$, gas with lower
+metallicities can still exists in nearby halos, where the metal-rich
+SN ejecta will mix slowly into dense cores as the blastwave overtakes
+them \citep{Cen08}.  These environments may be the host of true
+extremely metal-poor star formation, such as the recently discovered
+halo star with all detected metals below $10^{-4.2} \zsun$
+\citep{Caffau11}.
 
 We also find that the merger history plays an important role in
 supplying gas into halos after its first epoch of SF.  Mergers of
@@ -930,22 +1027,25 @@ and IMFs, used in \textit{ab initio} dwarf galaxy simulations.
 \acknowledgments
 
 JHW thanks Renyue Cen, Amina Helmi, Marco Spaans, and Eline Tolstoy
-for enlightening discussions.  JHW is partially supported by NASA
-through Hubble Fellowship grant \#120-6370 awarded by the Space
-Telescope Science Institute, which is operated by the Association of
+for enlightening discussions.  We thank an anonymous referee for
+helpful suggestions.  JHW is partially supported by NASA through
+Hubble Fellowship grant \#120-6370 awarded by the Space Telescope
+Science Institute, which is operated by the Association of
 Universities for Research in Astronomy, Inc., for NASA, under contract
 NAS 5-26555.  MJT and MLN acknowledge partial support from NASA ATFP
-grant NNX08AH26G.  Computational resources were provided by NASA/NCCS
-award SMD-09-1439.  TA acknowledges financial support from the {\em
-  Baden-W\"{u}rttemberg-Stiftung} under grant P-LS-SPII/18, the
-Heidelberg Institut f\"ur Theoretische Studien. This work was
-partially supported by NASA ATFP grant NNX08AH26G, NSF AST-0807312,
-and NSF AST-1109243. This research has made use of NASA’s Astrophysics
-Data System Bibliographic Services.  The majority of the analysis and
-plots were done with \texttt{yt} \citep{yt_full_paper}.
+grant NNX08AH26G.  MJT~acknowledges support by the NSF CI TraCS
+fellowship award OCI-1048505.  Computational resources were provided
+by NASA/NCCS award SMD-09-1439.  TA acknowledges financial support
+from the {\em Baden-W\"{u}rttemberg-Stiftung} under grant
+P-LS-SPII/18, the Heidelberg Institut f\"ur Theoretische Studien. This
+work was partially supported by NASA ATFP grant NNX08AH26G, NSF
+AST-0807312, and NSF AST-1109243. This research has made use of NASA’s
+Astrophysics Data System Bibliographic Services.  The majority of the
+analysis and plots were done with \texttt{yt} \citep{yt_full_paper}.
 
 %\clearpage
-\begin{thebibliography}{101}
+%\bibliography{ms}
+\begin{thebibliography}{108}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Abel} {et~al.}(1997){Abel}, {Anninos}, {Zhang}, \&
@@ -988,12 +1088,11 @@ plots were done with \texttt{yt} \citep{yt_full_paper}.
   {Trenti}, M., {van Dokkum}, P., {Franx}, M., {Stiavelli}, M., {Carollo},
   C.~M., {Magee}, D., \& {Gonzalez}, V. 2011, \apj, 737, 90
 
-\bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{a}})}]{Bovill11a}
-{Bovill}, M.~S., \& {Ricotti}, M. 2010{\natexlab{a}}, ArXiv e-prints
-  (1010.2231)
+\bibitem[{{Bovill} \& {Ricotti}(2011{\natexlab{a}})}]{Bovill11a}
+{Bovill}, M.~S., \& {Ricotti}, M. 2011{\natexlab{a}}, \apj, 741, 17
 
-\bibitem[{{Bovill} \& {Ricotti}(2010{\natexlab{b}})}]{Bovill11b}
----. 2010{\natexlab{b}}, ArXiv e-prints (1010.2233)
+\bibitem[{{Bovill} \& {Ricotti}(2011{\natexlab{b}})}]{Bovill11b}
+---. 2011{\natexlab{b}}, \apj, 741, 18
 
 \bibitem[{{Bromm} {et~al.}(2002){Bromm}, {Coppi}, \& {Larson}}]{Bromm02_P3}
 {Bromm}, V., {Coppi}, P.~S., \& {Larson}, R.~B. 2002, \apj, 564, 23
@@ -1010,6 +1109,13 @@ plots were done with \texttt{yt} \citep{yt_full_paper}.
   {Ostriker}}]{Bryan95}
 {Bryan}, G.~L., {Norman}, M.~L., {Stone}, J.~M., {Cen}, R., \& {Ostriker},
   J.~P. 1995, Computer Physics Communications, 89, 149
+
+\bibitem[{{Caffau} {et~al.}(2011){Caffau}, {Bonifacio}, {Fran{\c c}ois},
+  {Sbordone}, {Monaco}, {Spite}, {Spite}, {Ludwig}, {Cayrel}, {Zaggia},
+  {Hammer}, {Randich}, {Molaro}, \& {Hill}}]{Caffau11}
+{Caffau}, E., {Bonifacio}, P., {Fran{\c c}ois}, P., {Sbordone}, L., {Monaco},
+  L., {Spite}, M., {Spite}, F., {Ludwig}, H.-G., {Cayrel}, R., {Zaggia}, S.,
+  {Hammer}, F., {Randich}, S., {Molaro}, P., \& {Hill}, V. 2011, \nat, 477, 67
 
 \bibitem[{{Cen} \& {Ostriker}(1992)}]{Cen92}
 {Cen}, R., \& {Ostriker}, J.~P. 1992, \apjl, 399, L113
@@ -1065,9 +1171,6 @@ plots were done with \texttt{yt} \citep{yt_full_paper}.
 \bibitem[{{Gnedin} \& {Hui}(1998)}]{gnedin98}
 {Gnedin}, N.~Y., \& {Hui}, L. 1998, \mnras, 296, 44
 
-\bibitem[{{Gnedin} \& {Kravtsov}(2006)}]{Gnedin06}
-{Gnedin}, N.~Y., \& {Kravtsov}, A.~V. 2006, \apj, 645, 1054
-
 \bibitem[{{G{\'o}rski} {et~al.}(2005){G{\'o}rski}, {Hivon}, {Banday},
   {Wandelt}, {Hansen}, {Reinecke}, \& {Bartelmann}}]{HEALPix}
 {G{\'o}rski}, K.~M., {Hivon}, E., {Banday}, A.~J., {Wandelt}, B.~D., {Hansen},
@@ -1107,6 +1210,9 @@ plots were done with \texttt{yt} \citep{yt_full_paper}.
 
 \bibitem[{{Hernquist} \& {Springel}(2003)}]{Hernquist03}
 {Hernquist}, L., \& {Springel}, V. 2003, \mnras, 341, 1253
+
+\bibitem[{{Johnson} {et~al.}(2007){Johnson}, {Greif}, \& {Bromm}}]{Johnson07}
+{Johnson}, J.~L., {Greif}, T.~H., \& {Bromm}, V. 2007, \apj, 665, 85
 
 \bibitem[{{Karlsson} {et~al.}(2008){Karlsson}, {Johnson}, \&
   {Bromm}}]{Karlsson08}
@@ -1153,6 +1259,9 @@ plots were done with \texttt{yt} \citep{yt_full_paper}.
 {Maio}, U., {Khochfar}, S., {Johnson}, J.~L., \& {Ciardi}, B. 2011, \mnras,
   414, 1145
 
+\bibitem[{{Martin} {et~al.}(2008){Martin}, {de Jong}, \& {Rix}}]{Martin08_uFd}
+{Martin}, N.~F., {de Jong}, J.~T.~A., \& {Rix}, H.-W. 2008, \apj, 684, 1075
+
 \bibitem[{Matsumoto \& Nishimura(1998)}]{MTwister}
 Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 
@@ -1178,10 +1287,18 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 \bibitem[{{O'Shea} \& {Norman}(2008)}]{OShea08}
 ---. 2008, \apj, 673, 14
 
+\bibitem[{{Paardekooper} {et~al.}(2011){Paardekooper}, {Pelupessy}, {Altay}, \&
+  {Kruip}}]{Paardekooper11}
+{Paardekooper}, J.-P., {Pelupessy}, F.~I., {Altay}, G., \& {Kruip}, C.~J.~H.
+  2011, \aap, 530, A87
+
 \bibitem[{{Penprase} {et~al.}(2010){Penprase}, {Prochaska}, {Sargent},
   {Toro-Martinez}, \& {Beeler}}]{Penprase10}
 {Penprase}, B.~E., {Prochaska}, J.~X., {Sargent}, W.~L.~W., {Toro-Martinez},
   I., \& {Beeler}, D.~J. 2010, \apj, 721, 1
+
+\bibitem[{{Razoumov} \& {Sommer-Larsen}(2010)}]{Razoumov10}
+{Razoumov}, A.~O., \& {Sommer-Larsen}, J. 2010, \apj, 710, 1239
 
 \bibitem[{{Ricotti} {et~al.}(2008){Ricotti}, {Gnedin}, \& {Shull}}]{Ricotti08}
 {Ricotti}, M., {Gnedin}, N.~Y., \& {Shull}, J.~M. 2008, \apj, 685, 21
@@ -1231,6 +1348,9 @@ Matsumoto, M., \& Nishimura, T. 1998, ACM Trans. Model. Comput. Simul., 8, 3
 {Smith}, B.~D., {Turk}, M.~J., {Sigurdsson}, S., {O'Shea}, B.~W., \& {Norman},
   M.~L. 2009, \apj, 691, 441
 
+\bibitem[{{Springel} \& {Hernquist}(2003)}]{Springel03b}
+{Springel}, V., \& {Hernquist}, L. 2003, \mnras, 339, 289
+
 \bibitem[{{Stacy} {et~al.}(2010){Stacy}, {Greif}, \& {Bromm}}]{Stacy10_Binary}
 {Stacy}, A., {Greif}, T.~H., \& {Bromm}, V. 2010, \mnras, 403, 45
 
@@ -1270,9 +1390,9 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 {Truelove}, J.~K., {Klein}, R.~I., {McKee}, C.~F., {Holliman}, II, J.~H.,
   {Howell}, L.~H., \& {Greenough}, J.~A. 1997, \apjl, 489, L179+
 
-\bibitem[{{Tseliakhovich} {et~al.}(2010){Tseliakhovich}, {Barkana}, \&
+\bibitem[{{Tseliakhovich} {et~al.}(2011){Tseliakhovich}, {Barkana}, \&
   {Hirata}}]{Tselia10_Minihalo}
-{Tseliakhovich}, D., {Barkana}, R., \& {Hirata}, C. 2010, ArXiv e-prints
+{Tseliakhovich}, D., {Barkana}, R., \& {Hirata}, C.~M. 2011, \mnras, 1501
 
 \bibitem[{{Tseliakhovich} \& {Hirata}(2010)}]{Tselia10}
 {Tseliakhovich}, D., \& {Hirata}, C. 2010, \prd, 82, 083520
@@ -1298,6 +1418,11 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 \bibitem[{{Whalen} {et~al.}(2004){Whalen}, {Abel}, \& {Norman}}]{Whalen04}
 {Whalen}, D., {Abel}, T., \& {Norman}, M.~L. 2004, \apj, 610, 14
 
+\bibitem[{{Whalen} {et~al.}(2008){Whalen}, {van Veelen}, {O'Shea}, \&
+  {Norman}}]{Whalen08_SN}
+{Whalen}, D., {van Veelen}, B., {O'Shea}, B.~W., \& {Norman}, M.~L. 2008, \apj,
+  682, 49
+
 \bibitem[{{Wise} \& {Abel}(2007)}]{Wise07}
 {Wise}, J.~H., \& {Abel}, T. 2007, \apj, 665, 899
 
@@ -1312,7 +1437,7 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 
 \bibitem[{{Wolcott-Green} {et~al.}(2011){Wolcott-Green}, {Haiman}, \&
   {Bryan}}]{Wolcott11}
-{Wolcott-Green}, J., {Haiman}, Z., \& {Bryan}, G.~L. 2011, ArXiv e-prints
+{Wolcott-Green}, J., {Haiman}, Z., \& {Bryan}, G.~L. 2011, \mnras, 1673
 
 \bibitem[{{Wolfe} {et~al.}(2005){Wolfe}, {Gawiser}, \&
   {Prochaska}}]{Wolfe05_Review}
@@ -1324,6 +1449,9 @@ Toro, E.~F., Spruce, M., \& Speares, W. 1994, Shock Waves, 4, 25,
 
 \bibitem[{{Woosley} \& {Weaver}(1995)}]{Woosley95}
 {Woosley}, S.~E., \& {Weaver}, T.~A. 1995, \apjs, 101, 181
+
+\bibitem[{{Yajima} {et~al.}(2011){Yajima}, {Choi}, \& {Nagamine}}]{Yajima11}
+{Yajima}, H., {Choi}, J.-H., \& {Nagamine}, K. 2011, \mnras, 412, 411
 
 \bibitem[{{Yoshida} {et~al.}(2003){Yoshida}, {Abel}, {Hernquist}, \&
   {Sugiyama}}]{Yoshida03}
