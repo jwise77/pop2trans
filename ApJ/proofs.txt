@@ -1,0 +1,32 @@
+Here are my responses to the queries in the proof.
+
+Q1: The code is called "grafic" not "graphic".  The existing text is
+correct.
+
+Q2: Please change the sentence to "A nearby PISN provides a
+metallicity floor of [Z/H] = −2.8 in the quiet halo, and the first
+Pop II stars form with a similar metallicity."
+
+Q4: The arXiv number for this reference is astro-ph/9710187.  It was
+never published in a journal.
+
+Q5: Clark et al. (2009), and O'Shea et al. (2004) were never published
+in a journal.  Frebel & Bromm (2010) is still in the review process.
+
+Q6: The changes look fine to me.
+
+Q7: Tseliakhovich et al. (2011) was published in MNRAS, vol. 418,
+906. Wolcott-Green et al. (2011) was published in MNRAS, vol. 418,
+838.
+
+I have the following questions about the redline version.
+
+1. Bottom of page 5: "star formation" was crossed out for the acronym
+"SF", which hasn't been defined earlier.  Please change the first
+instance to "star formation (SF)".
+
+2. Middle of page 22: "start forming" was changed to "start-forming".
+Please revert to the original text.
+
+3. Page 33: "lower metallicity" was changed to "lower-metallicity".
+Please revert to the original text.
